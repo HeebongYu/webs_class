@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -44,22 +45,59 @@
         }
 
         * {
+            margin: 0%;
+            padding: 0%;
             font-family: 'NexonLv1Gothic';
+            line-height: 1.6;
+        }
+
+        body {
+            padding: 5%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+        }
+
+        .list1 li {
+            display: inline;
+        }
+
+        .list1 li a {
+            border: 1px solid #333;
+            padding: 10px 30px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Javascript 문법 정리</h1>
 
-    <h2>데이터 불러하기</h2>
-    <ul>
-        <li>01. 변수 : 데이터 부르기</li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <h1><a href="../index.html">Javascript</a></h1>
+
+    <uL class="list1">
+        <li><a href="javascript01.html">데이터 저장하기</a></li>
+        <li><a href="javascript02.html">데이터 불러오기</a></li>
+        <li><a href="javascript03.html">데이터 실행하기</a></li>
+        <li><a href="javascript04.html">데이터 제어하기</a></li>
+    </uL>
+
+    <h2>데이터 불러오기</h2>
 </body>
 
 </html>
