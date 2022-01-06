@@ -3,7 +3,7 @@
 ## 메인페이지
 https://heebongyu.github.io/webs_class/
 
-## 자바스크랩트
+## JavaScript
 https://heebongyu.github.io/webs_class/script/index.html
 
 ## HTML Reference
