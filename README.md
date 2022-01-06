@@ -4,10 +4,11 @@
 https://heebongyu.github.io/webs_class/
 
 ## 자바스크랩트
-https://heebongyu.github.io/webs_class/
+https://heebongyu.github.io/webs_class/script/index.html
 
-## ㅗ씌
-https://heebongyu.github.io/webs_class/
+## HTML
+https://heebongyu.github.io/webs_class/html/index.html
 
-CSS
-https://heebongyu.github.io/webs_class/
+## CSS
+https://heebongyu.github.io/webs_class/css/index.html
+
