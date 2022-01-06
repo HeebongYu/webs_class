@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
-
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -125,6 +124,7 @@
         }
     </style>
     <link rel="stylesheet" href="../assets/css/prism.css">
+    <script src="../assets/js/prism.js"></script>
 </head>
 
 <body>
@@ -171,7 +171,7 @@
 
     <hr>
 
-    <!-- sample1 -->
+    <!-- 01. 변수 : 데이터 불러오기 -->
     <div id="sample1" class="sample">
         <h3>01. 변수 : 데이터 불러오기</h3>
         <div class="code">
@@ -187,11 +187,25 @@
 }</code></pre>
         </div>
     </div>
-    <!-- //sample1 -->
+    <!-- 01. 변수 : 데이터 불러오기 -->
+    <!-- 01. 변수 : 데이터 불러오기_결과 -->
+    <script>
+        {
+            let x = 100,
+                y = 200,
+                z = "javascript";
+
+            document.write("<br>*** 01. 변수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+        }
+    </script>
+    <!-- 01. 변수 : 데이터 불러오기_결과 -->
 
     <hr>
 
-    <!-- sample2 -->
+    <!-- 02. 상수 : 데이터 불러오기 -->
     <div id="sample2" class="sample">
         <h3>02. 상수 : 데이터 불러오기</h3>
         <div class="code">
@@ -207,11 +221,25 @@
 }</code></pre>
         </div>
     </div>
-    <!-- //sample2 -->
+    <!-- 02. 상수 : 데이터 불러오기 -->
+    <!-- 02. 상수 : 데이터 불러오기_결과 -->
+    <script>
+        {
+            const x = 100,
+                y = 200,
+                z = "javascript";
+
+            document.write("<br>*** 02. 상수 ***<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+        }
+    </script>
+    <!-- 02. 상수 : 데이터 불러오기_결과 -->
 
     <hr>
 
-    <!-- sample3 -->
+    <!-- 03. 배열 : 데이터 불러오기 -->
     <div id="sample3" class="sample">
         <h3>03. 배열 : 데이터 불러오기</h3>
         <div class="code">
@@ -225,11 +253,23 @@
 }</code></pre>
         </div>
     </div>
-    <!-- //sample3 -->
+    <!-- 03. 배열 : 데이터 불러오기 -->
+    <!-- 03. 배열 : 데이터 불러오기_결과 -->
+    <script>
+        {
+            const arr = [100, 200, "javascript"];
+
+            document.write("<br>*** 03. 배열 ***<br>");
+            document.write(arr[0], "<br>");
+            document.write(arr[1], "<br>");
+            document.write(arr[2], "<br>");
+        }
+    </script>
+    <!-- 03. 배열 : 데이터 불러오기_결과 -->
 
     <hr>
 
-    <!-- sample4 -->
+    <!-- 04. 배열 : 데이터 불러오기 : 2차 배열 -->
     <div id="sample4" class="sample">
         <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
         <div class="code">
@@ -245,11 +285,25 @@
 }</code></pre>
         </div>
     </div>
-    <!-- //sample4 -->
+    <!-- 04. 배열 : 데이터 불러오기 : 2차 배열 -->
+    <!-- 04. 배열 : 데이터 불러오기 : 2차 배열_결과 -->
+    <script>
+        {
+            const arr = [100, 200, ["javascript", "jquery"]];
+
+            document.write("<br>*** 04. 배열 ***<br>");
+            document.write(arr[0], "<br>");
+            document.write(arr[1], "<br>");
+            document.write(arr[2], "<br>");
+            document.write(arr[2][0], "<br>");
+            document.write(arr[2][1], "<br>");
+        }
+    </script>
+    <!-- 04. 배열 : 데이터 불러오기 : 2차 배열_결과 -->
 
     <hr>
 
-    <!-- sample5 -->
+    <!-- 5. 배열 : 데이터 불러오기 : 갯수 구하기 -->
     <div id="sample5" class="sample">
         <h3>5. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
         <div class="code">
@@ -261,68 +315,39 @@
 }</code></pre>
         </div>
     </div>
-    <!-- //sample5 -->
-
-    <hr>
-
-
-
-    <script src="../assets/js/prism.js"></script>
-    <!-- Javascript -->
+    <!-- 5. 배열 : 데이터 불러오기 : 갯수 구하기 -->
+    <!-- 5. 배열 : 데이터 불러오기 : 갯수 구하기_결과 -->
     <script>
-        // 01. 변수 : 데이터 불러오기
-        {
-            let x = 100,
-                y = 200,
-                z = "javascript";
-
-            document.write("<br>*** 01. 변수 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-        }
-
-        // 02. 상수 : 데이터 불러오기
-        {
-            const x = 100,
-                  y = 200,
-                  z = "javascript";
-
-            document.write("<br>*** 02. 상수 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-        }
-
-        // 03. 배열 : 데이터 불러오기
-        {
-            const arr = [100, 200, "javascript"];
-
-            document.write("<br>*** 03. 배열 ***<br>");
-            document.write(arr[0], "<br>");
-            document.write(arr[1], "<br>");
-            document.write(arr[2], "<br>");
-        }
-
-        // 04. 배열 : 데이터 불러오기 : 2차 배열
-        {
-            const arr = [100, 200, ["javascript", "jquery"]];
-
-            document.write("<br>*** 04. 배열 ***<br>");
-            document.write(arr[0], "<br>");
-            document.write(arr[1], "<br>");
-            document.write(arr[2], "<br>");
-            document.write(arr[2][0], "<br>");
-            document.write(arr[2][1], "<br>");
-        }
-
-        // 5. 배열 : 데이터 불러오기 : 갯수 구하기
         {
             const arr = [100, 200, "javascript"];
 
             document.write("<br>*** 05. 배열 ***<br>");
             document.write(arr.length)
         }
+    </script>
+    <!-- 5. 배열 : 데이터 불러오기 : 갯수 구하기_결과 -->
+
+    <hr>
+
+    <!-- Javascript -->
+    <script>
+        // 06. 배열 : 데이터 불러오기 : for()
+        // 07. 배열 : 데이터 불러오기 : forEach()
+        // 08. 배열 : 데이터 불러오기 : for of
+        // 09. 배열 : 데이터 불러오기 : for in
+        // 10. 배열 : 데이터 불러오기 : map()
+        // 11. 배열 : 데이터 불러오기 : 펼침 연산자
+        // 12. 객체 : 데이터 불러오기 : 기본
+        // 13. 객체 : 데이터 불러오기 : Object
+        // 14. 객체 : 데이터 불러오기 : 변수
+        // 15. 객체 : 데이터 불러오기 : for in
+        // 16. 객체 : 데이터 불러오기 : map()
+        // 17. 객체 : 데이터 불러오기 : hasOwnProperty()
+        // 18. 객체 : 데이터 불러오기 : 펼침 연산자 - 복사
+        // 19. 객체 : 데이터 불러오기 : 펼침 연산자 - 추가
+        // 20. 객체 : 데이터 불러오기 : 펼침 연산자 - 결합
+        // 21. 객체 : 데이터 불러오기 : 비구조화 할당
+        // 22. 객체 : 데이터 불러오기 : 비구조화 할당
     </script>
 </body>
 
