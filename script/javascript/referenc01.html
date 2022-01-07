@@ -5,113 +5,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>referen01</title>
-    <style>
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 300;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 400;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 700;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        * {
-            margin: 0%;
-            padding: 0%;
-            font-family: 'NexonLv1Gothic';
-            line-height: 1.6;
-        }
-
-        body {
-            padding: 5%;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        hr {
-            margin: 5% 0;
-            border-style: dashed;
-            border-color: #e6e6e6;
-            border-width: 0px;
-            border-bottom-width: 1px;
-        }
-
-        h1 {
-            padding-bottom: 20px;
-            font-size: 50px;
-        }
-
-        .list1 li {
-            display: inline;
-        }
-
-        .list1 li a {
-            border: 1px solid #333;
-            padding: 8px 30px 5px 30px;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .refer {
-            background: #333;
-            color: #fff;
-            padding: 2px 10px 0 10px;
-            border-radius: 30px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            background-color: #000;
-            color: #fff;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: 400;
-            padding: 3px 10px 0 10px;
-            font-size: 24px;
-        }
-    </style>
-
+    <title>Javascript</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/prism.css">
-
-    <script src="../assets/js/prism.js"></script>
 </head>
 
 <body>
-    <div>
-        <a href="javascript01.html" class="refer">데이터 저장하기</a>
+    <div class="arrangement">
+        <h1>기초 문법</h1>
+
+        <hr>
+
+        <h2>자바스크립트 선언문</h2>
+
+        <p>
+            선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다. &lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지를 스크립트 영역이라고 부릅니다.
+        </p>
+
+        <div class="line">
+<pre><code>01: &lt;!DOCTYPE html&gt;
+02: &lt;html lang="ko"&gt;
+03: &lt;head&gt;
+04:     &lt;meta charset="UTF-8"&gt;
+05:     &lt;title&gt;Document&lt;/title&gt;
+06:     &lt;script&gt;
+07:         document,write("환영합니다");
+08:     &lt;/script&gt;
+09: &lt;/head&gt;
+10: &lt;body&gt;
+11: &lt;/body&gt;
+12: &lt;/html&gt;
+</code></pre>
+        </div>
+
+        <p>
+            선운문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역애 선언하면 됩니다. 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있습니다. 우리도 &lt;head&gt; 태그 영역에 선언하겠습니다.
+        </p>
+
+        <h2>자바스크립트 주석 처리</h2>
+        <h2>내부 스크립트 외부로 분리하기</h2>
+        <h2>코드 입력 시 주의 사항</h2>
     </div>
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr> <hr> <hr> <hr>
+
 
     <h1>기초 문법</h1>
 
@@ -330,6 +290,8 @@ document,write("welcome!"); (O)
     </ol>
 
     <hr>
+
+    <script src="../assets/js/prism.js"></script>
 </body>
 
 </html>
