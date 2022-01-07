@@ -48,20 +48,37 @@ a {
     color: #000;
 }
 
+/* top */
+.top {
+    position: fixed;
+    right: 20px; 
+    bottom: 20px;
+}
+.top a {
+    width: 60px; 
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    display: block;
+}
+
 /* header */
 #header {
     padding: 40px;
-    border-bottom: 1px dashed #e6e6e6;
+    border-bottom: 1px dashed #cdcdcd;
 }
 #header h1 {
     margin-bottom: 30px;
-    font-style: 40px;
+    font-size: 40px;
 }
 #header nav ul li {
     display: inline;
 }
 #header nav ul li a {
-    font-style: 20px;
+    font-size: 20px;
     border: 1px solid #000;
     padding: 12px 30px 10px 30px;
     border-radius: 30px;
@@ -79,12 +96,12 @@ a {
     }
     #header h1 {
         margin-bottom: 15px;
-        font-style: 28px;
+        font-size: 28px;
     }
     #header nav ul li a {
-        font-style: 16px;
+        font-size: 16px;
         padding: 8px 15px 6px 15px;
-        margin: 5px;
+        margin-bottom: 5px;
     }
 }
 
@@ -92,7 +109,9 @@ a {
 #main {
     padding: 40px;
 }
-.list{
+
+/* list */
+.list {
     padding-bottom: 40px;
     border-bottom: 1px dotted #cdcdcd;
 }
@@ -101,16 +120,43 @@ a {
     line-height: 1.8;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px){ 
     #main {
         padding: 20px;
     }
-    .list{
+    .list {
         padding-bottom: 20px;
     }
     .list ul li {
         font-size: 14px;
         line-height: 1.6;
+    }
+}
+
+/* note */
+.note {
+    padding: 40px 0;
+    border-bottom: 1px dotted #cdcdcd;
+}
+.note a {
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 7px 15px 5px 15px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.note a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px){ 
+    .note {
+        padding: 20px 0;
+    }
+    .note a {
+        font-size: 14px;
     }
 }
 
@@ -134,7 +180,7 @@ a {
     border-radius: 0 0 5px 5px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px){ 
     .script {
         padding: 20px 0;
     }
@@ -145,4 +191,47 @@ a {
         font-size: 14px;
         padding: 10px 15px 8px 15px;
     }
+    .script .sample .code pre {
+        font-size: 14px;
+    }
+}
+
+/* doc */
+.doc {
+    font-size: 18px;
+    line-height: 1.8;
+    padding-bottom: 300px;
+}
+.doc h2 {
+    font-weight: 500;
+    margin: 40px 0 5px;
+}
+.doc h3 {
+    font-weight: 500;
+    margin: 20px 0 5px;
+    text-decoration: underline;
+}
+.doc li {
+    list-style: disc;
+    margin-left: 20px;
+}
+.doc p {
+    margin-bottom: 5px;
+}
+.doc .line {
+    border: 1px solid #cdcdcd;
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+}
+.doc .code {
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+    background: #f4f8fa;
+}
+.doc strong {
+    background: #c3eaff;
+    font-weight: normal;
+    border-radius: 20px;
+    padding: 2px 15px 0px 15px;
+    display: inline-block;
 }

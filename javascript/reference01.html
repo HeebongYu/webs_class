@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>자바스크립트 <strong>선언문</strong></h2>
+            <p>
+                자바스크립트 선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것입니다.
+            </p>
+            <p></p>
+            &lt;script&gt; 태그로 선언문이 시작하여 &lt;/script&gt; 태그로 선언문이 종료되며, 그 영역을 스크립트 영역이라고 부릅니다.
+            </p>
+
+            <div class="line">
+                <pre><code>&lt;script&gt;
+    document.write("자바스크립트 코드");
+&lt;/script&gt;
+</code></pre>
+            </div>
+
+            <h2>자바스크립트 <strong>주석처리</strong></h2>
+            <p>
+                자바스크립트 선언문 안에 코드가 아닌 설명글을 넣고 싶으면 주석처리를 합니다.
+            </p>
+            <p>
+                주석처리는 아래와 같이 합니다.
+            </p>
+            <div class="line">
+                <pre><code>// 한 줄 설명글인 경우
+/*
+    설명글이 여러 줄인 경우
+    이렇게 처리합니다.
+*/
+</code></pre>
+            </div>
+
+            <h2>코드 입력시 <strong>주의사항</strong></h2>
+            <ul>
+                <li>대소문자를 구분해야 합니다.</li>
+                <li>작성한 후 세미콜론(;)을 작성하도록 합시다.</li>
+                <li>한 줄에 한 문장만 작성하도록 합시다.</li>
+                <li>문자형 데이터 작성시 ""와 ''의 겹침을 주의합시다.</li>
+                <li>코드를 작성할 떄 괄호의 짝이 맞아야 합니다. [], {}, ()</li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
