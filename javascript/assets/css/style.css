@@ -87,3 +87,29 @@ a {
         margin: 5px;
     }
 }
+
+/* main */
+#main {
+    padding: 40px;
+}
+.list{
+    padding-bottom: 40px;
+    border-bottom: 1px dotted #cdcdcd;
+}
+.list ul li {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media (max-width: 800px){
+    #main {
+        padding: 20px;
+    }
+    .list{
+        padding-bottom: 20px;
+    }
+    .list ul li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
