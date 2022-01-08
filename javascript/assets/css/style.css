@@ -235,3 +235,12 @@ a {
     padding: 2px 15px 0px 15px;
     display: inline-block;
 }
+
+@media (max-width: 800px){
+    .doc .line {
+        font-size: 14px;
+    }
+    .doc .code {
+        font-size: 14px;
+    }
+}
