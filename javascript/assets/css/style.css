@@ -273,3 +273,12 @@ a {
         padding: 15px;
     }
 }
+
+/* table */
+.doc th{
+    border-top: 1px solid #000;
+    background-color: #ededed;
+}
+.doc td {
+    border-top: 1px solid #000;
+}
