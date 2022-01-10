@@ -275,8 +275,11 @@ a {
 }
 
 /* table */
-.doc th{
-    border-top: 1px solid #000;
+.doc .table {
+    border: 1px solid #000;
+    margin: 0; padding: 0;
+}
+.doc th {
     background-color: #ededed;
 }
 .doc td {
