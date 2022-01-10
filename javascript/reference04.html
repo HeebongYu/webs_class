@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li class="active"><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2><strong>for()문</strong></h2>
+            <p>
+                <div class="line">
+                    <ul>
+                        <li>for 문은 조건식을 만족할 때가지 특정 코드를 반복하여 실행합니다.</li>
+                        <li>초기값 → 조건식 → 자바스트렙트 코드 → 증감식 → 조건식</li>
+                    </ul>
+                </div>
+            </p>
+            <p>
+                <div class="line">
+                    for( 초기값; 조건식; 증감식 ){ 자바스크립트 코드 }
+                </div>
+            </p>
+            <p>
+                <div class="code">
+<pre><code>&lt;script&gt;
+    for( var i = 1; i &lt;=10; i++){
+        document.write("반복" + i, "&lt;br&gt;");
+    }
+&lt;/script&gt;
+</code></pre>
+                </div>
+           </p>
+           <p>
+               <div class="line">
+                   ※결과<br>
+                   반복1<br>
+                   반복2<br>
+                   반복3<br>
+                   반복4<br>
+                   반복5<br>
+                   반복6<br>
+                   반복7<br>
+                   반복8<br>
+                   반복9<br>
+                   반복10
+               </div>
+           </p>
+        </div>
+    </main>
+</body>
+</html>
