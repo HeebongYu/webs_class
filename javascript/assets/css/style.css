@@ -348,13 +348,13 @@ a {
     margin: 5px 0;
 }
 .javascript .menu li a:hover {
-    background: #0243F1;
+    background: #48a965;
     color: #fff;
 }
 
 @media (max-width: 800px){
     .javascript h1 {
         font-size: 55px;
-        padding: 15px 0;
+        padding: 10px 0;
     }
 }

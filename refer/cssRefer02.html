@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Refer</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>유희봉</strong>
+    </header>
+        
+    <main id="contents">
+        <h2><a href="css.html">CSS</a> <em>Block/Inline</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li class="active"><a href="cssRefer02.html">Block/Inline/Inline-Block</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>Block</h3>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>지정된 엘리먼트는 전후 줄바꿈이 들어가 다른 엘리먼트들을 다른 줄로 밀어내고 혼자 한 줄을 차지합니다.</li>
+                            <li>대표적인 block 엘리먼트로 &lt;div&gt;, &lt;p&gt;, &lt;h1&gt; 태그 등이 있습니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <div class="line">
+                        <h1 style="background-color: yellow;">
+                            &lt;h1&gt;
+                        </h1>
+                        <h1 style="background-color: yellow; height: 100px;">
+                            &lt;h1&gt;
+                        </h1>
+                    </div>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;h1&gt; style="background-color: yellow;">
+    &lt;h1&gt;
+&lt;/h1&gt;&lt;br&gt;
+&lt;h1&gt; style="background-color: yellow; height: 100px;">
+    &lt;h1&gt;
+&lt;/h1&gt;
+</code></pre>
+                    </div>
+                </p>
+
+                <h3>Inline</h3>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>지정된 엘리먼트는 전후 줄바꿈 없이 한 줄에 다른 엘리먼트들과 나란히 배치됩니다.</li>
+                            <li>대표적인 inline 엘리먼트로 &lt;span&gt;, &lt;a&gt;, &lt;em&gt; 태그 등이 있습니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <div class="line">
+                        <em style="background-color: yellow;">
+                            &lt;em&gt;
+                        </em>
+                        <em style="background-color: yellow; height: 100px;">
+                            &lt;em&gt;
+                        </em>
+                    </div>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;em&gt; style="background-color: yellow;">
+    &lt;em&gt;
+&lt;/em&gt;
+&lt;em&gt; style="background-color: yellow; height: 100px;">
+    &lt;em&gt;
+&lt;/em&gt;
+</code></pre>
+                    </div>
+                </p>
+
+                <h3>Inline-Block</h3>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>지정된 엘리먼트는 기본적으로 inline 엘리먼트처럼 전후 줄바꿈 없이 한 줄에 다른 엘리먼트들과 나란히 배치됩니다.</li>
+                            <li>하지만 inline 엘리먼트에서 불가능하던 width와 height 속성 지정 및 margin과 padding 속성의 상하 간격 지정이 가능해집니다.</li>
+                            <li>대표적인 inline-block 엘리먼트로 &lt;button&gt;이나 &lt;input&gt;, &lt;select&gt; 태그 등을 들 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <div class="line">
+                        <button style="background-color: yellow;">
+                            &lt;button&gt;
+                        </button>
+                        <button style="background-color: yellow; height: 100px;">
+                            &lt;button&gt;
+                        </button>
+                    </div>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;button&gt; style="background-color: yellow;">
+    &lt;button&gt;
+&lt;/button&gt;
+&lt;button&gt; style="background-color: yellow; height: 100px;">
+    &lt;button&gt;
+&lt;/button&gt;
+</code></pre>
+                    </div>
+                </p>
+                
+                
+            </div>
+        </div>
+        <!-- refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>

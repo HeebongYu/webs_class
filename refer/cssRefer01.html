@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Refer</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>유희봉</strong>
+    </header>
+        
+    <main id="contents">
+        <h2><a href="css.html">CSS</a> <em>기초 문법</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li class="active"><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>CSS란?</h3>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>CSS는 마크업 언어(HTML, XHTML)가 실제 표시되는 방법을 기술하는 <strong>스타일 언어</strong>입니다.</li>
+                            <li>레이아웃과 스타일을 정의할 때 자유도가 높습니다.</li>
+                        </ul>
+                    </div>     
+                </p>
+                
+                <h3>CSS 주석 표시</h3>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>CSS는 주석을 표시할 때 시작과 끝에 <strong>/* 주석 */</strong>를 넣습니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>/*
+    css 주석 부분입니다.
+*/
+</code></pre>
+                    </div>
+                </p>                
+
+                <h3>CSS 선언 방법</h3>
+                <h4>내부 스타일(Internal Style Sheet)</h4>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>HTML 문서 안의 <strong>&lt;style&gt;과 &lt;/style&gt; 안</strong>에 CSS 코드를 넣는 방법입니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>※HTML
+    
+&lt;style&gt;
+    h1 {
+        color: blue;
+    }
+&lt;/style&gt;
+</code></pre>
+                    </div>
+                </p>
+                
+                <h4>외부 스타일(Linking Style Sheet)</h4>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li><strong>별도의 CSS 파일</strong>을 만들고 HTML 문서와 연결하는 방법입니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>※HTML
+
+&lt;link rel="stylesheet" href="css/style.css"&gt;
+</code></pre>
+                    </div>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>※CSS
+
+h1 {
+    color: red;
+}
+</code></pre>
+                    </div>
+                </p>
+
+                <h4>인라인 스타일(Inline Style Sheet)</h4>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>HTML 태그의 <strong>style 속성</strong>에 CSS 코드를 넣는 방법입니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>※HTML
+
+&lt;p style="color: blue"&gt;Lorem ipsum dolor. &lt;/p&gt;
+</code></pre>
+                    </div>
+                </p>
+            </div>  
+        </div>
+        <!-- refer -->
+
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>
