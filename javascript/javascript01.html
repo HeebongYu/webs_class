@@ -74,9 +74,9 @@
     var y = 200; //변수 y에 숫자 200을 저장
     var z = "javascript"; //변수 z에 문자 javascript를 저장
 
-    document.write(x);
-    document.write(y);
-    document.write(z);
+    document.write(x, "&lt;br&gt;");
+    document.write(y, "&lt;br&gt;");
+    document.write(z, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -99,9 +99,9 @@
     y = 400; //변수 y를 200->400 변경
     z = "jquery"; //변수 z를 javascript->jquery 변경 
 
-    document.write(x);
-    document.write(y);
-    document.write(z);
+    document.write(x, "&lt;br&gt;");
+    document.write(y, "&lt;br&gt;");
+    document.write(z, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -124,9 +124,9 @@
     y -= 400; //== y = y - 400; //변수 y에 -400 추가
     z += "jquery"; //== z = z = jquery; //변수 z에 jquery 추가
 
-    document.write(x);
-    document.write(y);
-    document.write(z);
+    document.write(x, "&lt;br&gt;");
+    document.write(y, "&lt;br&gt;");
+    document.write(z, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -150,15 +150,15 @@
         x = 200; //지역변수 100->200
         y = 300; //전역변수 200->300      
 
-        document.write(x);
-        document.write(y);
-        document.write(z);
+        document.write(x, "&lt;br&gt;");
+        document.write(y, "&lt;br&gt;");
+        document.write(z, "&lt;br&gt;");
     };
     func();
 
-    document.write(x);
-    document.write(y);
-    document.write(z);
+    document.write(x, "&lt;br&gt;");
+    document.write(y, "&lt;br&gt;");
+    document.write(z, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -177,13 +177,13 @@
     const y = 200;
     const z = "javascript";
 
-    x = 300; //상수 x는 변화 없이 그대로 100
-    y = 400; //상수 y는 변화 없이 그대로 200
-    z = "jquery"; //상수 z는 변화 없이 그대로 javascript
+    // x = 300;  적용시 값이 출력되지 않음
+    // y = 400;  적용시 값이 출력되지 않음
+    // z = "jquery";  적용시 값이 출력되지 않음
 
-    document.write(x);
-    document.write(y);
-    document.write(z);
+    document.write(x, "&lt;br&gt;");
+    document.write(y, "&lt;br&gt;");
+    document.write(z, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -204,9 +204,9 @@
     arr[1] = 200; //배열 1에 200을 저장
     arr[2] = "javascript"; //배열 2에 javascript를 저장
 
-    document.write(arr[0]);
-    document.write(arr[1]);
-    document.write(arr[2]);
+    document.write(arr[0], "&lt;br&gt;");
+    document.write(arr[1], "&lt;br&gt;");
+    document.write(arr[2], "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -227,9 +227,9 @@
     //배열 1에 200을 저장
     //배열 2에 javascript를 저장                        
 
-    document.write(arr[0]);
-    document.write(arr[1]);
-    document.write(arr[2]);
+    document.write(arr[0], "&lt;br&gt;");
+    document.write(arr[1], "&lt;br&gt;");
+    document.write(arr[2], "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -250,9 +250,9 @@
     arr[1] = 200; //배열 1에 200을 저장
     arr[2] = "javascript"; //배열 2에 javascript를 저장
 
-    document.write(arr[0]);
-    document.write(arr[1]);
-    document.write(arr[2]);
+    document.write(arr[0], "&lt;br&gt;");
+    document.write(arr[1], "&lt;br&gt;");
+    document.write(arr[2], "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -273,9 +273,9 @@
     //배열 1에 200을 저장
     //배열 2에 javascript를 저장
 
-    document.write(arr[0]);
-    document.write(arr[1]);
-    document.write(arr[2]);
+    document.write(arr[0], "&lt;br&gt;");
+    document.write(arr[1], "&lt;br&gt;");
+    document.write(arr[2], "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -296,9 +296,9 @@
     obj[1] = 200; //객체 1에 200을 저장
     obj[2] = "javascript"; //객체 2에 javascript를 저장
 
-    document.write(obj[0]);
-    document.write(obj[1]);
-    document.write(obj[2]);
+    document.write(obj[0], "&lt;br&gt;");
+    document.write(obj[1], "&lt;br&gt;");
+    document.write(obj[2], "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -319,9 +319,9 @@
     obj.b = 200; //객체 b에 200을 저장
     obj.c = "javascript"; //객체 c에 javascript를 저장
 
-    document.write(obj.a);
-    document.write(obj.b);
-    document.write(obj.c);
+    document.write(obj.a, "&lt;br&gt;");
+    document.write(obj.b, "&lt;br&gt;");
+    document.write(obj.c, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -342,9 +342,9 @@
     obj.b = 200; //객체 b에 200을 저장
     obj.c = "javascript"; //객체 c에 javascript를 저장
 
-    document.write(obj.a);
-    document.write(obj.b);
-    document.write(obj.c);
+    document.write(obj.a, "&lt;br&gt;");
+    document.write(obj.b, "&lt;br&gt;");
+    document.write(obj.c, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -365,9 +365,9 @@
     //객체 b에 200을 저장
     //객체 c에 javascript를 저장
 
-    document.write(obj.a);
-    document.write(obj.b);
-    document.write(obj.c);
+    document.write(obj.a, "&lt;br&gt;");
+    document.write(obj.b, "&lt;br&gt;");
+    document.write(obj.c, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -391,9 +391,9 @@
         }
     ];
 
-    document.write(obj[0].a);
-    document.write(obj[0].b);
-    document.write(obj[1].c);
+    document.write(obj[0].a, "&lt;br&gt;");
+    document.write(obj[0].b, "&lt;br&gt;");
+    document.write(obj[1].c, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -418,12 +418,12 @@
         d: "javascript" //객체 d에 javascript를 저장
     };
 
-    document.write(obj.a);
-    document.write(obj.b[0]);
-    document.write(obj.b[1]);
-    document.write(obj.c.x);
-    document.write(obj.c.y);
-    document.write(obj.d);
+    document.write(obj.a, "&lt;br&gt;");
+    document.write(obj.b[0], "&lt;br&gt;");
+    document.write(obj.b[1], "&lt;br&gt;");
+    document.write(obj.c.x, "&lt;br&gt;");
+    document.write(obj.c.y, "&lt;br&gt;");
+    document.write(obj.d, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -448,9 +448,9 @@
         c  //객체c에 변수c 저장
     };
 
-    document.write(obj.a);
-    document.write(obj.b);
-    document.write(obj.c);
+    document.write(obj.a, "&lt;br&gt;");
+    document.write(obj.b, "&lt;br&gt;");
+    document.write(obj.c, "&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
@@ -484,20 +484,31 @@
         }
     };
 
-    document.write(obj.a);
-    document.write(obj.b);
-    document.write(obj.b[0]);
-    document.write(obj.b[1]);
-    document.write(obj.c.x);
-    document.write(obj.c.y);
-    obj.e();
-    obj.d();
-    obj.g();
+    document.write(obj.a, "&lt;br&gt;");
+    document.write(obj.b, "&lt;br&gt;");
+    document.write(obj.b[0], "&lt;br&gt;");
+    document.write(obj.b[1], "&lt;br&gt;");
+    document.write(obj.c.x, "&lt;br&gt;");
+    document.write(obj.c.y, "&lt;br&gt;");
+    obj.e("&lt;br&gt;");
+    obj.d("&lt;br&gt;");
+    obj.g("&lt;br&gt;");
 }</code></pre>
                 </div>
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result17"></div>
+                    <div class="result17">
+                        100<br>
+                        200,300<br>
+                        200<br>
+                        300<br>
+                        400<br>
+                        500<br>
+                        javascript<br>
+                        javascript가 실행되었습니다.<br>
+                        javascript가 실행되었습니다.<br>
+                        javascript가 실행되었습니다.<br>
+                    </div>
                 </div>
             </div>
             <!-- //sample17 -->
@@ -570,7 +581,9 @@
             //y = 400;
             //z = "jquery";
 
-            document.querySelector(".result05").innerHTML = x + "<br>" + y + "<br>" + z;
+            // document.write(x, "<br>");
+            // document.write(y, "<br>");
+            // document.write(z, "<br>");
         }
 
         // 06. 배열 : 여러개의 데이터를 저장 : 표현 방법1
@@ -714,11 +727,15 @@
                 }
             };
 
-            document.querySelector(".result17").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + obj.d + "<br>";
-            
-            obj.e();
-            obj.f();
-            obj.g();
+            // document.write(obj.a, "<br>");
+            // document.write(obj.b, "<br>");
+            // document.write(obj.b[0], "<br>");
+            // document.write(obj.b[1], "<br>");
+            // document.write(obj.c.x, "<br>");
+            // document.write(obj.c.y, "<br>");
+            // obj.e("<br>");
+            // obj.f("<br>");
+            // obj.g("<br>");
         }
     </script>
 </body>

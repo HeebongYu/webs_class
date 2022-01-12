@@ -37,9 +37,156 @@
 
         <div class="refer">
             <div class="doc">
+                <h3>CSS 색상</h3>
 
+                <h4>키워드(Keyword)</h4>
+                <p>
+                    <div class="line">
+                        <il>
+                            <li>pass..ㅠ</li>
+                        </il>
+                    </div>
+                </p>
+                <p>
+                    <button style="color: currentColor;">K</button>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;button style="color: currentColor;"&gt;K&lt;/button&gt;
+</code></pre>
+                    </div>
+                </p>
 
-                
+                <h4>이름_&lt;named-color&gt;</h4>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>색의 이름을 직접 적어서 사용합니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <button style="color: red;">N</button>
+                    <button style="color: orange;">N</button>
+                    <button style="color: tan;">N</button>
+                    <button style="color: rebeccapurple;">N</button>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;button style="color: red;"&gt;N&lt;/button&gt;
+&lt;button style="color: orange;"&gt;N&lt;/button&gt;
+&lt;button style="color: tan;"&gt;N&lt;/button&gt;
+&lt;button style="color: rebeccapurple;"&gt;N&lt;/button&gt;
+</code></pre>
+                    </div>
+                </p>
+
+                <h4>헥스코드_&lt;hex-color&gt;</h4>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>16진법으로 3자리 or 6자리로 표현합니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <button style="color: #090;">HEX</button>
+                    <button style="color: #009900;">HEX</button>
+                    <button style="color: #090a;">HEX</button>
+                    <button style="color: #009900aa;">HEX</button>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;button style="color: #090;"&gt;HEX&lt;/button&gt;
+&lt;button style="color: #009900;"&gt;HEX&lt;/button&gt;
+&lt;button style="color: #090a;"&gt;HEX&lt;/button&gt;
+&lt;button style="color: #009900aa;"&gt;HEX&lt;/button&gt;
+</code></pre>
+                    </div>
+                </p>
+
+                <h4>알지비_&lt;rgb()&gt;, &lt;rgba()&gt;</h4>
+                <p>
+                    <div class="line">
+                        <ul>
+                            <li>rgb(red green blue)은 빨강, 초록, 파랑으로 색을 표협합니다.</li>
+                            <li>rgba(red green blue alpha)은 빨강, 초록, 파랑, 투명도로 색을 표협합니다.</li>
+                            <li>최댓값은255이고 최솟값은 0입니다.</li>
+                            <li>투명도(alpha)은 좌측의 곱하여 표현합니다.</li>
+                        </ul>
+                    </div>
+                </p>
+                <p>
+                    <button style="color: rgb(255, 90, 190, 0.6);">RGB</button>
+                    <button style="color: rgba(255, 90, 190, 0.6);">RGB</button>
+                    <button style="color: rgb(255 90 190 / 0.6);">RGB</button>
+                    <button style="color: rgba(255 90 190 / 0.3);">RGB</button>
+                    <button style="color: rgb(255 90 190 / 60%);">RGB</button>
+                    <button style="color: rgba(255 90 190 / 30%);">RGB</button>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;button style="color: rgb(255, 90, 190, 0.6);"&gt;RGB&lt;/button&gt;
+&lt;button style="color: rgba(255, 90, 190, 0.6);"&gt;RGB&lt;/button&gt;
+&lt;button style="color: rgb(255 90 190 / 0.6);"&gt;RGB&lt;/button&gt;
+&lt;button style="color: rgba(255 90 190 / 0.3);"&gt;RGB&lt;/button&gt;
+&lt;button style="color: rgb(255 90 190 / 60%);"&gt;RGB&lt;/button&gt;
+&lt;button style="color: rgba(255 90 190 / 30%);"&gt;RGB&lt;/button&gt;
+</code></pre>
+                    </div>
+                </p>
+
+                <h4>&lt;hsl()&gt;, &lt;hsla()&gt;</h4>
+                <p>
+                    <div class="line">
+                        <il>
+                            <li>pass..ㅠ</li>
+                        </il>
+                    </div>
+                </p>
+                <p>
+                    <button style="color: hsl(30, 100%, 50%, 0.6);">HSL</button>
+                    <button style="color: hsla(30, 100%, 50%, 0.6);">HSL</button>
+                    <button style="color: hsl(30 100% 50% / 0.6);">HSL</button>
+                    <button style="color: hsla(30 100% 50% / 0.6);">HSL</button>
+                    <button style="color: hsl(30.0 100% 50% / 60%);">HSL</button>
+                    <button style="color: hsla(30.2 100% 50% / 60%);">HSL</button>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;button style="color: hsl(30, 100%, 50%, 0.6);"&gt;HSL&lt;/button&gt;
+&lt;button style="color: hsla(30, 100%, 50%, 0.6);"&gt;HSL&lt;/button&gt;
+&lt;button style="color: hsl(30 100% 50% / 0.6);"&gt;HSL&lt;/button&gt;
+&lt;button style="color: hsla(30 100% 50% / 0.6);"&gt;HSL&lt;/button&gt;
+&lt;button style="color: hsl(30.0 100% 50% / 60%);"&gt;HSL&lt;/button&gt;
+&lt;button style="color: hsla(30.2 100% 50% / 60%);"&gt;HSL&lt;/button&gt;
+</code></pre>
+                    </div>
+                </p>
+
+                <h4>전역(Global)</h4>
+                <p>
+                    <div class="line">
+                        <il>
+                            <li>pass..ㅠ</li>
+                        </il>
+                    </div>
+                </p>
+                <p>
+                    <button style="color: inherit;">G</button>
+                    <button style="color: initial;">G</button>
+                    <button style="color: revert;">G</button>
+                    <button style="color: unset;">G</button>
+                </p>
+                <p>
+                    <div class="code">
+<pre><code>&lt;button style="color: inherit;"&gt;G&lt;/button&gt;
+&lt;button style="color: initial;"&gt;G&lt;/button&gt;
+&lt;button style="color: revert;"&gt;G&lt;/button&gt;
+&lt;button style="color: unset;"&gt;G&lt;/button&gt;
+</code></pre>
+                    </div>
+                </p>
             </div>
         </div>
         <!-- refer -->
