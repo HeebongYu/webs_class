@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/javascript.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/javascript.png">
+    <link rel="icon" href="../assets/face/javascript.png">
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+<body>
+    <div class="top"><a href="#header">Top</a></div>
+    
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">선택문</a></li>
+                <li class="active"><a href="reference08.html">반복문</a></li>
+            </ul>
+        </nav>
+        <!-- //nav -->
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2><strong>반복문</strong></h2>
+            <div class="line">
+                <ul>
+                    <li>반복문은 이용하면 코드를 원하는 횟수만큼 반복하여 실행할 수 있습니다.</li>
+                    <li>반복문은 종류로는 while문, do while문, for문, breack문, continue문이 있습니다.</li>
+                </ul> 
+            </div>
+
+            <h3>while문</h3>
+            <div class="line">
+                <ul>
+                    <li>while문은 조건식을 만족할 때까지 코드를 여러 회 반복하여 실행합니다.</li>
+                </ul>
+            </div>
+            <div class="line mt10">
+                let 변수 = 초기값; while( 조건식 ){ 자바스크립트 코드; 증감식 }
+            </div>
+            <div class="code">
+<pre><code>{
+    let i = 1;
+    while( i &lt;= 4 ){ document.write( i ); i++ }  //1234
+}</code></pre>
+            </div>         
+
+            <h3>do while문</h3>
+            <div class="line">
+                <ul>
+                    <li>do while문은 반드시 한 번은 코드를 실행하고 조건식 검사합니다.</li>
+                </ul>
+            </div>
+            <div class="line mt10">
+                let 변수 = 초기값; do{ 코드; 증감식 } while( 조건식 );
+            </div>
+            <div class="code">
+<pre><code>{
+    let i = 1;
+    do { document.write( i ); i++; } while ( i &lt;= 4 );  //1234
+}</code></pre>
+            </div>   
+
+            <h3>for()문</h3>
+            <div class="line">
+                <ul>
+                    <li>for 문은 조건식을 만족할 때가지 특정 코드를 반복하여 실행합니다.</li>
+                    <li>초기값 → 조건식 → 자바스트렙트 코드 → 증감식 → 조건식</li>
+                </ul>
+            </div>
+            <div class="line mt10">
+                for( 초기값; 조건식; 증감식 ){ 자바스크립트 코드; }
+            </div>
+            <div class="code">
+<pre><code>{
+    for( i=1; i&lt;10; i++ ){ document.write(i); }    //123456789
+}</code></pre>
+            </div>
+
+            <h3>중첩 for문</h3>
+            <div class="line">
+                <ul>
+                    <li>중첩 for문은 반복문 안에 반복문이 있는 경우를 의미합니다.</li>
+                </ul>
+            </div>
+            <div class="line mt10">
+                for( 조건식1 ){ if( 조건식2 ){ 자바스크립트 코드; } }
+            </div>
+            <div class="code">
+<pre><code>{
+    for( let i=1; i&lt;=2; i++ ){ document.write(i)
+        for( let j=1; j&lt;=3; j++ ){ document.write(j) }    //11232123
+    }
+}</code></pre>
+            </div>
+
+            <h3>breack문</h3>
+            <div class="line">
+                <ul>
+                    <li>반복문에서 breack문을 사용시 조건식과 상관없이 강제로 반복을 종료합니다.</li>
+                </ul>
+            </div>
+
+            <h3>continue문</h3>
+            <div class="line">
+                <ul>
+                    <li>반복문에서 continue문 사용시 다음 조건식을 생략하고 그 다음 조건식으로 넘어갑니다.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

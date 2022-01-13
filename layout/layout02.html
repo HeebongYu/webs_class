@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout02</title>
+    <style>
+        * {
+            margin: 0;
+            height: 0;
+        }
+        body {
+            background-color: #EAF5EA;
+        }
+        #container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #C8E6CB;
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: #91C58A;
+        }
+        #contents {
+            width: 1200px;
+        }
+        #contents .left {
+            width: 300px;
+            height: 780px;
+            background-color: #67AD5B;
+            float: left;
+        }
+        #contents .center {
+            width: 600px;
+            height: 780px;
+            background-color: #5D9E51;
+            float: left;
+        }
+        #contents .right {
+            width: 300px;
+            height: 780px;
+            background-color: #508C46;
+            float: left;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #457B3B;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id='header'></div>
+        <div id="nav"></div>
+        <div id="contents">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+        <div id="footer"></div>
+    </div>  
+
+    <!-- margin -->
+    <!-- 
+    margin-top: 10px;
+    margin-right: 11px;
+    margin-bottom: 12px;
+    margin-left: 13px;
+    margin: 10px;                        /* 위:10px 오른쪽:10px 아래:10px 왼쪽:10px */
+    margin: 10px 11px;                   /* 위:10px 오른쪽:11px 아래:10px 왼쪽:11px */
+    margin: 10px 11px 12px;              /* 위:10px 오른쪽:11px 아래:12px 왼쪽:11px */
+    margin: 10px 11px 12px 13px;         /* 위:10px 오른쪽:11px 아래:12px 왼쪽:13px */
+    margin: auto;                        /* 자동값, 기본값 */
+    margin: 0 auto;                      /* 가운데 정렬(블록구조) */
+    -->
+
+    <!-- padding -->
+    <!--
+    padding-top: 10px;
+    padding-right: 11px;
+    padding-bottom: 12px;
+    padding-left: 13px;
+    padding: 10px;                        /* 위:10px 오른쪽:10px 아래:10px 왼쪽:10px */
+    padding: 10px 11px;                   /* 위:10px 오른쪽:11px 아래:10px 왼쪽:11px */
+    padding: 10px 11px 12px;              /* 위:10px 오른쪽:11px 아래:12px 왼쪽:11px */
+    padding: 10px 11px 12px 13px;         /* 위:10px 오른쪽:11px 아래:12px 왼쪽:13px */
+    -->
+</body>
+</html>

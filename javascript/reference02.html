@@ -30,73 +30,64 @@
                 <li><a href="reference03.html">자료형</a></li>
                 <li><a href="reference04.html">for문</a></li>
                 <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">선택문</a></li>
+                <li><a href="reference08.html">반복문</a></li>
             </ul>
         </nav>
+        <!-- //nav -->
     </header>
     
     <main id="main">
         <div class="doc">
             <h2><strong>변수란?</strong></h2>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>변수(variables)란 변하는 데이터(값)을 저장할 수 있는 메모리 공간 입니다.</li>
-                        <li>변수에는 데이터가 오직 한 개만 저장된고 새로운 데이터가 들어오면 기존에 있던 데이터 지워집니다.</li>
-                        <li>데이터의 종류로는 문자형(Srting), 숫자형(Number), 논리형(Boolean) 등이 있고 자세한 내용은 <a href="reference03.html"><strong>자료형</strong></a>에서 다루겠습니다.</li>
-                    </ul>
-                </div>
-            </p>
+            <div class="line">
+                <ul>
+                    <li>변수(variables)란 변하는 데이터(값)을 저장할 수 있는 메모리 공간 입니다.</li>
+                    <li>변수에는 데이터가 오직 한 개만 저장된고 새로운 데이터가 들어오면 기존에 있던 데이터 지워집니다.</li>
+                    <li>데이터의 종류로는 문자형(Srting), 숫자형(Number), 논리형(Boolean) 등이 있고 자세한 내용은 <a href="reference03.html"><strong>자료형</strong></a>에서 다루겠습니다.</li>
+                </ul>
+            </div>
 
-            <h2>변수 <strong>선언 방법</strong></h2>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>변수를 선언할 때에는 var, let 키워드를 변수명 앞에 붙입니다.</li>
-                    </ul>
-                </div>
-            </p>   
-            <p>
-                <div class="code">
-<pre><code>var 변수명; 또는 var 변수명 = 값; 
-let 변수명; 또는 let 변수명 = 값;
-</pre></code>
-                </div>
-            </p>
+            <h2><strong>변수 선언 방법</strong></h2>
+            <div class="line">
+                <ul>
+                    <li>변수를 선언할 때에는 var, let 키워드를 변수명 앞에 붙입니다.</li>
+                </ul>
+            </div>
+            <div class="line mt10">
+                var 변수명; 또는 var 변수명 = 값;<br>
+                let 변수명; 또는 let 변수명 = 값;
+            </div>
 
             <h2><strong>변수명</strong></h2>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>자바스크립트에는 의미를 가진 단어들이 있기 때문에 사용자가 임의로 사용할 수 없는 단어들이 있습니다.</li>      
-                        <li>키워드 : 자바스크립트에서 사용하는 단어</li>
-                        <li>식별자 : 사용자가 임의로 사용하는 단어</li>
-                    </ul>
-                </div>
-            </p>
+            <div class="line">
+                <ul>
+                    <li>자바스크립트에는 의미를 가진 단어들이 있기 때문에 사용자가 임의로 사용할 수 없는 단어들이 있습니다.</li>      
+                    <li>키워드 : 자바스크립트에서 사용하는 단어</li>
+                    <li>식별자 : 사용자가 임의로 사용하는 단어</li>
+                </ul>
+            </div>
 
             <h3>식별자를 만드는 규칙</h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>사용자가 사용할 수 있는 문자 : 알파벳(a~z, A~Z), 숫자(0~9), 밑줄(_), 달러기호($)</li>
-                        <li>첫 글자는 숫자를 사용할 수 없습니다.</li>
-                        <li>공백을 사용할 수 없습니다. : 밑줄(_) 사용가능, 하이픈(-) 사용안됩니다.</li>
-                        <li>특수기호를 사용할 수 없습니다. : 달러기호($)는 사용가능합니다.</li>
-                        <li>키워드를 사용할 수 없습니다.</li>
-                    </ul>
-                </div>
-            </p>
+            <div class="line">
+                <ul>
+                    <li>사용자가 사용할 수 있는 문자 : 알파벳(a~z, A~Z), 숫자(0~9), 밑줄(_), 달러기호($)</li>
+                    <li>첫 글자는 숫자를 사용할 수 없습니다.</li>
+                    <li>공백을 사용할 수 없습니다. : 밑줄(_) 사용가능, 하이픈(-) 사용안됩니다.</li>
+                    <li>특수기호를 사용할 수 없습니다. : 달러기호($)는 사용가능합니다.</li>
+                    <li>키워드를 사용할 수 없습니다.</li>
+                </ul>
+            </div>
 
             <h3>단어를 조합할 때 규칙</h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>언더스코어 노테이션 : (color_top) : 중간에 '_'를 사용합니다.</li>
-                        <li>캐멜 노테이션 : (colorTop) : 두번째 단어의 첫 글자를 대문자로 사용합니다.</li>
-                        <li>파스칼 노테이션 : (ColorTop) : 모든 단어의 첫 글자를 대문자로 사용합니다.</li>
-                    </ul>
-                </div>
-            </p>
+            <div class="line">
+                <ul>
+                    <li>언더스코어 노테이션 : 중간에 '_'를 사용합니다.<br>ex) color_top</li>
+                    <li>캐멜 노테이션 : 두번째 단어의 첫 글자를 대문자로 사용합니다.<br>ex) colorTop</li>
+                    <li>파스칼 노테이션 : 모든 단어의 첫 글자를 대문자로 사용합니다.<br>ex) ColorTop</li>
+                </ul>
+            </div>
         </div>
     </main>
 </body>

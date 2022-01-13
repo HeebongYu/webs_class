@@ -28,10 +28,10 @@
                 <li><a href="reference01.html">기초 문법</a></li>
                 <li><a href="reference02.html">변수</a></li>
                 <li><a href="reference03.html">자료형</a></li>
-                <li class="active"><a href="reference04.html">for문</a></li>
+                <li><a href="reference04.html">for문</a></li>
                 <li><a href="reference05.html">연산자</a></li>
                 <li><a href="reference06.html">조건문</a></li>
-                <li><a href="reference07.html">선택문</a></li>
+                <li class="active"><a href="reference07.html">선택문</a></li>
                 <li><a href="reference08.html">반복문</a></li>
             </ul>
         </nav>
@@ -40,21 +40,39 @@
 
     <main id="main">
         <div class="doc">
-            <h2><strong>for()문</strong></h2>
+            <h2><strong>선택문</strong></h2>
             <div class="line">
                 <ul>
-                    <li>for 문은 조건식을 만족할 때가지 특정 코드를 반복하여 실행합니다.</li>
-                    <li>초기값 → 조건식 → 자바스트렙트 코드 → 증감식 → 조건식</li>
+                    <li>선택문은 검사하여 변수와 일치하는 값을 선택하여 제어합니다.</li>
+                    <li>선택문은 종류로는 switch문이 있습니다.</li>
+                </ul> 
+            </div>
+
+            <h3>switch문</h3>
+            <div class="line">
+                <ul>
+                    <li>switch문은 여러 경우의 값 중 일치하는 데이터를 찾아 그에 해당하는 코드를 실행합니다.</li>
                 </ul>
             </div>
             <div class="line mt10">
-                for( 초기값; 조건식; 증감식 ){ 자바스크립트 코드; }
+                let 변수 = 초기값; switch( 변수 ){ case 값1: 코드1; break; case 값2: 코드2; break; default: 코드3; }
             </div>
             <div class="code">
-<pre><code>for( i = 1; i &lt;10; i++){
-    document.write(i);
-}   //  123456789
-</code></pre>
+<pre><code>{
+    let i = 1;
+
+    switch(i){
+        case 1 :
+            document.write("코드1");     //코드1
+        break;
+        case 2 :
+            document.write("코드2");
+        break;
+        default :
+            document.write("값이없음");
+        break;
+    }
+}</code></pre>
             </div>
         </div>
     </main>

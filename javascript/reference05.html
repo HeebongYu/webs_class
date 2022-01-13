@@ -30,228 +30,107 @@
                 <li><a href="reference03.html">자료형</a></li>
                 <li><a href="reference04.html">for문</a></li>
                 <li class="active"><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">선택문</a></li>
+                <li><a href="reference08.html">반복문</a></li>
             </ul>
         </nav>
+        <!-- //nav -->
     </header>
 
     <main id="main">
         <div class="doc">
-            <h2><strong>연산자</strong>(operators)</h2>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>연산자에는 산술, 문자 결합, 대입(복합 대입), 증감, 비교, 논리, 삼항 조건 연산자가 있습니다.</li>
-                    </ul>
-                </div>
-            </p>
+            <h2><strong>연산자(operators)</strong></h2>
+            <div class="line">
+                <ul>
+                    <li>연산자에는 산술, 문자 결합, 대입, 증감, 비교, 논리 연산자가 있습니다.</li>
+                    <li>연산자는 조건식을 작성할 떄 사용합니다.</li>
+                </ul>
+            </div>
 
-            <h3><strong>산술</strong> 연산자</h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>산술 연산자에는 더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지(%)가 있습니다.</li>
-                        <li>산술 연산자로 연산을 하기 위해서는 연산 대상 데이터가 반드시 2개 있어야 합니다.</li>
-                    </ul>
-                </div>
-            </p>
-            <p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>종류</th>
-                            <th>기본형</th>
-                            <th>설명</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="center">+</td>
-                            <td class="center">A+B</td>
-                            <td class="center">더하기</td>
-                        </tr>
-                        <tr>
-                            <td class="center">-</td>
-                            <td class="center">A-B</td>
-                            <td class="center">빼기</td>
-                        </tr>
-                        <tr>
-                            <td class="center">*</td>
-                            <td class="center">A*B</td>
-                            <td class="center">곱하기</td>
-                        </tr>
-                        <tr>
-                            <td class="center">/</td>
-                            <td class="center">A/B</td>
-                            <td class="center">나누기</td>
-                        </tr>
-                        <tr>
-                            <td class="center">%</td>
-                            <td class="center">A%B</td>
-                            <td class="center">나머지</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </p>
-            <p>
-                <div class="code">
-<pre><code>&lt;script&gt;
-    var num1 = 15;
-    var num2 = 2;
-    var result;
+            <h3>산술 연산자</h3>
+            <div class="line">
+                <ul>
+                    <li>산술 연산자는 더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지(%)가 있습니다.</li>
+                </ul>
+            </div>
+            <div class="line mt10">
+                A 산술연산자(+, -, *, /, %) B
+            </div>
+            <div class="code">
+<pre><code>{
+    let i = 10;
+    let j = 2;
 
-    result = num1 + num2;
-    document.write(result, "&lt;br&gt;");    //17
-    result = num1 - num2;
-    document.write(result, "&lt;br&gt;");     //13
-    result = num1 * num2;
-    document.write(result, "&lt;br&gt;");     //30
-    result = num1 / num2;
-    document.write(result, "&lt;br&gt;");     //7.5
-    result = num1 % num2;
-    document.write(result, "&lt;br&gt;");     //1
-&lt;/script&gt;
-</pre></code>
-                </div>
-            </p>
+    document.write(i + j);    //10 + 2 = 12
+    document.write(i - j);     //10 - 2 = 8
+    document.write(i * j);     //10 * 2 = 20
+    document.write(i / j);     //10 / 2 = 5
+    document.write(i % j);     //10 % 2 =0
+}</pre></code>
+            </div>
  
-            <h3><strong>문자 결합</strong> 연산자</h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>피연산자(연산 대상 데이터)가 문자형 데이터 입니다.</li>
-                        <li>여러 개의 문자를 하나의 문자형 데이터로 결합할 때 사용합니다.</li>
-                    </ul>
-                </div>
-            </p>
-            <p>
-                <div class="code">
-<pre><code>&lt;script&gt;
-    var t1 = "학교종이";
-    var t2 = " 땡떙떙";
-    var t3 = 8282;
-    var t4 = " 어서 모이자";
-    var result;
+            <h3>문자 결합 연산자</h3>
+            <div class="line">
+                <ul>
+                    <li>피연산자(연산 대상 데이터)가 문자형 데이터 입니다.</li>
+                    <li>여러 개의 문자를 하나의 문자형 데이터로 결합할 때 사용합니다.</li>
+                </ul>
+            </div>
+            <div class="line mt10">
+                A + B + C
+            </div>
+            <div class="code">
+<pre><code>{
+    let t1 = "강";
+    let t2 = "아";
+    let t3 = "지";
 
-    result = t1 + t2 + t3 + t4;
-    document.write(result);    //"학교종이 땡땡떙 8282 어서 모이자"
-&lt;/script&gt;
-</pre></code>
-                </div>
-            </p>
+    document.write(t1 + t2 + t3);    //강 + 아 + 지 = 강아지
+}</pre></code>
+            </div>
             
-            <h3><strong>대입</strong> 연산자</h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다.</li>
-                        <li>복합 대입 연산자(+=, -=, *=, /=, %=)는 산술 연산자와 대입 연산자가 복합적으로 적용된 것입니다.</li>
-                    </ul>
-                </div>
-            </p>
-            <p>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>종류</th>
-                            <th>풀이</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="center">A = B</td>
-                            <td class="center">A = B</td>
-                        </tr>
-                        <tr>
-                            <td class="center">A += B</td>
-                            <td class="center">A = A+B</td>
-                        </tr>
-                        <tr>
-                            <td class="center">A -= B</td>
-                            <td class="center">A = A-B</td>
-                        </tr>
-                        <tr>
-                            <td class="center">A * B</td>
-                            <td class="center">A = A*B</td>
-                        </tr>
-                        <tr>
-                            <td class="center">A / B</td>
-                            <td class="center">A = A/B</td>
-                        </tr>
-                        <tr>
-                            <td class="center">A % B</td>
-                            <td class="center">A = A%B</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </p>
-            <p>
-                <div class="code">
-<pre><code>&lt;script&gt;
-    var num1 = 10;
-    var num2 = 2;
+            <h3>대입 연산자</h3>
+            <div class="line">
+                <ul>
+                    <li>대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다.</li>
+                    <li>복합 대입 연산자(+=, -=, *=, /=, %=)는 산술 연산자와 대입 연산자가 복합적으로 적용된 것입니다.</li>
+                </ul>
+            </div>
+            <div class="line mt10">
+                A 대입연산자(+=, -=, *=, /=, %=) B
+            </div>
+            <div class="code">
+<pre><code>{
+    let i = 10;
+    let j = 2;
 
-    num1 + num2;
-    document.write(num1, "&lt;br&gt;");    //12
-    num1 - num2;
-    document.write(num1, "&lt;br&gt;");     //8
-    num1 * num2;
-    document.write(num1, "&lt;br&gt;");     //20
-    num1 / num2;
-    document.write(num1, "&lt;br&gt;");     //5
-    num1 % num2;
-    document.write(num1, "&lt;br&gt;");     //0
-&lt;/script&gt;
-</pre></code>
-                </div>
-            </p>
-            <p>
-                <div class="code">
-<pre><code>&lt;script&gt;
-    var str = "&lt;table border='1'&gt;";
-    str += "&lt;tr&gt;";
-    str += "&lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;3&lt;/td&gt;";
-    str += "&lt;/tr&gt;";
-    str += "&lt;/table&gt;";
+    document.write(i = i += j);   //i = 10 + 2 = 12
+    document.write(i = i -= j);   //i = 12 - 2 = 10
+    document.write(i = i *= j);   //i = 10 * 2 = 20
+    document.write(i = i /= j);    //i = 20 / 2 = 10
+    document.write(i = i %= j);   //i = 10 % 2 = 0
+}</pre></code>
+            </div>
 
-    document.write(str);
-&lt;/script&gt;
-</pre></code>
-                </div>
-            </p>
-            <p>
-                <script>
-                    var str = "<table border='1'>";
-                    str += "<tr>";
-                    str += "<td>1</td><td>2<td>3</td>";
-                    str += "</tr>";
-                    str += "</table>";
-                    
-                    document.write(str);
-                </script>
-            </p>
+            <h3>증감 연산자</h3>
+            <div class="line">
+                <ul>
+                    <li>증감 연산자는 증가 연산자(++)와 감소 연산자(--)가 있습니다.</li>
+                    <li>증가 연산자(++)는 숫자형 데이터를 1씩 증가시키는 연산자입니다.</li>
+                    <li>감소 연산자(--)는 숫자형 데이터를 1씩 감소시키는 연산자입니다.</li>
+                </ul>
+            </div>
             
-            <h3><strong>증감</strong> 연산자</h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>증감 연산자는 증가 연산자(++)와 감소 연산자(--)가 있습니다.</li>
-                        <li>증가 연산자(++)는 숫자형 데이터를 1씩 증가시키는 연산자입니다.</li>
-                        <li>감소 연산자(--)는 숫자형 데이터를 1씩 감소시키는 연산자입니다.</li>
-                    </ul>
-                </div>
-            </p>
-            
-            <h3><strong>비교</strong> 연산자</h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>'크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자입니다.</li>
-                        <li>결과값으로 trum(참) 또는 false(거짓)로 반환합니다.</li>
-                    </ul>
-                </div>
-            </p>
-            <p>
-                <table class="table">
+            <h3>비교 연산자</h3>
+            <div class="line">
+                <ul>
+                    <li>'크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자입니다.</li>
+                    <li>결과값으로 trum(참) 또는 false(거짓)로 반환합니다.</li>
+                </ul>
+            </div>
+            <div class="table mt10">
+                <table>
                     <thead>
                         <tr>
                             <th>종류</th>
@@ -285,42 +164,27 @@
                         </tr>
                     </tbody>
                 </table>
-            </p>
-
-            <h3><strong>논리</strong> 연산자</h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>논리 연산자는 ||(or), &&(and), !(not)가 있습니다.</li>
-                    </ul>
-                </div>
-            </p>
-
-            <h3>연산자 <strong>우선순위</strong></h3>
-            <p>
-                <div class="line">
-                    <ul>
-                        <li>1. ()</li>
-                        <li>2. 단항 연산자(--, ++, !)</li>
-                        <li>3. 산술 연산자(+, -, *, /, %)</li>
-                        <li>4. 비교 연산자(>, &lt;, >=, &lt;=, ==, !=)</li>
-                        <li>5. 논리 연산자(||, &&)</li>
-                        <li>6. 대입 연산자(=, +=, -=, *=, /=, %=)</li>
-                    </ul>
-                </div>
-            </p>
-
-            <h3><strong>삼항 조건</strong> 연산자</h3>
-            <p>
-                <div class="line">
-                    pass
-                </div>
-            </p>
+            </div>
             
 
-            
-           
-            
+            <h3>논리 연산자</h3>
+            <div class="line">
+                <ul>
+                    <li>논리 연산자는 ||(or), &&(and), !(not)가 있습니다.</li>
+                </ul>
+            </div>
+
+            <h3>연산자 우선순위</h3>
+            <div class="line">
+                <ul>
+                    <li>1. ()</li>
+                    <li>2. 단항 연산자(--, ++, !)</li>
+                    <li>3. 산술 연산자(+, -, *, /, %)</li>
+                    <li>4. 비교 연산자(>, &lt;, >=, &lt;=, ==, !=)</li>
+                    <li>5. 논리 연산자(||, &&)</li>
+                    <li>6. 대입 연산자(=, +=, -=, *=, /=, %=)</li>
+                </ul>
+            </div>
         </div>
     </main>
 </body>

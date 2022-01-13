@@ -39,24 +39,6 @@
             <div class="doc">
                 <h3>CSS 색상</h3>
 
-                <h4>키워드(Keyword)</h4>
-                <p>
-                    <div class="line">
-                        <il>
-                            <li>pass..ㅠ</li>
-                        </il>
-                    </div>
-                </p>
-                <p>
-                    <button style="color: currentColor;">K</button>
-                </p>
-                <p>
-                    <div class="code">
-<pre><code>&lt;button style="color: currentColor;"&gt;K&lt;/button&gt;
-</code></pre>
-                    </div>
-                </p>
-
                 <h4>이름_&lt;named-color&gt;</h4>
                 <p>
                     <div class="line">
@@ -111,7 +93,7 @@
                         <ul>
                             <li>rgb(red green blue)은 빨강, 초록, 파랑으로 색을 표협합니다.</li>
                             <li>rgba(red green blue alpha)은 빨강, 초록, 파랑, 투명도로 색을 표협합니다.</li>
-                            <li>최댓값은255이고 최솟값은 0입니다.</li>
+                            <li>최댓값은 255이고 최솟값은 0입니다.</li>
                             <li>투명도(alpha)은 좌측의 곱하여 표현합니다.</li>
                         </ul>
                     </div>
@@ -140,7 +122,10 @@
                 <p>
                     <div class="line">
                         <il>
-                            <li>pass..ㅠ</li>
+                            <li>hsl(hue saturation lightness)은 색상, 채도, 명도로 색을 표협합니다.</li>
+                            <li>hsla(hue saturation lightness alpha)은 색상, 채도, 명도, 불투명도로 색을 표협합니다.</li>
+                            <li>색상은 최댓값:360, 최솟값:0이고 red:0, green:120, blue:240 입니다.</li>
+                            <li>채도와 명도는 백분율로 나타냅니다.</li>
                         </il>
                     </div>
                 </p>
@@ -149,8 +134,8 @@
                     <button style="color: hsla(30, 100%, 50%, 0.6);">HSL</button>
                     <button style="color: hsl(30 100% 50% / 0.6);">HSL</button>
                     <button style="color: hsla(30 100% 50% / 0.6);">HSL</button>
-                    <button style="color: hsl(30.0 100% 50% / 60%);">HSL</button>
-                    <button style="color: hsla(30.2 100% 50% / 60%);">HSL</button>
+                    <button style="color: hsl(30 100% 50% / 60%);">HSL</button>
+                    <button style="color: hsla(30 100% 50% / 60%);">HSL</button>
                 </p>
                 <p>
                     <div class="code">
@@ -158,32 +143,8 @@
 &lt;button style="color: hsla(30, 100%, 50%, 0.6);"&gt;HSL&lt;/button&gt;
 &lt;button style="color: hsl(30 100% 50% / 0.6);"&gt;HSL&lt;/button&gt;
 &lt;button style="color: hsla(30 100% 50% / 0.6);"&gt;HSL&lt;/button&gt;
-&lt;button style="color: hsl(30.0 100% 50% / 60%);"&gt;HSL&lt;/button&gt;
-&lt;button style="color: hsla(30.2 100% 50% / 60%);"&gt;HSL&lt;/button&gt;
-</code></pre>
-                    </div>
-                </p>
-
-                <h4>전역(Global)</h4>
-                <p>
-                    <div class="line">
-                        <il>
-                            <li>pass..ㅠ</li>
-                        </il>
-                    </div>
-                </p>
-                <p>
-                    <button style="color: inherit;">G</button>
-                    <button style="color: initial;">G</button>
-                    <button style="color: revert;">G</button>
-                    <button style="color: unset;">G</button>
-                </p>
-                <p>
-                    <div class="code">
-<pre><code>&lt;button style="color: inherit;"&gt;G&lt;/button&gt;
-&lt;button style="color: initial;"&gt;G&lt;/button&gt;
-&lt;button style="color: revert;"&gt;G&lt;/button&gt;
-&lt;button style="color: unset;"&gt;G&lt;/button&gt;
+&lt;button style="color: hsl(30 100% 50% / 60%);"&gt;HSL&lt;/button&gt;
+&lt;button style="color: hsla(30 100% 50% / 60%);"&gt;HSL&lt;/button&gt;
 </code></pre>
                     </div>
                 </p>
