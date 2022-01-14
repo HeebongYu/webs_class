@@ -44,66 +44,172 @@
             <h2><strong>자료형(Data type)</strong></h2>
             <div class="line">
                 <ul>
-                    <li>자료형(Data type)으로는 숫자, 문자열, 논리값, 특수값, 심벌, 객체, 배열, 함수 등이 있습니다.</li>
+                    <li>변수를 저장할 수 있는 자료형으로는 숫자형, 문자형, 논리형, 빈 데이터가 있습니다.</li>
                 </ul>
             </div>
 
             <h3>숫자형(Number)</h3>
             <div class="line">
-                let 변수 = 숫자;<br>
-                let 변수 = Number("문자형 숫자");
+                <ul>
+                    <li>숫자형 데이터는 단어 그대로 숫자를 의미합니다.</li>
+                </ul>
             </div>
+            <div class="line mt10">
+                let 변수 = 숫자; 또는 Number("문자형 숫자");
+            </div>
+
+            <h4 class="mt10">숫자형 실습해보기</h4>
             <div class="code">
 <pre><code>{
-    let x = 100;                    //100
-    let y = Number("200");    //200
+    let a = 100;
+    let b = Number("500");
+
+    document.write(a, "&lt;br&gt;");
+    document.write(b);
 }</code></pre>
+            </div>
+            <div class="line">
+                <script>
+                    //숫자형 예제
+                    {
+                        let a = 100;
+                        let b = Number("500");
+
+                        document.write(a, "<br>");
+                        document.write(b);
+                    }
+                </script>
             </div>
 
             <h3>문자형(String)</h3>
             <div class="line">
+                <ul>
+                    <li>숫자형 데이터는 문자나 숫자를 " " 또는 ' '로 감싸고 있습니다.</li>
+                </ul>
+            </div>
+            <div class="line mt10">
                 let 변수 = "사용할 문자나 숫자";
             </div>
+
+            <h4 class="mt10">문자형 실습해보기</h4>
             <div class="code">
 <pre><code>{
-    let x = "javascript";    //javascript
-    let y = "100";            //100
+    let c = "javascript";
+    let d = "100";
+
+    document.write(c, "&lt;br&gt;");
+    document.write(d);
 }</code></pre>
+            </div>
+            <div class="line">
+                <script>
+                    //문자형 예제
+                    {
+                        let c = "javascript";
+                        let d = "100";
+
+                        document.write(c, "<br>");
+                        document.write(d);
+                    }
+                </script>
             </div>
 
             <h3>논리형(Boolean)</h3>
             <div class="line">
-                let 변수 = true or flalse;<br>
-                let 변수 = Boollean(데이터);
+                <ul>
+                    <li>논리형 데이터는 true 또는 false가 있습니다.</li>
+                </ul>
             </div>
+            <div class="line mt10">
+                let 변수 = true or false; 또는 Boollean(데이터);
+            </div>
+
+            <h4 class="mt10">논리형 실습해보기</h4>
             <div class="code">
 <pre><code>{
-let a = true;                            //true
-let b = flalse;                          //flalse
-let c = 10 > 5;                         //true
-let d = 10 &lt; 5;                         //flalse
+    let e = true;
+    let f = false;
+    let g = 10 > 5;
 
-let e = Boollean("javascript");   //true
-let f = Boollean(0);                  //flalse
-let g = Boollean(null);              //flalse
-let h = Boollean(undefined);    //flalse
-let i = Boollean(" ");                  //flalse
+    document.write(e, "&lt;br&gt;");
+    document.write(f, "&lt;br&gt;");
+    document.write(g);
 }</code></pre>
             </div>
+            <div class="line">
+                <script>
+                    //논리형 예제
+                    {
+                        var e = true;
+                        var f = false;
+                        var g = 10 > 5;
 
-            <h3>특수값 : Null</h3>
+                        document.write(e, "<br>");
+                        document.write(f, "<br>");
+                        document.write(g);
+                    }
+                </script>
+            </div>
+
+            <h3>Null</h3>
             <div class="line">
                 <ul>
                     <li>null은 변수에 지정된 값이 null인 경우를 말합니다.</li>
-                    <li>null은 변수 저장된 값을 비울떄 사용합니다.</li>
+                    <li>null은 변수에 저장된 값을 비울고자 할 떄 사용하는 값입니다.</li>
                 </ul>                   
             </div>
+            <div class="line mt10">
+                let 변수 = null;
+            </div>
 
-            <h3>특수값 : Undefined</h3>
+            <h4 class="mt10">Null 실습해보기</h4>
+            <div class="code">
+<pre><code>{
+    let h = "hello";
+    h = null
+
+    document.write(h);
+}</code></pre>
+            </div>
+            <div class="line">
+                <script>
+                    //Null 예제
+                    {
+                        let h = "hello";
+                        h = null
+
+                        document.write(h);
+                    }
+                </script>
+            </div>
+
+            <h3>Undefined</h3>
             <div class="line">
                 <ul>
                     <li>Undefined은 변수에 값이 등록되기 전의 기본값을 말합니다.</li>
                 </ul>
+            </div>
+            <div class="line mt10">
+                let 변수;
+            </div>
+
+            <h4 class="mt10">Undefined 실습해보기</h4>
+            <div class="code">
+<pre><code>{
+    let i;
+
+    document.write(i);
+}</code></pre>
+            </div>
+            <div class="line">
+                <script>
+                    //Undefined 예제
+                    {
+                        let i;
+
+                        document.write(i);
+                    }
+                </script>
             </div>
 
             <h3>특수값 : Typeof</h3>
@@ -112,6 +218,41 @@ let i = Boollean(" ");                  //flalse
                     <li>typeof은 지정된 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용합니다.</li>
                 </ul>
             </div>
+            <div class="line mt10">
+                typeof은 변수 또는 데이터;
+            </div>
+
+            <h4 class="mt10">typeof 실습해보기</h4>
+            <div class="code">
+<pre><code>{
+    let j = 100;
+    let k = "자바스크립트";
+
+    document.write(typeof j, "&lt;br&gt;");
+    document.write(typeof k);
+}</code></pre>
+            </div>
+            <div class="line">
+                <script>
+                    //typeof 예제
+                    {
+                        let j = 100;
+                        let k = "자바스크립트";
+
+                        document.write(typeof j, "<br>");
+                        document.write(typeof k);
+                    }
+                </script>
+            </div>
+            
+
+
+
+
+
+
+            
+
 
             <h3>심볼(Symbol)</h3>
             <div class="line">
@@ -143,9 +284,7 @@ let i = Boollean(" ");                  //flalse
             <h3>함수(Function)</h3>
             <div class="line">
                 <ul>
-                    <li>변수에는 코드를 저장할수 없고 데이터만 저장할 수 있습니다.</li>
-                    <li>함수를 이용하면 코드를 저장할 수 있습니다.</li>
-                    <li>자세한 내용은 <a href="reference08.html"><strong>함수</strong></a>에서 다루겠습니다.</li>
+                    <a href="reference08.html"><strong><em>함수 자세히</em></strong></a>
                 </ul>
             </div>
         </div>

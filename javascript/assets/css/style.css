@@ -297,10 +297,8 @@ a {
 
 }
 
-
 .doc .table table {
     width: 100%;
-    min-width: 800px;
     border: 1px solid#CDCDCD;
     border-collapse: collapse;
     table-layout: fixed;
