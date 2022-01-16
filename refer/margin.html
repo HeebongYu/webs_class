@@ -14,6 +14,9 @@
      <!-- CSS -->
      <link rel="stylesheet" href="assets/css/style.css">
      <link rel="stylesheet" href="assets/css/prism.css">
+
+     <!-- script -->
+    <script src="assets/js/prism.js"></script>
 </head>
 <body>
     <header id="header">
@@ -27,6 +30,7 @@
         <div class="menu">
             <ul>
                 <li><a href="css.html">속성</a></li>
+                <li><a href="background.html">background</a></li>
                 <li class="active"><a href="margin.html">margin</a></li>
                 <li><a href="padding.html">padding</a></li>
             </ul>
@@ -35,112 +39,136 @@
 
         <div class="refer">
             <div class="doc">
-                <h3>margin</h3>
-                <p class="line">margin 속성은 요소의 바깥쪽 여백을 설정합니다.</p>
+                <h3><strong>margin</strong></h3>
+                <div class="line">margin 속성은 요소의 바깥쪽 여백을 설정합니다.</div>
 
                 <h3>문법</h3>
-                <p>margin :
-                </p>
-                <h3>정의</h3>
-                <ul>
-                    <li>margin-top 속성은 위쪽 바깥쪽 여백을 설정합니다.</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-
-            <br>
-            <br>
-            <div class="doc">
-                <h3><strong>margin</strong></h3>
                 <div class="line">
-                    margin은 요소의 주위에 빈 공간을 추가합니다.
+                    margin:<br>
+                    auto;, 0%;, 0ch;, 0cm;, 0em;, 0ex;, 0fr;, 0in;, 0mm;, 0pc;, 0pt;, 0px;, 0rem;, 0vh;, 0vmax;, 0vmin;, 0vw;
                 </div>
-            </div>
-            <div class="table mt20">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>속성</th>
-                            <th>설명</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th rowspan="6">margin</th>
-                            <td>
-                                <li>margin: 10px;</li>
-                                <li class="mt5">위/왼쪽/아래/오른쪽 10px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <li>margin: 10px 11px;</li>
-                                <li class="mt5">위/아래/ 10px, 왼쪽/오른쪽 11px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <li>margin: 10px 11px 12px;</li>
-                                <li class="mt5">위 10px, 왼쪽/오른쪽 11px, 아래 12px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <li>margin: 10px 11px 12px 13px;</li>
-                                <li class="mt5">위 10px, 왼쪽 11px, 아래 12px, 오른쪽 13px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <li>margin: auto;</li>
-                                <li class="mt5">기본값</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <li>margin: 0 auto;</li>
-                                <li class="mt5">가운데</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>margin-top</th>
-                            <td>
-                                <li>margin-top: 10px;</li>
-                                <li class="mt5">위 10px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>margin-left</th>
-                            <td>
-                                <li>margin-left: 10px;</li>
-                                <li class="mt5">왼쪽 10px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>margin-bottom</th>
-                            <td>
-                                <li>margin-bottom: 10px;</li>
-                                <li class="mt5">아래 10px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>margin-right</th>
-                            <td>
-                                <li>margin-right: 10px;</li>
-                                <li class="mt5">오른쪽 10px</li>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="line mt10">
+                    margin-<br>
+                    top:, left:, bottom:, right:, block-end:, block-start:, inline-end:, inline-start:, block:, inline:, trim:
+                </div>
+                <div class="table mt10">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="6">margin</th>
+                                <td>
+                                    <li>margin: 10px;</li>
+                                    <li class="mt5">위/왼쪽/아래/오른쪽 10px</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li>margin: 10px 11px;</li>
+                                    <li class="mt5">위/아래/ 10px, 왼쪽/오른쪽 11px</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li>margin: 10px 11px 12px;</li>
+                                    <li class="mt5">위 10px, 왼쪽/오른쪽 11px, 아래 12px</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li>margin: 10px 11px 12px 13px;</li>
+                                    <li class="mt5">위 10px, 왼쪽 11px, 아래 12px, 오른쪽 13px</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li>margin: auto;</li>
+                                    <li class="mt5">기본값</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li>margin: 0 auto;</li>
+                                    <li class="mt5">가운데</li>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>정의</h3>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>margin</th>
+                                <td>margin 속성은 바깥쪽 여백을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>margin-top</th>
+                                <td>margin-top 속성은 바깥쪽 여백의 아래쪽 속성을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>margin-left</th>
+                                <td>margin-left 속성은 바깥쪽 여백의 왼쪽 속성을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>margin-bottom</th>
+                                <td>margin-bottom 속성은 바깥쪽 여백의 아래쪽 속성을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>margin-right</th>
+                                <td>margin-right 속성은 바깥쪽 여백의 오른쪽 속성을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>margin-block-end</th>
+                                <td>margin-block-end 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>margin-block-start</th>
+                                <td>margin-block-start 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>margin-inline-end</th>
+                                <td>margin-inline-end 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>margin-inline-end</th>
+                                <td>margin-inline-end 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>margin-inline-start</th>
+                                <td>margin-inline-start 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>margin-block</th>
+                                <td>margin-block 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>margin-inline</th>
+                                <td>margin-inline 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>margin-trim</th>
+                                <td>margin-trim 속성은</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <!-- refer -->
     </main>
-
-    <!-- script -->
-    <script src="assets/js/prism.js"></script>
 </body>
 </html>

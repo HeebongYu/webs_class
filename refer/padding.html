@@ -14,6 +14,9 @@
      <!-- CSS -->
      <link rel="stylesheet" href="assets/css/style.css">
      <link rel="stylesheet" href="assets/css/prism.css">
+
+     <!-- script -->
+    <script src="assets/js/prism.js"></script>
 </head>
 <body>
     <header id="header">
@@ -27,6 +30,7 @@
         <div class="menu">
             <ul>
                 <li><a href="css.html">속성</a></li>
+                <li><a href="background.html">background</a></li>
                 <li><a href="margin.html">margin</a></li>
                 <li class="active"><a href="padding.html">padding</a></li>
             </ul>
@@ -36,80 +40,119 @@
         <div class="refer">
             <div class="doc">
                 <h3><strong>padding</strong></h3>
+                <div class="line">padding 속성은 요소의 안쪽 여백을 설정합니다.</div>
+
+                <h3>문법</h3>
                 <div class="line">
-                    padding은 요소의 내부에 빈 공간을 만듭니다.
+                    padding:<br>
+                    0%;, 0ch;, 0cm;, 0em;, 0ex;, 0fr;, 0in;, 0mm;, 0pc;, 0pt;, 0px;, 0rem;, 0vh;, 0vmax;, 0vmin;, 0vw;
                 </div>
-            </div>
-            <div class="table mt20">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>속성</th>
-                            <th>설명</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th rowspan="4">padding</th>
-                            <td>
-                                <li>padding: 10px;</li>
-                                <li class="mt5">위/왼쪽/아래/오른쪽 10px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <li>padding: 10px 11px;</li>
-                                <li class="mt5">위/아래/ 10px, 왼쪽/오른쪽 11px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <li>padding: 10px 11px 12px;</li>
-                                <li class="mt5">위 10px, 왼쪽/오른쪽 11px, 아래 12px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <li>padding: 10px 11px 12px 13px;</li>
-                                <li class="mt5">위 10px, 왼쪽 11px, 아래 12px, 오른쪽 13px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>padding-top</th>
-                            <td>
-                                <li>padding-top: 10px;</li>
-                                <li class="mt5">위 10px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>padding-left</th>
-                            <td>
-                                <li>padding-left: 10px;</li>
-                                <li class="mt5">왼쪽 10px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>padding-bottom</th>
-                            <td>
-                                <li>padding-bottom: 10px;</li>
-                                <li class="mt5">아래 10px</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>padding-right</th>
-                            <td>
-                                <li>padding-right: 10px;</li>
-                                <li class="mt5">오른쪽 10px</li>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="line mt10">
+                    padding-<br>
+                    top:, left:, bottom:, right:, block-end:, block-start:, inline-end:, inline-start:, block:, inline:
+                </div>
+                <div class="table mt10">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="4">padding</th>
+                                <td>
+                                    <li>padding: 10px;</li>
+                                    <li class="mt5">위/왼쪽/아래/오른쪽 10px</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li>padding: 10px 11px;</li>
+                                    <li class="mt5">위/아래/ 10px, 왼쪽/오른쪽 11px</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li>padding: 10px 11px 12px;</li>
+                                    <li class="mt5">위 10px, 왼쪽/오른쪽 11px, 아래 12px</li>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li>padding: 10px 11px 12px 13px;</li>
+                                    <li class="mt5">위 10px, 왼쪽 11px, 아래 12px, 오른쪽 13px</li>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>정의</h3>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>padding</th>
+                                <td>padding 속성은 안쪽 여백을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>padding-top</th>
+                                <td>padding-top 속성은 안쪽 여백의 아래쪽 속성을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>padding-left</th>
+                                <td>padding-left 속성은 안쪽 여백의 왼쪽 속성을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>padding-bottom</th>
+                                <td>padding-bottom 속성은 안쪽 여백의 아래쪽 속성을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>padding-right</th>
+                                <td>padding-right 속성은 안쪽 여백의 오른쪽 속성을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>padding-block-end</th>
+                                <td>padding-block-end 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>padding-block-start</th>
+                                <td>padding-block-start 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>padding-inline-end</th>
+                                <td>padding-inline-end 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>padding-inline-end</th>
+                                <td>padding-inline-end 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>padding-inline-start</th>
+                                <td>padding-inline-start 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>padding-block</th>
+                                <td>padding-block 속성은</td>
+                            </tr>
+                            <tr>
+                                <th>padding-inline</th>
+                                <td>padding-inline 속성은</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <!-- refer -->
     </main>
-
-    <!-- script -->
-    <script src="assets/js/prism.js"></script>
 </body>
 </html>
