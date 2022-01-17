@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Refer</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/html.png">
+    <link rel="icon" href="../assets/face/html.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>유희봉</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="html.html">HTML</a> <em>웹표준/웹접근성/웹호환성</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="html.html">속성</a></li>
+                <li><a href="htmlRefer01.html">기초 문법</a></li>
+                <li><a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a></li>
+                <li class="active"><a href="htmlRefer03.html">시멘틱 태그</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>시멘틱 태그(Semantics)</h3>
+                <p>
+                    시맨틱 태그에 의해 컴퓨터가 HTML 요소의 의미를 보다 명확히 해석하고 그 데이터를 활용할 수 있는 시맨틱 웹이 실현될 수 있다.
+                    시맨틱 웹이란 웹이 존재하는 수많은 웹페이지들에 메타데이터를 부여하여 기존의 잡다한 데이터 집합이었던 웹페이지를 의미와 관련성을 가지는 거대한 데이터 베이스로 구축하고자 하는 발상이다.
+                </p>
+                
+                <h3>종류</h3>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>종류</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>&lt;header&gt;</th>
+                                <td>
+                                    &lt;header&gt; 요소는 소개 및 탐색에 도움을 주는 콘텐츠를 나타냅니다.<br>
+                                    제목, 로고, 검색 폼, 작성자 이름 등의 요소도 포함할 수 있습니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;nav&gt;</th>
+                                <td>
+                                    &lt;nav&gt; 요소는 문서의 부분 중 현재 페이지 내, 또는 다른 페이지로의 링크를 보여주는 구획을 나타냅니다.<br>
+                                    자주 쓰이는 예제는 메뉴, 목차, 색인입니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;main&gt;</th>
+                                <td>
+                                    &lt;main&gt; 요소는 문서 &lt;body&gt;의 주요 콘텐츠를 나타냅니다.<br>
+                                    주요 콘텐츠 영역은 문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠로 이루어집니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;section&gt;</th>
+                                <td>
+                                    &lt;section&gt; 요소는 HTML 문서의 독립적인 구획을 나타내며, 더 적합한 의미를 가진 요소가 없을 때 사용합니다.<br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;aside&gt;</th>
+                                <td>
+                                    &lt;aside&gt; 요소는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다.<br>
+                                    주로 사이드바 혹은 콜아웃 박스로 표현합니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;article&gt;</th>
+                                <td>
+                                    &lt;article&gt; 요소는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로 구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다.                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;footer&gt;</th>
+                                <td>
+                                    &lt;footer&gt; 요소는 가장 가까운 구획 콘텐츠나 구획 루트의 푸터를 나타냅니다.<br>
+                                    일반적으로 구획의 작성자, 저작권 정보, 관련 문서 등의 내용을 담습니다.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>HTML5에서 없어진 태그</h3>
+                <div class="line">
+                    <ul>
+                        <li>&lt;font&gt;: CSS가 있기 때문에 폐기(CSS의 color, font-family, font-size 대체)</li>
+                        <li>&lt;center&gt;: CSS가 있기 때문에 폐기(CSS의 text-align: center;, margin:0 auto; 대체)</li>
+                        <li>&lt;basefont&gt;: CSS가 있기 때문에 폐기(CSS의 font-family, font-size 대체)</li>
+                        <li>&lt;applet&gt;: Java Applet을 넣을 때 쓰는 태그(HTML의 &lt;object&gt;,&lt;embed&gt; 대체)</li>
+                        <li>&lt;strike&gt;: HTML의 &lt;del&gt;,&lt;s&gt; 대체</li>
+                        <li>&lt;frame&gt;, &lt;frameset&gt;, &lt;noframes&gt;: HTML의 &lt;iframe&gt;으로 비슷하게 가능</li>
+                        <li>&lt;acronym&gt;: HTML의 &lt;abbr&gt; 대체</li>
+                        <li>&lt;dir&gt;: HTML의 &lt;ul&gt; 대체</li>
+                        <li>&lt;nobr&gt;: CSS가 있기 때문에 폐기(CSS의 white-space: nowrap; 대체)</li>
+                        <li>&lt;marquee&gt;: 익스플로러에서 글자가 흐르게 하는 태그(JavaScript의 Animation 대체)</li>
+                        <li>&lt;blink&gt;: 넷스케이프에서 글자를 깜빡이게 하는 태그(JavaScript의 Animation 대체)</li>
+                        <li>&lt;bgsound&gt;: 익스플로러에서 배경음악을 재생시키는 태그(HTML의 &lt;audio&gt; 대체)</li>
+                    </ul>
+                </div>
+
+                <h3>HTML5에서 의미가 변경된 태그</h3>
+                <div class="line">
+                    <ul>
+                        <li>
+                            &lt;a&gt;: href="#" 또는 "JavaScript:;"로 지정해야 널 링크로 사용할 수 있음<br>
+                            -> href 속성 없이 사용해도 널 링크로 사용할 수 있음
+                        </li>
+                        <li>
+                            &lt;address&gt;: 이름이나 이메일 주소, 전화번호 등 제작자에 대한 정보를 표시<br>
+                            -> 실제 우편물 주소를 표시
+                        </li>
+                        <li>
+                            &lt;b&gt;: 텍스트를 진하게 표시
+                            -> 특별하게 중요하지는 않지만 진하게 표시하려고 할 떄 사용
+                        </li>
+                        <li>
+                            &lt;hr&gt;: 가로줄을 표시할 때 사용
+                            -> 단락 단위로 주제를 바꾸려고 할 떄 사용
+                        </li>
+                        <li>
+                            &lt;i&gt;: 텍스트를 기울어지게 표시하려고
+                            -> 중요할 정보를 기울어지게 표시하려고 할 떄 사용
+                        </li>
+                        <li>
+                            &lt;menu&gt;: 목록과 메뉴를 정의할 떄 사용
+                            -> 실제 문서 메뉴 정보를 제공하는데 사용
+                        </li>
+                        <li>
+                            &lt;small&gt;: 작은 글자로 표시하려고
+                            -> 세부 주석이나 법적 인쇄문서에서 작은 인쇄 정보를 표시할 떄 사용
+                        </li>
+                        <li>
+                            &lt;strong&gt;: 글자를 강조할 떄 사용
+                            -> 중요할 정보를 진하게 표시하려고 할 떄 사용
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>

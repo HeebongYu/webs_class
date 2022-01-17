@@ -129,7 +129,9 @@ body {
 .refer .table {
     overflow-x: auto;
 }
-
+.refer .table .center {
+    text-align: center;
+}
 .refer .table table {
     width: 100%;
     border: 1px solid #aaa;
