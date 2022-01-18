@@ -187,14 +187,41 @@
                     <div class="view6"><img src="assets/img/imge20.jpg" alt="이미지20"></div>
                 </div>
                 <div class="btn">
+                    <a href="#c" class="btn0">리셋</a>
                     <a href="#c" class="btn1">두번째 이미지를 클릭하면 두번째 이미지를 선택 또는 해체</a>
                     <a href="#c" class="btn2">첫번째 이미지를 클릭하면 첫번째 이미지를 선택 또는 해체</a>
                     <a href="#c" class="btn3">버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하세요!</a>
-                    <a href="#c" class="btn4">버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하세요!</a>
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    
+    //리셋
+    document.querySelector("#sample4 .btn0").addEventListener("click", function(){
+        document.querySelector("#sample4 .view1").classList.remove("selected");
+        document.querySelector("#sample4 .view1").classList.remove("selected2");
+        document.querySelector("#sample4 .view2").classList.remove("selected");
+        document.querySelector("#sample4 .view2").classList.remove("selected2");
+    });
+
+    //두번째 이미지를 클릭하면 두번째 이미지를 선택 또는 해체
+    document.querySelector("#sample4 .view2").addEventListener("click", function(){
+        document.querySelector("#sample4 .view2").classList.toggle("selected");
+        document.querySelector("#sample4 .view2").classList.remove("selected2");
+    });
+
+    //첫번째 이미지를 클릭하면 첫번째 이미지를 선택 또는 해체
+    document.querySelector("#sample4 .view1").addEventListener("click", function(){
+        document.querySelector("#sample4 .view1").classList.toggle("selected");
+        document.querySelector("#sample4 .view1").classList.remove("selected2");
+    });
+
+    //버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하세요!
+    document.querySelector("#sample4 .btn3").addEventListener("click", function(){
+        document.querySelectorAll("#sample4 .view > div").forEach(function(el){
+            if(el.classList.contains("selected")){
+                el.classList.add("selected2");
+            }
+        });
+    });
 }</code></pre>
                 </div>
             </div>
@@ -269,41 +296,36 @@
 
         //숙제
         {
+            //리셋
+            document.querySelector("#sample4 .btn0").addEventListener("click", function(){
+                document.querySelector("#sample4 .view1").classList.remove("selected");
+                document.querySelector("#sample4 .view1").classList.remove("selected2");
+                document.querySelector("#sample4 .view2").classList.remove("selected");
+                document.querySelector("#sample4 .view2").classList.remove("selected2");
+            });
+
             //두번째 이미지를 클릭하면 두번째 이미지를 선택 또는 해체
             document.querySelector("#sample4 .view2").addEventListener("click", function(){
                 document.querySelector("#sample4 .view2").classList.toggle("selected");
+                document.querySelector("#sample4 .view2").classList.remove("selected2");
             });
 
             //첫번째 이미지를 클릭하면 첫번째 이미지를 선택 또는 해체
             document.querySelector("#sample4 .view1").addEventListener("click", function(){
                 document.querySelector("#sample4 .view1").classList.toggle("selected");
+                document.querySelector("#sample4 .view1").classList.remove("selected2");
             });
 
-            //버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.
-            document.querySelector("#sample4 .btn3").addEventListener("click", function(){
-                document.querySelectorAll("#sample4 .view > div").forEach(function(el){
-                    if(el.classList.contains("selected")){
-                        el.classList.remove("selected");
-                    };
-                });
-            });
             //버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하세요!
             document.querySelector("#sample4 .btn3").addEventListener("click", function(){
                 document.querySelectorAll("#sample4 .view > div").forEach(function(el){
                     if(el.classList.contains("selected")){
                         el.classList.add("selected2");
-                    };
+                    }
                 });
             });
-
-
-
         }
         
-        // el.classList.add("selected2");
-
-                
-
     </script>
 </body>
 

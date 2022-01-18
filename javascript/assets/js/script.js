@@ -1,4 +1,15 @@
-//결과보기 버튼을 클릭하면 경고창을 띄워주세요~~
-document.querySelector(".result").addEventListener("click", function(){
-    alert("ddd")
+//zz
+document.querySelector(".result1t h4").addEventListener("click", function(el){
+    el
+});
+
+
+
+
+
+document.querySelector(".result1t h4").addEventListener("click", function(){
+    document.querySelector(".result1").style.display = "block";
+});
+document.querySelector(".result1t h4").addEventListener("click", function(){
+    document.querySelector(".result1").style.display = "block";
 });
