@@ -15,9 +15,6 @@
     <!-- style -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
-
-    <!-- script -->
-    <script src="assets/js/prism.js"></script>
 </head>
 
 <body>
@@ -45,7 +42,10 @@
                 <li><a href="practice01.html">데이터 연습하기</a></li>
             </ul>
         </nav>
+        <!-- //nav -->
+
     </header>
+    <!-- header -->
 
     <main id="main">
         <div class="list">
@@ -183,6 +183,9 @@
         document.querySelector("#sample3 .view2").classList.add("selected");
         document.querySelector("#sample3 .view4").classList.add("selected");
         document.querySelector("#sample3 .view6").classList.add("selected");
+        document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+            el.classList.remove("blue")
+        })
     });
 
     //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.
@@ -263,6 +266,7 @@
         <!-- //script -->
     </main>
     <!-- script -->
+    <script src="assets/js/prism.js"></script>
     <script>
         //sample1
         {
@@ -327,6 +331,9 @@
                 document.querySelector("#sample3 .view2").classList.add("selected");
                 document.querySelector("#sample3 .view4").classList.add("selected");
                 document.querySelector("#sample3 .view6").classList.add("selected");
+                document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+                    el.classList.remove("blue")
+                })
             });
 
             //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.

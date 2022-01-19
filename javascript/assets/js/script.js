@@ -64,14 +64,3 @@ document.querySelectorAll(".result").forEach(function(el){
     });
 });
 
-// //결과보기
-// document.querySelectorAll(".result h4").forEach(function(a){
-//     a.addEventListener("click", function(){
-//         document.querySelectorAll(".result > div").forEach(function(b){
-//             if(true){
-//                 b.style.display = "block";
-//             }
-//         })
-//     })
-// })
-
