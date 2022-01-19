@@ -9,16 +9,16 @@
 //     })
 // })
     
-//결과보기
-document.querySelectorAll(".result h4").forEach(function(a){
-    a.addEventListener("click", function(){
-        document.querySelectorAll(".result > div").forEach(function(b){
-            if(true){
-                b.style.display = "block";
-            }
-        })
-    })
-})
+// //결과보기
+// document.querySelectorAll(".result h4").forEach(function(a){
+//     a.addEventListener("click", function(){
+//         document.querySelectorAll(".result > div").forEach(function(b){
+//             if(true){
+//                 b.style.display = "block";
+//             }
+//         })
+//     })
+// })
 
 
 //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.
@@ -49,3 +49,29 @@ document.querySelectorAll(".result h4").forEach(function(a){
 //         }
 //     });
 // });
+
+
+
+
+
+
+
+
+//결과보기
+document.querySelectorAll(".result").forEach(function(el){
+    el.addEventListener("click", function(){
+        el.classList.toggle("active");
+    });
+});
+
+// //결과보기
+// document.querySelectorAll(".result h4").forEach(function(a){
+//     a.addEventListener("click", function(){
+//         document.querySelectorAll(".result > div").forEach(function(b){
+//             if(true){
+//                 b.style.display = "block";
+//             }
+//         })
+//     })
+// })
+
