@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice01-1</title>
+    <title>practice01-2</title>
 
     <!-- style -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -14,7 +14,7 @@
 
 <body>
 
-    <div class="back"><a href="practice01.html">Back</a></div>
+    <div class="back"><a href="practice.html">Back</a></div>
 
     <main id="main">
         <div class="test">
@@ -22,7 +22,6 @@
 
             <!-- 01 -->
             <h3>2.1 for문을 이용해서 2단부터 9단까지 출력하시오!</h3>
-
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     for(let i=2; i&lt;=9; i++){
@@ -38,7 +37,6 @@
            
             <!-- 02 -->
             <h3>2.2 while문을 이용해서 2단부터 9단까지 출력하시오!</h3>
-
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     let i = 2;
@@ -55,6 +53,38 @@
 }</code></pre>
             </div>
             <!-- //02 -->
+
+            <!-- 03 -->
+            <h3>2.3 사용자가 원하는 단을 받아 출력하시오!</h3>
+            <p>조건 ㅣ 사용자가 원하는 단은 prompt()를 사용합니다. <a href="#" class="pBtn btn03">클릭</a></p>
+
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let num, result;
+
+    document.querySelector(".btn03").addEventListener("click", () => {
+        num = prompt("출력할 구구단 숫자를 입력해주세요", "2");
+        // console.log(num);
+
+        for(let i=1; i&lt;=9; i++){
+            result = num + " * " + i + " = " + (num * i) + "&lt;br&gt;";
+            // console.log(result);
+            document.querySelector(".result03 > div").innerHTML += result;
+        };
+    })
+
+    document.querySelectorAll(".result").forEach(function(el){
+        el.addEventListener("click", function(){
+            el.classList.toggle("active");
+        });
+    });
+}</code></pre>
+            </div>
+            <div class="result result03">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+            <!-- //03 -->
 
             
         </div>
@@ -87,6 +117,28 @@
                 };
                 i++
             };
+        }
+
+        //2.3 사용자가 원하는 단을 받아 출력하시오!
+        {
+            let num, result;
+
+            document.querySelector(".btn03").addEventListener("click", () => {
+                num = prompt("출력할 구구단 숫자를 입력해주세요", "2");
+                // console.log(num);
+
+                for(let i=1; i<=9; i++){
+                    result = num + " * " + i + " = " + (num * i) + "<br>";
+                    // console.log(result);
+                    document.querySelector(".result03 > div").innerHTML += result;
+                };
+            })
+
+            document.querySelectorAll(".result").forEach(function(el){
+                el.addEventListener("click", function(){
+                    el.classList.toggle("active");
+                });
+            });
         }
     </script>
 </body>

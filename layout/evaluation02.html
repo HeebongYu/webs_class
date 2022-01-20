@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평가02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #66db72;
+        }
+
+        #all {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        #main {
+            height: 780px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        #main .aside1 {
+            width: 300px;
+            height: 780px;
+            background-color: rgb(133, 133, 63);
+        }
+
+        #main .section {
+            width: 600px;
+        }
+
+        .section .article1 {
+            width: 600px;
+            height: 390px;
+            background-color: rgb(240, 240, 173);
+        }
+
+        .section .article2 {
+            width: 600px;
+            height: 390px;
+            background-color: rgb(36, 11, 85);
+        }
+
+        #main .aside2 {
+            width: 300px;
+            height: 780px;
+            background-color: rgb(12, 53, 30);
+        }
+
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside class="aside1"></aside>
+            <section class="section">
+                <article class="article1"></article>
+                <article class="article2"></article>
+            </section>
+            <aside class="aside2"></aside>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>
