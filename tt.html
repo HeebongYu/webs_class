@@ -1,0 +1,156 @@
+<h3>var</h3>
+<ul>
+    <li>데이터 저장 가능</li>
+    <li>중복선언 가능</li>
+    <li>재활당(변경) 가능</li>
+</ul>
+<h4>중복선언 가능</h4>
+<p>코드</p>
+<pre class="line-numbers"><code class="language-js">{
+    var a = "var 1";
+    var a = "var 2";
+    
+    document.write(a);
+}</code></pre>
+<p>결과</p>
+<script>
+    {
+        var a = "var 1";
+        var a = "var 2";
+        
+        document.write(a);
+    }
+</script>
+<h4>재활당(변경) 가능</h4>
+<p>코드</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(var b=1; b&lt;5; b++){
+        document.write(b)
+    }
+}</code></pre>
+<p>결과</p>
+<script>
+    {
+        for(var b=1; b<5; b++){
+            document.write(b)
+        }
+    }
+</script>
+
+<h3>let</h3>
+<ul>
+    <li>데이터 저장 가능</li>
+    <li>중복선언 불가</li>
+    <li>재활당(변경) 가능</li>
+</ul>
+<h4>중복선언 불가</h4>
+<p>코드</p>
+<pre class="line-numbers"><code class="language-js">{
+    let c = "let 1";
+    let c = "let 2";
+
+    document.write(c);
+}</code></pre>
+<p>결과</p>
+<script>
+    {
+        let c = "let 1";
+        let c = "let 2";
+
+        document.write(c);
+    }
+</script>
+<h4>재활당(변경) 가능</h4>
+<p>코드</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(let c=1; c&lt;5; c++){
+        document.write(c)
+    }
+}</code></pre>
+<p>결과</p>
+<script>
+    {
+        for(let c=1; c<5; c++){
+            document.write(c)
+        }
+    }
+</script>
+
+<h3>const</h3>
+<ul>
+    <li>데이터 저장 가능</li>
+    <li>중복선언 불가</li>
+    <li>재활당(변경) 불가</li>
+</ul>
+<h4>중복선언 불가</h4>
+<p>코드</p>
+<pre class="line-numbers"><code class="language-js">{
+    const c = "const 1";
+    const c = "const 2";
+
+    document.write(c);
+}</code></pre>
+<p>결과</p>
+<script>
+    {
+        const c = "const 1";
+        const c = "const 2";
+
+        document.write(c);
+    }
+</script>
+<h4>재활당(변경) 불가</h4>
+<p>코드</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(const c=1; c&lt;5; c++){
+        document.write(c)
+    }
+}</code></pre>
+<p>결과</p>
+<script>
+    {
+        for(const c=1; c<5; c++){
+            document.write(c)
+        }
+    }
+</script>
+
+<h3>변수명만 쓴 경우</h3>
+<ul>
+    <li>데이터 저장 가능</li>
+    <li>중복선언 가능</li>
+    <li>재활당(변경) 가능</li>
+</ul>
+<h4>중복선언 가능</h4>
+<p>코드</p>
+<pre class="line-numbers"><code class="language-js">{
+    d = "변수명만 쓴 경우 1";
+    d = "변수명만 쓴 경우 2";
+
+    document.write(d);
+}</code></pre>
+<p>결과</p>
+<script>
+    {
+        d = "변수명만 쓴 경우 1";
+        d = "변수명만 쓴 경우 2";
+
+        document.write(d);
+    }
+</script>
+<h4>재활당(변경) 가능</h4>
+<p>코드</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(d=1; d&lt;5; d++){
+        document.write(d)
+    }
+}</code></pre>
+<p>결과</p>
+<script>
+    {
+        for(d=1; d<5; d++){
+            document.write(d)
+        }
+    }
+</script>
+<p>변수 저장 키워드를 적지 않으면 var로 적용됩니다.</p>
