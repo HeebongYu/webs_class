@@ -12,3 +12,5 @@ https://heebongyu.github.io/webs_class/html/index.html
 ## CSS 레버런스
 https://heebongyu.github.io/webs_class/css/index.html
 
+## 웹표준 사이트 제작
+https://heebongyu.github.io/webs_class/site/webClass/index.html
