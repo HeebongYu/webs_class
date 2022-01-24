@@ -1,0 +1,84 @@
+/* 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* 목록 초기화 */
+ol,
+ul {
+    list-style: none;
+}
+
+/* 스타일 초기화 */
+em {
+    font-style: normal;
+}
+
+/* 클리어픽스 */
+.clearfix {
+    zoom: 1; /* ie6,7,8 */
+}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+}
+.clearfix::after {
+    clear: both;
+}
+#wrap {
+    width: 1200px; 
+    margin: 0 auto;
+}
+#header {
+    width: 1200px;
+}
+#header .banner {
+    width: 1200px;
+    height: 160px;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+#header .banner .logo {
+    float: left;
+    width: 20%;
+    padding: 28px;
+}
+#header .banner .logo a {
+    font-size: 45px;
+    color: #62db72;
+}
+#header .banner .search {
+    float: left;
+    width: 52%;
+}
+#header .banner .setting {
+    float:right;
+    width: 28%;
+    margin-right: 30px;
+    font-size: 5px;
+    text-align: right;
+}
+#header .banner .setting a {
+    padding: 15px 5px;
+}
+#header .nav {
+    width: 1200px;
+    height: 60px;
+    border-bottom: 1px solid #eee;
+}
+#header .nav ul {
+    margin: 0 60px;
+}
+#header .nav li {
+    display: inline-block;
+    padding: 20px 2px;
+}
+#header .nav li a {
+    font-weight: 1000;
+}
+#header .nav li a.green {
+    color: #62db72;
+}
+
