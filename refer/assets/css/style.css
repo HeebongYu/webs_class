@@ -135,10 +135,6 @@ body {
     overflow-x: auto;
 }
 
-.refer .title {}
-
-.refer .title ul {}
-
 .refer .title li {
     display: inline;
 }
@@ -150,28 +146,40 @@ body {
     display: inline-block;
     margin-bottom: 5px;
 }
-
 .refer .title li.active a {
     background-color: #000;
     color: #fff;
+}
+.refer .subTitle {
+    margin-top: 10px;
+}
+.refer .subTitle li {
+    display: inline-block;
+}
+.refer .subTitle li a {
+    margin-right: 10px;
+}
+.refer .subTitle li.active a {
+    border-bottom: 2px solid #000;
 }
 
 .refer .table {
     margin-top: 40px;
     overflow-x: auto;
 }
-
+.refer .table h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
 .refer .table .center {
     text-align: center;
 }
-
 .refer .table table {
     width: 100%;
     border: 1px solid #aaa;
     border-collapse: collapse;
     border-spacing: 0px
 }
-
 .refer .table table th {
     border: 1px solid #aaa;
     padding: 15px;

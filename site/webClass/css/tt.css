@@ -17,7 +17,7 @@ em {
 
 /* 클리어픽스 */
 .clearfix {
-    zoom: 1; /* ie6,7,8 */
+    zoom: 1;
 }
 .clearfix::before,
 .clearfix::after {

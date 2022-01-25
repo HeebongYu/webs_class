@@ -1,0 +1,10 @@
+/* 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* 목록 초기화 */
+.none {
+    list-style: none;
+}

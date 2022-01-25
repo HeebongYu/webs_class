@@ -2,7 +2,7 @@
 #wrap {}
 
 /* 
-    헤더01 float
+    헤더01 float을 사용한 경우
     float으로 인한 영역 깨짐 현상 발행(하이트 값을 인식 못함)
     1. 깨지는 영역에 clear: both; 설정
     2. 부모 영역한태 overflow: hidden; 설정

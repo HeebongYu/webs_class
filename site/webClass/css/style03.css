@@ -1,0 +1,17 @@
+/* 전체 레이아웃 */
+#wrap {}
+
+/* 헤더03 flex 사용한 경우 */
+
+#header {
+    border-bottom: 1px solid #eee;
+    display: grid;
+}
+#header .logo {
+}
+#header .menu {
+}
+#header .menu li {
+}
+#header .member {
+}
