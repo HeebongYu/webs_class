@@ -8,13 +8,13 @@
     <title>css Refer</title>
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../assets/face/css.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
-    <link rel="icon" href="../assets/face/css.png">
+    <link rel="shortcut icon" href="../../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/face/css.png">
+    <link rel="icon" href="../../assets/face/css.png">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/prism.css">
 </head>
 
 <body>
@@ -127,22 +127,22 @@
                             <tr>
                                 <th>하위 선택자<br>(Descendant Selector)</th>
                                 <td>div p {color: #fff;}</td>
-                                <td>div 태그의 하위 p태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                                <td>div의 하위 p를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>자식 선택자<br>(Child Selector)</th>
                                 <td>div &gt; p {color: #fff;}</td>
-                                <td>div 태그의 자식 p태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                                <td>div의 자식 p를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>형제 선택자<br>(Sibling Selector)</th>
                                 <td>div ~ p {color: #fff;}</td>
-                                <td>선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                                <td>div의 형제 중 뒤에 있는 모든 p를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>인접 형제 선택자<br>(Adjacent Sibling Selector)</th>
                                 <td>div + p {color: #fff;}</td>
-                                <td>선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                                <td>div의 형제 중 바로 뒤에 p를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -220,25 +220,25 @@
                             <tr>
                                 <th>::first-line</th>
                                 <td>p::first-line {color: #fff}</td>
-                                <td></td>
+                                <td>p의 첫줄을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>::first-letter</th>
                                 <td>p::first-letter {color: #fff}</td>
-                                <td></td>
+                                <td>p의 첫글자를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>::brfore</th>
                                 <td>p::brfore {content: '시작'}</td>
-                                <td></td>
+                                <td>p의 내용 앞에 시작을 작성한다.</td>
                             </tr><tr>
                                 <th>::after</th>
                                 <td>p::after {content: '끝'}</td>
-                                <td></td>
+                                <td>p의 내용 뒤에 끝을 작성한다.</td>
                             </tr><tr>
                                 <th>::selection</th>
                                 <td>p::selection {color: red}</td>
-                                <td></td>
+                                <td>p의 내용을 드래그하면 글씨 색을 빨간색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -262,67 +262,67 @@
                             <tr>
                                 <th>:first-child</th>
                                 <td>li:first-child {color: #fff;}</td>
-                                <td>첫번쨰 자식</td>
+                                <td>첫번쨰 자식을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:last-child</th>
                                 <td>li:last-child {color: #fff;}</td>
-                                <td>마지막 자식</td>
+                                <td>마지막 자식을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:first-of-type</th>
                                 <td>li:first-of-type {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>li의 부모의 자식 중 첫번째 li을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:last-of-type</th>
                                 <td>li:last-of-type {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>li의 부모의 자식 중 마지막 li을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:nth-child()</th>
                                 <td>li:nth-child(2) {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>앞에서 2번쨰 자식을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:nth-last-child()</th>
                                 <td>li:nth-last-child(2) {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>뒤에서 2번쨰 자식을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:nth-of-type()</th>
                                 <td>li:nth-of-type(3) {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>li의 부모의 자식 중 앞에서 3번째 li을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:nth-last-of-type()</th>
                                 <td>li:nth-last-of-type(3) {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>li의 부모의 자식 중 뒤에서 3번째 li을 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:only-child</th>
                                 <td>li:only-child {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>li가 유일한 자식이면 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:only-of-type</th>
                                 <td>li:only-of-type {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>부모가 li이고 유일한 자식인 li이면 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:not()</th>
                                 <td>li:not(:nth-child(2)) {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>앞에서 2번쨰 자식 외의 모두 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:root</th>
-                                <td>li:root {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>:root {color: #fff;}</td>
+                                <td>가장 상위 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:empty</th>
-                                <td>li:empty {color: #fff;}</td>
-                                <td> 자식</td>
+                                <td>:empty {color: #fff;}</td>
+                                <td>자식이 없는 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -346,22 +346,22 @@
                             <tr>
                                 <th>:link</th>
                                 <td>a:link {color: #fff;}</td>
-                                <td></td>
+                                <td>방문하지 않은 링크일 떄 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:visited</th>
                                 <td>a:visited {color: #fff;}</td>
-                                <td></td>
+                                <td>방문한 링크일 때 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:hover</th>
                                 <td>a:hover {color: #fff;}</td>
-                                <td></td>
+                                <td>마우스가 올라와 있을 떄 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:active</th>
                                 <td>a:active {color: #fff;}</td>
-                                <td></td>
+                                <td>클릭된 상태일 때 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -385,22 +385,22 @@
                             <tr>
                                 <th>:chocked</th>
                                 <td>input:chocked {color: #fff;}</td>
-                                <td></td>
+                                <td>체크 상태일 때 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:focus</th>
                                 <td>input:focus {color: #fff;}</td>
-                                <td></td>
+                                <td>포커스가 들어와 있을 때 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:emabled</th>
                                 <td>input:emabled {color: #fff;}</td>
-                                <td></td>
+                                <td>사용 가능한 상태일 떄 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:disabled</th>
                                 <td>input:disabled {color: #fff;}</td>
-                                <td></td>
+                                <td>사용 불가능한 상태일 떄 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -411,7 +411,7 @@
     </main>
 
     <!-- script -->
-    <script src="assets/js/prism.js"></script>
+    <script src="../assets/js/prism.js"></script>
     <script>
         document.querySelectorAll(".subTitle li").forEach((el) => {
             el.addEventListener("click", (e) => {
