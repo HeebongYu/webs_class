@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Refer</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/face/css.png">
+    <link rel="icon" href="../../assets/face/css.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/prism.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>유희봉</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS</a> <em>ir효과</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">이미지표현방법</a></li>
+                <li class="active"><a href="cssRefer07.html">ir효과</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>ir효과</h3>
+                <p>ir효과는 CSS을 통하여 대체문자 관리하는 방법입니다.</p>
+
+                <h3>ir_pm</h3>
+                <p>ir_pm는 의미있는 이미지에 대체 텍스트를 제공하는 경우을 의미합니다.</p>
+                <h4>사용방법</h4>
+                <div class="code">
+<pre><code>ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+</code></pre>
+                </div>
+
+                <h3>ir_wa</h3>
+                <p>ir_wa는 의미있는 이미지에 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고 싶은 경우를 의미합니다.</p>
+                <h4>사용방법</h4>
+                <div class="code">
+<pre><code>.ir_wa {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+</code></pre>
+                </div>
+
+                <h3>ir_so</h3>
+                <p>ir_so는 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공하는 경우를 의미합니다.</p>
+                <h4>사용방법</h4>
+                <div class="code">
+<pre><code>.ir_so {
+    overflow: hidden;
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    line-height: 0;
+    text-indent: -9999px;
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+        <!-- refer -->
+    </main>
+
+    <!-- script -->
+    <script src="../assets/js/prism.js"></script>
+</body>
+
+</html>
