@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="webClass/css/reset.css">
+    <link rel="stylesheet" href="webClass/css/fonts.css">
+    <style>
+        * {
+            font-family: 'NexonLv2Gothic';
+            padding: 0;
+            margin: 0;
+        }
+        body {}
+        #header {
+            width: 1920px;
+            height: 109px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 20% 65% 15%;
+            background-color: #000;
+        }
+        #header .logo {
+
+        }
+        #header .logo a {
+            display: inline-block;
+            font-size: 28px;
+            margin-top: 24px;
+            margin-left: 72px;
+            font-weight: 1000;
+            color: #fff;
+        }
+        #header .nav {
+            text-align: right;
+        }
+        #header .nav li {
+            font-weight: 1000;
+            margin: 20px;
+            padding-top: 10px;
+            display: inline-block;
+        }
+        #header .nav li a {
+            color: #fff;
+        }
+        #header .ham {
+            text-align: right;
+        }
+        #main {
+            height: 5861px;
+        }
+        #main .banner {
+            width: 1920px;
+            height: 893px;
+            background-image: url(webClass/img/bg01.png);
+        }
+        #main .cont1 {
+            width: 1200px;
+            height: 640px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 33% auto 33%;
+        }
+        #main .cont1 .c1a1 {
+            background-color: #cdcdcd;
+        }
+        #main .cont1 .c1a1 h2 {
+            margin-top: 120px;
+            margin-bottom: 35px;
+            font-size: 40px;
+        }
+        #main .cont1 .c1a1 p {
+            font-size: 18px;
+        }
+        #main .cont1 .c1a2 img {
+            margin-top: 80px;
+            float: right;
+        }
+        #main .cont1 .c1a3 img{
+            float: left;
+        }
+
+
+
+        #footer {
+            width: 1920px;
+            height: 399px;
+            background-color: #B99E9E;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="#">IMFORE</a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">WORK</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="ham"></div>
+    </header>
+    <main id="main">
+        <div class="banner"></div>
+        <section class="cont1">
+            <article class="c1a1">
+                <h2>
+                    위챗이 이끄는<br>
+                    가장 앞선<br>
+                    디지털 전환<br>
+                </h2>
+                <p>
+                    미니프로그램은 중국 위챗의 앱인앱 개념의<br>
+                    서비스로, 별도의 설치 없이도 앱처럼 구동되는<br>
+                    편리함으로 13억 중국인의 모바일 일상을<br>
+                    아우르고 있습니다.
+                </p>
+            </article>
+            <article class="c1a2">
+                <img src="webClass/img/img_text_bg1.jpg" alt="" width="375px" height="500px">
+            </article>
+            <article class="c1a3">
+                <img src="webClass/img/img_text_bg2.jpg" alt="" width="387px" height="500px">
+            </article>
+        </section>
+        <section class="cont2"></section>
+        <section class="cont3"></section>
+    </main>
+    <footer id="footer"></footer>
+</body>
+</html>
