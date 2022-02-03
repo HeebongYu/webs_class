@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +15,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
 </head>
-
 <body>
     <div class="top"><a href="#header">Top</a></div>
 
@@ -51,7 +49,6 @@
             </ul>
         </nav>
         <!-- //nav -->
-
     </header>
     <!-- header -->
 
@@ -67,30 +64,656 @@
                 <li>07. 배열 메서드 : reverse() : 배열 요소 순서를 반대로 정렬 : 반환(배열)</li>
                 <li>08. 배열 메서드 : sort() : 배열 요소를 정렬 : 반환(배열)</li>
                 <li>09. 배열 메서드 : concat() : 배열 요소를 결합 : 반환(배열)</li>
-                <li>10. 배열 메서드 : slice() : 배열 요소를 다른 요소로 변경 : 반환(배열)</li>
-                <li>11. 배열 메서드 : splice() : 배열 요소를 다른 요소로 변경 : 반환(배열)</li>
-                <li>12. 배열 메서드 : indexOf() : 배열 요소 검색 : 반환(숫자)</li>
-                <li>13. 배열 메서드 : lastIndexOf() : 배열 요소 끝에서 검색: 반환(숫자)</li>
-                <li>14. 배열 메서드 : includes() : 배열 요소 검색 : 반환(불린)</li>
-                <li>15. 배열 메서드 : find() : 배열 요소 검색 : 반환(요소)</li>
-                <li>16. 배열 메서드 : findIndex() : 배열 첫 요소 검색 : 반환(요소)</li>
-                <li>17. 배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색 : 반환(배열)</li>
-                <li>18. 배열 메서드 : map() : 배열 요소 추출하여 새로운 배열로 만듦 : 반환(배열)</li>
-                <li>19. 배열 메서드 : reduce() : 배열 요소 하나로 정리 : 반환(결괏값)</li>
-                <li>20. 배열 메서드 : reduceRight() : 배열 요소 하나로 정리 : 반환(결괏값)</li>
+
+                <li>10. 배열 메서드 : reduce() : 배열 요소 하나로 정리 : 반환(결괏값)</li>
+                <li>11. 배열 메서드 : reduceRight() : 배열 요소 하나로 정리 : 반환(결괏값)</li>
+
+                <li>12. 배열 메서드 : slice() : 배열 요소를 다른 요소로 변경 : 반환(배열)</li>
+                <li>13. 배열 메서드 : splice() : 배열 요소를 다른 요소로 변경 : 반환(배열)</li>
+
+                <li>14. 배열 메서드 : indexOf() : 배열 요소 검색 : 반환(숫자)</li>
+                <li>15. 배열 메서드 : lastIndexOf() : 배열 요소 끝에서 검색: 반환(숫자)</li>
+                <li>16. 배열 메서드 : includes() : 배열 요소 검색 : 반환(불린)</li>
+                <li>17. 배열 메서드 : find() : 배열 요소 검색 : 반환(요소)</li>
+                <li>18. 배열 메서드 : findIndex() : 배열 첫 요소 검색 : 반환(요소)</li>
+                <li>19. 배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색 : 반환(배열)</li>
+                <li>20. 배열 메서드 : map() : 배열 요소 추출하여 새로운 배열로 만듦 : 반환(배열)</li>
+               
                 <li>21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</li>
             </ul>
         </div>
         <!-- //list -->
-        <div class="script">
 
+        <div class="script">
+            <!-- sample1 -->
+            <div id="sample1" class="sample">
+                <h3>01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 32%">
+                            <col style="width: 22%">
+                            <col style="width: 42%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>속성</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample01_N1"></td>
+                                <td class="sample01_Q1"></td>
+                                <td class="samlpe01_M1"></td>
+                                <td class="sample01_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N2"></td>
+                                <td class="sample01_Q2"></td>
+                                <td class="samlpe01_M2"></td>
+                                <td class="sample01_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N3"></td>
+                                <td class="sample01_Q3"></td>
+                                <td class="samlpe01_M3"></td>
+                                <td class="sample01_R3"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arrNum = [100, 200, 300, 400, 500];
+    const arrNumlength = arrNum.length;
+
+    const arrText = ['a', 'b', 'c', 'd', 'e'];
+    const arrTextlength = arrText.length;
+
+    const arr = [1, 2, ['a', 'b']];
+    const arrlength = arr.length;
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample1 -->
+
+            <!-- sample2 -->
+            <div id="sample2" class="sample">
+                <h3>02. 배열 메서드 : join() : 배열 요소 문자형 결합 : 반환(문자열)</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 32%">
+                            <col style="width: 22%">
+                            <col style="width: 42%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample02_N1"></td>
+                                <td class="sample02_Q1"></td>
+                                <td class="samlpe02_M1"></td>
+                                <td class="sample02_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample02_N2"></td>
+                                <td class="sample02_Q2"></td>
+                                <td class="samlpe02_M2"></td>
+                                <td class="sample02_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample02_N3"></td>
+                                <td class="sample02_Q3"></td>
+                                <td class="samlpe02_M3"></td>
+                                <td class="sample02_R3"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample02_N4"></td>
+                                <td class="sample02_Q4"></td>
+                                <td class="samlpe02_M4"></td>
+                                <td class="sample02_R4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arrNum = [100, 200, 300, 400, 500];
+    const tex1 = arrNum.join('*');
+    const tex2 = arrNum.join('-');
+    const tex3 = arrNum.join('');
+    const tex4 = arrNum.join(' ');
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample2 -->
+
+            <!-- sample3 -->
+            <div id="sample3" class="sample">
+                <h3>03. 배열 메서드 : push() / pop()</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 32%">
+                            <col style="width: 13%">
+                            <col style="width: 13%">
+                            <col style="width: 38%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample03_N1"></td>
+                                <td class="sample03_Q1"></td>
+                                <td class="samlpe03_M1"></td>
+                                <td class="sample03_R1"></td>
+                                <td class="sample03_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample03_N2"></td>
+                                <td class="sample03_Q2"></td>
+                                <td class="samlpe03_M2"></td>
+                                <td class="sample03_R2"></td>
+                                <td class="sample03_P2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
+    const arrPush = arrNum1.push(600);
+
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const arrPop = arrNum2.pop();
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample3 -->
+
+            <!-- sample4 -->
+            <div id="sample4" class="sample">
+                <h3>04. 배열 메서드 : unshift() / shift()</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 32%">
+                            <col style="width: 13%">
+                            <col style="width: 13%">
+                            <col style="width: 38%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample04_N1"></td>
+                                <td class="sample04_Q1"></td>
+                                <td class="samlpe04_M1"></td>
+                                <td class="sample04_R1"></td>
+                                <td class="sample04_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample04_N2"></td>
+                                <td class="sample04_Q2"></td>
+                                <td class="samlpe04_M2"></td>
+                                <td class="sample04_R2"></td>
+                                <td class="sample04_P2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
+    const arrUnshift = arrNum1.unshift(600);
+
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const arrShift = arrNum2.shift(600);
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample4 -->
+
+            <!-- sample5 -->
+            <div id="sample5" class="sample">
+                <h3>05. 배열 메서드 : reverse() / sort()</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 32%">
+                            <col style="width: 30%">
+                            <col style="width: 34%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample05_N1"></td>
+                                <td class="sample05_Q1"></td>
+                                <td class="samlpe05_M1"></td>
+                                <td class="sample05_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample05_N2"></td>
+                                <td class="sample05_Q2"></td>
+                                <td class="samlpe05_M2"></td>
+                                <td class="sample05_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample05_N3"></td>
+                                <td class="sample05_Q3"></td>
+                                <td class="samlpe05_M3"></td>
+                                <td class="sample05_R3"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample05_N4"></td>
+                                <td class="sample05_Q4"></td>
+                                <td class="samlpe05_M4"></td>
+                                <td class="sample05_R4"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample05_N5"></td>
+                                <td class="sample05_Q5"></td>
+                                <td class="samlpe05_M5"></td>
+                                <td class="sample05_R5"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample05_N6"></td>
+                                <td class="sample05_Q6"></td>
+                                <td class="samlpe05_M6"></td>
+                                <td class="sample05_R6"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
+    const arrReverse = arrNum1.reverse();
+
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const arrSort2 = arrNum2.sort();
+
+    const arrNum3 = [100, 200, 300, 400, 500];
+    const arrSort3 = arrNum3.sort(function(a,b){return b-a});
+
+    const arrNum4 = [500, 400, 300, 200, 100];
+    const arrSort4 = arrNum4.sort(function(a,b){return a-b});
+
+    const arrNum5 = ['c', 'd', 'e', 'a', 'b'];
+    const arrSort5 = arrNum5.sort((a,b) => a.localeCompare(b));
+
+    const arrNum6 = ['c', 'd', 'e', 'a', 'b'];
+    const arrSort6 = arrNum6.sort((a,b) => b.localeCompare(a));
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample5 -->
+
+            <!-- sample6 -->
+            <div id="sample6" class="sample">
+                <h3>06 배열 메서드 : concat() / 펼침연산자 : 배열 요소 결합</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 32%">
+                            <col style="width: 30%">
+                            <col style="width: 34%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample06_N1"></td>
+                                <td class="sample06_Q1"></td>
+                                <td class="samlpe06_M1"></td>
+                                <td class="sample06_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample06_N2"></td>
+                                <td class="sample06_Q2"></td>
+                                <td class="samlpe06_M2"></td>
+                                <td class="sample06_R2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    const arrNum1 = [100, 200, 300];
+    const arrNum2 = [400, 500, 600];
+
+    const arrConcat = arrNum1.concat(arrNum2);
+
+    const arrSpread = [...arrNum1, ...arrNum2];
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample6 -->
+
+            <!-- sample7 -->
+            <div id="sample7" class="sample">
+                <h3>07 배열 메서드 : () / 펼침연산자 : 배열 요소 결합</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 32%">
+                            <col style="width: 30%">
+                            <col style="width: 34%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample07_N1"></td>
+                                <td class="sample07_Q1"></td>
+                                <td class="samlpe07_M1"></td>
+                                <td class="sample07_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample07_N2"></td>
+                                <td class="sample07_Q2"></td>
+                                <td class="samlpe07_M2"></td>
+                                <td class="sample07_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample07_N3"></td>
+                                <td class="sample07_Q3"></td>
+                                <td class="samlpe07_M3"></td>
+                                <td class="sample07_R3"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample07_N4"></td>
+                                <td class="sample07_Q4"></td>
+                                <td class="samlpe07_M4"></td>
+                                <td class="sample07_R4"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample07_N5"></td>
+                                <td class="sample07_Q5"></td>
+                                <td class="samlpe07_M5"></td>
+                                <td class="sample07_R5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+   
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample7 -->
         </div>
         <!-- //script -->
     </main>
+
     <!-- script -->
     <script src="assets/js/prism.js"></script>
-    <script>
 
+    <script>
+        //{1}
+        //01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)
+        {
+            const arrNum = [100, 200, 300, 400, 500];
+            const arrNumlength = arrNum.length;
+
+            document.querySelector(".sample01_N1").innerHTML = 1;
+            document.querySelector(".sample01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe01_M1").innerHTML = ".length";
+            document.querySelector(".sample01_R1").innerHTML = arrNumlength;
+
+            const arrText = ['a', 'b', 'c', 'd', 'e'];
+            const arrTextlength = arrText.length;
+
+            document.querySelector(".sample01_N2").innerHTML = 2;
+            document.querySelector(".sample01_Q2").innerHTML = "['a', 'b', 'c', 'd', 'e']";
+            document.querySelector(".samlpe01_M2").innerHTML = ".length";
+            document.querySelector(".sample01_R2").innerHTML = arrTextlength;
+
+            const arr = [1, 2, ['a', 'b']];
+            const arrlength = arr.length;
+
+            document.querySelector(".sample01_N3").innerHTML = 3;
+            document.querySelector(".sample01_Q3").innerHTML = "[1, 2, ['a', 'b']]";
+            document.querySelector(".samlpe01_M3").innerHTML = ".length";
+            document.querySelector(".sample01_R3").innerHTML = arrlength;
+        }
+        
+        //{2}
+        //02. 배열 메서드 : join() : 배열 요소 문자형 결합 : 반환(문자열)
+        {
+            const arrNum = [100, 200, 300, 400, 500];
+            const tex1 = arrNum.join('*');
+            const tex2 = arrNum.join('-');
+            const tex3 = arrNum.join('');
+            const tex4 = arrNum.join(' ');
+            
+            document.querySelector(".sample02_N1").innerHTML = 1;
+            document.querySelector(".sample02_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe02_M1").innerHTML = "join('*')";
+            document.querySelector(".sample02_R1").innerHTML = tex1;
+
+            document.querySelector(".sample02_N2").innerHTML = 2;
+            document.querySelector(".sample02_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe02_M2").innerHTML = "join('-')";
+            document.querySelector(".sample02_R2").innerHTML = tex2;
+
+            document.querySelector(".sample02_N3").innerHTML = 3;
+            document.querySelector(".sample02_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe02_M3").innerHTML = "join('')";
+            document.querySelector(".sample02_R3").innerHTML = tex3;
+
+            document.querySelector(".sample02_N4").innerHTML = 4;
+            document.querySelector(".sample02_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe02_M4").innerHTML = "join(' ')";
+            document.querySelector(".sample02_R4").innerHTML = tex4;
+        }
+
+        //{3}
+        //03. 배열 메서드 : push() : 배열 마지막 요소에 추가 : 반환(숫자)
+        {
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const arrPush = arrNum1.push(600);
+
+            document.querySelector(".sample03_N1").innerHTML = 1;
+            document.querySelector(".sample03_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe03_M1").innerHTML = "push(600)";
+            document.querySelector(".sample03_R1").innerHTML = arrPush;
+            document.querySelector(".sample03_P1").innerHTML = arrNum1;
+        }
+
+        //04. 배열 메서드 : pop() : 배열 마지막 요소 삭제 : 반환(삭제된 요소)
+        {
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrPop = arrNum2.pop();
+
+            document.querySelector(".sample03_N2").innerHTML = 2;
+            document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe03_M2").innerHTML = "pop()";
+            document.querySelector(".sample03_R2").innerHTML = arrPop;
+            document.querySelector(".sample03_P2").innerHTML = arrNum2;
+        }
+
+        //{4}
+        //05. 배열 메서드 : unshift() : 배열 처음 요소에 추가 : 반환(숫자)
+        {
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const arrUnshift = arrNum1.unshift(600);
+
+            document.querySelector(".sample04_N1").innerHTML = 1;
+            document.querySelector(".sample04_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe04_M1").innerHTML = "unshift(600)";
+            document.querySelector(".sample04_R1").innerHTML = arrUnshift;
+            document.querySelector(".sample04_P1").innerHTML = arrNum1;
+        }
+
+        //06. 배열 메서드 : shift() : 배열 처음 요소 삭제 : 반환(삭제된 요소)
+        {
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrShift = arrNum2.shift(600);
+
+            document.querySelector(".sample04_N2").innerHTML = 2;
+            document.querySelector(".sample04_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe04_M2").innerHTML = "shift()";
+            document.querySelector(".sample04_R2").innerHTML = arrShift;
+            document.querySelector(".sample04_P2").innerHTML = arrNum2;
+        }
+
+        //{5}
+        //07. 배열 메서드 : reverse() : 배열 요소 순서를 반대로 정렬 : 반환(배열)
+        {
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const arrReverse = arrNum1.reverse();
+
+            document.querySelector(".sample05_N1").innerHTML = 1;
+            document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe05_M1").innerHTML = "reverse()";
+            document.querySelector(".sample05_R1").innerHTML = arrReverse;
+        }
+
+        //08. 배열 메서드 : sort() : 배열 요소를 정렬 : 반환(배열)
+        {
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrSort2 = arrNum2.sort();
+
+            document.querySelector(".sample05_N2").innerHTML = 2;
+            document.querySelector(".sample05_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe05_M2").innerHTML = "sort()";
+            document.querySelector(".sample05_R2").innerHTML = arrSort2;
+
+            const arrNum3 = [100, 200, 300, 400, 500];
+            const arrSort3 = arrNum3.sort(function(a,b){return b-a});
+
+            document.querySelector(".sample05_N3").innerHTML = 3;
+            document.querySelector(".sample05_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe05_M3").innerHTML = "sort(function(a,b){return b-a})";
+            document.querySelector(".sample05_R3").innerHTML = arrSort3;
+
+            const arrNum4 = [500, 400, 300, 200, 100];
+            const arrSort4 = arrNum4.sort(function(a,b){return a-b});
+
+            document.querySelector(".sample05_N4").innerHTML = 4;
+            document.querySelector(".sample05_Q4").innerHTML = "[500, 400, 300, 200, 100]";
+            document.querySelector(".samlpe05_M4").innerHTML = "sort(function(a,b){return a-b})";
+            document.querySelector(".sample05_R4").innerHTML = arrSort4;
+
+            const arrNum5 = ['c', 'd', 'e', 'a', 'b'];
+            const arrSort5 = arrNum5.sort((a,b) => a.localeCompare(b));
+
+            document.querySelector(".sample05_N5").innerHTML = 5;
+            document.querySelector(".sample05_Q5").innerHTML = "['c', 'd', 'e', 'a', 'b']";
+            document.querySelector(".samlpe05_M5").innerHTML = "sort((a,b) => a.localeCompare(b))";
+            document.querySelector(".sample05_R5").innerHTML = arrSort5;
+
+            const arrNum6 = ['c', 'd', 'e', 'a', 'b'];
+            const arrSort6 = arrNum6.sort((a,b) => b.localeCompare(a));
+
+            document.querySelector(".sample05_N6").innerHTML = 6;
+            document.querySelector(".sample05_Q6").innerHTML = "['c', 'd', 'e', 'a', 'b']";
+            document.querySelector(".samlpe05_M6").innerHTML = "sort((a,b) => b.localeCompare(a))";
+            document.querySelector(".sample05_R6").innerHTML = arrSort6;
+        }
+
+        //{6}
+        //09. 배열 메서드 : concat() : 배열 요소를 결합 : 반환(배열)
+        {
+            const arrNum1 = [100, 200, 300];
+            const arrNum2 = [400, 500, 600];
+            const arrConcat = arrNum1.concat(arrNum2);
+
+            document.querySelector(".sample06_N1").innerHTML = 1;
+            document.querySelector(".sample06_Q1").innerHTML = "[100, 200, 300], [400, 500, 600]";
+            document.querySelector(".samlpe06_M1").innerHTML = "arrNum1.concat(arrNum2);";
+            document.querySelector(".sample06_R1").innerHTML = arrConcat;
+
+            const arrSpread = [...arrNum1, ...arrNum2];
+
+            document.querySelector(".sample06_N2").innerHTML = 2;
+            document.querySelector(".sample06_Q2").innerHTML = "[100, 200, 300], [400, 500, 600]";
+            document.querySelector(".samlpe06_M2").innerHTML = "[...arrNum1, ...arrNum2]";
+            document.querySelector(".sample06_R2").innerHTML = arrSpread;
+        }
+
+        //{7}
+        //10. 배열 메서드 : reduce() : 배열 요소 하나로 정리 : 반환(결괏값)
+        {
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const arrReduce1 = arrNum1.reduce(element => element);
+
+            document.querySelector(".sample07_N1").innerHTML = 1;
+            document.querySelector(".sample07_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe07_M1").innerHTML = "reduce(element => element)";
+            document.querySelector(".sample07_R1").innerHTML = arrReduce1;
+
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrReduce2 = arrNum2.reduce((previous, current) => previous + current);
+
+            document.querySelector(".sample07_N2").innerHTML = 2;
+            document.querySelector(".sample07_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".samlpe07_M2").innerHTML = "reduce((p,c) => p+c)";
+            document.querySelector(".sample07_R2").innerHTML = arrReduce2;
+
+            //arrNum2  값을 for문을 이용해서 출력해주세요!
+            {
+                const arrNum2 = [100, 200, 300, 400, 500];
+
+                for(let i=0; i<arrNum2.length; i++){
+                    document.write(arrNum2[i])
+                }
+            }
+
+        }
+        //11. 배열 메서드 : reduceRight() : 배열 요소 하나로 정리 : 반환(결괏값)
     </script>
 </body>
 
