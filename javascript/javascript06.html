@@ -1066,7 +1066,7 @@
 
             document.querySelector(".sample04_N2").innerHTML = 2;
             document.querySelector(".sample04_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".samlpe04_M2").innerHTML = "shift()";
+            document.querySelector(".samlpe04_M2").innerHTML = "shift(600)";
             document.querySelector(".sample04_R2").innerHTML = arrShift;
             document.querySelector(".sample04_P2").innerHTML = arrNum2;
         }
@@ -1526,19 +1526,98 @@
         {
             arrBox1 = [100, 200, 300, 400, 500, 600, 700];
 
+            document.write("<br>"+"*** arrBox1 ***"+"<br>");
+
             //300, 400
+            document.write("<br>"+"*** 300, 400 (1)***"+"<br>");
+            {
+                const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+                const arrBoxSlice1 = arrBox1.slice(2,4);
+                document.write(arrBoxSlice1+"-slice");
+            }
+            document.write("<br>"+"*** 300, 400 (2)***"+"<br>");
+            {
+                const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+                const arrBoxSplice1 = arrBox1.splice(2,2);
+                document.write(arrBoxSplice1+"-splice");
+            }
 
             //100, 300, 500, 700
+            document.write("<br>"+"*** 100, 300, 500, 700 (1)***"+"<br>");
+            {
+                const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+                const arrBoxSplice1 = arrBox1.splice(5,1) + arrBox1.splice(3,1) + arrBox1.splice(1,1);
+                document.write(arrBox1+"-splice");
+            }
+            document.write("<br>"+"*** 100, 300, 500, 700 (2)***"+"<br>");
+            {
+                const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+                const arrFilter1 = arrBox1.filter(el => (el/100)%2 === 1);
+                document.write(arrFilter1+"-filter");
+            }
 
             //700
+            document.write("<br>"+"*** 700 (1)***"+"<br>");
+            {
+                const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+                const arrFilter1 = arrBox1.filter(el => el === 700);
+                document.write(arrFilter1+"-filter");
+            }
+            document.write("<br>"+"*** 700 (2)***"+"<br>");
+            {
+                const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+                const arrBoxSplice1 = arrBox1.splice(6,1);
+                document.write(arrBoxSplice1+"-splice");
+            }
+        }
+        document.write("<br><br>");
+
+        {
+            document.write("<br>"+"*** arrBox2 ***"+"<br>");
 
             arrBox2 = ['j', 'b', 'c', 'd', 'e'];
 
             //j
+            document.write("<br>"+"*** j(1) ***"+"<br>");
+            {
+                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                const arrFilter1 = arrBox2.filter(el => el === 'j');
+                document.write(arrFilter1+"-filter");
+            }
+            document.write("<br>"+"*** j(2) ***"+"<br>");
+            {
+                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                const arrBoxSplice1 = arrBox2.splice(0,1);
+                document.write(arrBoxSplice1+"-splice");
+            }
 
             //jc
+            document.write("<br>"+"*** jc (1)***"+"<br>");
+            {
+                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                const arrBoxSplice1 = arrBox2.splice(3,2) + arrBox2.splice(1,1);
+                document.write(arrBox2+"-splice");
+            }
+            document.write("<br>"+"*** jc (2)***"+"<br>");
+            {
+                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                const arrBoxFind = arrBox2.find(el => el === 'j') + arrBox2.find(el => el === 'c')
+                document.write(arrBoxFind+"-find");
+            }
 
             //jbcd
+            document.write("<br>"+"*** jbcd (1)***"+"<br>");
+            {
+                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                const arrBoxPop = arrBox2.pop();
+                document.write(arrBox2+"-pop");
+            }
+            document.write("<br>"+"*** jbcd (2)***"+"<br>");
+            {
+                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                const arrBoxSplice1 = arrBox2.splice(4)
+                document.write(arrBox2+"-splice");
+            }
         }
 
     </script>
