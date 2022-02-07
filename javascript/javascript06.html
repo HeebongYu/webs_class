@@ -40,12 +40,12 @@
                 <li><a href="practice.html">데이터 연습하기</a></li>
             </ul>
             <ul>
-                <li><a href="sample.html">필수 예제</a></li>
-                <li><a href="plugin.html">플러그인</a></li>
-                <li><a href="effect/mouseEffect.html">마우스 이펙트</a></li>
-                <li><a href="effect/parallaxEffect.html">패랠랙스 이펙트</a></li>
-                <li><a href="effect/slideEffect.html">슬라이드 이펙트</a></li>
-                <li><a href="effect/gameEffect.html">게임 이펙트</a></li>
+                <li><a href="sample_menu.html">메뉴 이펙트</a></li>
+                <li><a href="sample_search.html">검색 이펙트</a></li>
+                <li><a href="sample_mouse.html">마우스 이펙트</a></li>
+                <li><a href="sample_parallax.html">패랠랙스 이펙트</a></li>
+                <li><a href="sample_slide.html">슬라이드 이펙트</a></li>
+                <li><a href="sample_game.html">게임 이펙트</a></li>
             </ul>
         </nav>
         <!-- //nav -->
@@ -1062,11 +1062,11 @@
         //06. 배열 메서드 : shift() : 배열 처음 요소 삭제 : 반환(삭제된 요소)
         {
             const arrNum2 = [100, 200, 300, 400, 500];
-            const arrShift = arrNum2.shift(600);
+            const arrShift = arrNum2.shift();
 
             document.querySelector(".sample04_N2").innerHTML = 2;
             document.querySelector(".sample04_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".samlpe04_M2").innerHTML = "shift(600)";
+            document.querySelector(".samlpe04_M2").innerHTML = "shift()";
             document.querySelector(".sample04_R2").innerHTML = arrShift;
             document.querySelector(".sample04_P2").innerHTML = arrNum2;
         }
@@ -1526,52 +1526,64 @@
         {
             arrBox1 = [100, 200, 300, 400, 500, 600, 700];
 
-            document.write("<br>"+"*** arrBox1 ***"+"<br>");
+            document.write("*** arrBox1 ***");
+            document.write("<br>"+"[100, 200, 300, 400, 500, 600, 700]"+"<br>");
 
             //300, 400
             document.write("<br>"+"*** 300, 400 (1)***"+"<br>");
             {
                 const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
-                const arrBoxSlice1 = arrBox1.slice(2,4);
-                document.write(arrBoxSlice1+"-slice");
+                const arrBoxSlice = arrBox1.slice(2,4);
+                document.write(arrBoxSlice+"-slice");
             }
             document.write("<br>"+"*** 300, 400 (2)***"+"<br>");
             {
                 const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
-                const arrBoxSplice1 = arrBox1.splice(2,2);
-                document.write(arrBoxSplice1+"-splice");
+                const arrBoxSplice = arrBox1.splice(2,2);
+                document.write(arrBoxSplice+"-splice");
+            }
+            document.write("<br>"+"*** 300, 400 (3)***"+"<br>");
+            {
+                const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+                const arrFilter = arrBox1.filter(el => 300<=el && el<=400);
+                document.write(arrFilter+"-filter");
             }
 
             //100, 300, 500, 700
             document.write("<br>"+"*** 100, 300, 500, 700 (1)***"+"<br>");
             {
                 const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
-                const arrBoxSplice1 = arrBox1.splice(5,1) + arrBox1.splice(3,1) + arrBox1.splice(1,1);
+                const arrBoxSplice = arrBox1.splice(5,1) + arrBox1.splice(3,1) + arrBox1.splice(1,1);
                 document.write(arrBox1+"-splice");
             }
             document.write("<br>"+"*** 100, 300, 500, 700 (2)***"+"<br>");
             {
                 const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
-                const arrFilter1 = arrBox1.filter(el => (el/100)%2 === 1);
-                document.write(arrFilter1+"-filter");
+                const arrFilter = arrBox1.filter(el => (el/100)%2 === 1);
+                document.write(arrFilter+"-filter");
             }
 
             //700
             document.write("<br>"+"*** 700 (1)***"+"<br>");
             {
                 const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
-                const arrFilter1 = arrBox1.filter(el => el === 700);
-                document.write(arrFilter1+"-filter");
+                const arrSlice = arrBox1.slice(6)
+                document.write(arrSlice+"-slice");
             }
             document.write("<br>"+"*** 700 (2)***"+"<br>");
             {
                 const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
-                const arrBoxSplice1 = arrBox1.splice(6,1);
-                document.write(arrBoxSplice1+"-splice");
+                const arrBoxSplice = arrBox1.splice(6,1);
+                document.write(arrBoxSplice+"-splice");
+            }
+            document.write("<br>"+"*** 700 (3)***"+"<br>");
+            {
+                const arrBox1 = [100, 200, 300, 400, 500, 600, 700];
+                const arrFilter = arrBox1.filter(el => el === 700);
+                document.write(arrFilter+"-filter");
             }
         }
         document.write("<br><br>");
-
         {
             document.write("<br>"+"*** arrBox2 ***"+"<br>");
 
@@ -1581,21 +1593,27 @@
             document.write("<br>"+"*** j(1) ***"+"<br>");
             {
                 const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrFilter1 = arrBox2.filter(el => el === 'j');
-                document.write(arrFilter1+"-filter");
+                const arrBoxShift = arrBox2.shift();
+                document.write(arrBoxShift+"-shift");
             }
             document.write("<br>"+"*** j(2) ***"+"<br>");
             {
                 const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxSplice1 = arrBox2.splice(0,1);
-                document.write(arrBoxSplice1+"-splice");
+                const arrBoxSplice = arrBox2.splice(0,1);
+                document.write(arrBoxSplice+"-splice");
+            }
+            document.write("<br>"+"*** j(3) ***"+"<br>");
+            {
+                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                const arrFilter = arrBox2.filter(el => el === 'j');
+                document.write(arrFilter+"-filter");
             }
 
             //jc
             document.write("<br>"+"*** jc (1)***"+"<br>");
             {
                 const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxSplice1 = arrBox2.splice(3,2) + arrBox2.splice(1,1);
+                const arrBoxSplice = arrBox2.splice(3,2) + arrBox2.splice(1,1);
                 document.write(arrBox2+"-splice");
             }
             document.write("<br>"+"*** jc (2)***"+"<br>");
@@ -1615,7 +1633,7 @@
             document.write("<br>"+"*** jbcd (2)***"+"<br>");
             {
                 const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxSplice1 = arrBox2.splice(4)
+                const arrBoxSplice = arrBox2.splice(4)
                 document.write(arrBox2+"-splice");
             }
         }
