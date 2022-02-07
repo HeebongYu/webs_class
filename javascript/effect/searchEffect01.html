@@ -141,9 +141,11 @@
             }
         }
 
-        /*  */
+        /* 검색효과 */
         .board .list li.hide {
-                display: none;
+            display: none;
+            width: 1000px;
+            height: 500px;
         }
     </style>
 </head>
@@ -190,25 +192,20 @@
 
     <!-- script -->
     <script>
-        const searchBox = document.querySelector("#search_box");
-        const cssList = document.querySelectorAll(".list ul li");
+        const searchBox = document.querySelector("#search_box");    //input(#search_box)를 변수(searchBox)에 저장
+        const cssList = document.querySelectorAll(".list ul li");   //다수의 li를 변수(cssList)에 저장
 
-        searchBox.addEventListener("keyup", () => {
-            const searcWord = searchBox.value; //사용자가 입력한 데이터 저장소
-            // console.log(searcWord);
+        searchBox.addEventListener("keyup", () => {    //searchBox에 keyup 했을 때 이벤트(addEventListener) 실행
+            const searcWord = searchBox.value;    //input(searchBox)에 사용자가 입력한 데이터를 변수(searcWord)에 저장
 
             cssList.forEach(el => {
-                console.log(el.dataset.name)
+                const cssName = el.dataset.name;    //다수의 cssList의 dataset.name을 변수(cssName)에 저장
 
-
-                const cssName = el.dataset.name; //CSS 속성 값
-
-
-                if(cssName.indexOf(searcWord)){
-                    el.classList.add("hide")
+                if(cssName.indexOf(searcWord)){    //조건문(if): cssName가 searcWord에 있는지 검색(indexOf)
+                    el.classList.add("hide");    //참이면 클래스 add("hide")를 실행
                 } else {
-                    el.classList.remove("hide")
-                }
+                    el.classList.remove("hide");    //거짓이면 있으면 클래스 remove("hide")를 실행
+                };
             });
         });
 

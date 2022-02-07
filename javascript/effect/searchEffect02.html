@@ -149,7 +149,7 @@
             }
         }
 
-        /*  */
+        /* 검색효과 */
         .board .list li {
                 display: none;
         }
@@ -205,31 +205,28 @@
 
     <!-- script -->
     <script>
-        const searchBox = document.querySelector("#search_box");
-        const cssList = document.querySelectorAll(".list ul li");
-        const cssCount = document.querySelector(".count em");
+        const searchBox = document.querySelector("#search_box");    //input(#search_box)를 변수(searchBox)에 저장
+        const cssList = document.querySelectorAll(".list ul li");   //다수의 li를 변수(cssList)에 저장
+        const cssCount = document.querySelector(".count em");    //전체 속성 갯수(.count)를 변수(cssCount)에 저장
 
         cssList.forEach((eleement, index) => {
-            eleement.classList.add("show");
-            cssCount.innerHTML = index + 1;
+            eleement.classList.add("show");    //초기값으로 cssList에 클래스 add("hide")를 실행
+            cssCount.innerHTML = index + 1;    //cssCount에 배열의 갯수를 문서에(innerHTML) 표현
         });
 
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value; //사용자가 입력한 값
-            //console.log(searchWord);
+        searchBox.addEventListener("keyup", () => {    //searchBox에 keyup 했을 때 이벤트(addEventListener) 실행
+            const searchWord = searchBox.value;    //input(searchBox)에 사용자가 입력한 데이터를 변수(searcWord)에 저장
 
             cssList.forEach(el => {
-                const cssName = el.dataset.name; //CSS 속성 값(모두)
-                //console.log(cssName);
+                const cssName = el.dataset.name;    //다수의 cssList의 dataset.name을 변수(cssName)에 저장
 
-                if(cssName.includes(searchWord)){
-                    el.classList.add("show");
+                if(cssName.includes(searchWord)){    //조건문(if): cssName가 searcWord에 있는지 검색(includes)
+                    el.classList.add("show");    //참이면 클래스 add("hide")를 실행
                 } else {
-                    el.classList.remove("show");
-                }
-            })
-        })
-
+                    el.classList.remove("show");    //거짓이면 있으면 클래스 remove("hide")를 실행
+                };
+            });
+        });
     </script>
 </body>
 </html>
