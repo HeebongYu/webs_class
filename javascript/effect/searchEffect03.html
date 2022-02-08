@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Effect</title>
+    <style>
+        /* 폰트 */
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 기본셋팅 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NexonLv1Gothic';
+            font-size: 16px;
+            line-height: 1.6;
+            word-break: break-all;
+            color: #223547;
+        }
+        a {
+            text-decoration: none;
+            color: #223547;
+        }
+
+        /* number */
+        .number {
+            margin: 10px;
+        }
+        .number li {
+            list-style: none;
+            display: inline;
+        }
+        .number li a {
+            border: 1px solid #223547;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.3s;
+        }
+        .number li.active a {
+            background: #223547;
+            color: #fff;
+        }
+
+        /* board */
+        .board {
+            margin: 5vw 10vw 10vw 10vw;
+            width: 80vw;
+            background: #f1f3f6;
+            bottom: 2px solid #223547;
+            padding: 3vw;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .board sub {
+            font-size: 20px;
+        }
+        .board sub a {
+            font-size: 20px;
+            border-bottom: 1px solid #223547;
+        }
+        .board h1 a {
+            font-family: 'TmonMonsori';
+            font-size: 80px;
+            margin-bottom: 1vw;
+        }
+        .board .search {
+            margin-bottom: 3vw;
+        }
+        .board .search label {
+            display: none;
+        }
+        .board .search input {
+            font-size: 24px;
+            bottom: 2px solid #223547;
+            padding: 10px 40px;
+            border-radius: 40px;
+            width: 50%;
+            text-align: center;
+        }
+        .board .count {
+            text-align: right;
+            color: #777;
+        }
+        .board .count em {
+            font-style: normal;
+            color: #223547;
+        }
+        .board .list {
+            text-align: left;
+        }
+        .board .list li {
+            background-color: #bdd6e6;
+            margin: 5px 0;
+            padding: 7px 10px;
+            border-radius: 4px;
+            list-style: none;
+            transition: all 0.3s;
+        }
+        .board .list li:hover {
+            background-color: #a5c3d5;
+            cursor: grabbing;
+        }
+       
+        @media (max-width: 800px){
+            .board {
+                margin: 2vw 2vw 2vw 2vw;
+                width: 96vw;
+                padding: 4vw 2vw;
+            }
+            .board .sub {
+                font-size: 14px;
+            }
+            .board .sub a {
+                font-size: 14px;
+            }
+            .board h1 a {
+                font-size: 40px;
+            }
+            .board .search input {
+                font-size: 16px;
+                padding: 5px 20px;
+                width: 100%;
+            }
+            .board .list li {
+                font-size: 14px;
+            }
+        }
+
+        /* 검색효과 */
+        .board .list li {
+                display: none;
+        }
+        .board .list li.show {
+                display: block;
+        }
+
+        /* option */
+        .board .search span {
+            border: 1px solid #223547;
+            border-radius: 30px;
+            padding: 5px 30px;
+            margin: 3px;
+            display: inline-block;
+        }
+        .board .search span:hover {
+            background: #223547;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="number">
+            <ul>
+                <li><a href="searchEffect01.html">1</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li class="active"><a href="searchEffect03.html">3</a></li>
+                <li><a href="searchEffect04.html">4</a></li>
+            </ul>
+        </div>
+        <div class="board">
+            <span class="sub"><a href="#">charAt()를 이용하여 CSS 알파벳 별로 검색하기</a></span>
+            <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
+
+            <div class="search">
+                <span>a</span>
+                <span>b</span>
+                <span>c</span>
+                <span>d</span>
+                <span>e</span>
+                <span>f</span>
+                <span>g</span>
+                <span>h</span>
+                <span>i</span>
+                <span>j</span>
+                <span>k</span>
+                <br>
+                <span>속성</span>
+                <span>레이아웃</span>
+                <span>애니메이션</span>
+                <span>배경</span>
+                <span>테두리</span>
+            </div>
+
+            <div class="count">
+                전체 속성 갯수 : <em>0</em>개
+            </div>
+
+            <div class="list">
+                <ul>
+                    <!-- a -->
+                    <li data-name="accent-color" data-type="속성"><strong>accent-color</strong> : accent-color 속성은 일부 사용자 인터페이스 컨트롤의 액센트 색상을 설정합니다.</li>
+                    <li data-name="align-content" data-type="레이아웃"><strong>align-content</strong> : align-content 속성은 콘텐츠 항목 사이 및 주위의 공간 분포를 설정합니다.</li>
+                    <li data-name="align-items" data-type="레이아웃"><strong>align-items</strong> : align-items 속성은 모든 직계 자식의 align-self 값을 그룹으로 설정합니다.</li>
+                    <li data-name="align-self" data-type="레이아웃"><strong>align-self</strong> : align-self 속성은 align-items 값을 재정의합니다.</li>
+                    <li data-name="align-tracks" data-type="레이아웃"><strong>align-tracks</strong> : align-tracks 속성은 석조(masonry) 축 정렬을 설정합니다.</li>
+                    <li data-name="all" data-type="속성"><strong>all</strong> : all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.</li>
+                    <li data-name="animation" data-type="애니메이션"><strong>animation</strong> : animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다.</li>
+                    <li data-name="animation-delay" data-type="애니메이션"><strong>animation-delay</strong> : animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다.</li>
+                    <li data-name="animation-direction" data-type="애니메이션"><strong>animation-direction</strong> : animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다.</li>
+                    <li data-name="animation-duration" data-type="애니메이션"><strong>animation-duration</strong> : animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다.</li>
+                    <li data-name="animation-fill-mode" data-type="애니메이션"><strong>animation-fill-mode</strong> : animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                    <li data-name="animation-iteration-count" data-type="애니메이션"><strong>animation-iteration-count</strong> : animation-iteration-count 속성은 애니메이션이 반복 횟수를 설정합니다.</li>
+                    <li data-name="animation-name" data-type="애니메이션"><strong>animation-name</strong> : animation-name 속성은 애니메이션이 키프레임 이름을 설정합니다.</li>
+                    <li data-name="animation-play-state" data-type="애니메이션"><strong>animation-play-state</strong> : animation-play-state 속성은 애니메이션이 진행상태를 설정합니다.</li>
+                    <li data-name="animation-timing-function" data-type="애니메이션"><strong>animation-timing-function</strong> : animation-timing-function 속성은 애니메이션의 속도를 설정합니다.</li>
+                    <li data-name="appearance" data-type="속성"><strong>appearance</strong> : appearance 속성은 기본 스타일 방식을 제어합니다.</li>
+                    <!-- b -->
+                    <li data-name="backdrop-filter" data-type="속성"><strong>backdrop-filter</strong> : backdrop-filter 속성은 컨텐츠의 요소 뒤에 필터효과를 설정합니다.</li>
+                    <li data-name="backface-visibility" data-type="속성"><strong>backface-visibility</strong> : backface-visibility 속성은 컨텐츠의 요소 뒷면 표시 여부 설정합니다.</li>
+                    <li data-name="background" data-type="배경"><strong>background</strong> : background 속성은 배경을 설정하는 약식 속성입니다.</li>
+                    <li data-name="background-attachment" data-type="배경"><strong>background-attachment</strong> : background-attachment 속성은 배경이미지의 고정 여부를 설정합니다.</li>
+                    <li data-name="background-blend-mode" data-type="배경"><strong>background-blend-mode</strong> : background-blend-mode 속성은 배경의 혼합에 대하여 설정합니다.</li>
+                    <li data-name="background-clip" data-type="배경"><strong>background-clip</strong> : background-clip 속성은 배경이미지의 위치 기준점을 설정합니다.</li>
+                    <li data-name="background-color" data-type="배경"><strong>background-color</strong> : background-color 속성은 배경의 색상을 설정합니다.</li>
+                    <li data-name="background-image" data-type="배경"><strong>background-image</strong> : background-image 속성은 배경의 이미지를 설정합니다.</li>
+                    <li data-name="background-origin" data-type="배경"><strong>background-origin</strong> : background-origin 속성은 배경이미지의 위치 기준점을 설정합니다.</li>
+                    <li data-name="background-position" data-type="배경"><strong>background-position</strong> : background-position 속성은 배경이미지의 위치를 설정합니다.</li>
+                    <li data-name="background-position-x" data-type="배경"><strong>background-position-x</strong> : background-position-x 속성은 배경이미지의 x위치를 설정합니다.</li>
+                    <li data-name="background-position-y" data-type="배경"><strong>background-position-y</strong> : background-position-y 속성은 배경이미지의 y위치를 설정합니다.</li>
+                    <li data-name="background-repeat" data-type="배경"><strong>background-repeat</strong> : background-repeat 속성은 배경이미지의 반복을 설정합니다.</li>
+                    <li data-name="background-size" data-type="배경"><strong>background-size</strong> : background-size 속성은 배경이미지의 사이즈를 설정합니다.</li>
+                    <li data-name="border" data-type="테두리"><strong>border</strong> : border 속성은 테두리를 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-block" data-type="테두리"><strong>border-block</strong> : border-block속성은 테두리의 위아래를 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-block-color" data-type="테두리"><strong>border-block-color</strong> : border-block-color 속성은 테두리의 위아래 색상을 설정합니다.</li>
+                    <li data-name="border-block-end" data-type="테두리"><strong>border-block-end</strong> : border-block-end 속성은 테두리의 위아래 중 끝 부분을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-block-end-color" data-type="테두리"><strong>border-block-end-color</strong> : border-block-end-color 속성은 테두리의 위아래 중 끝 부분의 색상을 설정합니다.</li>
+                    <li data-name="border-block-end-style" data-type="테두리"><strong>border-block-end-style</strong> : border-block-end-style 속성은 테두리의 위아래 중 끝 부분의 스타일을 설정합니다.</li>
+                    <li data-name="border-block-end-width" data-type="테두리"><strong>border-block-end-width</strong> : border-block-end-width 속성은 테두리의 위아래 중 끝 부분의 두께을 설정합니다.</li>
+                    <li data-name="border-block-start" data-type="테두리"><strong>border-block-start</strong> : border-block-start 속성은 테두리의 위아래 중 시작 부분을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-block-start-color" data-type="테두리"><strong>border-block-start-color</strong> : border-block-start-color 속성은 테두리의 위아래 중 시작 부분의 색상을 설정합니다.</li>
+                    <li data-name="border-block-start-style" data-type="테두리"><strong>border-block-start-style</strong> : border-block-start-style 속성은 테두리의 위아래 중 끝 부분의 스타일을 설정합니다.</li>
+                    <li data-name="border-block-start-width" data-type="테두리"><strong>border-block-start-width</strong> : border-block-start-width 속성은 테두리의 위아래 중 끝 부분의 두께을 설정합니다.</li>
+                    <li data-name="border-block-style" data-type="테두리"><strong>border-block-style</strong> :  border-block-style 속성은 테두리의 위아래 스타일을 설정합니다.</li>
+                    <li data-name="border-block-width" data-type="테두리"><strong>border-block-width</strong> : border-block-width 속성은 테두리의 위아래 두께을 설정합니다.</li>
+                    <li data-name="border-bottom" data-type="테두리"><strong>border-bottom</strong> : border-bottom 속성은 테두리의 아래쪽을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-bottom-color" data-type="테두리"><strong>border-bottom-color</strong> : border-bottom-color 속성은 테두리의 아래쪽 색상을 설정합니다.</li>
+                    <li data-name="border-bottom-left-radius" data-type="테두리"><strong>border-bottom-left-radius</strong> : border-bottom-left-radius 속성은 데두리의 아래쪽의 왼쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-bottom-right-radius" data-type="테두리"><strong>border-bottom-right-radius</strong> : border-bottom-right-radius 속성은 데두리의 아래쪽의 오른쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-bottom-style" data-type="테두리"><strong>border-bottom-style</strong> : border-bottom-style 속성은 테두리의 아래쪽 스타일을 설정합니다.</li>
+                    <li data-name="border-bottom-width" data-type="테두리"><strong>border-bottom-width</strong> : border-bottom-width 속성은 테두리의 아래쪽 두께를 설정합니다.</li>
+                    <li data-name="border-collapse" data-type="테두리"><strong>border-collapse</strong> : border-collapse 속성은 테이블의 셀 사이의 거리 여부를 설정합니다.</li>
+                    <li data-name="border-color" data-type="테두리"><strong>border-color</strong> : border-color 속성은 테두리의 색상을 설정합니다.</li>
+                    <li data-name="border-end-end-radius" data-type="테두리"><strong>border-end-end-radius</strong> : border-end-end-radius 속성은 데두리의 끝쪽의 끝쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-end-start-radius" data-type="테두리"><strong>background</strong> : border-end-start-radius 속성은 데두리의 끝쪽의 시작쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-image" data-type="테두리"><strong>border-image</strong> : border-image 속성은 테두리 이미지를 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-image-outset" data-type="테두리"><strong>border-image-outset</strong> : border-image-outset 속성은 테두리 상자와 테두리 이미지의 거리를 설정합니다.</li>
+                    <li data-name="border-image-repeat" data-type="테두리"><strong>border-image-repeat</strong> : border-image-repeat 속성은 원본 이미지를 테두리 이미지에 표현 방법을 설정합니다.</li>
+                    <li data-name="border-image-slice" data-type="테두리"><strong>border-image-slice</strong> : border-image-slice 속성은 border-image-source로 설정한 이미지를 여러 개의 영역으로 나눕니다.</li>
+                    <li data-name="border-image-source" data-type="테두리"><strong>border-image-source</strong> : border-image-source 속성은 테두리 이미지의 원본 이미지를 설정합니다.</li>
+                    <li data-name="border-image-width" data-type="테두리"><strong>border-image-width</strong> : border-image-width 속성은 테두리 이미지의 너비를 설정합니다.</li>
+                    <li data-name="border-inline" data-type="테두리"><strong>border-inline</strong> : border-inline 속성은 테두리의 양쪽을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-inline-color" data-type="테두리"><strong>border-inline-color</strong> : border-inline-color 속성은 테두리의 양쪽 색상을 설정합니다.</li>
+                    <li data-name="border-inline-end" data-type="테두리"><strong>border-inline-end</strong> : border-inline-end 속성은 테두리의 양쪽 중 끝 부분을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-inline-end-color" data-type="테두리"><strong>border-inline-end-color</strong> : border-inline-end-color 속성은 테두리의 양쪽 중 끝 부분의 색상을 설정합니다.</li>
+                    <li data-name="border-inline-end-style" data-type="테두리"><strong>border-inline-end-style</strong> : border-inline-end-style 속성은 테두리의 양쪽 중 끝 부분의 스타일을 설정합니다.</li>
+                    <li data-name="border-inline-end-width" data-type="테두리"><strong>border-inline-end-width</strong> : border-inline-end-width 속성은 테두리의 양쪽 중 끝 부분의 두께을 설정합니다.</li>
+                    <li data-name="border-inline-start" data-type="테두리"><strong>border-inline-start</strong> : border-inline-start 속성은 테두리의 양쪽 중 시작 부분을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-inline-start-color" data-type="테두리"><strong>border-inline-start-color</strong> : border-inline-start-color 속성은 테두리의 양쪽 중 시작 부분의 색상을 설정합니다.</li>
+                    <li data-name="border-inline-start-style" data-type="테두리"><strong>border-inline-start-style</strong> : border-inline-start-style 속성은 테두리의 양쪽 중 끝 부분의 스타일을 설정합니다.</li>
+                    <li data-name="border-inline-start-width" data-type="테두리"><strong>border-inline-start-width</strong> : border-inline-start-width 속성은 테두리의 양쪽 중 끝 부분의 두께을 설정합니다.</li>
+                    <li data-name="border-inline-style" data-type="테두리"><strong>border-inline-style</strong> :  border-inline-style 속성은 테두리의 양쪽 스타일을 설정합니다.</li>
+                    <li data-name="border-inline-width" data-type="테두리"><strong>border-inline-width</strong> : border-inline-width 속성은 테두리의 양쪽 두께을 설정합니다.</li>
+                    <li data-name="border-left" data-type="테두리"><strong>border-left</strong> : border-left 속성은 테두리의 왼쪽을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-left-color" data-type="테두리"><strong>border-left-color</strong> : border-left-color 속성은 테두리의 왼쪽 색상을 설정합니다.</li>
+                    <li data-name="border-left-style" data-type="테두리"><strong>border-left-style</strong> : border-left-style 속성은 테두리의 왼쪽 스타일을 설정합니다.</li>
+                    <li data-name="border-left-width" data-type="테두리"><strong>border-left-width</strong> : border-left-width 속성은 테두리의 왼쪽 두께를 설정합니다.</li>
+                    <li data-name="border-radius" data-type="테두리"><strong>border-radius</strong> : border-radius 속성은 데두리의 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-right" data-type="테두리"><strong>border-right</strong> : border-right 속성은 테두리의 오른쪽을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-right-color" data-type="테두리"><strong>border-right-color</strong> : border-right -color 속성은 테두리의 오른쪽 색상을 설정합니다.</li>
+                    <li data-name="border-right-style" data-type="테두리"><strong>border-right-style</strong> : border-right -style 속성은 테두리의 오른쪽 스타일을 설정합니다.</li>
+                    <li data-name="border-right-width" data-type="테두리"><strong>border-right-width</strong> : border-right -width 속성은 테두리의 오른쪽 두께를 설정합니다.</li>
+                    <li data-name="border-spacing" data-type="테두리"><strong>border-spacing</strong> : border-spacing 속성은 테이블의 셀 사이의 거리를 설정합니다.</li>
+                    <li data-name="border-start-end-radius" data-type="테두리"><strong>border-start-end-radius</strong> : border-start-end-radius 속성은 데두리의 시작쪽의 끝쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-start-start-radius" data-type="테두리"><strong>border-start-start-radius</strong> : border-start-start-radius 속성은 데두리의 시작쪽의 시작쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-style" data-type="테두리"><strong>border-style</strong> : border-style 속성은 테두리의 스타일을 설정합니다.</li>
+                    <li data-name="border-top" data-type="테두리"><strong>border-top</strong> : border-top 속성은 테두리의 윗쪽을 설정하는 약식 속성입니다.</li>
+                    <li data-name="border-top-color" data-type="테두리"><strong>border-top-color</strong> : border-top-color 속성은 테두리의 윗쪽 색상을 설정합니다.</li>
+                    <li data-name="border-top-left-radius" data-type="테두리"><strong>border-top-left-radius</strong> : border-top-left-radius 속성은 데두리의 위쪽의 왼쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-top-right-radius" data-type="테두리"><strong>border-top-right-radius</strong> : border-top-right-radius 속성은 데두리의 위쪽의 오른쪽 모서리 굴곡을 설정합니다.</li>
+                    <li data-name="border-top-style" data-type="테두리"><strong>border-top-style</strong> : border-top-style 속성은 테두리의 윗쪽 스타일을 설정합니다.</li>
+                    <li data-name="border-top-width" data-type="테두리"><strong>border-top-width</strong> : border-top-width 속성은 테두리의 윗쪽 두께를 설정합니다.</li>
+                    <li data-name="border-width" data-type="테두리"><strong>border-width</strong> : border-right -width 속성은 테두리의 두께를 설정합니다.</li>
+                    <li data-name="bottom" data-type="속성"><strong>bottom</strong> : bottom 속성은 위치 지정 기준에서 아래쪽을 지정하는 오프셋 속성입니다.</li>
+                    <li data-name="box-decoration-break" data-type="속성"><strong>box-decoration-break</strong> : box-decoration-break 속성은 분할될 때 요소의 조각을 렌더링하는 방법을 설정합니다.</li>
+                    <li data-name="box-shadow" data-type="속성"><strong>box-shadow</strong> : box-shadow 속성은 그림자를 설정합니다.</li>
+                    <li data-name="box-sizing" data-type="속성"><strong>box-sizing</strong> : box-sizing 속성은 크기 조정이 방식을 설정합니다.</li>
+                    <li data-name="break-after" data-type="속성"><strong>break-after</strong> : break-after 속성은 뒤와 분열 방법을 설정합니다.</li>
+                    <li data-name="break-before" data-type="속성"><strong>break-before</strong> : break-after 속성은 앞과 분열 방법을 설정합니다.</li>
+                    <li data-name="break-inside" data-type="속성"><strong>break-inside</strong> : break-inside 속성은 분열 여부를 설정합니다.</li>
+                    <!-- c -->
+                    <li data-name="caption-side" data-type="속성"><strong>caption-side</strong> : caption-side 속성은 테이블의 캡션의 위치를 설정합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- script -->
+    <script>
+        const searchBox = document.querySelectorAll(".search span");    //다수의 검색목록(.search span)를 변수(searchBox)에 저장
+        const cssList = document.querySelectorAll(".list ul li");   //다수의 리스트를 변수(cssList)에 저장
+        const cssCount = document.querySelector(".count em");    //전체 속성 갯수(.count)를 변수(cssCount)에 저장
+
+        //모든 데이터 보이기
+        cssList.forEach((li, index) => {
+            li.classList.add("show");    //초기값으로 cssList에 클래스 add("show")를 실행
+            cssCount.innerHTML = index + 1;    //cssCount에 배열의 갯수를 문서에(innerHTML) 표현
+        })
+
+        //검색목록을 클릭하면 클리한 데이터 값을 가져와야 한다.
+        searchBox.forEach(el => {
+            el.addEventListener("click", () => {
+                const searchWord = el.innerText;    // 버튼의 글자만
+                // console.log(searcWord);
+
+                cssList.forEach(el => {
+                    // console.log(el)
+                    const cssName = el.dataset.name;    //검색목록 중 css 속성 값
+                    // console.log(cssName);
+                    const cssType = el.dataset.type;    //검색목록 중 css 유형 값
+                    // console.log(cssType);
+
+
+                    //조건문의 조건: 버튼 첫글자 == css 속성의 첫글자 and 버튼 첫글자 == css 유형의 첫글자
+                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssType.charAt(0)){
+                        el.classList.add("show");    //참이면 add("show")를 실행 하여 class에 show 추가
+                    } else {
+                        el.classList.remove("show");    //거짓이면 remove("show")를 실행 하여 class에 show 제거
+                    }
+                })
+            })
+        })
+
+    </script>
+</body>
+</html>
