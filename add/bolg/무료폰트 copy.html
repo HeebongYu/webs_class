@@ -1,0 +1,1325 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko" class="ko">
+<head>
+	<title>글꼴 | 추천 공공저작물 | 공공누리</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/front/main_2021.css" >
+	<link rel="shortcut icon" href="/images/front/favicon.ico">
+	<link rel="stylesheet" href="/css/front/all.css" >
+	<link rel="stylesheet" href="/css/front/animate.css" >
+	<link rel="stylesheet" href="/css/front/jquery-ui.css" >
+	<link rel="stylesheet" href="/css/front/audioplayer.css" >
+	
+	<script src="/js/front/common.js"></script>
+	<script src="/js/front/jquery-1.8.1.min.js"></script>	
+	<script src="/js/front/jquery-ui.js"></script>	
+	<script src="/js/front/audioplayer.js"></script>		
+	<script src="/js/front/gnb.js"></script>
+	<script src="/js/front/datepicker.js"></script>
+	<script src="/js/front/layer-popup.js"></script>		
+	<script src="/js/front/wow.js"></script>
+	<script src="/js/front/jquery.bxslider.js"></script>
+	<!-- <script  src="/js/front/jquery.cookie.js"></script> -->
+	<!-- 자체 작업  JS -->
+	<script src="/js/front/kogl-attachment.js"></script>	
+	<script src="/js/front/search.js"></script>
+	
+	
+	
+	
+	<link rel="shortcut icon" href="images/front/favicon.ico">
+	<link rel="stylesheet" href="/css/front/all.css" >
+	<link rel="stylesheet" href="/css/front/animate.css" >
+	<link rel="stylesheet" href="/css/front/slick.css" >
+	<link rel="stylesheet" href="/css/front/main_2021.css" >
+	<link rel="stylesheet" href="/css/front/jquery-ui.css" >
+	<link rel="stylesheet" href="/css/front/animate.css" >
+	
+	<script src="/js/front/jquery-1.8.1.min.js"></script>	
+	<script src="/js/front/jquery-ui.js"></script>		
+	<script src="/js/front/gnb.js"></script>	
+	<script src="/js/front/slick.js"></script>
+	<script src="/js/front/main_2021.js"></script>
+	<script src="/js/front/jquery.bxslider.js"></script>
+	
+	
+	
+	<!-- 이미지 메뉴 css -->
+	<style type="text/css">
+	.board-right {float:right;}
+	.board-right select {width:158px;height:40px;border:1px solid #ccc;color:#000;font-size:16px;background: #fff url(https://www.kogl.or.kr/images/front/common/bg_select.jpg) no-repeat right 15px center;-webkit-appearance: none;vertical-align:middle;padding:0 20px;box-sizing:border-box;}
+	.board-num {margin-top:10px;text-align:right;}
+	.thumb-wrap {overflow:hidden;}
+	.thumb-list {border-top:2px solid #000;margin:10px -10px 0 0;padding-top:10px;}
+	.thumb-list:after {content:"";display:block;clear:both;}
+	.thumb-list > li {position:relative;float:left;width:calc(20% - 10px);margin:10px 10px 0 0;overflow:hidden;}
+	.thumb-list > li .thumb {position:relative;width:99%; padding-top:82.8%;overflow:hidden;border:1px solid #ccc;}
+	.thumb-list > li .thumb  img {position:absolute;top:0;left:0;width:100%;height:100%;}
+	.thumb-list > li .mask {width:100%;height:100%;background:rgba(0,0,0,0.0);position:absolute;left:-100%;top:0;transition:all .3s ease-in-out;-webkit-transition: all 0.3s ease-in-out 0s;-moz-transition: all 0.3s ease-in-out 0s;}
+	.thumb-list > li:hover .mask {left:0;background:rgba(0,0,0,0.8);}
+	.thumb-list > li .mask.on {left:0;background:rgba(0,0,0,0.8);}
+	.thumb-list > li .mask .tit {color:#fff;text-align:center;border-bottom:1px solid #808080;padding:18px 0;margin:0 15px;line-height:18px;}
+	.thumb-list > li .mask .tit a {color:#fff;display:block;text-align:center;font-size:16px;}
+	.thumb-list > li .mask .info-list {margin:10px 15px;}
+	.thumb-list > li .mask .info-list li {margin:3px 0;color:#fff;font-size:12px;}
+	.thumb-list > li .mask .reaction-box {background:#fff;margin:0 15px;text-align:center;padding:1px 0 3px;color:#354c78;}
+	.thumb-list > li .mask .reaction-box img {vertical-align:middle;margin:0 3px;width:17px;}
+	.thumb-list > li .mask .reaction-box span {color:#354c78;font-size:13px;height:20px;line-height:20px;margin-right:5px;display:inline-block;vertical-align:middle;}
+	.thumb-list > li .mask .reaction-box span:hover {height:19px;border-bottom:1px solid #354c78;}
+	.thumb-list > li .mask .reaction-box span:last-child {margin-right:0;}
+	.locationarea .submenu3, .locationarea .submenu4 {position:absolute;left:0px;top:50px;border:1px solid #ddd;z-index:50;min-width:100%;display:none;box-sizing:border-box;border-bottom:0;}
+	.locationarea .submenu3{z-index:51 !important;}
+	.locationarea .submenu4{z-index:51 !important;}
+	.locationarea .submenu3 li,
+	.locationarea .submenu4 li {background:#fff;min-width:100%;padding:9px 12px;box-sizing:border-box;border-bottom:1px solid #ddd;}
+	locationarea .submenu3 li a,
+	.locationarea .submenu4 li a{display:block;}
+	@media screen and (max-width:1024px) {
+		.thumb-list > li .mask .tit {padding:5% 0;margin:0 10px;}
+		.thumb-list > li .mask .tit a {font-size:15px;}
+		.thumb-list > li .mask .info-list {margin:5px 10px;}
+		.thumb-list > li .mask .info-list li {margin:0;font-size:12px;}
+		.thumb-list > li .mask .reaction-box {margin:0 10px;}
+		.thumb-list > li .mask .reaction-box img {margin:0 1px;width:16px;}
+	}
+	@media screen and (max-width:900px) {
+		.thumb-list > li .mask .tit {padding:5% 0;}
+		.thumb-list > li .mask .tit a {font-size:14px;}
+		.thumb-list > li .mask .info-list {margin:5px 10px;}
+	}
+	@media screen and (max-width:770px) {
+		.board-right {float:none;padding:0 10px;}
+		.board-right select {width:100%;}
+		.board-num {padding:0 15px;}
+		.thumb-list {margin:10px 0 0 0;padding:0 10px;}
+		.thumb-list > li {float:none;width:calc(100% - 0px);margin:20px 0 0 0;}
+		.thumb-list > li .thumb {padding-top:66.5%}
+		.thumb-list > li .mask .tit {padding:20px 0;margin:0 15px;}
+		.thumb-list > li .mask .tit a {font-size:16px;}
+		.thumb-list > li .mask .info-list {margin:20px 15px;}
+		.thumb-list > li .mask .info-list li {margin:3px 0;font-size:12px;}
+		.thumb-list > li .mask .reaction-box {margin:0 15px;}
+		.thumb-list > li .mask .reaction-box img {margin:0 3px;width:17px;}
+	}
+</style>
+	
+	<!-- //이미지 메뉴 css -->
+	<script type="text/javascript">
+	var browse;
+	$(function () {
+		browse = navigator.userAgent.toLowerCase();
+		$('#thispage').hide();
+		//경로메뉴 1
+		$(".btnNavi3").click(function(){
+			$(this).toggleClass("on");
+			$(".submenu3").slideToggle();
+		});
+
+		//경로메뉴 2
+		$(".btnNavi4").click(function(){
+			$(this).toggleClass("on");
+			$(".submenu4").slideToggle();
+		});
+		console.log(browse);
+	})
+
+	function fn_recommendList(bigCode, smallCode) {
+			location.href = "/recommend/recommendDivList.do?division=font&smallCode="+smallCode;
+	}
+
+	function dataForChange(name) {
+		$('#thispage').show();
+		$('.btnNavi3').text(name);
+
+		var innerHTML ="";
+		if(name == '제작년도'){
+			$(".btnNavi4").text('선택');
+			
+
+		}
+
+		if(name == '공공누리유형'){
+			$(".btnNavi4").text('선택');
+			
+		}
+
+		if(name == '소장기관'){
+			$(".btnNavi4").text('선택');
+
+			
+		}
+
+		$(".submenu4").html(innerHTML);
+	}
+	</script>
+	
+	
+
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="/static/freefontevent/css/reset.css" />
+    <link rel="stylesheet" href="/static/freefontevent/css/freeFontEvent_new.css" />
+<!--     <link rel="stylesheet" href="/static/freefontevent/css/freeFontEvent.css" /> -->
+    <script src="/js/front/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript">
+        function setCookie(name, value, expiredays) {
+            var date = new Date();
+            date.setDate(date.getDate() + expiredays);
+            document.cookie = escape(name) + "=" + escape(value) + "; path=/; expires=" + date.toUTCString();
+        }
+
+        function closePopup() {
+            if (document.getElementById("check").value) {
+                setCookie("mainPopupYN", "N", 1);
+                self.close();
+            }
+        }
+
+        function serviceInfoOpen(){
+            var url = "/static/freefontevent/copyrightinfo.html";
+            window.open(url,"","width=900, height=350,top=400,left=600");
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56393753-12"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-56393753-12');
+    </script><!-- //wrap -->
+
+    <script type="text/javascript">
+        function freeFontDownload(idx){
+            var furl = '/freeFontFileDown.do?idx='+idx;
+            var dataIdx = 'idx='+idx;
+
+            //$.ajax({
+            //    type: "POST",
+            //    url: furl,
+            //    data: dataIdx,
+            //    dataType : "json",
+            //    error: function() {
+            //        alert('현재 안심 글꼴파일 서비스 이용이 불가능합니다.');
+            //    }
+            //});
+            window.open(furl, "_blank");
+        }
+    </script>
+
+	
+	<script>
+	function toMenu(){
+		$("#nav-menu").find("a").eq(0).focus();
+	}
+	</script>
+</head>
+<body>
+	<!--메뉴건너띄기 시작-->
+	<dl id="skiptoContent">
+		<dt class="blind">바로가기 메뉴</dt>
+		<!-- <dd><a href="#gnb" class="accessibility01">메인메뉴 바로가기</a>	</dd> -->
+		<dd><a href="#content-wrap" class="accessibility01">본문내용 바로가기</a></dd>
+		<dd><a href="javascript:void(0)" class="accessibility01" onclick="toMenu()">주메뉴 바로가기</a>	</dd>
+		<!-- <dd><a href="#footer" class="accessibility01">푸터내용 바로가기</a></dd> -->
+	</dl>
+	<!--메뉴건너띄기 끝 -->
+	
+	<!-- wrap S -->
+	<div class="wrap">
+		        
+		<!-- header S -->
+		
+
+<script>
+
+$(window).load(function(){  
+//Toggle attribute
+	$('.btn-site').attr('title', '패밀리사이트 목록 열기').click(function() {
+	$(this).toggleClass('checked');
+	var title = '패밀리사이트 목록 열기' ;
+	if( $(this).hasClass('checked')){
+	   title = '패밀리사이트 목록 닫기';
+	}
+	$(this).attr('title', title);
+	});
+	
+	 
+	//Toggle attribute
+	$('.btn-site2').attr('title', '관련사이트 목록 열기').click(function() {
+	$(this).toggleClass('checked');
+	var title = '관련사이트 목록 열기' ;
+	if( $(this).hasClass('checked')){
+	   title = '관련사이트 목록 닫기';
+	}
+	$(this).attr('title', title);
+	});
+});
+
+$(function() {
+	initMenu();
+	
+	$('#topOpenSearch').click(function(){
+// 		console.log("Open Search");
+		document.searchMainForm.submit();
+	});
+	$('#topSearch').click(function(){
+// 		console.log("Open Search");
+		document.searchMainForm.submit();
+	});
+	
+
+	//오늘 날짜를 출력
+	$("#today").text(new Date().toLocaleDateString());
+	//datepicker 한국어로 사용하기 위한 언어설정
+	$.datepicker.setDefaults($.datepicker.regional['ko']);  
+	//시작일.
+	$('#startDate').datepicker({
+		showOn: "button",                     // 달력을 표시할 타이밍 (both: focus or button)
+	   // buttonImage: "images/calendar.gif", // 버튼 이미지
+		buttonImageOnly : false,             // 버튼 이미지만 표시할지 여부
+		buttonText: "날짜선택",             // 버튼의 대체 텍스트
+		monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		dayNamesShort: ['일','월','화','수','목','금','토'],
+		dayNamesMin: ['일','월','화','수','목','금','토'],
+		dateFormat: "yy-mm-dd",             // 날짜의 형식
+		changeMonth: true,                  // 월을 이동하기 위한 선택상자 표시여부
+		//minDate: 0,                       // 선택할수있는 최소날짜, ( 0 : 오늘 이전 날짜 선택 불가)
+		onClose: function( selectedDate ) {    
+			$("#endDate").datepicker( "option", "minDate", selectedDate );
+		}                
+	});
+
+	//종료일
+	$('#endDate').datepicker({
+		showOn: "button", 
+		//buttonImage: "images/calendar.gif", 
+		buttonImageOnly : false,
+		buttonText: "날짜선택",
+		monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		dayNamesShort: ['일','월','화','수','목','금','토'],
+		dayNamesMin: ['일','월','화','수','목','금','토'],
+		dateFormat: "yy-mm-dd",
+		changeMonth: true,
+		//minDate: 0, // 오늘 이전 날짜 선택 불가
+		onClose: function( selectedDate ) {
+			// 종료일(toDate) datepicker가 닫힐때
+			// 시작일(fromDate)의 선택할수있는 최대 날짜(maxDate)를 선택한 종료일로 지정 
+			$("#startDate").datepicker( "option", "maxDate", selectedDate );
+		}                
+	});
+	
+	//		검색어 입력
+	$("#query").on("change", function(){
+		query = $("#query").val() || ""; 
+		$("#query").val(query);
+	});
+	
+	//결과내 재검색 #reChk
+	$("#reChk").on("click", function(){
+		temp_query = $("input[name=temp_query]").val() || "";	
+        if ($('input:checkbox[id="reChk"]').is(":checked") == true){
+			temp_query = temp_query+","+$("#query").val();
+			$("input[name=requery]").val($("input[name=temp_query]").val());
+        	$("#rt").val("1");
+			$("#query").val("");
+        }else if ($('input:checkbox[id="reChk"]').is(":checked") == false){
+			temp_query = $("input[name=temp_query]").val();
+			$("#query").val(temp_query);
+			$("#rt").val("");
+        }
+	});
+	
+	//첨부파일 attFileYn	
+	$("#attachChk").on("click", function(){
+		if($("input:checkbox[name=attachChk]").is(":checked") == true){
+			$("#attach").val("Y");
+		} else {
+			$("#attach").val("N");
+		}
+	});
+		
+	//보도자료 press
+	
+	$("#pressChk").on("click", function(){
+		if($("input:checkbox[name=pressChk]").is(":checked") == true){
+			$("#press").val("Y");
+		} else {
+			$("#press").val("");
+		}
+	});
+	
+
+	//기간선택
+	$("#duringDate li input").on("click", function(){
+		var $oSelect = $(this).attr("checked") || "";
+		var $oDuring = "";
+		if ($oSelect == "checked"){
+			$oDuring = $(this).parent().attr("data-mType");
+			setDate($oDuring);
+		}
+	});
+	
+
+	$("#allCompany").on("click", function(){
+		if($("input:checkbox[id='allCompany']").is(":checked") == true){
+			selDept('','');
+		}
+	});
+	
+	//20201112 팝업 포커스
+	$(".popSearchCompany").on("focus", function(){
+		$(".linkAppend").remove();
+		$(this).before("<a href='javascript:void(0);' class='linkBefore'></a>");
+		$(".linkBefore").on("focus", function(){
+			$(".btn-pop-close").focus();
+		})
+	});
+	
+	$(".popSearchDate").on("focus", function(){
+		$(".linkAppend").remove();
+		$(this).before("<a href='javascript:void(0);' class='linkBefore'></a>");
+		$(".linkBefore").on("focus", function(){
+			$(".btn-pop-close").focus();
+		})
+	});
+	
+	$(".btn-pop-close").on("focus", function(){
+		$(".linkBefore").remove();
+	})	
+	
+	
+});
+
+function onClickWorkType() {
+	var arrayParam = new Array();
+	if($("input:checkbox[name=workType1]:checked").is(":checked") == true){
+		arrayParam.push($("input:checkbox[name=workType1]").val());
+	}
+	if($("input:checkbox[name=workType2]:checked").is(":checked") == true){
+		arrayParam.push($("input:checkbox[name=workType2]").val());
+	}
+	if($("input:checkbox[name=workType3]:checked").is(":checked") == true){
+		arrayParam.push($("input:checkbox[name=workType3]").val());
+	}
+	if($("input:checkbox[name=workType4]:checked").is(":checked") == true){
+		arrayParam.push($("input:checkbox[name=workType4]").val());
+	}
+	$("#rgtType").val(arrayParam);
+	//console.log($("#rgtType").val());
+}
+
+</script>
+
+<!--메뉴건너띄기 끝 -->	
+	<form name="searchMainForm" id="searchMainForm" action="/search/search.do" method="post">		
+		<input type="hidden" title="searchDate" name="searchDate" id ="searchDate" value="">
+		<input type="hidden" title="company" id="company" name="company" value="">
+		<input type="hidden" title="orgCode" id="orgCode" name="orgCd"  value="">
+		<input type="hidden" title="rt" name="rt"  id ="rt" value="">
+		<input type="hidden" title="requery" name="requery"  id="requery"  value="">
+		<input type="hidden" title="temp_query" name="temp_query"  id ="temp_query"  value="">
+		<input type="hidden" title="attach" name="attach"  id ="attach"  value="">
+		<input type="hidden" title="fileExt" name="fileExt"  id ="fileExt"  value="">
+		<input type="hidden" title="press" name="press"  id ="press"  value="">
+		<input type="hidden" title="atcType" name="atcType"  id ="atcType"  value="">
+		<input type="hidden" title="cateCd" name="cateCd"  id ="cateCd"  value="">
+		<input type="hidden" title="cateCd1" name="cateCd1"  id ="cateCd1"  value="">
+		<input type="hidden" title="cateCd2" name="cateCd2"  id ="cateCd2"  value="">
+		<input type="hidden" title="rgtType" name="rgtType"  id ="rgtType"  value="">
+		<input type="hidden" title="rsort" name="rsort"  id ="rsort"  value="RANK" />
+		<input type="hidden" title="chosung" name="chosung"  id ="chosung"  value="">
+		<input type="hidden" title="collectionType" name="collectionType"  id ="collectionType"  value="">			
+	<div id="header" class="header-green">	
+			
+		<div class="layout_area clear2">
+			<h1 class="logo"><a href="/index.do" title="통합 인트로페이지로 이동"><img src="/images/front/common/logo.jpg"  alt="OPEN 공공누리 공공저작물 자유이용허락"></a></h1>
+			<div class="searcharea">
+				<div class="searchform">
+					<fieldset>
+						<legend>공공저작물 검색</legend>	
+						<label for="query" style="text-indent:-10000px">검색어</label>							
+						<input type="text" name="query" id="query" title="공공저작물을 검색해 보세요." value="" autocomplete="off" placeholder="상세검색을 통해 공공저작물을 찾아보세요!!">
+						<button type="button" id="topOpenSearch">검색</button>						
+					</fieldset>
+					<button type="button" class="detailsearch contbtn">상세검색</button>
+					<button  type="button"  class="search_layer_close" title="통합검색 닫기">검색닫기</button>
+				</div>					
+			</div>
+			<ul class="util">				
+			
+				<li>
+					<div class="profile">
+						<a href="/member/loginMain.do" title="로그인"><img src="/images/front/common/bg_profile.jpg" width="39" height="39" alt="로그아웃"></a>
+					</div>
+				</li>
+				<li class="login"></li>
+			
+			
+				<li class="allmenu"><a href="/etc/allMenu.do" title="사이트맵-전체메뉴보기"><img src="/images/front/common/btn_allmenu.jpg" alt="사이트맵버튼"></a></li>
+			</ul>
+			<!-- 모바일 검색 -->
+			<button  type="button"  class="mobile-search search_layer_open">모바일 검색창 열기</button>			
+		</div>					
+		<div class="detail-seachbox">
+			<div class="layout_area clear2">
+				<ul class="search-condition">	
+					<li class="search-company">
+						<button type="button" class="btn-modal-pop" id="popSearchCompany">전체기관</button>							
+					</li>
+					<li class="search-date">
+						<button type="button"  class="btn-modal-pop" id="popSearchDate">전체기간</button>
+					</li>
+					<li class="search-type">
+						 <span class="checks">
+							<input type="checkbox" title="1유형" id="workType1" name="workType1" value="1"  checked onclick="javascript:onClickWorkType();">
+							<label for="workType1">1유형</label>
+						 </span>
+						 <span class="checks">
+							<input type="checkbox" title="2유형" id="workType2" name="workType2" value="2"  checked onclick="javascript:onClickWorkType();">
+							<label for="workType2">2유형</label>
+						 </span>
+						 <span class="checks">
+							<input type="checkbox" title="3유형" id="workType3" name="workType3" value="3"  checked onclick="javascript:onClickWorkType();">
+							<label for="workType3">3유형</label>
+						 </span>
+						 <span class="checks">
+							<input type="checkbox" title="4유형" id="workType4" name="workType4" value="4"  checked onclick="javascript:onClickWorkType();">
+							<label for="workType4">4유형</label>
+						 </span>
+					</li>
+				</ul>	
+				
+				<ul class=seachtype>
+<!--
+이전내용 20211028
+--> 				
+					<li class="all selected"><a href="javascript:void(0);"  onclick="doSearch('all',''); return false;">전체</a></li>
+					<li class="recommend"><a href="javascript:void(0);"  onclick="doSearch('recommend',''); return false;">추천</a></li>
+					<li class="language"><a href="javascript:void(0);"  onclick="doSearch('language',''); return false;">어문</a></li>
+					<li class="image"><a href="javascript:void(0);"  onclick="doSearch('image',''); return false;">사진</a></li>
+					<li class="media"><a href="javascript:void(0);"  onclick="doSearch('media',''); return false;">영상</a></li>
+					<li class="art"><a href="javascript:void(0);"  onclick="doSearch('art',''); return false;">미술</a></li>
+					<li class="music"><a href="javascript:void(0);"  onclick="doSearch('music',''); return false;">음악</a></li>
+					<li class="sharing"><a href="javascript:void(0);"  onclick="doSearch('sharing',''); return false;">공유마당</a></li>
+ 					
+				</ul>
+<!-- 				
+				<ul class=seachtype>	
+					<li class="recommend"><a href="javascript:void(0);"  onclick="doSearch('recommend',''); return false;">문화·예술</a></li>
+					<li class="recommend"><a href="javascript:void(0);"  onclick="doSearch('recommend',''); return false;">과학기술</a></li>
+					<li class="language"><a href="javascript:void(0);"  onclick="doSearch('language',''); return false;">정보통신</a></li>
+					<li class="music"><a href="javascript:void(0);"  onclick="doSearch('music',''); return false;">교육·학술</a></li>
+					<li class="art"><a href="javascript:void(0);"  onclick="doSearch('art',''); return false;">외교·국방</a></li>
+					<li class="sharing"><a href="javascript:void(0);"  onclick="doSearch('sharing',''); return false;">법률·행정</a></li>
+					<li class="image"><a href="javascript:void(0);"  onclick="doSearch('image',''); return false;">사회·경제</a></li>
+					<li class="media"><a href="javascript:void(0);"  onclick="doSearch('media',''); return false;">보건·의료·복지</a></li>					
+					
+										
+				</ul>
+-->
+				<ul class="search-option">	
+					<li class="search-type">
+						 <span class="checks">
+							<input type="checkbox" id="reChk" name="reChk" value="Y" >
+							<label for="reChk">결과 내 재검색</label>
+						 </span>
+						 <span class="checks">
+							<input type="checkbox" id="attachChk" name="attachChk" value="Y" >
+							<label for="attachChk">첨부파일 게시물만</label>
+						 </span>
+						 <span class="checks">
+							<input type="checkbox" id="pressChk" name="pressChk" value="Y" >
+							<label for="pressChk">보도자료 미포함</label>
+						 </span>
+						 <!-- 2019-12-05 검색 버튼 추가 -->
+						 <a href="javascript:void(0)" class="btnSrch" id="topSearch">검색</a>
+					</li>
+				</ul>	
+				<button type="button" class="btn-close-search contbtn">상세검색 닫기</button>
+			</div>				
+		</div>		
+		<script>
+
+		//상세검색
+		   $(".contbtn").on("click", function(){
+		      if($(this).hasClass('opendv')){
+		         close_search($(this));
+		      }else{
+		         $(this).addClass('opendv');
+		         /* $(".detail-seachbox").attr("tabindex", "0").show(); */
+		         $(".detail-seachbox").show();
+		         $("#popSearchCompany").focus();
+		         
+		      };
+		   });
+
+		   $(".btn-close-search").click(function(){
+		      var btn_contbtn = $('.contbtn');
+		      close_search(btn_contbtn);
+		   });
+		   
+			// 2019-12-10 접근성 포커스 추가
+			$(".btn-close-search").on('focusout',function(){
+				var btn_contbtn = $('.contbtn');
+			    close_search(btn_contbtn);
+			    $(".detailsearch").focus();
+			});
+		
+
+		   function close_search(this_btn){
+		      this_btn.removeClass('opendv');
+		      $(".detail-seachbox").removeAttr("tabindex").hide();
+		      $(".contbtn").focus();
+		   };
+		//상세검색end
+		</script>	
+		<!-- 모바일 메뉴 시작 -->
+		<button type="button" class="mob_btn mobile_gnb_open_btn"  id="hamburger-1"><span class="hidden">모바일 메뉴</span></button>		
+		<div class="mobile_gnb_list">
+			 <h2 class="blind">모바일 네이게이션</h2>
+			 <div class="mobile-gnbhead">
+				<div class="m-logo"><a href="/" title="통합 인트로페이지로 이동"><img src="/images/front/common/mobile_gnblogo.jpg"  alt="OPEN 공공누리 공공저작물 자유이용허락" /></a></div>
+				<ul class="mobile-util">
+					<li>
+						<div class="profile">
+							
+							<a href="/member/loginMain.do"><img src="/images/front/common/bg_profile.jpg" width="39" height="39" alt="로그인" /></a>
+							
+							
+						</div>
+					</li>
+					<li class="allmenu">
+						<button type="button" class="hamburger mobile_gnb_open_btn is-active">
+							<img src="/images/front/common/btn_close_m.jpg"  alt="모바일메뉴닫기 이미지" />
+						</button>
+					</li>
+				</ul>
+			 </div>
+			<ul class="gnb_area">
+				<li class="oneD depth">
+					<a href="javascript:void(0)" >추천공공저작물</a>
+					<ul class="twoD" style="display: block;">					
+						<li><a href="/recommend/recommendDivList.do?division=img">이미지</a></li>
+						<li><a href="/recommend/recommendDivList.do?division=3D">3D</a></li>
+						<li><a href="/recommend/recommendDivList.do?division=video">영상</a></li>
+						<li><a href="/recommend/recommendDivList.do?division=music">음악</a></li>
+						<li><a href="/recommend/recommendDivList.do?division=sound">소리</a></li>
+						<li><a href="/recommend/recommendDivList.do?division=font">글꼴</a></li>
+						<li><a href="/recommend/recommendDivList.do?division=doc">어문</a></li>
+						<li><a href="/recommend/recommendList.do?atcUrl=keyword&bigCode=A001&middleCode=B009">키워드 저작물</a></li>
+						<li><a href="/search/curationList.do?etc3=A001">큐레이션</a></li>
+						<li><a href="/recommend/bestContentsList.do">우수공공저작물</a></li>
+						<li><a href="/map/map.do">추천공공저작물 지도</a></li>
+					</ul>
+				</li>
+				<li  class="oneD depth">
+					<a href="javascript:void(0)">우수활용사례</a>
+					<ul  class="twoD">
+						<li><a href="/use/bestCaseList.do?caseYear=2021">활용사례</a></li>
+						<li><a href="/use/bestCaseExForm.do">활용사례등록 안내</a></li>
+						<li><a href="/use/bestSupportingInfo.do">활용지원 사업 안내</a></li>
+						<li><a href="/use/bestCaseTipList.do?etc1=T">활용 TIP</a></li>
+						<li><a href="/use/bestWinningWorkList.do">공모전</a></li>
+					</ul>
+				</li>
+				<li  class="oneD depth">
+					<a href="javascript:void(0)">공공누리 소식</a>
+					<ul  class="twoD">
+						<li><a href="/news/noticeList.do">공지사항</a></li>
+						<li><a href="/news/reportList.do">보도자료</a></li>
+						<li><a href="/news/eventList.do">이벤트</a></li>
+						<li><a href="/news/promotionList.do">콘텐츠·홍보물&웹툰</a></li>
+						<li><a href="/news/newsLetterList.do">뉴스레터</a></li>
+						<li><a href="/news/newsReportList.do"><span>이달의보도자료</span></a></li>
+					</ul>
+				</li>
+				<li  class="oneD depth">
+					<a href="javascript:void(0)">공공누리 소개</a>
+					<ul  class="twoD">
+						<li><a href="/info/introduce.do">공공누리란?</a></li>
+						<li><a href="/info/freeUse.do">공공저작물 자유이용</a></li>
+						<li><a href="/info/license.do">공공누리 유형안내</a></li>
+						<li><a href="/info/faqList.do?mstIdx=KOGL_006&dataGroup=2">자주하는 질문</a></li>
+						<li><a href="/info/userQnaList.do">질문과 답변(개인)</a></li>
+					</ul>
+				</li>
+				<li  class="opencenter oneD depth">
+					<a href="javascript:void(0)">개방지원센터</a>
+					<ul  class="twoD">
+						<li><a href="/edu/openInfo.do">개방지원센터 안내</a></li>
+						<li><a href="/edu/eduDataList.do">자료실·강의실</a></li>
+						<li><a href="/edu/organNation.do">도입기관 소개</a></li>						
+						<li><a href="/edu/publicQnaList.do">질문과 답변(기관)</a></li>
+						
+					</ul>
+				</li>
+				<li  class="oneD depth">
+					<a href="javascript:void(0)">회원관리</a>
+					<ul  class="twoD">			
+				
+				    
+						<li><a href="/personalpage/personalMain.do">개인회원 로그인</a></li>
+						<li><a href="/member/loginForm.do">기관회원 로그인</a></li>
+						<li><a href="/member/loginMain.do">회원가입</a></li>
+										
+				    				
+				    					    
+				
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="shadow_bg"></div>	
+	</div>
+	
+	<!-- nav S -->
+		<div id="nav" class="navbar-collapse collapse header-green">
+			<h2 class="blind">네비게이션</h2>
+			<div class="nav-inner">
+				<ul class="nav-area" id="nav-menu">
+					<li class="menu">
+						<a href="/recommend/recommendDivList.do?division=img"  class="mma">추천공공저작물</a>
+						<ul style="display: none;">				
+							<li><a href="/recommend/recommendDivList.do?division=img">이미지</a></li>
+							<li><a href="/recommend/recommendDivList.do?division=3D">3D</a></li>
+							<li><a href="/recommend/recommendDivList.do?division=video">영상</a></li>
+							<li><a href="/recommend/recommendDivList.do?division=sound">소리</a></li>
+							<li><a href="/recommend/recommendDivList.do?division=music">음악</a></li>
+							<li><a href="/recommend/recommendDivList.do?division=font">글꼴</a></li>
+							<li><a href="/recommend/recommendDivList.do?division=doc">어문</a></li>
+							<li><a href="/recommend/recommendList.do?atcUrl=keyword&bigCode=A001&middleCode=B009">키워드 저작물</a></li>
+							<li><a href="/search/curationList.do?etc3=A001">큐레이션</a></li>
+							<li><a href="/recommend/bestContentsList.do">우수공공저작물</a></li>
+							<li><a href="/map/map.do">추천공공저작물 지도</a></li>
+						</ul>
+					</li>
+					<li class="menu2">
+						<a href="/use/bestCaseList.do?caseYear=2021" class="mma">우수활용사례</a>
+						<ul style="display: none;">
+							<li><a href="/use/bestCaseList.do?caseYear=2021">활용사례</a></li>
+							<li><a href="/use/bestCaseExForm.do">활용사례등록 안내</a></li>
+							<li><a href="/use/bestSupportingInfo.do">활용지원 사업 안내</a></li>
+							<li><a href="/use/bestCaseTipList.do?etc1=T">활용 TIP</a></li>
+							<li><a href="/use/bestWinningWorkList.do">공모전</a></li>
+						</ul>
+					</li>
+					<li class="menu3">
+						<a href="/news/noticeList.do" class="mma">공공누리 소식</a>
+						<ul style="display: none;">
+							<li><a href="/news/noticeList.do">공지사항</a></li>
+							<li><a href="/news/reportList.do">보도자료</a></li>
+							<li><a href="/news/eventList.do">이벤트</a></li>
+							<li><a href="/news/promotionList.do">콘텐츠·홍보물&웹툰</a></li>
+							<li><a href="/news/newsLetterList.do">뉴스레터</a></li>							
+							<li><a href="/news/newsReportList.do"><span>이달의보도자료</span></a></li>
+						</ul>
+					</li>
+					<li class="menu4">
+						<a href="/info/introduce.do" class="mma">공공누리 소개</a>
+						<ul style="display: none;">
+							<li><a href="/info/introduce.do">공공누리란?</a></li>
+							<li><a href="/info/freeUse.do">공공저작물 자유이용</a></li>
+							<li><a href="/info/license.do">공공누리 유형안내</a></li>
+							<li><a href="/info/faqList.do?mstIdx=KOGL_006&dataGroup=2">자주하는 질문</a></li>
+							<li><a href="/info/userQnaList.do">질문과 답변(개인)</a></li>
+						</ul>
+					</li>
+					<li class="menu5">
+						<a href="/edu/openInfo.do" class="mma">개방지원센터</a>
+						<ul style="display: none;">
+							<li><a href="/edu/openInfo.do">개방지원센터 안내</a></li>
+							<li><a href="/edu/eduDataList.do">자료실·강의실</a></li>
+							<li><a href="/edu/organNation.do">도입기관 소개</a></li>						
+							<li><a href="/edu/publicQnaList.do">질문과 답변(기관)</a></li>
+							
+						</ul>
+					</li>
+					<li class="menu6">
+						<a href="#" class="mma">회원관리</a>						
+						<ul style="display: none;">									
+					
+						
+							<li><a href="/personalpage/personalMain.do">개인회원 로그인</a></li>
+							<li><a href="/member/loginForm.do">기관회원 로그인</a></li>
+							<li><a href="/member/loginMain.do">회원가입</a></li>
+											
+					    				
+					    
+					
+						</ul>
+					</li>
+				</ul>
+				<!-- 로그인 전 S -->		
+			
+			    					    
+				<ul class="quick-link" style="display: none;">
+			    	
+			    					    
+					
+					<li class=""><a href="http://www.alright.or.kr/mp/user/alrightIntro/alrightIntro.do" title="신탁관리시스템 새창이동" target="_blank"><img src="/images/front/common/btn_top_bn01.jpg"  alt="신탁관리시스템" /></a></li>
+					<li class=""><a href="https://gongu.copyright.or.kr" target="_blank" title="공유마당 새창이동"><img src="/images/front/common/btn_top_bn02.jpg"  alt="공유마당" /></a></li>
+				</ul>			
+				
+				<!-- //로그인 전 E -->				
+				<div class="sub-bg" style="display: none;"></div>
+			</div>
+		</div>
+		<!-- //nav E -->
+		
+		<!-- 기간설정 팝업 -->
+		<div class="layerpopup popDate popSearchDate" style="display: none;">
+			<div class="pop-header">
+				<strong>기간설정</strong>
+			</div>
+			<div class="pop-content">
+				<ul class="condition_tab" id="duringDate">
+					<li class="all" data-mtype=""><input type="radio" name="duringDate" id="allMonth"><label for="allMonth">전체</label></li>
+					<li data-mtype="1" class="month"><input type="radio" name="duringDate" id="month1"><label for="month1">1개월</label></li>
+					<li data-mtype="3" class="month"><input type="radio" name="duringDate" id="month3"><label for="month3">3개월</label></li>
+					<li data-mtype="6" class="month"><input type="radio" name="duringDate" id="month6"><label for="month6">6개월</label></li>
+				</ul>
+				<div class="datebox">
+					<p>
+						<label for="startDate" class="hidden-obj">시작일 설정</label>
+						<input type="text" name="startDate"  class="com_input " id="startDate"  value="" title="시작일 입력 예시 2019.09.15">
+					</p>
+					<span>~</span>
+					<p> 
+						<label for="endDate" class="hidden-obj">종료일 설정</label>
+						<input type="text" name="endDate"  class="com_input " id="endDate"  value="" title="종료 입력 예시 2019.09.15">
+					</p>
+				</div>
+				<div class="btn-area"><a href="javascript:closeModalPop('popSearchDate');setDateOption();">설정</a></div>
+			</div>
+			<button type="button" class="btn-pop-close"><span>전체 기간설정 팝업 창닫기</span></button>															
+		</div>		
+		<!-- //기간설정 팝업 -->
+		<!-- 도입기관 검색 팝업  -->
+		<div class="layerpopup popCompany popSearchCompany"  style=" display: none;">
+			<div class="pop-header">
+				<strong>도입기관 검색</strong>
+			</div>
+			<div class="pop-content">
+				<div class="pop-top-seachbox">				
+					<input id="totalCnt" type="hidden"/>
+					<input id="pageBlock" type="hidden"/>
+					<input type="text" id="deptKeyword" name="deptKeyword" value="" title="검색어를 입력해 주세요" onkeypress="javascript:pressDeptCheck((event),this);">
+					<label for="deptKeyword" class="hidden-obj">검색어를 입력해 주세요</label>
+					<a href="javascript:getDept('')">검색</a>	
+				</div>
+
+				<div class="pop-totalcount clear2">
+					<p>총<span id="deptCnt"></span>개 도입기관이 있습니다.</p>
+					<div class="pop-checkall">
+						<input type="checkbox" id="allCompany" name="allCompany" value="">
+						<label for="allCompany">전체기관</label>
+					</div>
+				</div>
+				<ul class="initial-list">
+					<li><a href="javascript:getDept(0, 'ㄱ')">ㄱ</a></li>
+					<li><a href="javascript:getDept(0, 'ㄴ')">ㄴ</a></li>
+					<li><a href="javascript:getDept(0, 'ㄷ')">ㄷ</a></li>
+					<li><a href="javascript:getDept(0, 'ㄹ')">ㄹ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅁ')">ㅁ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅂ')">ㅂ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅅ')">ㅅ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅇ')">ㅇ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅈ')">ㅈ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅊ')">ㅊ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅋ')">ㅋ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅌ')">ㅌ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅍ')">ㅍ</a></li>
+					<li><a href="javascript:getDept(0, 'ㅎ')">ㅎ</a></li>
+				</ul>
+
+				<div class="company-list">
+					<ul id="deptList">
+					</ul>
+				</div>
+				<div class="list-page" id="deptPaginate">
+				</div>
+				<div class="btn-area">
+					<a href="#" class="modal_close">닫기</a>
+				</div>		
+				<button type="button"  class="lastClose btn-pop-close"><span>공공기관검색 팝업 창닫기</span></button>		
+			</div>
+		</div>			
+	</form>	
+	
+			
+
+		<!-- container S -->
+		<div class="container">
+			
+
+<div class="wrap">
+
+	<!-- container S -->
+	<div class="container">
+
+		<!-- contents S -->
+		<div id="content-wrap">
+			<div class="layout_area clear2">
+				<h2 class="pagetit">글꼴</h2>
+				<div class="locationarea clear2">
+					<ul>
+						<li class="home">홈</li>
+						<li class="2depth">추천공공저작물</li>
+						<li class="thispage">
+							<button type="button" class="btnNavi1">글꼴</button>
+							<ul class="submenu1" style="display: none;">
+								<li><a href="/recommend/recommendDivList.do?division=img">이미지</a></li>
+								<li><a href="/recommend/recommendDivList.do?division=3D">3D</a></li>
+								<li><a href="/recommend/recommendDivList.do?division=video">영상</a></li>
+								<li><a href="/recommend/recommendDivList.do?division=sound">소리</a></li>
+								<li><a href="/recommend/recommendDivList.do?division=music">음악</a></li>
+								<li><a href="/recommend/recommendDivList.do?division=font">글꼴</a></li>
+								<li><a href="/recommend/recommendDivList.do?division=doc">어문</a></li>
+								<li><a href="/recommend/recommendList.do?bigCode=A001&middleCode=B009">키워드 저작물</a></li>
+								<li><a href="/search/curationList.do?etc3=A001">큐레이션</a></li>
+								<li><a href="/recommend/bestContentsList.do">우수공공저작물</a></li>
+								<li><a href="/map/map.do">추천공공저작물 지도</a></li>
+							</ul>
+						</li>
+
+							
+					</ul>
+				</div>
+				
+				<!-- 랜덤 영역 -->
+				<div class="thumb-wrap listmain-slider">
+					<ul class="thumb-list slider-list">
+					
+					</ul>
+				</div>
+				<script>
+				    $('.slider-list').bxSlider({
+				        slideWidth: 240,
+				        minSlides:1,
+				        maxSlides:4,
+				        touchEnabled: (navigator.maxTouchPoints > 0),
+				        controls: true,
+				        slideMargin:25,
+				        infiniteLoop: true ,
+				        // 웹접근성 추가
+				        onSliderLoad: function () {
+				            $(".bx-clone").find("a").prop("tabindex", "-1");
+				        },
+				        onSlideAfter: function () {
+				            $(".slider-list").children("li").each(function () {
+				                if ($(this).attr("aria-hidden") == "false") {
+				                    $(this).find("a").attr("tabindex", "0");
+				                } else {
+				                    $(this).find("a").attr("tabindex", "-1");
+				                }
+				            });
+				        }
+				    });
+				</script>
+				<!-- 랜덤 영역 -->
+				
+				
+				<div class="cont">
+					
+						<ul class="keyword-tab" style="margin-bottom:30px;">
+							<li><button  onclick="javascript:fn_recommendList('A006','C001')">공공 안심글꼴</button></li>
+							<li><button  onclick="javascript:fn_recommendList('A006','C002')">민간 안심글꼴</button></li>
+							<li><button  onclick="javascript:fn_recommendList('A006','C003')">공공저작물 추천글꼴</button></li>
+							<li><button  onclick="javascript:fn_recommendList('A006','C004')">안심글꼴 PPT</button></li>
+							<li><button  onclick="javascript:fn_recommendList('A006','freeFont')">안심 글꼴 파일 서비스</button></li>
+						</ul>
+						
+							<div class="thumb-wrap" >
+								<div style="position: relative;">
+								
+
+
+<div class="font_pop_wrap">
+	<div class="pop_head"></div>
+	<div class="pop_container">
+		<div class="pop_main">
+			<img src="/static/freefontevent/img2/font_main.png" alt="국민 누구나 저작권 걱정없이 자유롭게 이용할 수 있는 '안심 글골파일 서비스'. 안심글꼴파일 서비스 안내. 1 이 글꼴로 무엇을 할 수 있나요? 온라인으로 문서나 PPT작성 등도 가능하고 인쇄도 가능하고, 다름사람에게 보내줄 수 있어요. 2 더 많은 글골을 보고 싶다면 어떻게 하나요? 공공저작물 공유마당과 공공누리로 들어오세요 다만, 공유마당과 공공누리에 있는 글꼴은 이용조건이 다르니 주의해주세요. *글꼴파일 :ttf(윈도우용), otf(맥용)">
+			<a href = "https://gongu.copyright.or.kr/gongu/bbs/B0000018/list.do?menuNo=200195" target="_blank" rel="noopener noreferrer" class="logo1" title="새창열림">공유마당</a>
+			<a href = "http://www.kogl.or.kr/recommend/recommendDivList.do?division=font"target="_blank" rel="noopener noreferrer" class="logo2" title="새창열림">공공누리</a>		
+		</div>
+		<div class="pop_all_down">
+			<a href="javascript:freeFontDownload(203)"><span>안심글꼴 한번에 내려받기</span></a>
+			<a href="javascript:freeFontDownload(202)"><span>글꼴 목록 내려받기</span></a>
+		</div>
+
+		<div class="pop_content box_kogl">
+			<div class="box_title"><strong>KOGL(133종)</strong><button id="KOGL" onclick="serviceInfoOpen()" class="btn_help"></button></div>
+			<div class="box_new_list">
+				<ul id="kogl_101_area" >
+					<!-- <div  title ="저작권자 : 한국출판인회의"> -->
+					<li><a href="javascript:freeFontDownload(197)" title="저작권자 : 충북대70주년체B" ><img src="/static/freefontevent/img2/KOGL_132.png" alt="충북대70주년체B"></a></li>         
+					<li><a href="javascript:freeFontDownload(198)" title="저작권자 : 충북대70주년R" ><img src="/static/freefontevent/img2/KOGL_133.png" alt="충북대70주년R"></a></li>        
+					<li><a href="javascript:freeFontDownload(199)" title="저작권자 : 충북대직지체" ><img src="/static/freefontevent/img2/KOGL_134.png" alt="충북대직지체"></a></li>
+					<li><a href="javascript:freeFontDownload(187)" title="저작권자 : 코트라" ><img src="/static/freefontevent/img2/KOGL_126.png" alt="코트라 고딕체"></a></li>        
+					<li><a href="javascript:freeFontDownload(188)" title="저작권자 : 코트라" ><img src="/static/freefontevent/img2/KOGL_127.png" alt="코트라 도약체"></a></li>        
+					<li><a href="javascript:freeFontDownload(189)" title="저작권자 : 코트라" ><img src="/static/freefontevent/img2/KOGL_128.png" alt="코트라 볼드체"></a></li>        
+					<li><a href="javascript:freeFontDownload(190)" title="저작권자 : 코트라" ><img src="/static/freefontevent/img2/KOGL_129.png" alt="코트라 손글씨체"></a></li>        
+					<li><a href="javascript:freeFontDownload(191)" title="저작권자 : 코트라" ><img src="/static/freefontevent/img2/KOGL_130.png" alt="코트라 희망체"></a></li>
+					<li><a href="javascript:freeFontDownload(196)" title="저작권자 : 횡성한우체" ><img src="/static/freefontevent/img2/KOGL_131.png" alt="횡성한우체"></a></li>                
+					<li><a href="javascript:freeFontDownload(184)" title="저작권자 : ACC어린이가을담은체" ><img src="/static/freefontevent/img2/KOGL_123.png" alt="ACC어린이가을담은체"></a></li>        
+					<li><a href="javascript:freeFontDownload(185)" title="저작권자 : ACC어린이마음고운체" ><img src="/static/freefontevent/img2/KOGL_124.png" alt="ACC어린이마음고운체"></a></li>        
+					<li><a href="javascript:freeFontDownload(186)" title="저작권자 : ACC어린이하늘맑은체" ><img src="/static/freefontevent/img2/KOGL_125.png" alt="ACC어린이하늘맑은체"></a></li>
+				</ul>				
+			</div>
+			<div class="box_list">
+				<ul id="kogl_101_area_02">
+					<li><a href="javascript:freeFontDownload(74)" title="저작권자 : 경기도" ><img src="/static/freefontevent/img2/KOGL_42.png" alt="경기천년바탕체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(75)" title="저작권자 : 경기도" ><img src="/static/freefontevent/img2/KOGL_43.png" alt="경기천년바탕체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(76)" title="저작권자 : 경기도" ><img src="/static/freefontevent/img2/KOGL_44.png" alt="경기천년제목체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(77)" title="저작권자 : 경기도" ><img src="/static/freefontevent/img2/KOGL_45.png" alt="경기천년제목체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(78)" title="저작권자 : 경기도" ><img src="/static/freefontevent/img2/KOGL_46.png" alt="경기천년제목체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(79)" title="저작권자 : 경기도" ><img src="/static/freefontevent/img2/KOGL_47.png" alt="경기천년제목체 VB"></a></li>
+					<li><a href="javascript:freeFontDownload(81)" title="저작권자 : 고양시" ><img src="/static/freefontevent/img2/KOGL_49.png" alt="고양덕양체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(80)" title="저작권자 : 고양시" ><img src="/static/freefontevent/img2/KOGL_48.png" alt="고양덕양체 EB"></a></li>
+					<li><a href="javascript:freeFontDownload(83)" title="저작권자 : 고양시" ><img src="/static/freefontevent/img2/KOGL_51.png" alt="고양일산체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(82)" title="저작권자 : 고양시" ><img src="/static/freefontevent/img2/KOGL_50.png" alt="고양일산체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(173)" title="저작권자 : 국립공원 꼬미" ><img src="/static/freefontevent/img2/KOGL_116.png" alt="국립공원 꼬미"></a></li>  
+					<li><a href="javascript:freeFontDownload(174)" title="저작권자 : 국립공원 반달이" ><img src="/static/freefontevent/img2/KOGL_117.png" alt="국립공원 반달이"></a></li> 					   
+					<li><a href="javascript:freeFontDownload(175)" title="저작권자 : 국립공원 반달이&꼬미 ICON" ><img src="/static/freefontevent/img2/KOGL_118.png" alt="국립공원 반달이 & 꼬미 icon"></a></li> 
+					<li><a href="javascript:freeFontDownload(40)" title="저작권자 : 국립박물관문화재단" ><img src="/static/freefontevent/img2/KOGL_38.png" alt="국립박물관문화재단 클래식체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(41)" title="저작권자 : 국립박물관문화재단" ><img src="/static/freefontevent/img2/KOGL_39.png" alt="국립박물관문화재단 클래식체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(42)" title="저작권자 : 국립박물관문화재단" ><img src="/static/freefontevent/img2/KOGL_40.png" alt="국립박물관문화재단 클래식체 M"></a></li>
+<!-- 					<li><a href="javascript:freeFontDownload(3)"  title="저작권자 : 국립중앙도서관" ><img src="/static/freefontevent/img2/KOGL_01.png" alt="국립중앙도서관체"></a></li> -->
+					<li><a href="javascript:freeFontDownload(88)" title="저작권자 : 김포시" ><img src="/static/freefontevent/img2/KOGL_56.png" alt="김포평화바탕체"></a></li>
+					<li><a href="javascript:freeFontDownload(87)" title="저작권자 : 김포시" ><img src="/static/freefontevent/img2/KOGL_55.png" alt="김포평화제목체"></a></li>
+					<li><a href="javascript:freeFontDownload(166)" title="저작권자 : 김포" ><img src="/static/freefontevent/img2/KOGL_111.png" alt="김포평화고딕체B"></a></li>
+					<li><a href="javascript:freeFontDownload(168)" title="저작권자 : 김포" ><img src="/static/freefontevent/img2/KOGL_113.png" alt="김포평화고딕체R"></a></li>
+					<li><a href="javascript:freeFontDownload(4)"   title="저작권자 : 김해시" ><img src="/static/freefontevent/img2/KOGL_02.png" alt="김해가야체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(5)"   title="저작권자 : 김해시" ><img src="/static/freefontevent/img2/KOGL_03.png" alt="김해가야체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(140)" title="저작권자 : 한국출판인회의" ><img src="/static/freefontevent/img2/KOGL_94.png" alt="문체부,한국출판인회의 KoPub World 돋움체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(141)" title="저작권자 : 한국출판인회의" ><img src="/static/freefontevent/img2/KOGL_95.png" alt="문체부,한국출판인회의 KoPub World 돋움체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(142)" title="저작권자 : 한국출판인회의" ><img src="/static/freefontevent/img2/KOGL_96.png" alt="문체부,한국출판인회의 KoPub World 돋움체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(137)" title="저작권자 : 한국출판인회의" ><img src="/static/freefontevent/img2/KOGL_91.png" alt="문체부, 한국출판인회의 KoPub World 바탕체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(138)" title="저작권자 : 한국출판인회의" ><img src="/static/freefontevent/img2/KOGL_92.png" alt="문체부, 한국출판인회의 KoPub World 바탕체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(139)" title="저작권자 : 한국출판인회의" ><img src="/static/freefontevent/img2/KOGL_93.png" alt="문체부, 한국출판인회의 KoPub World 바탕체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(161)" title="저작권자 : 문화재청" ><img src="/static/freefontevent/img2/KOGL_109.png" alt="문화재돌봄체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(165)" title="저작권자 : 문화재청" ><img src="/static/freefontevent/img2/KOGL_110.png" alt="문화재돌봄체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(89)" title="저작권자 : 부산광역시" ><img src="/static/freefontevent/img2/KOGL_57.png" alt="부산체"></a></li>
+					<li><a href="javascript:freeFontDownload(84)" title="저작권자 : 광주광역시" ><img src="/static/freefontevent/img2/KOGL_52.png" alt="빛고을광주체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(85)" title="저작권자 : 광주광역시" ><img src="/static/freefontevent/img2/KOGL_53.png" alt="빛고을광주체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(86)" title="저작권자 : 광주광역시" ><img src="/static/freefontevent/img2/KOGL_54.png" alt="빛고을광주체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(178)" title="저작권자 : 상주경천섬체" ><img src="/static/freefontevent/img2/KOGL_119.png" alt="상주경천섬체"></a></li>
+					<li><a href="javascript:freeFontDownload(179)" title="저작권자 : 상주곶감체" ><img src="/static/freefontevent/img2/KOGL_120.png" alt="상주곶감체"></a></li> 
+					<li><a href="javascript:freeFontDownload(180)" title="저작권자 : 상주다정다감체" ><img src="/static/freefontevent/img2/KOGL_121.png" alt="상주다정다감체"></a></li>  
+					<li><a href="javascript:freeFontDownload(181)" title="저작권자 : 상주해례본체" ><img src="/static/freefontevent/img2/KOGL_122.png" alt="상주해례본체"></a></li>            
+					<li><a href="javascript:freeFontDownload(101)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_69.png" alt="서울남산체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(102)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_70.png" alt="서울남산체 EB"></a></li>
+					<li><a href="javascript:freeFontDownload(99)"  title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_67.png" alt="서울남산체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(100)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_68.png" alt="서울남산체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(105)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_73.png" alt="서울남산장체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(106)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_74.png" alt="서울남산장체 EB"></a></li>
+					<li><a href="javascript:freeFontDownload(103)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_71.png" alt="서울남산장체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(104)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_72.png" alt="서울남산장체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(107)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_75.png" alt="서울남산장체 Black"></a></li>
+					<li><a href="javascript:freeFontDownload(108)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_76.png" alt="서울남산세로쓰기체"></a></li>
+					<li><a href="javascript:freeFontDownload(92)"  title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_60.png" alt="서울한강체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(93)"  title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_61.png" alt="서울한강체 EB"></a></li>
+					<li><a href="javascript:freeFontDownload(90)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_58.png" alt="서울한강체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(91)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_59.png" alt="서울한강체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(96)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_64.png" alt="서울한강장체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(97)" title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_65.png" alt="서울한강장체 EB"></a></li>
+					<li><a href="javascript:freeFontDownload(94)"  title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_62.png" alt="서울한강장체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(95)"  title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_63.png" alt="서울한강장체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(98)"  title="저작권자 : 서울특별시" ><img src="/static/freefontevent/img2/KOGL_66.png" alt="서울한강장체 Black"></a></li>
+					<li><a href="javascript:freeFontDownload(125)" title="저작권자 : 서울지방 보훈청" ><img src="/static/freefontevent/img2/KOGL_90.png" alt="서울지방보훈청 62570체"></a></li>
+					<li><a href="javascript:freeFontDownload(118)" title="저작권자 : 한국출판문화산업진흥원" ><img src="/static/freefontevent/img2/KOGL_86.png" alt="순바탕체"></a></li>
+					<li><a href="javascript:freeFontDownload(7)"   title="저작권자 : 순천시" ><img src="/static/freefontevent/img2/KOGL_05.png" alt="순천제 B"></a></li>
+					<li><a href="javascript:freeFontDownload(8)"   title="저작권자 : 순천시" ><img src="/static/freefontevent/img2/KOGL_06.png" alt="순천제 R"></a></li>
+					<li><a href="javascript:freeFontDownload(143)" title="저작권자 : 아산시" ><img src="/static/freefontevent/img2/KOGL_97.png" alt="아산이순신체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(144)" title="저작권자 : 아산시" ><img src="/static/freefontevent/img2/KOGL_98.png" alt="아산이순신체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(145)" title="저작권자 : 아산시" ><img src="/static/freefontevent/img2/KOGL_99.png"  alt="아산이순신돋움체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(146)" title="저작권자 : 아산시" ><img src="/static/freefontevent/img2/KOGL_100.png" alt="아산이순신돋움체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(147)" title="저작권자 : 아산시" ><img src="/static/freefontevent/img2/KOGL_101.png" alt="아산이순신돋움체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(9)"   title="저작권자 : 안동시" ><img src="/static/freefontevent/img2/KOGL_07.png" alt="안동엄마까투리체"></a></li>
+					<li><a href="javascript:freeFontDownload(10)"  title="저작권자 : 안동시" ><img src="/static/freefontevent/img2/KOGL_08.png" alt="안동월영교체"></a></li>
+					<li><a href="javascript:freeFontDownload(11)"  title="저작권자 : 양평군" ><img src="/static/freefontevent/img2/KOGL_09.png" alt="양평군체"></a></li>
+					<li><a href="javascript:freeFontDownload(154)" title="저작권자 : 영양군" ><img src="/static/freefontevent/img2/KOGL_102.png" alt="영양군 음식디미방체"></a></li>
+					<li><a href="javascript:freeFontDownload(171)" title="저작권자 : 예산추사사랑체" ><img src="/static/freefontevent/img2/KOGL_114.png" alt="예산추사사랑체"></a></li>
+					<li><a href="javascript:freeFontDownload(172)" title="저작권자 : 예산추사사랑체B" ><img src="/static/freefontevent/img2/KOGL_115.png" alt="예산추사사랑체 B"></a></li> 
+					<li><a href="javascript:freeFontDownload(14)" title="저작권자 : 완도군" ><img src="/static/freefontevent/img2/KOGL_12.png" alt="완도청정바다체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(15)" title="저작권자 : 완도군" ><img src="/static/freefontevent/img2/KOGL_13.png" alt="완도청정바다체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(16)" title="저작권자 : 완도군" ><img src="/static/freefontevent/img2/KOGL_14.png" alt="완도희망체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(17)" title="저작권자 : 완도군" ><img src="/static/freefontevent/img2/KOGL_15.png" alt="완도희망체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(109)" title="저작권자 : 전주시" ><img src="/static/freefontevent/img2/KOGL_77.png" alt="전주완판본체 각B"></a></li>
+					<li><a href="javascript:freeFontDownload(111)" title="저작권자 : 전주시" ><img src="/static/freefontevent/img2/KOGL_79.png" alt="전주완판본체 각L"></a></li>
+					<li><a href="javascript:freeFontDownload(110)" title="저작권자 : 전주시" ><img src="/static/freefontevent/img2/KOGL_78.png" alt="전주완판본체 각R"></a></li>
+					<li><a href="javascript:freeFontDownload(112)" title="저작권자 : 전주시" ><img src="/static/freefontevent/img2/KOGL_80.png" alt="전주완판본체 순B"></a></li>
+					<li><a href="javascript:freeFontDownload(114)" title="저작권자 : 전주시" ><img src="/static/freefontevent/img2/KOGL_82.png" alt="전주완판본체 순L"></a></li>
+					<li><a href="javascript:freeFontDownload(113)" title="저작권자 : 전주시" ><img src="/static/freefontevent/img2/KOGL_81.png" alt="전주완판본체 순R"></a></li>
+					<li><a href="javascript:freeFontDownload(18)"  title="저작권자 : 정선군" ><img src="/static/freefontevent/img2/KOGL_16.png" alt="정선동강체"></a></li>
+					<li><a href="javascript:freeFontDownload(19)"  title="저작권자 : 정선군" ><img src="/static/freefontevent/img2/KOGL_17.png" alt="정선아리랑 뿌리체"></a></li>
+					<li><a href="javascript:freeFontDownload(20)"  title="저작권자 : 정선군" ><img src="/static/freefontevent/img2/KOGL_18.png" alt="정선아리랑 혼체"></a></li>
+					<li><a href="javascript:freeFontDownload(21)"  title="저작권자 : 정선군" ><img src="/static/freefontevent/img2/KOGL_19.png" alt="정선아리랑체"></a></li>
+					<li><a href="javascript:freeFontDownload(115)" title="저작권자 : 제주특별자치도" ><img src="/static/freefontevent/img2/KOGL_83.png" alt="제주고딕체"></a></li>
+					<li><a href="javascript:freeFontDownload(117)" title="저작권자 : 제주특별자치도" ><img src="/static/freefontevent/img2/KOGL_85.png" alt="제주명조체"></a></li>
+					<li><a href="javascript:freeFontDownload(116)" title="저작권자 : 제주특별자치도" ><img src="/static/freefontevent/img2/KOGL_84.png" alt="제주한라산체"></a></li>
+					<li><a href="javascript:freeFontDownload(167)" title="저작권자 : 창원" ><img src="/static/freefontevent/img2/KOGL_112.png" alt="창원단감아삭체"></a></li>  
+					<li><a href="javascript:freeFontDownload(155)" title="저작권자 : 칠곡군" ><img src="/static/freefontevent/img2/KOGL_103.png" alt="칠곡할매서체(권인자 할머니)"></a></li>
+					<li><a href="javascript:freeFontDownload(156)" title="저작권자 : 칠곡군" ><img src="/static/freefontevent/img2/KOGL_104.png" alt="칠곡할매서체(김영분 할머니)"></a></li>     
+					<li><a href="javascript:freeFontDownload(157)" title="저작권자 : 칠곡군" ><img src="/static/freefontevent/img2/KOGL_105.png" alt="칠곡할매서체(이원순 할머니)"></a></li>
+					<li><a href="javascript:freeFontDownload(158)" title="저작권자 : 칠곡군" ><img src="/static/freefontevent/img2/KOGL_106.png" alt="칠곡할매서체(이종희 할머니)"></a></li>
+					<li><a href="javascript:freeFontDownload(159)" title="저작권자 : 칠곡군" ><img src="/static/freefontevent/img2/KOGL_107.png" alt="칠곡할매서체(추유을 할머니)"></a></li>
+					<li><a href="javascript:freeFontDownload(6)"   title="저작권자 : 포천시" ><img src="/static/freefontevent/img2/KOGL_04.png" alt="포천 막걸리체"></a></li>   
+					<li><a href="javascript:freeFontDownload(12)"  title="저작권자 : 포천시" ><img src="/static/freefontevent/img2/KOGL_10.png" alt="포천 오성과한음체B"></a></li>
+					<li><a href="javascript:freeFontDownload(13)"  title="저작권자 : 포천시" ><img src="/static/freefontevent/img2/KOGL_11.png" alt="포천 오성과한음체R"></a></li>
+					<li><a href="javascript:freeFontDownload(160)" title="저작권자 : 한국토지주택공사" ><img src="/static/freefontevent/img2/KOGL_108.png" alt="LH 안단테체"></a></li>
+					<li><a href="javascript:freeFontDownload(22)" title="저작권자 : 전라남도" ><img src="/static/freefontevent/img2/KOGL_20.png" alt="푸른전남체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(23)" title="저작권자 : 전라남도" ><img src="/static/freefontevent/img2/KOGL_21.png" alt="푸른전남체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(24)" title="저작권자 : 전라남도" ><img src="/static/freefontevent/img2/KOGL_22.png" alt="푸른전남체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(25)" title="저작권자 : 한국수력원자력" ><img src="/static/freefontevent/img2/KOGL_23.png" alt="한돋음체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(26)"  title="저작권자 : 한국수력원자력" ><img src="/static/freefontevent/img2/KOGL_24.png" alt="한돋음체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(27)"  title="저작권자 : 한국수력원자력" ><img src="/static/freefontevent/img2/KOGL_25.png" alt="한울림체"></a></li>
+					<li><a href="javascript:freeFontDownload(121)" title="저작권자 : 해남군" ><img src="/static/freefontevent/img2/KOGL_89.png" alt="해남체"></a></li>
+					<li><a href="javascript:freeFontDownload(28)"  title="저작권자 : 고흥군" ><img src="/static/freefontevent/img2/KOGL_26.png" alt="행복고홍체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(29)"  title="저작권자 : 고흥군" ><img src="/static/freefontevent/img2/KOGL_27.png" alt="행복고홍체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(30)"  title="저작권자 : 고흥군" ><img src="/static/freefontevent/img2/KOGL_28.png" alt="행복고홍체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(119)" title="저작권자 : 한국환경공단" ><img src="/static/freefontevent/img2/KOGL_87.png" alt="환경체 B"></a></li>
+					<li><a href="javascript:freeFontDownload(120)" title="저작권자 : 한국환경공단" ><img src="/static/freefontevent/img2/KOGL_88.png" alt="환경체 R"></a></li>
+					<li><a href="javascript:freeFontDownload(31)" title="저작권자 : 한국토지주택공사" ><img src="/static/freefontevent/img2/KOGL_29.png" alt="LH체"></a></li>
+					<li><a href="javascript:freeFontDownload(32)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_30.png" alt="Mapo금빛나루"></a></li>
+					<li><a href="javascript:freeFontDownload(33)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_31.png" alt="Mapo꽃섬"></a></li>
+					<li><a href="javascript:freeFontDownload(34)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_32.png" alt="Mapo당인리발전소"></a></li>
+					<li><a href="javascript:freeFontDownload(35)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_33.png" alt="Mapo다카포"></a></li>
+					<li><a href="javascript:freeFontDownload(36)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_34.png" alt="Mapo마포나루"></a></li>
+					<li><a href="javascript:freeFontDownload(37)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_35.png" alt="Mapo배낭여행"></a></li>
+					<li><a href="javascript:freeFontDownload(38)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_36.png" alt="Mapo애민"></a></li>
+					<li><a href="javascript:freeFontDownload(39)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_37.png" alt="Mapo한아름"></a></li>
+					<li><a href="javascript:freeFontDownload(43)" title="저작권자 : 서울시 마포구" ><img src="/static/freefontevent/img2/KOGL_41.png" alt="Mapo홍대프리덤"></a></li>				
+				</ul>
+			</div>
+		</div>
+		<div class="pop_content box_ofl">
+			<div class="box_title"><strong>OFL(46종)</strong><button id="KOGL" onclick="serviceInfoOpen()" class="btn_help"></button></div>
+			<div class="box_new_list">
+				<ul id="ofl_39_area">
+					<li><a href="javascript:freeFontDownload(200)"  title="저작권자 : KCC정범체" ><img src="/static/freefontevent/img2/OFL_45.png" alt="KCC정범체"></a></li>
+					<li><a href="javascript:freeFontDownload(201)"  title="저작권자 : KCC김환기체" ><img src="/static/freefontevent/img2/OFL_46.png" alt="KCC김환기체"></a></li>
+				</ul>				
+			</div>
+			<div class="box_list">
+				<ul id="ofl_39_area_02">
+					<li><a href="javascript:freeFontDownload(122)" title="저작권자 : 롯데제과"><img src="/static/freefontevent/img2/OFL_33.png" alt="가나초콜릿체"></a></li>
+					<li><a href="javascript:freeFontDownload(148)" title="저작권자 : 가비아" ><img src="/static/freefontevent/img2/OFL_35.png" alt="가비아 납작블럭체"></a></li>
+					<li><a href="javascript:freeFontDownload(149)" title="저작권자 : 가비아" ><img src="/static/freefontevent/img2/OFL_36.png" alt="가비아 봄바람체"></a></li>
+					<li><a href="javascript:freeFontDownload(150)" title="저작권자 : 가비아" ><img src="/static/freefontevent/img2/OFL_37.png" alt="가비아 솔미체"></a></li>
+					<li><a href="javascript:freeFontDownload(44)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_01.png" alt="나눔고딕"></a></li>
+					<li><a href="javascript:freeFontDownload(45)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_02.png" alt="나눔고딕 에코"></a></li>
+					<li><a href="javascript:freeFontDownload(46)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_03.png" alt="나눔명조"></a></li>
+					<li><a href="javascript:freeFontDownload(47)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_04.png" alt="나눔명조 에코"></a></li>
+					<li><a href="javascript:freeFontDownload(48)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_05.png" alt="나눔바른고딕"></a></li>
+					<li><a href="javascript:freeFontDownload(49)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_06.png" alt="나눔바른펜"></a></li>
+					<li><a href="javascript:freeFontDownload(50)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_07.png" alt="나눔손글씨 붓체"></a></li>
+					<li><a href="javascript:freeFontDownload(51)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_08.png" alt="나눔손글씨 펜체"></a></li>
+					<li><a href="javascript:freeFontDownload(52)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_09.png" alt="나눔스퀘어"></a></li>
+					<li><a href="javascript:freeFontDownload(53)" title="저작권자 : 네이버㈜,(재)네이버문화재단" ><img src="/static/freefontevent/img2/OFL_10.png" alt="나눔스퀘어 라운드"></a></li>
+					<li class="qaut_box mr0"><a href="javascript:freeFontDownload(72)" title="저작권자 : ㈜우아한형제들" ><img src="/static/freefontevent/img2/OFL_29.png" alt="배달의 민족 가랑해랑체"></a></li>
+					<li class="mr10"><a href="javascript:freeFontDownload(55)" title="저작권자 : ㈜우아한형제들" ><img src="/static/freefontevent/img2/OFL_12.png" alt="배달의 민족 도현체"></a></li>
+					<li><a href="javascript:freeFontDownload(56)" title="저작권자 : ㈜우아한형제들" ><img src="/static/freefontevent/img2/OFL_13.png" alt="배달의 민족 연성체"></a></li>
+					<li><a href="javascript:freeFontDownload(57)" title="저작권자 : ㈜우아한형제들"><img src="/static/freefontevent/img2/OFL_14.png" alt="배달의 민족 을지로체"></a></li>
+					<li class="mr0"><a href="javascript:freeFontDownload(58)" title="저작권자 : ㈜우아한형제들"><img src="/static/freefontevent/img2/OFL_15.png" alt="배달의 민족 주아체"></a></li>
+					<li class="qaut_box mr10"><a href="javascript:freeFontDownload(71)"  title="저작권자 : ㈜우아한형제들" ><img src="/static/freefontevent/img2/OFL_28.png" alt="배달의 민족 한나는 열한살체"></a></li>
+					<li class="mr0"><a href="javascript:freeFontDownload(176)" title="저작권자 : 솔뫼김대건체 L" ><img src="/static/freefontevent/img2/OFL_43.png" alt="솔뫼김대건체 L"></a></li>
+					<li><a href="javascript:freeFontDownload(177)"  title="저작권자 : 솔뫼김대건체 M" ><img src="/static/freefontevent/img2/OFL_44.png" alt="솔뫼김대건체 M"></a></li>
+					<li><a href="javascript:freeFontDownload(63)"  title="저작권자 : ㈜야놀자" ><img src="/static/freefontevent/img2/OFL_20.png" alt="야놀자 야체"></a></li>
+					<li class="mr0"><a href="javascript:freeFontDownload(151)" title="저작권자 : (주)유앤피필"><img src="/static/freefontevent/img2/OFL_34.png" alt="유앤피플 고딕체"></a></li>
+					<li><a href="javascript:freeFontDownload(123)" title="저작권자 : 중고나라" ><img src="/static/freefontevent/img2/OFL_31.png" alt="중나좋체L"></a></li>
+					<li class="mr10"><a href="javascript:freeFontDownload(124)" title="저작권자 : 중고나라" ><img src="/static/freefontevent/img2/OFL_32.png" alt="중나좋체M"></a></li>
+					<li><a href="javascript:freeFontDownload(162)" title="저작권자 : 국민대사회디자인연구소" ><img src="/static/freefontevent/img2/OFL_40.png" alt="한글재민체"></a></li>
+					<li class="mr0"><a href="javascript:freeFontDownload(152)" title="저작권자 : ㈜우아한형제들" ><img src="/static/freefontevent/img2/OFL_38.png" alt="한나 Air"></a></li>
+					<li><a href="javascript:freeFontDownload(153)" title="저작권자 : ㈜우아한형제들" ><img src="/static/freefontevent/img2/OFL_39.png" alt="한나 Pro"></a></li>
+					<li class="mr10"><a href="javascript:freeFontDownload(59)" title="저작권자 : greenegg" ><img src="/static/freefontevent/img2/OFL_16.png" alt="BOKEH"></a></li>
+					<li><a href="javascript:freeFontDownload(64)" title="저작권자 : greenegg" ><img src="/static/freefontevent/img2/OFL_21.png" alt="CROOKED"></a></li>
+					<li class="mr0"><a href="javascript:freeFontDownload(54)" title="저작권자 : greenegg" ><img src="/static/freefontevent/img2/OFL_11.png" alt="Delta Universe"></a></li>
+					<li><a href="javascript:freeFontDownload(61)" title="저작권자 : greenegg" ><img src="/static/freefontevent/img2/OFL_18.png" alt="I am a player"></a></li>
+					<li class="mr10"><a href="javascript:freeFontDownload(65)" title="저작권자 : 한국저작권위원회" ><img src="/static/freefontevent/img2/OFL_22.png" alt="KCC김훈체"></a></li>
+					<li><a href="javascript:freeFontDownload(66)" title="저작권자 : 한국저작권위원회" ><img src="/static/freefontevent/img2/OFL_23.png" alt="KCC도담도담체"></a></li>
+					<li class="mr0"><a href="javascript:freeFontDownload(67)" title="저작권자 : 한국저작권위원회" ><img src="/static/freefontevent/img2/OFL_24.png" alt="KCC무럭무럭체"></a></li>
+					<li><a href="javascript:freeFontDownload(163)"  title="저작권자 : 한국저작권위원회" ><img src="/static/freefontevent/img2/OFL_41.png" alt="KCC임권택체"></a></li>
+					<li class="mr10"><a href="javascript:freeFontDownload(68)" title="저작권자 : 한국저작권위원회" ><img src="/static/freefontevent/img2/OFL_25.png" alt="KCC안중근체"></a></li>
+					<li><a href="javascript:freeFontDownload(69)" title="저작권자 : 한국저작권위원회" ><img src="/static/freefontevent/img2/OFL_26.png" alt="KCC은영체"></a></li>
+					<li class="mr0"><a href="javascript:freeFontDownload(164)" title="저작권자 : 한국저작권위원회" ><img src="/static/freefontevent/img2/OFL_42.png" alt="KCC차쌤체"></a></li> 
+					<li><a href="javascript:freeFontDownload(70)" title="저작권자 : 한국저작권위원회" ><img src="/static/freefontevent/img2/OFL_27.png" alt="Tlab신영복체"></a></li>
+					<li><a href="javascript:freeFontDownload(73)" title="저작권자 : greenegg" ><img src="/static/freefontevent/img2/OFL_30.png" alt="60's Stripe"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="pop_foot"></div>
+</div>
+
+								</div>
+							</div>
+						
+						
+							
+						
+					
+					
+
+				</div>
+			</div>
+			<!-- //contents E -->
+		</div>
+		<!-- //container-sub E -->
+	</div>
+	<!-- //container E -->
+</div>
+
+		
+			
+		</div>
+		<!-- //container E -->
+		
+		<!-- footer S -->	
+		
+		<!-- footer S -->
+
+
+
+<script type="text/javascript">
+
+//패밀리, 관련 사이트 이동
+function fn_goUrl(_tager){
+	if(_tager != ""){
+		window.open($("#"+_tager).val());
+	}
+}
+
+</script>
+<div id="footer">
+	<div id="footermain">
+		<div class="inner-box">
+			<div class="box01">
+				<ul class="menu">
+					<li><a href="/info/introduce.do">공공누리 소개</a></li>
+					<li><a href="/info/userGuide.do">이용안내</a></li>
+					<li><a href="/etc/clause.do">이용약관</a></li>
+					<li><a href="/etc/copyright.do">저작권정책</a></li>
+					<li><a href="/etc/privacy.do">개인정보처리방침</a></li>
+					<li><a href="http://www.kcisa.kr" target="_blank" title="한국문화정보원 새창이동">한국문화정보원소개</a></li>
+				</ul>
+				<div class="adress">
+					<p>(우)03925  서울특별시 마포구 월드컵북로 400 문화콘텐츠센터 6층·8층 한국문화정보원 </p>
+					<p>대표전화 : 1670-0052  사업자 등록번호 : 101-82-10054  상호명 : 한국문화정보원</p>
+					<p>ⓒ 한국문화정보원. All rights reserved.</p>
+				</div>
+			</div>
+			<div class="box02">
+				<div class="link-box">
+					<div class="site">
+						<label for="famillysite"  class="hidden-obj">패밀리사이트보기</label>
+						<select name="famillysite" id="famillysite" title="패밀리사이트보기">
+							<option value="http://www.kcisa.kr">한국문화정보원</option>
+							<option value="http://www.alright.or.kr/mp/user/sitemap/sitemap.do" >공공저작권 신탁관리시스템</option>
+							<option value="http://www.culture.go.kr">문화포털</option>
+<!-- 							<option value="http://stat.mcst.go.kr">문화셈터</option> -->
+							<option value="http://www.kculture.or.kr">전통문화포털</option>
+<!-- 							<option value="http://call.kcisa.kr">문화정보서비스 지원센터</option> -->
+						</select>
+						<button type="button" onclick="fn_goUrl('famillysite');" title="이동" class="btn">이동</button>
+					</div>
+					<div class="site">
+						<label for="othersite"  class="hidden-obj">관련사이트 보기</label>
+						<select name="othersite" id="othersite" title="패밀리사이트보기">
+							<option value="http://www.mcst.go.kr">문화체육관광부</option>
+							<option value="http://www.copyright.or.kr">한국저작권위원회</option>
+							<option value="http://www.data.go.kr">공공데이터포털</option>
+							<option value="http://www.cckorea.org">CCKOREA</option>
+						</select>
+						<button type="button" onclick="fn_goUrl('othersite');" title="이동" class="btn">이동</button>
+					</div>
+				</div>
+				<div class="bottom-mark">
+					<a href="http://www.mcst.go.kr/main.jsp" target="_blank" title="문화체육관광부 새창이동"><img src="/images/front/main/2021/bottom_link01.png"  alt="문화체육관광부"></a>
+					<a href="http://www.kcisa.kr" target="_blank" title="한국문화정보원 새창이동"><img src="/images/front/main/2021/bottom_link02.png"  alt="한국문화정보원"></a>
+					<a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" title="국가 공인 인증기관 : 웹와치 새창 이동" target="_blank"><img src="/images/front/main/2021/bottom_mark.gif" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" style="width:68px; height:auto;"/></a>
+					<a href="https://copyright.or.kr/main.do" target="_blank" title="클린사이트 바로가기"><img src="/images/front/main/2021/bottom_mark2.png"  alt="클린사이트"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //전체  wrap E -->
+
+		<!-- //footer E -->
+		
+	</div>
+	<!-- //wrap E -->
+		
+		<script  src="/js/1115_Insight_WebAnalytics.js"></script>
+
+		<!-- This script is for AceCounter START -->
+		<!--
+		<script>
+		var _ag   = 0 ;         // 로그인사용자 나이
+		var _id   = '';    		// 로그인사용자 아이디
+		var _mr   = '';        	// 로그인사용자 결혼여부 ('single' , 'married' )
+		var _gd   = '';         // 로그인사용자 성별 ('man' , 'woman')
+		var _skey = '' ;        // 내부검색어
+		
+		var _jn = '' ;          //  가입탈퇴 ( 'join','withdraw' ) 
+		var _jid = '' ;			// 가입시입력한 ID
+		
+		var _ud1 = '' ;			// 사용자 정의변수 1 ( 1 ~ 10 정수값)
+		var _ud2 = '' ;			// 사용자 정의변수 2 ( 1 ~ 10 정수값)
+		var _ud3 = '' ;			// 사용자 정의변수 3 ( 1 ~ 10 정수값)
+		</script>
+		-->
+		<!-- AceCounter END --> 
+											
+		<!-- TAG 시작 -->
+		<!--
+		<script>
+		//분석로그 수집 : 고정 
+		var _BT_SITE = "log.kcisa.kr";
+		
+		// 로그인사용자에 대한 정보. 로그인되었을 경우 첨부
+		//var _BT_LOGINSEG = "userid" + "_/" + "성별( 1 :남성, 2:여성, 3:기타(법인포함) )" + "_/" + "연령";
+		// 로그인 되었을 경우 해당 값을 위 예시를 참고하여 작성하여 주시기 바랍니다.
+		var _BT_LOGINSEG = ""; 
+		//DEBUG 용도. on 으로 되어 있으면 script 실행결과가 alert 으로 나옴
+		var _BT_DEBUG_ = "off";
+		
+		document.write("<sc" + "ript type='text/java" + "scr" + "ipt' src='"
+					+ ( document.location.protocol == "https:" ? "https://" : "http://" )
+					+ _BT_SITE + "/tag/WebNibbler_kogl_or_kr.js" + "'>");
+		document.write("</sc" + "ript>");
+		
+		
+		</script>
+		
+		<noscript>
+			<img src="http://log.kcisa.kr/tag/tag.jsp?site_cd=www.kogl.or.kr" width="0" height="0" border="0" alt="한국문화정보원 분석로그용 이미지" />
+			<img src='http://gtb10.acecounter.com:8080/?uid=BH3A39943863529&je=n&' border='0' width='0' height='0' alt="한국문화정보원 분석로그용 배경이미지" />
+		</noscript>-->
+		<!-- TAG 종료 -->
+
+		<!-- <script  src="/js/front/ui.js?v=20180810"></script> -->
+		
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();  
+  </script>
+</body>
+</html>

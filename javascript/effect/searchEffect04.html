@@ -239,24 +239,24 @@
             {name: "appearance", desc: "appearance 속성은 기본 스타일 방식을 제어합니다."}
         ]
         
-        const searchBox = document.querySelector("#search_box");
-        const cssCount = document.querySelector(".count");
-        const cssDesc = document.querySelector(".desc");
-        const cssList = document.querySelector(".list");
+        const searchBox = document.querySelector("#search_box");    //input박스(#search_box)를 변수(searchBox)에 저장
+        const cssCount = document.querySelector(".count");    //전체 속성 갯수(.count)를 변수(cssCount)에 저장
+        const cssDesc = document.querySelector(".desc");    //속성의 설명을 변수(cssDesc)에 저장
+        const cssList = document.querySelector(".list");    //속성의 리스트를 변수(cssList)에 저장
 
         // CSS 속성 값/전체 갯수 출력하기
         cssProperty.map((element, index) => {
-            cssCount.innerText = "전체 목록 갯수 : " + (index+1) + "개";
-            cssList.innerHTML += "<span>"+ element.name +"</span>";
+            cssCount.innerText = "전체 목록 갯수 : " + (index+1) + "개";    //cssCount에 cssProperty의 갯수를 글자로 (innerText) 표현
+            cssList.innerHTML += "<span>"+ element.name +"</span>";    //cssList에 cssProperty의 CSS 속성 값(element.name)를 문서에 (innerHTML) 표현
         });
 
         //사용자가 검색한 값
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;
+        searchBox.addEventListener("keyup", () => {    //searchBox에 입력(keyup) 했을 때 이벤트(addEventListener) 실행
+            const searchWord = searchBox.value;    //사용자 입력 값(searchBox.value)을 변수(searchWord)에 저장
             //console.log(searchWord);
-            findProp(searchWord);
+            findProp(searchWord);    //함수(findProp) 선언 및 함수에 매개변수(searchWord) 저장
         });
-
+//여기까지~~함!!
         document.querySelectorAll(".list span").forEach(span => {
             span.addEventListener("click", () => {
                 //클릭한 데이터 값을 가져오기
