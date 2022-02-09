@@ -399,7 +399,6 @@
 /* 이미지 유형02(img_type02) */
 .img_type02 {
     padding: 150px 0;
-    background: #f5f5f5;
 }
 .img_type02 h3 {
     font-size: 50px;
@@ -486,9 +485,110 @@
     opacity: 1;
 }
 
+/* banner_type01 */
+.banner_type01 {
+    color: #fff;
+}
+.banner_type01 .container {
+    width: 100%;
+    height: 500px;
+    background: url(../img/ban_bg.jpg);
+    text-align: center;
+}
+.banner_type01 h3 {
+    font-size: 50px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    display: inline-block;
+    font-weight: 500;
+}
+.banner_type01 p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.54;
+    opacity: 0.8;
+}
+.banner_type01 a {
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    font-weight: 500;
+}
 
-
-
-
-
+/* footer_type01 */
+.footer_type01 {
+    padding: 150px 0;
+    background: #f5f5f5;
+}
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(205, 205, 205);
+    margin-bottom: 50px;
+}
+.footer-menu > div {
+    width: 16%;
+}
+.footer-menu > div h3 {
+    font-weight: 500;
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+.footer-menu > div li a {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.8;
+    position: relative;
+    transition: all 0.3s;
+    color: rgb(96, 96, 96);
+}
+.footer-menu > div li a:hover {
+    color: rgb(0, 0, 0);
+}
+.footer-menu > div li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+.footer-menu > div li a:hover::before {
+    transform: scaleX(1);
+}
+.footer_rights {
+    text-align: center;
+    color: #000;
+}
+.footer_rights .footer-sns {
+    margin-top: 10px;
+}
+.footer_rights .footer-sns ul {
+    display: flex;
+    justify-content: center;
+}
+.footer_rights .footer-sns li a {
+    width: 40px;
+    height: 40px;
+    margin: 4px 6px;
+    display: inline-block;
+    background-image: url(../img/bg-svg.svg);
+}
+.footer_rights .footer-sns li:nth-child(1) a {
+    background-position: 0 0;
+}
+.footer_rights .footer-sns li:nth-child(2) a {
+    background-position: -50px 0;
+}
+.footer_rights .footer-sns li:nth-child(3) a {
+    background-position: -100px 0;
+}
+.footer_rights .footer-sns li:nth-child(4) a {
+    background-position: -150px 0;
+}
 
