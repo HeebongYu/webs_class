@@ -162,6 +162,20 @@
             color: #fff;
             cursor: pointer;
         }
+        .board .list li {
+            padding-right: 100px;
+            position: relative;
+        }
+        .board .list li span {
+            position: absolute;
+            right: 10px; top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+        .board .list li span::before {
+            content: 'view: ';
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
@@ -184,10 +198,10 @@
 
             <!-- 검색 영역 -->
             <div class="search">
-                <span>조회수 10개 이상</span>
-                <span>조회수 20개 이상</span>
-                <span>조회수 30개 이상</span>
-                <span>조회수 40개 이상</span>
+                <span data-view="10">조회수 10개 이상</span>
+                <span data-view="20">조회수 20개 이상</span>
+                <span data-view="30">조회수 30개 이상</span>
+                <span data-view="40">조회수 40개 이상</span>
             </div>
 
             <!-- 전체 목록 갯수 -->
@@ -215,7 +229,6 @@
             {view:"40", name:"animation-play-state", desc:"animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
             {view:"50", name:"animation-timing-function", desc:"animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다."},
             {view:"10", name:"appearance", desc:"appearance 속성은 기본 양식 컨트롤이 렌더링되는 방식을 제어합니다."},
-
             //b
             {view:"20", name:"backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
             {view:"30", name:"backface-visibility", desc: "backdrop-visibility 속성은 요소 뒷면 출력 여부 설정합니다."},
@@ -426,55 +439,45 @@
         const searchBox = document.querySelectorAll(".search span");
         const cssList = document.querySelector(".list ul");
         const cssCount = document.querySelector(".count em");
+        let listHTML = "";
 
-        //view 값만 출력
-        // for(let i = 0; i < cssProperty.length; i++){
-        //     //console.log(cssProperty[i].view);
-        // }
-        //name 값만 출력
-        // cssProperty.forEach(ele => {
-        //     //console.log(ele.name);
-        // });
-        //map()
-        // cssProperty.map(ele => {
-        //     //console.log(ele.desc);
-        // });
+        //목록 보여주기
+        function upDataList(list){
+            listHTML = "";
+            for(const data of list){
+                listHTML += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+            }
+            // for(let i=0; data<cssProperty.length i++){
+            //     listHTML += `<li>1</li>`;
+            // }
+            // cssProperty.forEach(el => {
+            //     listHTML += `<li>1</li>`;
+            // })
+            cssList.innerHTML = listHTML;
+        };
+        upDataList(cssProperty);
 
-        //각각의 버튼을 클릭하면 경고창
+        //버튼 클릭하기
         searchBox.forEach(span => {
             span.addEventListener("click", () => {
-                onClickButton();
-            })
+                const target = span.dataset.view
+                const filterList = cssProperty.filter(data => data.view >=target)
+                
+                upDataList(filterList);
+            });
         });
 
-//변수(데이터 저장 + 변경 + 추가 + 전역/지역)
-//상수(데이터 저장 + 변경x)
-//배열(순차적으로 여러개 데이터 저장),
-//객체(데이터 저장(키와 값))
-//함수(실행문 집합체, 재활용)
+        //변수(데이터 저장 + 변경 + 추가 + 전역/지역)
+        //상수(데이터 저장 + 변경x)
+        //배열(순차적으로 여러개 데이터 저장),
+        //객체(데이터 저장(키와 값))
+        //함수(실행문 집합체, 재활용)
 
-        //버튼을 클릭했을 떄
-        function onClickButton(){
-            alert("aa")
-        }
-        
-        //CSS 리스트 출력하기
-        function upDataList(){
-            let list = "";
-
-            for(let data of cssProperty){
-                //list += "<li>" + data.view + "</li>";
-                list += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
-            }
-            cssList.innerHTML = list;
-        }
-        upDataList();
-
-
-
-
-
-
+        //함수의 4가지
+        //선언적 함수
+        //익명함수
+        //매개변수 함수
+        //리턴값 함수
 
         //CSS 리스트 출력하기
         // for(let i=0; i<cssProperty.length; i++){
@@ -488,7 +491,7 @@
         // for(let li of cssProperty){
         //     list += "<li>"+li.view+"</li>"; 
         // }
-
+        
     </script>
 </body>
 </html>
