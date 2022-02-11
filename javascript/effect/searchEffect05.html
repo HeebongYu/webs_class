@@ -436,16 +436,18 @@
             {view:"10", name:"z-index", desc:"z-index 속성은 요소의 위치가 겹칠 경우 순서를 정의합니다."}
         ]
 
-        const searchBox = document.querySelectorAll(".search span");
-        const cssList = document.querySelector(".list ul");
-        const cssCount = document.querySelector(".count em");
-        let listHTML = "";
+        const searchBox = document.querySelectorAll(".search span");    //검색버튼(#search_box)을 변수(searchBox)에 저장
+        const cssList = document.querySelector(".list ul");    //속성의 리스트를 변수(cssList)에 저장
+        const cssCount = document.querySelector(".count");    //전체 속성 갯수(.count)를 변수(cssCount)에 저장
+        let listHTML = "";    //변수(listHTML) 선언
 
         //목록 보여주기
-        function upDataList(list){
-            listHTML = "";
+        function upDataList(list){    //함수(upDataList) 정의
+            listHTML = "";    //변수(listHTML) 리셋
+
+            //반복문: 변수(list)의 수만끔 반복실행
             for(const data of list){
-                listHTML += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+                listHTML += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;    //변수(listHTML)에 데이터 추가
             }
             // for(let i=0; data<cssProperty.length i++){
             //     listHTML += `<li>1</li>`;
@@ -453,17 +455,17 @@
             // cssProperty.forEach(el => {
             //     listHTML += `<li>1</li>`;
             // })
-            cssList.innerHTML = listHTML;
+            cssList.innerHTML = listHTML;    //변수(cssList)에 변수(listHTML)를 저장하여 HTML문서에 표현(innerHTML)
         };
-        upDataList(cssProperty);
+        upDataList(cssProperty);    //함수(upDataList)를 변수(cssProperty)에 대하여 실행
 
         //버튼 클릭하기
-        searchBox.forEach(span => {
-            span.addEventListener("click", () => {
-                const target = span.dataset.view
-                const filterList = cssProperty.filter(data => data.view >=target)
+        searchBox.forEach(span => {    //검색버튼(#search_box)에 대하여
+            span.addEventListener("click", () => {    //검색버튼(#search_box)의 값을 클릭하는(click) 이벤트 발생하는 경우(addEventListener)
+                const target = span.dataset.view    //변수(target)에 클릭한 검색버튼(#search_box)의 값 중에서 뷰값(dataset.view)을 저장
+                const filterList = cssProperty.filter(data => data.view >=target)    //변수(filterList)에 변수(cssProperty)의 뷰값(dataset.view)이 변수(target)보가 크거나 같으면 찾아서(filter) 저장
                 
-                upDataList(filterList);
+                upDataList(filterList);    //함수(upDataList)를 변수(filterList)에 대하여 실행
             });
         });
 

@@ -31,7 +31,6 @@
             font-weight: 1000;
             text-decoration: none;
         }
-        
         #change01 .color a:nth-child(1) {background :red; border-color: red;}
         #change01 .color a:nth-child(2) {background :orange; border-color: orange;}
         #change01 .color a:nth-child(3) {background :yellow; border-color: yellow;}
@@ -63,6 +62,21 @@
     </div>
     
     <script>
+        const changeColor = [
+            {color:"red", desc:"빨강"},
+            {color:"orange", desc:"주황"},
+            {color:"yellow", desc:"노랑"},
+            {color:"green", desc:"초록"},
+            {color:"blue", desc:"파랑"},
+            {color:"purple", desc:"보라"},
+        ]
+
+         // CSS 속성 값/전체 갯수 출력하기
+         changeColor.map((element, index) => {
+            cssList.innerHTML += d;
+        });
+
+
         document.querySelectorAll("#change01 .color a").forEach(span => {
             span.addEventListener("click", () => {
                 const colorName = span.dataset.color;

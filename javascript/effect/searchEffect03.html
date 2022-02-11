@@ -202,17 +202,6 @@
                 <span>i</span>
                 <span>j</span>
                 <span>k</span>
-                <br>
-                <span>기타</span>
-                <span>애니메이션</span>
-                <span>효과</span>
-                <span>속성</span>
-                <span>테이블</span>
-                <span>플렉스</span>
-                <span>글씨</span>
-                <span>그리드</span>
-                <span>위치</span>
-                <span>테이블</span>
             </div>
 
             <div class="count">
@@ -469,12 +458,9 @@
                     // console.log(el)
                     const cssName = el.dataset.name;    //검색목록 중 css 속성 값
                     // console.log(cssName);
-                    const cssType = el.dataset.type;    //검색목록 중 css 유형 값
-                    // console.log(cssType);
-
 
                     //조건문의 조건: 버튼 첫글자 == css 속성의 첫글자 and 버튼 첫글자 == css 유형의 첫글자
-                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssType.charAt(0)){
+                    if(searchWord.charAt(0) === cssName.charAt(0)){
                         el.classList.add("show");    //참이면 add("show")를 실행 하여 class에 show 추가
                     } else {
                         el.classList.remove("show");    //거짓이면 remove("show")를 실행 하여 class에 show 제거
