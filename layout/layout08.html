@@ -19,6 +19,7 @@
         a {
             text-decoration: none;
             color: #000;
+            font-family: 'Poppins', sans-serif;
         }
         ol,
         ul,
@@ -51,6 +52,12 @@
             text-indent: -9999px;
         }
 
+        /* 컨테이너 */
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
         /* 레이아웃 */
         #wrap {
             width: 100%;
@@ -58,27 +65,27 @@
         #header {
             height: 150px;
         }
-        #main .content1 {
+        #main #section1 {
             height: 735px;
         }
-        #main .content2 {
+        #main #section2 {
             height: 300px;
             background: #AFD5AB;
         }
-        #main .content3 {
+        #main #section3 {
             height: 388px;
             background: #91C58A;
             overflow: hidden;
         }
-        #main .content4 {
+        #main #section4 {
             height: 1440px;
             background: #67AD5B;
         }
-        #main .content5 {
+        #main #section5 {
             height: 974px;
             background: #C5F4CE;
         }
-        #main .content6 {
+        #main #section6 {
             height: 510px;
             background: #6BE382;
         }
@@ -86,210 +93,166 @@
             height: 237px;
             background: #8EEDB3;
         }
-
-        /* header */
-        #header {
+       
+        /* menu */
+        .menu {
             display: flex;
             justify-content: space-between;
-            padding: 50px 100px;
+            position: relative;
+            top: 50px;
         }
-        #header h1 {
+        .menu h1 {
             font-size: 30px;
-            font-weight: 300;
+            align-items: center;
+            font-weight: 500;
         }
-        #header h1 .logo {
+        .menu h1::before {
+            content: url(img/bg-svg.svg);
             width: 35px;
             height: 35px;
-            background: url(img/bg-svg.svg);
+            overflow: hidden;
             display: inline-block;
+            margin-right: 10px;
             vertical-align: middle;
         }
-        #header .nav li {
+        .menu .nav li {
             display: inline-block;
-            padding: 0 20px 0 20px;
-            margin-top: 10px;
-        }
-        #header .nav li a {
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 600;
             padding: 10px;
-            vertical-align: middle;
+            margin: 0 20px;
+            opacity: 0.8;
         }
-        #header .nav li a:hover {
-            border-bottom: 2px solid #000;
+        .menu .nav li:hover {
+            border-bottom: 3px solid rgba(0,0,0,0.7);
+            opacity: 1.3;
+            transition: all 0.3s;
         }
-        #header .icon a span {
+        .menu .icon a {
             width: 24px;
             height: 24px;
             display: inline-block;
             background: url(img/bg-svg.svg);
-            margin-right: 15px;
-            margin-top: 10px;
+            margin-left: 20px;
         }
-        #header .icon a:nth-child(1) span {
+        .menu .icon a:nth-child(1) {
             background-position: 0px -50px;
         }
-        #header .icon a:nth-child(2) span {
+        .menu .icon a:nth-child(2) {
             background-position: -50px -50px;
         }
-        #header .icon a:nth-child(3) span {
+        .menu .icon a:nth-child(3) {
             background-position: -100px -50px;
         }
 
-        /* content1 */
-        #main .content1 {
-            padding-left: 100px;
+        /* cont1 */
+        .cont1 {
+            height: 735px;
             position: relative;
         }
-        #main .content1 .tit {
+        .cont1 .desc {
         }
-        #main .content1 .tit h3 {
+        .cont1 .desc h3 {
             font-size: 80px;
-            padding-right: 300px;
             padding-top: 80px;
+            padding-right: 30%;
             line-height: 0.95;
-            margin-bottom: 55px;
-            font-weight: 1000;
-        }
-        #main .content1 .desc p {
-            font-size: 18px;
-            padding-right: 930px;
-            font-weight: 300;
-            opacity: 0.8;
-        }
-        #main .content1 .desc p.end {
             margin-bottom: 60px;
         }
-        #main .content1 .img {
-            background: url(img/con1.jpg);
-            width: 1000px;height: 700px;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
+        .cont1 .desc p {
+            font-size: 18px;
+            padding-bottom: 15px;
+            padding-right: 60%;
         }
-        #main .content1 .btn a {
+        .cont1 .btn {
+            margin-top: 50px;
+        }
+        .cont1 .btn a {
             padding: 23px 50px;
             border: 3px solid #C4A586;
             font-size: 16px;
             border-radius: 5px;
         }
-        #main .content1 .btn .left {
+        .cont1 .btn .left {
             margin-right: 30px;
             background: #C4A586;
             color: #fff;
         }
-        #main .content1 .btn .right {
+        .cont1 .btn .right {
             background: #fff;
             color: #C4A586;
         }
-
-        /* content2 */
-        #main .content2 {
-            padding: 50px 100px;
-        }
-        #main .content2 .tit {
-            margin-top: 30px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: 800;
-            margin-bottom: 80px;
-        }
-        #main .content2 .btn {
-            text-align: center;
-        }
-
-        #main .content2 .btn a {
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            background: url(img/bg-svg.svg);
-        }
-        #main .content2 .btn a:nth-child(1) {
-            background-position: 0px -50px;
-        }
-        #main .content2 .btn a:nth-child(2) {
-            background-position: -50px -50px;
-        }
-        #main .content2 .btn a:nth-child(3) {
-            background-position: -100px -50px;
-        }
-        #main .content2 .btn a:nth-child(4) {
-            background-position: -100px -50px;
-        }
-        #main .content2 .btn a:nth-child(5) {
-            background-position: -100px -50px;
-        }
-        #main .content2 .btn a:nth-child(6) {
-            background-position: -100px -50px;
+        .cont1 .img {
+            background: url(img/con1.jpg);
+            
+            width: 840px;
+            height: 700px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
     <div id="wrap">
         <header id="header">
-            <h1><span class="logo ir_pm"></span> MISTRIUM</h1>
-            <nav class="nav">            
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">products</a></li>
-                    <li><a href="#">faqs</a></li>
-                    <li><a href="#">contact us</a></li>
-                </ul>
-            </nav>
-            <div class="icon">
-                <a><span></span></a>
-                <a><span></span></a>
-                <a><span></span></a>
+            <div class="menu container">
+                <h1><a href="#">MISTRIUM</a></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">faqs</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="icon">
+                    <a><span class="ir_pm">검색</span></a>
+                    <a><span class="ir_pm">장바구니</span></a>
+                    <a><span class="ir_pm">로그인</span></a>
+                </div>
             </div>
         </header>
         <main id="main">
-            <section class="content1">
-                <div class="tit">
-                    <h3>
-                        Modern Furniture For
-                        Modern Living Style
-                    </h3>
+            <section id="section1">
+                <div class="cont1 container">
+                    <div class="desc">
+                        <h3>
+                            Modern Furniture For
+                            Modern Living Style
+                        </h3>
+                        <p>
+                            In unfeeling existence objection immediate repulsive 
+                            on he in. Imprudence comparison uncommonly me 
+                            he difficulty diminution resolution. Likewise proposal 
+                            differed scarcely dwelling as on raillery. 
+                        <p>
+                        <p>
+                            September few dependent extremity own continued 
+                            and ten prevailed attending. Early to weeks we could. 
+                            Do commanded an shameless we disposing do. 
+                            Indulgence ten remarkably nor are impression out. 
+                            Power is lived means oh every in we quiet.
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <a href="#" class="left">Request Quote</a>
+                        <a href="#" class="right">watch Video</a>
+                    </div>
+                    <div class="img"></div>
+
                 </div>
-                <div class="desc">
-                    <p>
-                        In unfeeling existence objection immediate repulsive 
-                        on he in. Imprudence comparison uncommonly me 
-                        he difficulty diminution resolution. Likewise proposal 
-                        differed scarcely dwelling as on raillery. 
-                    <p><br>
-                    <p class="end">
-                        September few dependent extremity own continued 
-                        and ten prevailed attending. Early to weeks we could. 
-                        Do commanded an shameless we disposing do. 
-                        Indulgence ten remarkably nor are impression out. 
-                        Power is lived means oh every in we quiet.
-                    </p>
-                </div>
-                <div class="btn">
-                    <a href="#" class="left">Request Quote</a>
-                    <a href="#" class="right">watch Video</a>
-                </div>
-                <div class="img"></div>
+                
             </section>
-            <section class="content2">
-                <div class="tit">
-                    SOME OF OUR TRUSTED CLIENTS
-                </div>
-                <div class="btn">
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                </div>
+            <section id="section2">
+             
             </section>
-            <section class="content3"></section>
-            <section class="content4"></section>
-            <section class="content5"></section>
-            <section class="content6"></section>
+            <section id="section3"></section>
+            <section id="section4"></section>
+            <section id="section5"></section>
+            <section id="section6"></section>
         </main>
         <footer id="footer"></footer>
     </div>
