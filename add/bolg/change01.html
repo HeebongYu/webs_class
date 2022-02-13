@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>change</title>
+    <title>change01</title>
     <style>
         #change01 {
             text-align: center;
@@ -31,21 +31,12 @@
             font-weight: 1000;
             text-decoration: none;
         }
-        
         #change01 .color a:nth-child(1) {background :red; border-color: red;}
         #change01 .color a:nth-child(2) {background :orange; border-color: orange;}
         #change01 .color a:nth-child(3) {background :yellow; border-color: yellow;}
         #change01 .color a:nth-child(4) {background :green; border-color: green;}
         #change01 .color a:nth-child(5) {background :blue; border-color: blue;}
         #change01 .color a:nth-child(6) {background :purple; border-color: purple;}
-
-        #change01 .text.red {color: red;}
-        #change01 .text.orange {color: orange;}
-        #change01 .text.yellow {color: yellow;}
-        #change01 .text.green {color: green;}
-        #change01 .text.blue {color: blue;}
-        #change01 .text.purple {color: purple;}
-
     </style>
 </head>
 <body>
@@ -63,10 +54,12 @@
     </div>
     
     <script>
-        document.querySelectorAll("#change01 .color a").forEach(span => {
+        const changeColor = document.querySelectorAll("#change01 .color a")
+
+        changeColor.forEach(span => {
             span.addEventListener("click", () => {
                 const colorName = span.dataset.color;
-                document.querySelector("#change01 .text").classList.add(colorName);
+                document.querySelector("#change01 .text").style.color = colorName;
             })
         });
     </script>

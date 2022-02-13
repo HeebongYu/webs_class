@@ -1,88 +1,41 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>change</title>
-    <style>
-        #change01 {
-            text-align: center;
-        }
-        #change01 h3 {
-            font-size: 25px;
-        }
-        #change01 .text {
-            border: 1px solid #000;
-            padding: 50px;
-            margin-left: 50%;
-            transform: translateX(-50%);
-            margin-bottom: 50px;
-            font-size: 50px;
-        }
-        #change01 .color {
-            margin: 0 auto;
-        }
-        #change01 .color a{
-            border: 1px solid;
-            padding: 10px;
-            border-radius: 20px;
-            color: #fff;
-            font-weight: 1000;
-            text-decoration: none;
-        }
-        #change01 .color a:nth-child(1) {background :red; border-color: red;}
-        #change01 .color a:nth-child(2) {background :orange; border-color: orange;}
-        #change01 .color a:nth-child(3) {background :yellow; border-color: yellow;}
-        #change01 .color a:nth-child(4) {background :green; border-color: green;}
-        #change01 .color a:nth-child(5) {background :blue; border-color: blue;}
-        #change01 .color a:nth-child(6) {background :purple; border-color: purple;}
+<style>
+#change01 .color a{
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 1000;
+    text-decoration: none;
+}
+#change01 .color a:nth-child(1) {background :red; border-color: red;}
+#change01 .color a:nth-child(2) {background :orange; border-color: orange;}
+#change01 .color a:nth-child(3) {background :yellow; border-color: yellow;}
+#change01 .color a:nth-child(4) {background :green; border-color: green;}
+#change01 .color a:nth-child(5) {background :blue; border-color: blue;}
+#change01 .color a:nth-child(6) {background :purple; border-color: purple;}
+</style>
 
-        #change01 .text.red {color: red;}
-        #change01 .text.orange {color: orange;}
-        #change01 .text.yellow {color: yellow;}
-        #change01 .text.green {color: green;}
-        #change01 .text.blue {color: blue;}
-        #change01 .text.purple {color: purple;}
 
-    </style>
-</head>
-<body>
-    <div id="change01">
-        <h3>글씨를 누르는 색으로 변경하기</h3>
-        <p class="text">글씨</p>
-        <div class="color">
-            <a href="#" data-color="red"><span>빨강</span></a>
-            <a href="#" data-color="orange"><span>주황</span></a>
-            <a href="#" data-color="yellow"><span>노랑</span></a>
-            <a href="#" data-color="green"><span>초록</span></a>
-            <a href="#" data-color="blue"><span>파랑</span></a>
-            <a href="#" data-color="purple"><span>보라</span></a>
-        </div>
+<div id="change01">
+    <h3>글씨를 누르는 색으로 변경하기</h3>
+    <p class="text" style="font-size: 30px;">글씨</p>
+    <div class="color">
+        <a href="#" data-color="red"><span>빨강</span></a>
+        <a href="#" data-color="orange"><span>주황</span></a>
+        <a href="#" data-color="yellow"><span>노랑</span></a>
+        <a href="#" data-color="green"><span>초록</span></a>
+        <a href="#" data-color="blue"><span>파랑</span></a>
+        <a href="#" data-color="purple"><span>보라</span></a>
     </div>
-    
-    <script>
-        const changeColor = [
-            {color:"red", desc:"빨강"},
-            {color:"orange", desc:"주황"},
-            {color:"yellow", desc:"노랑"},
-            {color:"green", desc:"초록"},
-            {color:"blue", desc:"파랑"},
-            {color:"purple", desc:"보라"},
-        ]
+</div>
 
-         // CSS 속성 값/전체 갯수 출력하기
-         changeColor.map((element, index) => {
-            cssList.innerHTML += d;
-        });
+<script>
+    const changeColor = document.querySelectorAll("#change01 .color a")
 
-
-        document.querySelectorAll("#change01 .color a").forEach(span => {
-            span.addEventListener("click", () => {
-                const colorName = span.dataset.color;
-                document.querySelector("#change01 .text").classList.add(colorName);
-            })
-        });
-    </script>
-</body>
-</html>
+    changeColor.forEach(span => {
+        span.addEventListener("click", () => {
+            const colorName = span.dataset.color;
+            document.querySelector("#change01 .text").style.color = colorName;
+        })
+    });
+</script>
