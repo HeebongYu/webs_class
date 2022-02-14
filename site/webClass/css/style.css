@@ -798,6 +798,8 @@
 .member-form .preBox {
     width: 100%;
     background: #f5f5f5;
+    border: 1px solid #eee;
+    box-sizing: border-box;
     font-size: 14px;
     padding: 20px;
 }
