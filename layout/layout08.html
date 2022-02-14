@@ -76,7 +76,6 @@
         }
         #main #section4 {
             height: 1440px;
-            background: #67AD5B;
         }
         #main #section5 {
             height: 974px;
@@ -255,24 +254,149 @@
             margin-left: 70px;
         }
         .cont3 .left .img {
-            background: url(img/bg-svg.svg);
-            width: 250px;
-            height: 220px;
-            background-position: 0 -250px;
+            background: url(img/L8-img01.png);
+            width: 409px;
+            height: 351px;
             position: absolute;
-            right: 50px;
-            bottom: 70px;
+            right: 0;
+            bottom: 0;
         }
         .cont3 .right .img {
-            background: url(img/bg-svg.svg);
-            width: 300px;
-            height: 180px;
-            background-position: -250px -250px;
+            background: url(img/L8-img02.png);
+            width: 351px;
+            height: 216px;
             position: absolute;
-            right: 10px;
-            bottom: 70px;
+            right: 5px;
+            bottom: 15px;
         }
 
+        /* cont4 */
+        .cont4 {
+            height: 1440px;
+        }
+        .cont4 .header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 173px;
+        }
+        .cont4 .header h3 {
+            padding-left: 73px;
+            font-size: 50px;
+        }
+        .cont4 .header li {
+            display: inline-block;
+            font-size: 23px;
+            color: #A9A7A6;
+            padding: 20px 35px;
+        }
+        .cont4 .header .btn {
+            padding: 20px 0 20px 0;
+            position: relative;
+        }
+        .cont4 .header .btn .text {
+            position: relative;
+            font-size: 17px;
+            padding-right: 160px;
+        }
+        .cont4 .header .btn .arr {
+            background: #000;
+            width: 24px;
+            height: 14px;
+            display: inline-block;
+            background: url(img/bg-svg.svg);
+            background-position: -200px 0;
+            position: absolute;
+            right: 120px;
+            top: 25px;
+        }
+        .cont4 .header .btn .text::before {
+            content: '';
+            width: 40px;
+            height: 20px;
+            background: #E9E9E9;
+            position: absolute;
+            right: 100px;
+            top: 0px;
+        }
+        .cont4 .choose {}
+        .cont4 .choose ul {
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 60px;
+        }
+        .cont4 .choose li {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 1000;
+            color: #A9A7A6;
+            padding: 0 30px;
+        }
+        .cont4 .choose li:hover {
+            color: #000;
+        }
+        .cont4 .goodsArr {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 70px;
+            margin-bottom: 40px;
+        }
+        .cont4 .goodsArr .goods {
+            width: 331px;
+            height: 460px;
+            /* background: #FF0000; */
+            /* opacity: 0.5; */
+            position: relative;
+        }
+        .cont4 .goodsArr .goods .btn {
+            font-size: 14px;
+            border: 1px solid #D9AB82;
+            display: inline-block;
+            background: #D9AB82;
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .cont4 .goodsArr .goods .btn .btn-img {
+            width: 26px;
+            height: 26px;
+            background: #000;
+            display: inline-block;
+            background: url(img/bg-svg.svg);
+            background-position: -250px 0;
+            vertical-align: middle;
+        }
+        .cont4 .goodsArr .goods .tit {
+            font-size: 26px;
+            font-weight: 700;
+            padding-left: 50px;
+        }
+        .cont4 .goodsArr .goods .price {
+            padding-left: 50px;
+            font-size: 19px;
+            font-weight: 700;
+        }
+        .cont4 .goodsArr .goods .price em {
+            font-size: 15px;
+            font-weight: 300;
+            color: #A9A7A6;
+            font-style: normal;
+            text-decoration:line-through;
+            text-decoration-color: #A9A7A6;
+            padding-left: 30px;
+        }
+        .cont4 .goodsArr .goods .box {
+            width: 315px;
+            height: 300px;
+            background: #FFF4E8;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
@@ -352,7 +476,78 @@
                     </div>
                 </div>
             </section>
-            <section id="section4"></section>
+
+            <section id="section4">
+                <div class="cont4 container">
+                    <div class="header">
+                        <h3>PRODUCTS</h3>
+                        <ul>
+                            <li>Best Selling</li>
+                            <li>Most Popular</li>
+                        </ul>
+                        <a href="#" class="btn">
+                            <span class="text">See All</span>
+                            <span class="arr"></span>
+                        </a>
+                    </div>
+                    <div class="choose">
+                        <ul>
+                            <li>All</li>
+                            <li>Bed</li>
+                            <li>Sofa</li>
+                            <li>Chair</li>
+                            <li>Light</li>
+                        </ul>
+                    </div>
+
+                    <div class="goodsArr">
+                        <div class="goods goods1">
+                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
+                            <div class="tit">Ramen Stool</div>
+                            <div class="price">$65.00 <em>$95.00</em></div>
+                            <div class="img"></div>
+                            <div class="box"></div>
+                        </div>
+                        <div class="goods goods2">
+                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
+                            <div class="tit">Ramen Stool</div>
+                            <div class="price">$65.00 <em>$95.00</em></div>
+                            <div class="img"></div>
+                            <div class="box"></div>
+                        </div>
+                        <div class="goods goods3">
+                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
+                            <div class="tit">Ramen Stool</div>
+                            <div class="price">$65.00 <em>$95.00</em></div>
+                            <div class="img"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                    <div class="goodsArr">
+                        <div class="goods goods4">
+                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
+                            <div class="tit">Ramen Stool</div>
+                            <div class="price">$65.00 <em>$95.00</em></div>
+                            <div class="img"></div>
+                            <div class="box"></div>
+                        </div>
+                        <div class="goods goods5">
+                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
+                            <div class="tit">Ramen Stool</div>
+                            <div class="price">$65.00 <em>$95.00</em></div>
+                            <div class="img"></div>
+                            <div class="box"></div>
+                        </div>
+                        <div class="goods goods6">
+                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
+                            <div class="tit">Ramen Stool</div>
+                            <div class="price">$65.00 <em>$95.00</em></div>
+                            <div class="img"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="section5"></section>
             <section id="section6"></section>
         </main>
