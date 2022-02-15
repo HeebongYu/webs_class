@@ -219,17 +219,57 @@
     <script>
         const cssProperty = [
             //a
-            {num:1, name:"all", desc:"all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
-            {num:2, name:"animation", desc:"animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
-            {num:3, name:"animation-delay", desc:"animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
-            {num:4, name:"animation-direction", desc:"animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
-            {num:5, name:"animation-duration", desc:"animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
-            {num:6, name:"animation-fill-mode", desc:"animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
-            {num:7, name:"animation-iteration-count", desc:"animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
-            {num:8, name:"animation-name", desc:"animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
-            {num:9, name:"animation-play-state", desc:"animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
-            {num:10, name:"animation-timing-function", desc:"animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다."},
-            {num:11, name:"appearance", desc:"appearance 속성은 기본 양식 컨트롤이 렌더링되는 방식을 제어합니다."},
+            {num:"1", name:"all", desc:"all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
+            {num:"2", name:"animation", desc:"animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
+            {num:"3", name:"animation-delay", desc:"animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
+            {num:"4", name:"animation-direction", desc:"animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
+            {num:"5", name:"animation-duration", desc:"animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
+            {num:"6", name:"animation-fill-mode", desc:"animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+            {num:"7", name:"animation-iteration-count", desc:"animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
+            {num:"8", name:"animation-name", desc:"animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
+            {num:"9", name:"animation-play-state", desc:"animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
+            {num:"10", name:"animation-timing-function", desc:"animation-timing-function 속성은 애니메이션 움직임의 속도를 설정합니다."},
+            {num:"11", name:"appearance", desc:"appearance 속성은 기본 양식 컨트롤이 렌더링되는 방식을 제어합니다."},
+            //b
+            {num:"12", name:"backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
+            {num:"13", name:"backface-visibility", desc: "backdrop-visibility 속성은 요소 뒷면 출력 여부 설정합니다."},
+            {num:"14", name:"background", desc: "background 속성은 배경 속성 값을 정의합니다."},
+            {num:"15", name:"background-attachment", desc:"background-attachment</strong> : background-attachment 속성은 배경이미지의 고정여부를 설정하기 위한 속성입니다."},
+            {num:"16", name:"background-blend-mode", desc:"background-blend-mode</strong> : background-blend-mode 속성은 배경을 혼합했을 때의 상태를 설정합니다."},
+            {num:"17", name:"background-clip", desc:"background-clip</strong> : background-clip 속성은 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다"},
+            {num:"18", name:"background-color", desc:"background-color</strong> : background-color 속성은 백그라운드 색을 설정합니다"},
+            {num:"19", name:"background-image", desc:"background-image</strong> : background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다"},
+            {num:"20", name:"background-origin", desc:"background-origin</strong> : background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다"},
+            {num:"21", name:"background-position", desc:"background-position</strong> : background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다"},
+            {num:"22", name:"background-repeat", desc:"background-repeat</strong> : background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다"},
+            {num:"23", name:"background-repeat", desc:"background-repeat</strong> : background-repeat 속성은 백그라운드 이미지 반복 여부를 설정합니다"},
+            {num:"24", name:"background-size", desc:"background-size</strong> : background-size 속성은 백그라운드 이미지 사이즈를 설정합니다"},
+            {num:"25", name:"border", desc:"border</strong> : border 속성은 테두리 속성을 일괄적으로 설정합니다"},
+            {num:"26", name:"border-bottom", desc:"border-bottom</strong> : border-bottom 속성은 테두리 아래쪽 속성을 일괄적으로 설정합니다"},
+            {num:"27", name:"border-bottom-color", desc:"border-bottom-color</strong> : border-bottom-color 속성은 테두리 아래쪽 색 속성을 설정합니다"},
+            {num:"28", name:"border-bottom-left-radius", desc:"border-bottom-left-radius</strong> : border-bottom-left-radius 속성은 아래부분 왼쪽 모서리 굴곡을 설정합니다"},
+            {num:"29", name:"border-bottom-right-radius", desc:"border-bottom-right-radius</strong> : border-bottom-right-radius 속성은 아래부분 오른쪽 모서리 굴곡을 설정합니다"},
+            {num:"30", name:"border-bottom-style", desc:"border-bottom-style</strong> : border-bottom-style 속성은 테두리 아래쪽 스타일 속성을 설정합니다"},
+            {num:"31", name:"border-bottom-width", desc:"border-bottom-width</strong> : border-bottom-width 속성은 테두리 아래쪽 두께 속성을 설정합니다"},
+            {num:"32", name:"border-collapse", desc:"border-collapse</strong> : border-collapse 속성은 테이블의 테두리 분리 여부를 설정합니다"},
+            {num:"33", name:"border-color", desc:"border-color</strong> : border-color 속성은 테두리 색 속성을 설정합니다"},
+            {num:"34", name:"border-image", desc:"border-image</strong> : border-image 속성은 테두리 이미지 속성을 설정합니다"},
+            {num:"35", name:"border-image-outset", desc:"border-image-outset</strong> : border-image-outset 속성은 테두리 이미지 간격 속성을 설정합니다"},
+            {num:"36", name:"border-image-repeat", desc:"border-image-repeat</strong> : border-image-repeat 속성은 테두리 이미지 반복 속성을 설정합니다"},
+            {num:"37", name:"border-image-slice", desc:"border-image-slice</strong> : border-image-slice 속성은 테두리 이미지 크기 속성을 설정합니다"},
+            {num:"38", name:"border-image-source", desc:"border-image-source</strong> : border-image-source 속성은 테두리 이미지 경로 속성을 설정합니다"},
+            {num:"39", name:"border-image-width", desc:"border-image-width</strong> : border-image-width 속성은 테두리 이미지 두께 속성을 설정합니다"},
+            {num:"40", name:"border-image-left", desc:"border-image-left</strong> : border-image-left 속성은 테두리 왼쪽 속성을 일괄적으로 설정합니다"},
+            {num:"41", name:"border-image-left-color", desc:"border-image-left-color</strong> : border-image-left-color 속성은 테두리 왼쪽 색 속성을 설정합니다"},
+            {num:"42", name:"border-image-left-style", desc:"border-image-left-style</strong> : border-image-left-style 속성은 테두리 왼쪽 스타일 속성을 설정합니다"},
+            {num:"43", name:"border-image-left-width", desc:"border-image-left-width </strong> : border-image-left-width 속성은 테두리 왼쪽 두께 속성을 설정합니다"},
+            {num:"44", name:"border-radius", desc:"border-radius</strong> : border-radius 속성은 모서리 굴곡을 설정합니다"},
+            {num:"45", name:"border-image-right", desc:"border-image-right</strong> : border-image-right 속성은 테두리 오른쪽 속성을 일괄적으로 설정합니다"},
+            {num:"46", name:"border-image-right-color", desc:"border-image-right-color</strong> : border-image-right-color 속성은 테두리 오른쪽 색 속성을 설정합니다"},
+            {num:"47", name:"border-image-right-style", desc:"border-image-right-style</strong> : border-image-right-style 속성은 테두리 오른쪽 스타일 속성을 설정합니다"},
+            {num:"48", name:"border-image-right-width", desc:"border-image-right-width </strong> : border-image-right-width 속성은 테두리 오른쪽 두께 속성을 설정합니다"},
+            {num:"49", name:"border-spacing", desc:"border-spacing</strong> : border-spacing 속성은 테이블의 테두리 간격을 설정합니다"},
+            {num:"50", name:"border-style", desc:"border-style </strong> : border-style 속성은 테두리 스타일 속성을 설정합니다"},
         ]
 
         const searchBox = document.querySelectorAll(".search span");    //검색버튼(#search_box)을 변수(searchBox)에 저장
@@ -262,7 +302,7 @@
             cssCount.innerHTML = countHTML;
         }
         upDataList();
-        
+
         //반대 정령
         function reverse(){
             cssProperty.reverse();
@@ -284,52 +324,52 @@
             });
             upDataList();
         }
-        
-        //알파벳 정렬(a~z)
-        function sortAlphabet(){
-            cssProperty.sort((a, b) => {
+ 
+        //알페벳 정렬(a~z)
+        function sortAlphabet() {
+            cssProperty.sort((a,b) => {
                 let x = a.name;
                 let y = b.name;
                 return x.localeCompare(y);
-            });
-            updateList();
+            })
+            upDataList();
         }
-        //알파벳 정렬(z~a)
-        function sortAlphabetZ(){
-            cssProperty.sort((a, b) => {
+
+        //알페벳 정렬(z~a)
+        function sortAlphabetZ() {
+            cssProperty.sort((a,b) => {
                 let x = a.name;
                 let y = b.name;
                 return y.localeCompare(x);
-            });
-            updateList();
+            })
+            upDataList();
         }
 
-        //반대로 버튼 클릭시
-        document.querySelector(".btn1").addEventListener("click", () => {
+         //반대로 버튼 클릭시
+         document.querySelector(".btn1").addEventListener("click", () => {
             reverse();
-        })
+        });
 
         //오름차순 버튼 클릭시
         document.querySelector(".btn2").addEventListener("click", () => {
             sortAscending();
-        })
+        });
 
         //내림차순 버튼 클릭시
         document.querySelector(".btn3").addEventListener("click", () => {
             sortDescending();
-        })
+        });
 
-        //알파벳 정령(a~z) 버튼 클릭시
+        //알파벳순(a~z)
         document.querySelector(".btn4").addEventListener("click", () => {
             sortAlphabet();
-        })
+        });
 
-        //알파벳 정령(z~a) 버튼 클릭시
+        //알파벳순(z~a)
         document.querySelector(".btn5").addEventListener("click", () => {
             sortAlphabetZ();
-        })
-
-        
+        });
+       
     </script>
 </body>
 </html>
