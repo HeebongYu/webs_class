@@ -841,3 +841,7 @@
     box-sizing: border-box;
     cursor: pointer;
 }
+.member-form button:hover {
+    background: #777;
+    color: #fff;
+}
