@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>change01</title>
     <style>
+        .aa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         #change01 {
             text-align: center;
         }
@@ -40,18 +45,21 @@
     </style>
 </head>
 <body>
-    <div id="change01">
-        <h3>글씨를 누르는 색으로 변경하기</h3>
-        <p class="text">글씨</p>
-        <div class="color">
-            <a href="#" data-color="red"><span>빨강</span></a>
-            <a href="#" data-color="orange"><span>주황</span></a>
-            <a href="#" data-color="yellow"><span>노랑</span></a>
-            <a href="#" data-color="green"><span>초록</span></a>
-            <a href="#" data-color="blue"><span>파랑</span></a>
-            <a href="#" data-color="purple"><span>보라</span></a>
+    <div class="aa">
+        <div id="change01">
+            <h3>글씨를 누르는 색으로 변경하기</h3>
+            <p class="text">글씨</p>
+            <div class="color">
+                <a href="#" data-color="red"><span>빨강</span></a>
+                <a href="#" data-color="orange"><span>주황</span></a>
+                <a href="#" data-color="yellow"><span>노랑</span></a>
+                <a href="#" data-color="green"><span>초록</span></a>
+                <a href="#" data-color="blue"><span>파랑</span></a>
+                <a href="#" data-color="purple"><span>보라</span></a>
+            </div>
         </div>
     </div>
+    
     
     <script>
         const changeColor = document.querySelectorAll("#change01 .color a")
@@ -65,3 +73,5 @@
     </script>
 </body>
 </html>
+
+<!-- https://heebongyu.github.io/webs_class/add/bolg/change01.html -->
