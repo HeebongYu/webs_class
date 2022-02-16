@@ -258,21 +258,21 @@ setInterval(sliderEffect, 2000);
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);     //첫번째 이미지 복사
         sliderInner.appendChild(sliderClone);                                //첫 번째 이미지를 마지막에 넣어줌
 
-        console.log(sliderWidth);
+        //console.log(sliderWidth); //이미지 가로 값 확인
 
-        function sliderEffect(){
+        function sliderEffect(){  //함수(sliderEffect) 선언
             currentIndex++;
-            sliderInner.style.transition = "all 0.3s";
-            sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)";
+            sliderInner.style.transition = "all 0.3s"; //애니메이션 속도 설정
+            sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)"; //위치 설정
 
             //마지막 사진에 갔을 떄
             if(currentIndex == sliderCount){
                 setTimeout(() => {
                     //이미지 초기화
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = "translateX(0px)";
+                    sliderInner.style.transition = "0s"; //애니메이션 속도 초기화
+                    sliderInner.style.transform = "translateX(0px)"; //위치 초기화
                 }, 300);
-                currentIndex = 0;
+                currentIndex = 0; //순서 초기화
             }
         };
         setInterval(sliderEffect, 2000);

@@ -45,7 +45,7 @@
 
     <div id="wrap">
         <header id="header">
-            <h1 class="logo"><a href="#">WEB <em>class</em></a></h1>
+            <h1 class="logo"><a href="index.html">WEB <em>class</em></a></h1>
             <nav class="menu">
                 <h2 class="ir_so">메인 메뉴</h2>
                 <ul>
@@ -57,16 +57,40 @@
                 </ul>
             </nav>
             <div class="member">
-                <a href="https://www.figma.com/file/R6vNckujX0r1TYOfQa840p/%EC%9B%B9%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0?node-id=0%3A1">회원가입</a>
-                <a href="#">로그인</a>
+                <a href="join.html">회원가입</a>
+                <a href="login.html">로그인</a>
             </div>
         </header>
         <!-- //header -->
 
-        <main id="contents"></main>
+        <main id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <section class="join-type gray">
+                <div class="member-form">
+                    <h3 class="mb30">로그인</h3>
+                    
+                    <form action="#" name="join" method="post">
+                        <fieldset>
+                            <legend class="ir_so">회원가입 입력폼</legend>
+                            <div class="join-box">
+                                <div>
+                                    <label for="youEmail">이메일</label>
+                                    <input type="email" id="youEmail" name="youEmail" placeholder="Sample@naver.com" autocomplete="off" autofocus required>
+                                </div>
+                                <div>
+                                    <label for="youPass">비밀번호</label>
+                                    <input type="password" id="youPass" name="youPass" maxlength="20" placeholder="비밀번호를 적어주세요!" autocomplete="off" required>
+                                </div>
+                            </div>
+                            <button id="joinBtn" class="join-submit" type="submit">로그인</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
         <!-- //contents -->
 
-        <footer id="footer" class="footer_type01">
+        <footer id="footer" class="footer_type01 white">
             <div class="container">
                 <h2 class="ir_so">푸터 바로가기 메뉴</h2>
                 <div class="footer-menu">
