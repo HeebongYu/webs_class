@@ -23,9 +23,8 @@
             overflow: hidden;
         }
         .slider__inner {   /* 이미지 움직이는 영역 */
-            display: flex;
-            width: 4800px;  /* 이미지 총 길이 */
-            transform: translateX(0);
+            height: 2880px;  /* 이미지 총 길이 */
+            transform: translateY(0);
         }
         .slider {
             width: 800px;
@@ -70,7 +69,7 @@
     <div class="info">
         <div class="title">
             <h1><a href="sliderEffect.html">Javascript Slider Effect04</a></h1>
-            <p>이미지 슬라이드 - 위로 움직이기</p>
+            <p>이미지 슬라이드 - 연속적으로 위로 움직이기</p>
         </div>
         <!-- //title -->
 
@@ -113,22 +112,103 @@
     
                             <div class="view-cont">
                                 <div class="active">
-<pre><code class="language-html">
-  
+<pre><code class="language-html">&lt;main&gt;
+    &lt;section id="sliderType02"&gt;
+        &lt;div class="slider__wrap"&gt;
+            &lt;div class="slider__img"&gt;
+                &lt;div class="slider__inner"&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img06.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img07.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img08.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img09.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                    &lt;div class="slider"&gt;&lt;img src="img/img10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
 </code></pre>
                                 </div>
                                 <!-- //cont1 -->
     
                                 <div>
-<pre><code class="language-css">
+<pre><code class="language-css">@import url(css/NexonLv1Gothic.css); /* 폰트.css */
+@import url(css/androidstudio.min.css); /* highlight.css */
+@import url(css/custom.css); /* custom.css */
 
+/* slider */
+.slider__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider__img {   /* 화면 보이는 구간 */
+    width: 800px;
+    height: 480px;
+    overflow: hidden;
+}
+.slider__inner {   /* 이미지 움직이는 영역 */
+    height: 2880px;  /* 이미지 총 길이 */
+    transform: translateY(0);
+}
+.slider {
+    width: 800px;
+    position: relative;
+}
+.slider::before {
+    position: absolute;
+    left: 5px;  
+    top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+}
+.slider:nth-child(1)::before {content: "이미지1"}
+.slider:nth-child(2)::before {content: "이미지2"}
+.slider:nth-child(3)::before {content: "이미지3"}
+.slider:nth-child(4)::before {content: "이미지4"}
+.slider:nth-child(5)::before {content: "이미지5"}
+.slider:nth-child(6)::before {content: "이미지1"}
 </code></pre>
                                 </div>
                                 <!-- //cont2 -->
     
                                 <div>
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">highlightAll(); //highlight.js에 저장된 함수 highlightAll 실행
+modal(); //custom.js에 저장된 함수 modal 실행
+tabMenu(); //tabMenu.js에 저장된 함수 modal 실행
 
+//sliderType03
+const sliderWrap = document.querySelector(".slider__wrap"); //.slider__wrap을 변수(sliderWrap)에 저장
+const sliderImg = document.querySelector(".slider__img"); //.slider__img를 변수(sliderImg)에 저장 //이미지 보이는 영역
+const sliderInner = document.querySelector(".slider__inner"); //.slider__inner를 변수(sliderInner)에 저장 //이미지 움직이는 영역
+const slider = document.querySelectorAll(".slider"); //.slider를 변수(slider)에 저장 //5개의 이미지
+
+let currentIndex = 0;                                                //첫번쨰 이미지 //현제 보이는 이미지
+let sliderCount = slider.length;                                     //이미지 갯수
+let sliderWidth = sliderImg.offsetHeight;                             //이미지 가로 값
+let sliderClone = sliderInner.firstElementChild.cloneNode(true);     //첫번째 이미지 복사
+sliderInner.appendChild(sliderClone);                                //첫 번째 이미지를 마지막에 넣어줌
+
+//console.log(sliderWidth); //이미지 가로 값 확인
+
+function sliderEffect(){  //함수(sliderEffect) 선언
+    currentIndex++;
+    sliderInner.style.transition = "all 0.3s"; //애니메이션 속도 설정
+    sliderInner.style.transform = "translateY(-" + sliderWidth * currentIndex + "px)"; //위치 설정
+
+    //마지막 사진에 갔을 떄
+    if(currentIndex == sliderCount){
+        setTimeout(() => {
+            //이미지 초기화
+            sliderInner.style.transition = "0s"; //애니메이션 속도 초기화
+            sliderInner.style.transform = "translateY(0px)"; //위치 초기화
+        }, 300);
+        currentIndex = 0; //순서 초기화
+    }
+};
+setInterval(sliderEffect, 2000);
 </code></pre>
                                 </div>
                                 <!-- //cont3 -->
@@ -164,7 +244,7 @@
         modal(); //custom.js에 저장된 함수 modal 실행
         tabMenu(); //tabMenu.js에 저장된 함수 modal 실행
 
-        //sliderType04
+        //sliderType03
         const sliderWrap = document.querySelector(".slider__wrap"); //.slider__wrap을 변수(sliderWrap)에 저장
         const sliderImg = document.querySelector(".slider__img"); //.slider__img를 변수(sliderImg)에 저장 //이미지 보이는 영역
         const sliderInner = document.querySelector(".slider__inner"); //.slider__inner를 변수(sliderInner)에 저장 //이미지 움직이는 영역
@@ -172,7 +252,7 @@
         
         let currentIndex = 0;                                                //첫번쨰 이미지 //현제 보이는 이미지
         let sliderCount = slider.length;                                     //이미지 갯수
-        let sliderWidth = sliderImg.offsetWidth;                             //이미지 가로 값
+        let sliderWidth = sliderImg.offsetHeight;                             //이미지 가로 값
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);     //첫번째 이미지 복사
         sliderInner.appendChild(sliderClone);                                //첫 번째 이미지를 마지막에 넣어줌
 
@@ -181,14 +261,14 @@
         function sliderEffect(){  //함수(sliderEffect) 선언
             currentIndex++;
             sliderInner.style.transition = "all 0.3s"; //애니메이션 속도 설정
-            sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)"; //위치 설정
+            sliderInner.style.transform = "translateY(-" + sliderWidth * currentIndex + "px)"; //위치 설정
 
             //마지막 사진에 갔을 떄
             if(currentIndex == sliderCount){
                 setTimeout(() => {
                     //이미지 초기화
                     sliderInner.style.transition = "0s"; //애니메이션 속도 초기화
-                    sliderInner.style.transform = "translateX(0px)"; //위치 초기화
+                    sliderInner.style.transform = "translateY(0px)"; //위치 초기화
                 }, 300);
                 currentIndex = 0; //순서 초기화
             }
