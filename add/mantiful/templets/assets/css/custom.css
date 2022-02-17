@@ -1,0 +1,55 @@
+/* 커스텀 */
+body {
+    background: #DBBFFF;
+}
+#wrap {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    overflow: hidden;
+    border: 0.1vh solid #777;
+}
+#window {
+    width: 95%;
+    height: 100vh;
+    background: #fff;
+    float: left;
+}
+.custom_side  {
+    width: 5%;
+    height: 100vh;
+    background: #CFCFCF;
+    float: left;
+    border-left: 0.1vh solid #777;
+    box-sizing: border-box;
+}
+.custom_top {
+    height: 5vh;
+    border-bottom: 0.1vh solid #777;
+}
+.custom_top .custom_dot {
+    position: relative;
+}
+.custom_top .custom_dot span {
+    background: coral;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 2vh;
+    display: inline-block;
+    position: absolute;
+    top: 1.5vh;
+}
+.custom_top .custom_dot span:nth-child(1) {
+    background: #F56565;
+    right: 10vh;
+}
+.custom_top .custom_dot span:nth-child(2) {
+    background: #F6E05E;
+    right: 6vh;
+}
+.custom_top .custom_dot span:nth-child(3) {
+    background: #4EBB7B;
+    right: 2vh;
+}
