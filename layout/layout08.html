@@ -79,23 +79,19 @@
         }
         #main #section5 {
             height: 974px;
-            background: #C5F4CE;
         }
         #main #section6 {
             height: 510px;
-            background: #6BE382;
         }
         #footer {
             height: 237px;
-            background: #8EEDB3;
         }
        
         /* menu */
         .menu {
             display: flex;
             justify-content: space-between;
-            position: relative;
-            top: 50px;
+            padding-top: 50px;
         }
         .menu h1 {
             font-size: 30px;
@@ -408,7 +404,185 @@
         .cont4 .goodsArr .goods6 .img {background: url(img/L8-img08.png); width: 252px; height: 327px; bottom: -10px;}
 
         /* cont5 */
+        .cont5 {
+            height: 974px;
+            display: flex;
+        }
+        .cont5 .left {
+            width: 50%;
+        }
+        .cont5 .left .img {
+            background: url(img/L8-img09.png);
+            width: 502px;
+            height: 550px;
+            display: inline-block;
+            margin-top: 200px;
+        }
+        .cont5 .right {
+            width: 50%;
+        }
+        .cont5 .right .top {
+            margin-top: 250px;
+            margin-left: 50px;
+        }
+        .cont5 .right .top .title {
+            font-size: 53px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .cont5 .right .top .doc {
+            font-size: 18px;
+            padding-top: 50px;
+            padding-right: 50px;
+        }
+        .cont5 .right .bottom {
+            margin-top: 130px;
+            margin-left: 150px;
+        }
+        .cont5 .right .bottom .name {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .cont5 .right .bottom .ather .day {
+            font-size: 14px;
+            opacity: 0.6;
+            margin-right: 35px;
+        }
+        .cont5 .right .bottom .ather .img {
+            background: url(img/bg-svg.svg);
+            width: 67px;
+            height: 10px;
+            display: inline-block;
+            background-position: 0 -1600px;
+        }
+        .cont5 .right .bottom .btn {
+            margin-top: 50px;
+        }
+        .cont5 .right .bottom .btn span {
+            background: url(img/bg-svg.svg);
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+        }
+        .cont5 .right .bottom .btn span:nth-child(1) {background-position: 0 -1650px; margin-right: 10px;}
+        .cont5 .right .bottom .btn span:nth-child(2) {background-position: 0 -1700px;}
 
+        /* cont6 */
+        .cont6 {
+            position: relative;
+        }
+        .cont6 .wrap {
+            width: 60%;
+            margin-top: 100px;
+            margin-left: 20px;
+            display: inline-block;
+        }
+        .cont6 .btn {
+            font-size: 14px;
+            border: 1px solid #FE8432;
+            display: inline-block;
+            padding: 13px 30px;
+            color: #FE8432;
+            border-radius: 30px;
+            margin-bottom: 50px;
+        }
+        .cont6 .btn:hover {
+            color: #fff;
+            background: #FE8432;
+        }
+        .cont6 .title {
+            font-size: 53px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .cont6 .logo {
+            margin-top: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cont6 .logo .img1 {
+            background: url(img/L8-img10.png);
+            width: 71px;
+            height: 59px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .cont6 .logo .text {
+            text-decoration: underline;
+            font-size: 15px;
+        }
+        .cont6 .img2 {
+            background: url(img/L8-img11.png);
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        /* #footer */
+        .footer {
+            height: 237px;
+        }
+        .footer_top {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(202, 202, 202,0.6);
+            padding: 50px 0;
+        }
+        .footer_top h1 {
+            font-size: 30px;
+            align-items: center;
+            font-weight: 400;
+        }
+        .footer_top h1::before {
+            content: url(img/bg-svg.svg);
+            width: 35px;
+            height: 35px;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .footer_top .nav li {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 10px;
+            margin: 0 20px;
+            opacity: 0.8;
+        }
+        .footer_top .nav li:hover {
+            border-bottom: 3px solid rgba(0,0,0,0.7);
+            opacity: 1.3;
+            transition: all 0.3s;
+        }
+        .footer_top .icon a {
+            width: 24px;
+            height: 12px;
+            display: inline-block;
+            background: url(img/bg-svg.svg);
+            margin-left: 20px;
+        }
+        .footer_top .icon a:nth-child(1) {
+            background-position: -150px -50px;
+        }
+        .footer_top .icon a:nth-child(2) {
+            background-position: -200px -50px;
+        }
+        .footer_top .icon a:nth-child(3) {
+            background-position: -250px -50px;
+        }
+        .footer_bot {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer_bot a {
+            margin-top: 30px;
+            color: rgba(202, 202, 202,0.6);
+        }
     </style>
 </head>
 <body>
@@ -559,11 +733,79 @@
                     </div>
                 </div>
             </section>
-
-            <section id="section5"></section>
-            <section id="section6"></section>
+            <section id="section5">
+                <div class="cont5 container">
+                    <div class="left">
+                        <span class="img"></span>
+                    </div>
+                    <div class="right">
+                        <div class="top">
+                            <div class="title">
+                                Let's see what our customer's say
+                            </div>
+                            <div class="doc">
+                                Dwelling and speedily ignorant any steepest. 
+                                Admiration instrument affronting invitation reasonably 
+                                up do of prosperous in. Shy saw declared age debating 
+                                ecstatic man. Call in so want pure rank am dear were. 
+                                Remarkably to continuing in surrounded diminution on.
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="name">
+                                Mike Taylor
+                            </div>
+                            <div class="ather">
+                                <span class="day">20 January 2020</span>
+                                <span class="img"></span>
+                            </div>
+                            <div class="btn">
+                                <span class="img01"></span>
+                                <span class="img02"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section6">
+                <div class="cont6 container">
+                    <div class="wrap">
+                        <div class="btn">Mistrium Interiror</div>
+                        <div class="title">
+                            Signup to receive updates about new products
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <span class="img1"></span>
+                        <span class="text">Watch intro video</span>
+                    </div>
+                    <div class="img2"></div>
+                </div>
+            </section>
         </main>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="footer container">
+                <div class="footer_top">
+                    <h1><a href="#">MISTRIUM</a></h1>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="icon">
+                        <a><span class="ir_pm">검색</span></a>
+                        <a><span class="ir_pm">장바구니</span></a>
+                        <a><span class="ir_pm">로그인</span></a>
+                    </div>
+                </div>
+                <div class="footer_bot">
+                    <a href="#">Copyright © 2021. arshakir.com</a>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
