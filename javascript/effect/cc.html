@@ -7,11 +7,15 @@
     <title>Document</title>
 
     <style>
+        @import url(css/NexonLv1Gothic.css); /* 폰트.css */
+        @import url(css/androidstudio.min.css); /* highlight.css */
+        @import url(css/custom.css); /* custom.css */
         @import url("https://fonts.googleapis.com/css?family=Inconsolata");
+
+
         html {
-        box-sizing: border-box;
+            box-sizing: border-box;
         }
-    
         *,
         *::after,
         *::before {
@@ -27,7 +31,7 @@
             background: #FF9AE0;
             font-family: "Inconsolata", monospace;
         }
-        .window {
+        .quiz__source {
             min-width: 360px;
             min-height: 220px;
             background-color: #c7c7c7;
@@ -126,6 +130,10 @@
         .content-container > .content > .scroll {
             width: 26px;
         }
+
+
+
+
         .scroll {
             background-color: #D7D7D7;
             display: flex;
@@ -193,10 +201,171 @@
             transform: rotate(90deg);
         }
     </style>
+    <style>
+   .source {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.source button {
+    border: 1px solid #fff;
+    background: transparent;
+    font-family: 'NexonLv1Gothic';
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.source button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* modal */
+#modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+#modal.show {
+    animation: foldOut 1s ease forwards;
+    /* animation-fill-mode: forwards; */
+}
+#modal.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+.modal-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    transform: scale(0);
+}
+#modal.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+@keyframes foldOut {
+    0% {transform: scaleX(0) scaleY(0.005)}
+    50% {transform: scaleX(1) scaleY(0.005)}
+    100% {transform: scaleX(1) scaleY(1)}
+}
+@keyframes foldIn {
+    0% {transform: scaleX(1) scaleY(1)}
+    50% {transform: scaleX(1) scaleY(0.005)}
+    100% {transform: scaleX(0) scaleY(0.005)}
+}
+@keyframes zoomOut {
+    0% {transform: scale(0)}
+    100% {transform: scale(1)}
+}
+@keyframes zoomIn {
+    0% {transform: scale(1)}
+    100% {transform: scale(0)}
+}
+.modal-close {
+    margin-top: 10px;
+}
+.modal-wrap .modal-cont {
+    opacity: 1;
+    position: relative;
+}
+.code-view {
+    width: 60vw;
+    height: 60vh;
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    overflow: scroll;
+}
+.code-view::-webkit-scrollbar {
+    display: none;
+}
+.view-header {
+    padding: 7px 0 7px 10px;
+    border-bottom: 1px solid #e2e8f5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    z-index: 10;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.view-header > span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+.view-header > span:nth-child(1) {
+    background: #f56565;
+}
+.view-header > span:nth-child(2) {
+    background: #f6e05e;
+}
+.view-header > span:nth-child(3) {
+    background: #4ebb7b;
+}
+.view-title {
+    padding: 9px 10px 7px 10px;
+    height: 37px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 40px;
+    background: #fff;
+}
+.view-title li {
+    display: inline;
+}
+.view-title li a {
+    color: rgb(150, 150, 150);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 12px 15px 8px 15px;
+    margin: 2px 5px 0 5px;
+}
+.view-title li.active a {
+    color: #000;
+    border-bottom: 4px solid #F56565;
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    font-weight: 600;
+}
+.view-cont {
+    height: 100%;
+    background-color: #282b2e;
+    padding-top: 80px;
+}
+.view-cont > div {
+    display: none;
+}
+.view-cont > div:first-child {
+    display: block;
+}
+.view-cont code {
+    line-height: 1.6;
+}
+    </style>
 </head>
 <body>
-    <div class="window">
-        <div class="title-bar">
+    <div class="quiz__source">
+        <div class="title-bar" aria-hidden="true">
             <div class="minimize">
                 <div class="symbol"></div>
             </div>
@@ -206,33 +375,47 @@
             <div class="close">
                 <div class="symbol"></div>
             </div>
-            </div>
+        </div>
+        <!-- //title-bar -->
     
-            <div class="menu-bar">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>javascript</span>
-                <span>jQuery</span>
-            </div>
+        <div class="menu-bar">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>javascript</span>
+            <span>jQuery</span>
+        </div>
     
-            <div class="content-container">
-                <div class="content">
-                <div class="main"></div>
-                <div class="scroll">
+        <div class="content-container">
+            <div class="content">
+                <div class="main">작성공간</div>
+                <div class="scroll" aria-hidden="true">
                     <div class="start"></div>
                     <div class="progress"></div>
                     <div class="end"></div>
                 </div>
+                <!-- //scroll -->
             </div>
-    
-            <div class="scroll -row">
+
+            <div class="scroll -row" aria-hidden="true">
                 <div class="start"></div>
                 <div class="progress"></div>
                 <div class="end"></div>
             </div>
+            <!-- //scroll -row" -->
         </div>
         <div class="footer"></div>
-      </div>
+    </div>
+
+</div>
+<!-- //info -->
+
+    <script src="js/highlight.min.js"></script> <!-- highlight.js -->
+    <script src="js/custom.js"></script> <!-- custom.js -->
+    <script>
+        highlightAll(); //highlight.js에 저장된 함수 highlightAll 실행
+        modal(); //custom.js에 저장된 함수 modal 실행
+        tabMenu();
+    </script>
 </body>
 </html>
 
