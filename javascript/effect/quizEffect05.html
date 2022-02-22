@@ -7,6 +7,7 @@
     <title>Quiz Effect</title>
     <link rel="stylesheet" href="css/dog.css">
     <link rel="stylesheet" href="css/quizCustom.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
 
     <style>
         /* 폰트 */
@@ -737,12 +738,14 @@ document.querySelector(".quiz__confirm").addEventListener("click", answerQuiz);
     <!-- //footer -->
 
     <!-- script -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <script src="js/quizCustom.js">
         modal();
         tabMenu();
     </script>
 
     <script>
+        hljs.highlightAll();
         const quizWrap = document.querySelector(".quiz__wrap");                         //퀴즈
 
         //문제정보
