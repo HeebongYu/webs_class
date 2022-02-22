@@ -11,10 +11,9 @@ a:hover {color: #390;}
 /* 폰트 초기화 */
 body, input, textarea, select, button, table {
     font-family: 'Nanum Gothic', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', 'sans-serif';
-    color: #222; font-size: 13px; line-height: 1.5;
-}
+    color: #222; font-size: 13px; line-height: 1.5;}
 
-/* 폰트 스타일 초기히ㅘ */
+/* 폰트 스타일 초기화 */
 em {font-style: normal;}
 
 /* 블릿기호 초기화 */
@@ -22,6 +21,9 @@ dl, ul, ol, li, menu {list-style: none;}
 
 /* 제목 태그 초기화 */
 h1, h2, h3, h4, h5, h6 {font-size: 13px;; color: #222; font-weight: normal;}
+
+/* 테두리 초기화 */
+img, fieldset {border: 0 none;}
 
 /* ir 효과 */
 /* 의미있는 이미지의 대체 텍스트 제공하는 경우 */
