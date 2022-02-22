@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout-practice02</title>
+    <style>
+        /* 폰트 */
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        /* 기본설정 */
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0%;
+            height: 0%;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+        }
+        #wrap {
+            width: 100%;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* header */
+        #header {
+            height: 100px;
+            display: flex;
+            justify-content: space-between
+        }
+        #header h2 {
+            font-size: 32px;
+            margin-left: 80px;
+            margin-top: 30px;
+            font-weight: 1000;
+        }
+        #header ul {
+            margin-top: 50px;
+            margin-right: 80px;
+        }
+        #header ul li {
+            display: inline;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 0 20px;
+        }
+        #header ul li:hover {
+            font-weight: 500;
+        }
+
+        /* section1 */
+        #main .section1 {
+            height: 420px;
+        }
+        #main .section1 p {
+            font-size: 50px;
+            margin-top: 245px;
+            display: inline-block;
+            font-weight: 1000;
+            padding-right: 300px;
+        }
+
+        /* section2 */
+        #main .section2 {
+            height: 800px;
+            display: flex;
+            justify-content: space-between
+        }
+        #main .section2 .section2_left p {
+            border-top: 1px solid #000;
+            margin-top: 59px;
+            padding-top: 30px;
+            font-size: 30px;
+            font-weight: 800;
+            position: absolute;
+            z-index: 1;
+        }
+        #main .section2 .section2_left .img1 {
+            background-image: url(img/img1.png);
+            width: 550px;
+            height: 540px;
+            position: relative;
+            top: 145px;
+            z-index: 0;
+        }
+        #main .section2 .section2_right p {
+            border-top: 1px solid #000;
+            margin-top: 109px;
+            padding-top: 30px;
+            font-size: 30px;
+            font-weight: 800;
+            position: absolute;
+            z-index: 1;
+        }
+        #main .section2 .section2_right .img2 {
+            background-image: url(img/img2.png);
+            width: 550px;
+            height: 540px;
+            position: relative;
+            top: 195px;
+            z-index: 0;
+        }
+
+        /* section3 */
+        #main .section3 {
+            height: 800px;
+            display: flex;
+            justify-content: space-between
+        }
+        #main .section3 .section3_left p {
+            border-top: 1px solid #000;
+            margin-top: 59px;
+            padding-top: 30px;
+            font-size: 30px;
+            font-weight: 800;
+            position: absolute;
+            z-index: 1;
+        }
+        #main .section3 .section3_left .img3 {
+            background-image: url(img/img3.png);
+            width: 550px;
+            height: 540px;
+            position: relative;
+            top: 145px;
+            z-index: 0;
+        }
+        #main .section3 .section3_right p {
+            border-top: 1px solid #000;
+            margin-top: 109px;
+            padding-top: 30px;
+            font-size: 30px;
+            font-weight: 800;
+            position: absolute;
+            z-index: 1;
+        }
+        #main .section3 .section3_right .img4 {
+            background-image: url(img/img4.png);
+            width: 550px;
+            height: 540px;
+            position: relative;
+            top: 195px;
+            z-index: 0;
+        }
+
+        /* section4 */
+        #main .section4 {
+            height: 480px;
+        }
+
+        /* footer */
+        #footer {
+            height: 369px;
+            background-color: #303137;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+        }
+        #footer .footer_left {
+            display: flex;
+            flex-direction: column
+        }
+        #footer .footer_left .footer_LT ul {
+            margin: 60px 0 40px 70px;
+        }
+        #footer .footer_left .footer_LT ul li {
+            display: inline;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        #footer .footer_left .footer_LT ul li:not(li:last-child)::after {
+            content: '|';
+            padding: 0 25px;
+            color: #A5A5A8;
+        }
+        #footer .footer_left .footer_LT ul li a {
+            color: #fff;
+        }
+        #footer .footer_left .footer_LB {
+            overflow: hidden;            
+            margin-left: 70px;
+        }
+        #footer .footer_left .footer_LB .footer_LB1 {
+            float: left;
+            padding-right: 70px;
+            width: 244px;
+            height: 80px;
+        }
+        #footer .footer_left .footer_LB h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        #footer .footer_left .footer_LB p {
+            font-size: 12px;
+            color: #97989B;
+        }
+        #footer .footer_left .footer_LB .footer_LB2 {
+            float: left;
+            width: 244px;
+            height: 80px;
+        }
+        #footer .footer_right {
+            float: right;
+            margin-top: 60px;
+            text-align: right;
+        }
+        #footer .footer_right h3 {
+            font-size: 15px;
+            font-weight: 500;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #A5A5A8;
+            display: inline;
+            text-align: right;
+            margin-right: 70px;
+        }
+        #footer .footer_right h3::after {
+            content: "+";
+            font-size: 25px;
+            color: #A5A5A8;
+        }
+        #footer .footer_right ul {
+            margin: 60px 70px 10px 0;
+        }
+        #footer .footer_right ul li {
+            display: inline;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        #footer .footer_right ul li:not(li:last-child)::after {
+            content: '|';
+            padding: 0 25px;
+            color: #A5A5A8;
+        }
+        #footer .footer_right ul li a {
+            color: #A5A5A8;
+        }
+        #footer .footer_right p {
+            display: inline;
+            margin-right: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h2><a href="#">IMFORM</a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">WOGK</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+            <!-- nav -->
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <section class="section1 container">
+                <p>We research new opportunities. that inspire success.</p>
+            </section>
+            <!-- //section1 -->
+
+            <section class="section2 container">
+                <div class="section2_left">
+                    <p>
+                        스마트한 카라이프<br>
+                        한국타이어
+                    </p>
+                    <div class="img1"></div>
+                </div>
+                <div class="section2_right">
+                    <p>
+                        한섬 프리미엄 스타일<br>
+                        모바일 룩북
+                    </p>
+                    <div class="img2"></div>
+                </div>
+            </section>
+            <!-- //section2 -->
+
+            <section class="section3 container">
+                <div class="section3_left">
+                    <p>
+                        나는 대만족 입니다<br>
+                        대만관광청 홈페이지 리뉴얼
+                    </p>
+                    <div class="img3"></div>
+                </div>
+                <div class="section3_right">
+                    <p>
+                        세련된 감각의 까사미아<br>
+                        라이프스타일 매거진
+                    </p>
+                    <div class="img4"></div>
+                </div>
+            </section>
+            <!-- //section3 -->
+
+            <section class="section4"></section>
+            <!-- section4 -->
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <div class="footer_left">
+                <div class="footer_LT">
+                    <ul>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer_LB">
+                    <div class="footer_LB1">
+                        <h3>IMFORM HQ</h3>
+                        <P>2F, Nonhyeon-ro 653, Gangnam-gu Seoul, Republic of Korea</P>
+                    </div>
+                    <div class="footer_LB2">
+                        <h3>IMFORM System Lab</h3>
+                        <P>4F, Nonhyeon-ro 654, Gangnam-gu Seoul, Republic of Korea</P>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_right">
+                <h3>패밀리 사이트 바로가기<span></span></h3>
+                <ul>
+                    <li><a href="#">Legal Notice</a></li>
+                    <li><a href="#">Library</a></li>
+                </ul>
+                <p>IMFORM. All rights reserved.</p>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

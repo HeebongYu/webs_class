@@ -254,86 +254,86 @@
 }
 
 /* .dog.like */
-.dog.like .face::before {
+.like .dog .face::before {
     margin-top: 10px;
 }
-.dog.like .face::after {
+.like .dog .face::after {
     height: 85px;
 }
-.dog.like .eyes {
+.like .dog .eyes {
     top: 13%;
 }
-.dog.like .eyes::before,
-.dog.like .eyes::after {
+.like .dog .eyes::before,
+.like .dog .eyes::after {
     width: 18px;
     height: 5px;
     margin: 0px 12.5%;
     transform: rotate(-37.5deg);
     border-radius: 20px;
 }
-.dog.like .eyes::after {
+.like .dog .eyes::after {
     transform: rotate(37.5deg);
 }
-.dog.like .nose {
+.like .dog .nose {
     top: 18%;
 }
-.dog.like .mouth {
+.like .dog .mouth {
     top: 16.5%;
 }
-.dog.like .tongue::before {
+.like .dog .tongue::before {
     height: 12px;
 }
-.dog.like .tongue::after {
+.like .dog .tongue::after {
     height: 24px;
     animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
 }
-.dog.like .chin {
+.like .dog .chin {
 top: 34%;
 }
-.dog.like .tail {
+.like .dog .tail {
     animation: movetail 0.1s linear infinite alternate forwards;
 }
 
 /* .dog.dislike */
-.dog.dislike .ears::before {
+.dislike .dog .ears::before {
     transform: rotate(-50deg) translate(-7px, 2px);
 }
-.dog.dislike .ears::after {
+.dislike .dog .ears::after {
     transform: rotate(50deg) translate(7px, 2px);
 }
-.dog.dislike .face::before {
+.dislike .dog .face::before {
     margin-top: 28px;
 }
-.dog.dislike .face::after {
+.dislike .dog .face::after {
     height: 55px;
 }
-.dog.dislike .eyes {
+.dislike .dog .eyes {
     top: 38%;
 }
-.dog.dislike .eyes::before,
-.dog.dislike .eyes::after {
+.dislike .dog .eyes::before,
+.dislike .dog .eyes::after {
     width: 18px;
     height: 5px;
     margin: 0px 14.5%;
     transform: rotate(-37.5deg);
     border-radius: 20px;
 }
-.dog.dislike .eyes::after {
+.dislike .dog .eyes::after {
     transform: rotate(37.5deg);
 }
-.dog.dislike .teardrop {
+.dislike .dog .teardrop {
     animation: cry 0.1s ease-in 0.25s forwards;
 }
-.dog.dislike .nose {
+.dislike .dog .nose {
     top: 44%;
 }
-.dog.dislike .mouth {
+.dislike .dog .mouth {
     top: 42%;
 }
-.dog.dislike .chin {
+.dislike .dog .chin {
     top: 52%;
 }
-.dog.dislike .tail {
+.dislike .dog .tail {
     transform: rotate(0);
     animation: none;
 }

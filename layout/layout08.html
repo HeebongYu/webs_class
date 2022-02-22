@@ -4,808 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>layout08</title>
+    <title>레이아웃</title>
     <style>
-        /* 폰트 */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-        
-        /* 기본셋팅 */
         * {
-            padding: 0;
             margin: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
         }
-        a {
-            text-decoration: none;
-            color: #000;
-            font-family: 'Poppins', sans-serif;
+        body {
+            background-color: #E3F2FD;
         }
-        ol,
-        ul,
-        li {
-            list-style: none;
-        }
-
-        /* ir효과 */
-        .ir_pm {
-            display: block;
-            overflow: hidden;
-            font-size: 0;
-            line-height: 0;
-            text-indent: -9999px;
-        }
-        .ir_wa {
-            display: block;
-            overflow: hidden;
-            position: relative;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-        }
-        .ir_so {
-            overflow: hidden;
-            position: absolute;
-            width: 0%;
-            height: 0%;
-            line-height: 0;
-            text-indent: -9999px;
-        }
-
-        /* 컨테이너 */
-        .container {
+        #wrap {
             width: 1200px;
             margin: 0 auto;
         }
-
-        /* 레이아웃 */
-        #wrap {
-            width: 100%;
-        }
         #header {
-            height: 150px;
+            width: 100%;
+            height: 100px;
+            background-color: #BBDEFB;
         }
-        #main #section1 {
-            height: 735px;
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #90CAF9;
         }
-        #main #section2 {
-            height: 300px;
+        #main {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
         }
-        #main #section3 {
-            height: 388px;
+        #contents {
+            width: 30%;
+            height: 600px;
+            background-color: #64B5F6;
         }
-        #main #section4 {
-            height: 1440px;
+        #article1 {
+            width: 70%;
+            height: 200px;
+            background-color: #42A5F5;
         }
-        #main #section5 {
-            height: 974px;
+        #article2 {
+            width: 70%;
+            height: 200px;
+            background-color: #2196F3;
+            position: absolute;
+            left: 30%;
+            top: 200px;
         }
-        #main #section6 {
-            height: 510px;
+        #article3 {
+            width: 70%;
+            height: 200px;
+            background-color: #1E88E5;
+            position: absolute;
+            left: 30%;
+            top: 400px;
         }
         #footer {
-            height: 237px;
-        }
-       
-        /* menu */
-        .menu {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 50px;
-        }
-        .menu h1 {
-            font-size: 30px;
-            align-items: center;
-            font-weight: 400;
-        }
-        .menu h1::before {
-            content: url(img/bg-svg.svg);
-            width: 35px;
-            height: 35px;
-            overflow: hidden;
-            display: inline-block;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-        .menu .nav li {
-            display: inline-block;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 10px;
-            margin: 0 20px;
-            opacity: 0.8;
-        }
-        .menu .nav li:hover {
-            border-bottom: 3px solid rgba(0,0,0,0.7);
-            opacity: 1.3;
-            transition: all 0.3s;
-        }
-        .menu .icon a {
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            background: url(img/bg-svg.svg);
-            margin-left: 20px;
-        }
-        .menu .icon a:nth-child(1) {
-            background-position: 0px -50px;
-        }
-        .menu .icon a:nth-child(2) {
-            background-position: -50px -50px;
-        }
-        .menu .icon a:nth-child(3) {
-            background-position: -100px -50px;
-        }
-
-        /* cont1 */
-        .cont1 {
-            height: 735px;
-            position: relative;
-        }
-        .cont1 .desc {
-        }
-        .cont1 .desc h3 {
-            font-size: 80px;
-            font-weight: 600;
-            padding-top: 80px;
-            padding-right: 20%;
-            line-height: 0.95;
-            margin-bottom: 60px;
-        }
-        .cont1 .desc p {
-            font-size: 18px;
-            padding-bottom: 15px;
-            padding-right: 60%;
-            opacity: 0.8;
-        }
-        .cont1 .btn {
-            margin-top: 50px;
-        }
-        .cont1 .btn a {
-            padding: 23px 50px;
-            border: 3px solid #C4A586;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .cont1 .btn a:hover {
-            font-style: italic;
-        }
-        .cont1 .btn .left {
-            margin-right: 30px;
-            background: #C4A586;
-            color: #fff;
-        }
-        .cont1 .btn .right {
-            background: #fff;
-            color: #C4A586;
-        }
-        .cont1 .img {
-            background: url(img/con1.jpg);
-            width: 840px;
-            height: 700px;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-
-        /* cont2 */
-        .cont2 h3 {
-            font-size: 20px;
-            font-weight: 900;
-            text-align: center;
-            padding-top: 80px;
-            font-weight: 600;
-        }
-        .cont2 .logo a {
-            background: url(img/bg-svg.svg);
-            background-position: 0 -150px;
-            height: 61px;
-            width: 1109px;
-            display: block;
-            margin: 50px auto;
-        }
-
-        /* cont3 */
-        .cont3 {
-            display: flex;
-            flex-direction: row;
-            height: 388px;
-        }
-        .cont3 .left {
-            width: 50%;
-            background: #FCEFE9;
-        }
-        .cont3 .right {
-            width: 50%;
-            background: #FAE2C8;
-        }
-        .cont3 .desc h3 {
-            font-size: 34px;
-            font-weight: 700;
-            line-height: 1.29;
-            padding-right: 50%;
-        }
-        .cont3 .left {
-            position: relative;
-        }
-        .cont3 .right {
-            position: relative;
-        }
-        .cont3 .left .desc h3 {
-            margin: 110px 0 90px 100px;
-        }
-        .cont3 .right .desc h3 {
-            margin: 110px 0 90px 70px;
-        }
-        .cont3 .desc p {
-            font-size: 20px;
-            font-weight: 500;
-            margin-left: 110px;
-        }
-        .cont3 .left .desc p {
-            margin-left: 100px;
-        }
-        .cont3 .right .desc p {
-            margin-left: 70px;
-        }
-        .cont3 .left .img {
-            background: url(img/L8-img01.png);
-            width: 409px;
-            height: 351px;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-        }
-        .cont3 .right .img {
-            background: url(img/L8-img02.png);
-            width: 351px;
-            height: 216px;
-            position: absolute;
-            right: 5px;
-            bottom: 15px;
-        }
-
-        /* cont4 */
-        .cont4 {
-            height: 1440px;
-        }
-        .cont4 .header {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 173px;
-        }
-        .cont4 .header h3 {
-            padding-left: 73px;
-            font-size: 50px;
-        }
-        .cont4 .header li {
-            display: inline-block;
-            font-size: 23px;
-            color: #A9A7A6;
-            padding: 20px 35px;
-        }
-        .cont4 .header .btn {
-            padding: 20px 0 20px 0;
-            position: relative;
-        }
-        .cont4 .header .btn .text {
-            position: relative;
-            font-size: 17px;
-            padding-right: 160px;
-        }
-        .cont4 .header .btn .arr {
-            background: #000;
-            width: 24px;
-            height: 14px;
-            display: inline-block;
-            background: url(img/bg-svg.svg);
-            background-position: -200px 0;
-            position: absolute;
-            right: 120px;
-            top: 25px;
-        }
-        .cont4 .header .btn .text::before {
-            content: '';
-            width: 40px;
-            height: 20px;
-            background: #E9E9E9;
-            position: absolute;
-            right: 100px;
-            top: 0px;
-        }
-        .cont4 .choose ul {
-            text-align: center;
-            margin-top: 100px;
-            margin-bottom: 60px;
-        }
-        .cont4 .choose li {
-            display: inline-block;
-            font-size: 18px;
-            font-weight: 1000;
-            color: #A9A7A6;
-            padding: 0 30px;
-            cursor: pointer;
-        }
-        .cont4 .choose li:hover {
-            color: #000;
-        }
-        .cont4 .goodsArr {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 70px;
-            margin-bottom: 40px;
-        }
-        .cont4 .goodsArr .goods {
-            width: 331px;
-            height: 460px;
-            position: relative;
-        }
-        .cont4 .goodsArr .goods .btn {
-            font-size: 14px;
-            border: 1px solid #D9AB82;
-            display: inline-block;
-            background: #D9AB82;
-            border-radius: 30px;
-            padding: 10px 20px;
-            margin-left: 50%;
-            transform: translateX(-50%);
-            color: #fff;
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-        .cont4 .goodsArr .goods .btn .btn-img {
-            width: 26px;
-            height: 26px;
-            background: #000;
-            display: inline-block;
-            background: url(img/bg-svg.svg);
-            background-position: -250px 0;
-            vertical-align: middle;
-        }
-        .cont4 .goodsArr .goods .tit {
-            font-size: 26px;
-            font-weight: 700;
-            padding-left: 50px;
-        }
-        .cont4 .goodsArr .goods .price {
-            padding-left: 50px;
-            font-size: 19px;
-            font-weight: 700;
-        }
-        .cont4 .goodsArr .goods .price em {
-            font-size: 15px;
-            font-weight: 300;
-            color: #A9A7A6;
-            font-style: normal;
-            text-decoration:line-through;
-            text-decoration-color: #A9A7A6;
-            padding-left: 30px;
-        }
-        .cont4 .goodsArr .goods .box {
-            width: 315px;
-            height: 300px;
-            background: #FFF4E8;
-            position: absolute;
-            top: 70px;
-            left: 0;
-            z-index: -1;
-        }
-        .cont4 .goodsArr .goods .img {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .cont4 .goodsArr .goods1 .img {background: url(img/L8-img03.png); width: 448px; height: 384px; bottom: -50px;}
-        .cont4 .goodsArr .goods2 .img {background: url(img/L8-img04.png); width: 390px; height: 332px; bottom: -20px;}
-        .cont4 .goodsArr .goods3 .img {background: url(img/L8-img05.png); width: 440px; height: 372px; bottom: -40px;}
-        .cont4 .goodsArr .goods4 .img {background: url(img/L8-img06.png); width: 308px; height: 308px; bottom: 0px;}
-        .cont4 .goodsArr .goods5 .img {background: url(img/L8-img07.png); width: 444px; height: 380px; bottom: -50px;}
-        .cont4 .goodsArr .goods6 .img {background: url(img/L8-img08.png); width: 252px; height: 327px; bottom: -10px;}
-
-        /* cont5 */
-        .cont5 {
-            height: 974px;
-            display: flex;
-        }
-        .cont5 .left {
-            width: 50%;
-        }
-        .cont5 .left .img {
-            background: url(img/L8-img09.png);
-            width: 502px;
-            height: 550px;
-            display: inline-block;
-            margin-top: 200px;
-        }
-        .cont5 .right {
-            width: 50%;
-        }
-        .cont5 .right .top {
-            margin-top: 250px;
-            margin-left: 50px;
-        }
-        .cont5 .right .top .title {
-            font-size: 53px;
-            line-height: 1.2;
-            font-weight: 700;
-        }
-        .cont5 .right .top .doc {
-            font-size: 18px;
-            padding-top: 50px;
-            padding-right: 50px;
-        }
-        .cont5 .right .bottom {
-            margin-top: 130px;
-            margin-left: 150px;
-        }
-        .cont5 .right .bottom .name {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .cont5 .right .bottom .ather .day {
-            font-size: 14px;
-            opacity: 0.6;
-            margin-right: 35px;
-        }
-        .cont5 .right .bottom .ather .img {
-            background: url(img/bg-svg.svg);
-            width: 67px;
-            height: 10px;
-            display: inline-block;
-            background-position: 0 -1600px;
-        }
-        .cont5 .right .bottom .btn {
-            margin-top: 50px;
-        }
-        .cont5 .right .bottom .btn span {
-            background: url(img/bg-svg.svg);
-            width: 32px;
-            height: 32px;
-            display: inline-block;
-        }
-        .cont5 .right .bottom .btn span:nth-child(1) {background-position: 0 -1650px; margin-right: 10px;}
-        .cont5 .right .bottom .btn span:nth-child(2) {background-position: 0 -1700px;}
-
-        /* cont6 */
-        .cont6 {
-            position: relative;
-        }
-        .cont6 .wrap {
-            width: 60%;
-            margin-top: 100px;
-            margin-left: 20px;
-            display: inline-block;
-        }
-        .cont6 .btn {
-            font-size: 14px;
-            border: 1px solid #FE8432;
-            display: inline-block;
-            padding: 13px 30px;
-            color: #FE8432;
-            border-radius: 30px;
-            margin-bottom: 50px;
-        }
-        .cont6 .btn:hover {
-            color: #fff;
-            background: #FE8432;
-        }
-        .cont6 .title {
-            font-size: 53px;
-            line-height: 1.2;
-            font-weight: 700;
-        }
-        .cont6 .logo {
-            margin-top: 50px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .cont6 .logo .img1 {
-            background: url(img/L8-img10.png);
-            width: 71px;
-            height: 59px;
-            display: inline-block;
-            margin-right: 10px;
-        }
-        .cont6 .logo .text {
-            text-decoration: underline;
-            font-size: 15px;
-        }
-        .cont6 .img2 {
-            background: url(img/L8-img11.png);
-            width: 250px;
-            height: 250px;
-            position: absolute;
-            right: 0px;
-            bottom: 0px;
-        }
-        /* #footer */
-        .footer {
-            height: 237px;
-        }
-        .footer_top {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(202, 202, 202,0.6);
-            padding: 50px 0;
-        }
-        .footer_top h1 {
-            font-size: 30px;
-            align-items: center;
-            font-weight: 400;
-        }
-        .footer_top h1::before {
-            content: url(img/bg-svg.svg);
-            width: 35px;
-            height: 35px;
-            overflow: hidden;
-            display: inline-block;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-        .footer_top .nav li {
-            display: inline-block;
-            font-size: 16px;
-            font-weight: 700;
-            padding: 10px;
-            margin: 0 20px;
-            opacity: 0.8;
-        }
-        .footer_top .nav li:hover {
-            border-bottom: 3px solid rgba(0,0,0,0.7);
-            opacity: 1.3;
-            transition: all 0.3s;
-        }
-        .footer_top .icon a {
-            width: 24px;
-            height: 12px;
-            display: inline-block;
-            background: url(img/bg-svg.svg);
-            margin-left: 20px;
-        }
-        .footer_top .icon a:nth-child(1) {
-            background-position: -150px -50px;
-        }
-        .footer_top .icon a:nth-child(2) {
-            background-position: -200px -50px;
-        }
-        .footer_top .icon a:nth-child(3) {
-            background-position: -250px -50px;
-        }
-        .footer_bot {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .footer_bot a {
-            margin-top: 30px;
-            color: rgba(202, 202, 202,0.6);
+            width: 100%;
+            height: 100px;
+            background-color: #1976D2;
+        }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;
+            }
+            #article1 {
+                height: 300px;
+            }
+            #article2 {
+                height: 300px;
+                top: 300px;
+            }
+            #article3 {
+                width: 100%;
+                height: 100px;
+                position: unset;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+            #article1 {
+                height: 600px;
+            }
+            #article2 {
+                width: 100%;
+                height: 100px;
+                position: unset;
+            }
+        }
+        @media (max-width: 600px){
+            #contents {
+                width: 100%;
+                height: 300px;
+            }
+            #article1 {
+                width: 100%;
+                height: 100px;
+                position: unset;
+            }
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <div class="menu container">
-                <h1><a href="#">MISTRIUM</a></h1>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">products</a></li>
-                        <li><a href="#">faqs</a></li>
-                        <li><a href="#">contact us</a></li>
-                    </ul>
-                </nav>
-                <div class="icon">
-                    <a><span class="ir_pm">검색</span></a>
-                    <a><span class="ir_pm">장바구니</span></a>
-                    <a><span class="ir_pm">로그인</span></a>
-                </div>
-            </div>
-        </header>
+        <header id="header"></header>
+        <nav id="nav"></nav>
         <main id="main">
-            <section id="section1">
-                <div class="cont1 container">
-                    <div class="desc">
-                        <h3>
-                            Modern Furniture For
-                            Modern Living Style
-                        </h3>
-                        <p>
-                            In unfeeling existence objection immediate repulsive 
-                            on he in. Imprudence comparison uncommonly me 
-                            he difficulty diminution resolution. Likewise proposal 
-                            differed scarcely dwelling as on raillery. 
-                        <p>
-                        <p>
-                            September few dependent extremity own continued 
-                            and ten prevailed attending. Early to weeks we could. 
-                            Do commanded an shameless we disposing do. 
-                            Indulgence ten remarkably nor are impression out. 
-                            Power is lived means oh every in we quiet.
-                        </p>
-                    </div>
-                    <div class="btn">
-                        <a href="#" class="left">Request Quote</a>
-                        <a href="#" class="right">watch Video</a>
-                    </div>
-                    <div class="img"></div>
-
-                </div>  
-            </section>
-            <section id="section2">
-                <div class="cont2 container">
-                    <h3>SOME OF OUR TAUSTED CLIENTS</h3>
-                    <div class="logo">
-                        <a href="#"></a>
-                    </div>
-                </div>
-            </section>
-            <section id="section3">
-                <div  class="cont3 container">
-                    <div class="left">
-                        <div class="desc">
-                            <h3>Residential Furniture</h3>
-                            <p>Browse Collection</p>
-                        </div>
-                        <div class="img"></div>
-                    </div>
-                    <div class="right">
-                        <div class="desc">
-                            <h3>Hospitality Furniture</h3>
-                            <p>Browse Collection</p>
-                        </div>
-                        <div class="img"></div>
-                    </div>
-                </div>
-            </section>
-            <section id="section4">
-                <div class="cont4 container">
-                    <div class="header">
-                        <h3>PRODUCTS</h3>
-                        <ul>
-                            <li>Best Selling</li>
-                            <li>Most Popular</li>
-                        </ul>
-                        <a href="#" class="btn">
-                            <span class="text">See All</span>
-                            <span class="arr"></span>
-                        </a>
-                    </div>
-                    <div class="choose">
-                        <ul>
-                            <li>All</li>
-                            <li>Bed</li>
-                            <li>Sofa</li>
-                            <li>Chair</li>
-                            <li>Light</li>
-                        </ul>
-                    </div>
-
-                    <div class="goodsArr">
-                        <div class="goods goods1">
-                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
-                            <div class="tit">Ramen Stool</div>
-                            <div class="price">$65.00 <em>$95.00</em></div>
-                            <div class="img"></div>
-                            <div class="box"></div>
-                        </div>
-                        <div class="goods goods2">
-                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
-                            <div class="tit">Flexform</div>
-                            <div class="price">$35.00 <em>$55.00</em></div>
-                            <div class="img"></div>
-                            <div class="box"></div>
-                        </div>
-                        <div class="goods goods3">
-                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
-                            <div class="tit">Porada</div>
-                            <div class="price">$87.00 <em>$97.00</em></div>
-                            <div class="img"></div>
-                            <div class="box"></div>
-                        </div>
-                    </div>
-                    <div class="goodsArr">
-                        <div class="goods goods4">
-                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
-                            <div class="tit">Taknion</div>
-                            <div class="price">$45.00 <em>$55.00</em></div>
-                            <div class="img"></div>
-                            <div class="box"></div>
-                        </div>
-                        <div class="goods goods5">
-                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
-                            <div class="tit">Amora</div>
-                            <div class="price">$65.00 <em>$95.00</em></div>
-                            <div class="img"></div>
-                            <div class="box"></div>
-                        </div>
-                        <div class="goods goods6">
-                            <a href="#" class="btn">Add To Cart <span class="btn-img"></span></a>
-                            <div class="tit">Liquid Contract</div>
-                            <div class="price">$35.00 <em>$45.00</em></div>
-                            <div class="img"></div>
-                            <div class="box"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="section5">
-                <div class="cont5 container">
-                    <div class="left">
-                        <span class="img"></span>
-                    </div>
-                    <div class="right">
-                        <div class="top">
-                            <div class="title">
-                                Let's see what our customer's say
-                            </div>
-                            <div class="doc">
-                                Dwelling and speedily ignorant any steepest. 
-                                Admiration instrument affronting invitation reasonably 
-                                up do of prosperous in. Shy saw declared age debating 
-                                ecstatic man. Call in so want pure rank am dear were. 
-                                Remarkably to continuing in surrounded diminution on.
-                            </div>
-                        </div>
-                        <div class="bottom">
-                            <div class="name">
-                                Mike Taylor
-                            </div>
-                            <div class="ather">
-                                <span class="day">20 January 2020</span>
-                                <span class="img"></span>
-                            </div>
-                            <div class="btn">
-                                <span class="img01"></span>
-                                <span class="img02"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="section6">
-                <div class="cont6 container">
-                    <div class="wrap">
-                        <div class="btn">Mistrium Interiror</div>
-                        <div class="title">
-                            Signup to receive updates about new products
-                        </div>
-                    </div>
-                    <div class="logo">
-                        <span class="img1"></span>
-                        <span class="text">Watch intro video</span>
-                    </div>
-                    <div class="img2"></div>
-                </div>
-            </section>
+            <section id="contents"></section>
+            <article id="article1"></article>
+            <article id="article2"></article>
+            <article id="article3"></article>
         </main>
-        <footer id="footer">
-            <div class="footer container">
-                <div class="footer_top">
-                    <h1><a href="#">MISTRIUM</a></h1>
-                    <nav class="nav">
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                    <div class="icon">
-                        <a><span class="ir_pm">검색</span></a>
-                        <a><span class="ir_pm">장바구니</span></a>
-                        <a><span class="ir_pm">로그인</span></a>
-                    </div>
-                </div>
-                <div class="footer_bot">
-                    <a href="#">Copyright © 2021. arshakir.com</a>
-                </div>
-            </div>
-        </footer>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>

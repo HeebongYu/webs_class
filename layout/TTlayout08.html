@@ -10,7 +10,7 @@
             margin: 0;
         }
         body {
-            background-color: #EAF5EA;
+            background-color: #E3F2FD;
         }
         #wrap {
             width: 1200px;
@@ -19,70 +19,67 @@
         #header {
             width: 100%;
             height: 100px;
-            background-color: #C8E6CB;
+            background-color: #BBDEFB;
         }
         #nav {
             width: 100%;
             height: 100px;
-            background-color: #91C58A;
+            background-color: #90CAF9;
         }
         #main {
             display: flex;
         }
-        #side {
-            width: 20%;
-            height: 600px;
-            background-color: #67AD5B;
-        }
         #contents {
-            width: 60%;
+            width: 30%;
             height: 600px;
-            background-color: #5D9E51;
+            background-color: #64B5F6;
         }
-        #side2 {
-            width: 20%;
+        #side {
+            width: 70%;
             height: 600px;
-            background-color: #508C46;
+            display: flex;
+            flex-direction: column
+        }
+        #article1 {
+            width: 100%;
+            height: 200px;
+            background-color: #42A5F5;
+        }
+        #article2 {
+            width: 100%;
+            height: 200px;
+            background-color: #2196F3;
+        }
+        #article3 {
+            width: 100%;
+            height: 200px;
+            background-color: #1E88E5;
         }
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #457B3B;
+            background-color: #1976D2;
         }
         @media (max-width: 1220px){
             #wrap {
                 width: 96%;
             }
-            #main {
-                flex-wrap: wrap
-            }
-            #side {
-                width: 30%;
-                height: 500px;
-            }
-            #contents {
-                width: 70%;
-                height: 500px;
-            }
-            #side2 {
-                width: 100%;
+            #article1 {
                 height: 300px;
+            }
+            #article2 {
+                height: 300px;
+            }
+            #article3 {
+                flex-basis : 100%;
+                height: 100px;
             }
         }
         @media (max-width: 768px){
-            #wrap {
-                width: 100%;
-            }
+         
         }
         @media (max-width: 600px){
-            #side {
-                width: 100%;
-                height: 300px;
-            }
-            #contents {
-                width: 100%;
-                height: 500px;
-            }
+           
         }
     </style>
 </head>
@@ -91,9 +88,12 @@
         <header id="header"></header>
         <nav id="nav"></nav>
         <main id="main">
-            <aside id="side"></aside>
             <section id="contents"></section>
-            <aside id="side2"></aside>
+            <aside id="side">
+                <article id="article1"></article>
+                <article id="article2"></article>
+                <article id="article3"></article>
+            </aside>
         </main>
         <footer id="footer"></footer>
     </div>

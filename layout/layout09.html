@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .cont {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #wrap {}
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #000;
+        }
+        .header.cont {
+            height: 100px;
+            background-color: #999;
+        }
+        #main {}
+        #section1 {
+            width: 100%;
+            height: 300px;
+            background-color: #111;
+        }
+        .section1.cont {
+            height: 300px;
+            background-color: #888;
+        }
+        #section2 {
+            width: 100%;
+            height: 600px;
+            background-color: #222;
+        }
+        .section2.cont {
+            display: flex;
+        }
+        .section2.cont .article1 {
+            width: 50%;
+            height: 600px;
+            background-color: #333;
+        }
+        .section2.cont .article2 {
+            width: 50%;
+            height: 600px;
+            background-color: #444;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #333;
+        }
+        .footer.cont {
+            height: 100px;
+            background-color: #555;
+        }
+        @media (max-width: 1220px){
+            .cont {
+                width: 96%;
+            }
+        }
+        @media (max-width: 768px){
+            .cont {
+                width: 100%;
+            }
+            .section2.cont {
+                flex-wrap: wrap;
+            }
+            .section2.cont .article1 {
+                width: 100%;
+                height: 300px;
+            }
+            .section2.cont .article2 {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        @media (max-width: 600px){
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header cont"></div>
+        </header>
+        <main id="main">
+            <section id="section1">
+                <div class="section1 cont"></div>
+            </section>
+            <section id="section2">
+                <div class="section2 cont">
+                    <article class="article1"></article>
+                    <article class="article2"></article>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="footer cont"></div>
+        </footer>
+    </div>
+</body>
+</html>
