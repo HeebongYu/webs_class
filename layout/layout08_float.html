@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃_float</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        body {
+            background-color: #E1F5FE;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background: #B3E5FC;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background: #81D4FA;
+        }
+        #main {
+            width: 100%;
+            height: 780px;
+            overflow: hidden;
+        }
+        #aside {
+            width: 25%;
+            height: 780px;
+            background: #4FC3F7;
+            float: left;
+        }
+        #contents1 {
+            width: 75%;
+            height: 260px;
+            background: #29B6F6;
+            float: right;
+        }
+        #contents2 {
+            width: 75%;
+            height: 260px;
+            background: #03A9F4;
+            float: right;
+        }
+        #contents3 {
+            width: 75%;
+            height: 260px;
+            background: #039BE5;
+            float: right;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background: #0288D1;
+        }
+
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;
+            }
+            #contents1 {
+                width: 75%;
+                height: 260px;
+            }
+            #contents2 {
+                width: calc(75% / 2);
+                height: 520px;
+                float: left;
+            }
+            #contents3 {
+                width: calc(75% / 2);
+                height: 520px;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+            #aside {
+                width: calc(100% * 250 / 768);
+                height: 780px;
+            }
+            #contents1 {
+                width: calc(100% * 518 / 768);
+                height: 390px;
+            }
+            #contents2 {
+                width: calc(100% * 518 / 768);
+                height: 390px;
+            }
+            #contents3 {
+                display: none;
+            }
+        }
+        @media (max-width: 600px){
+            #aside {
+                width: 100%;
+                height: 200px;
+            }
+            #contents1 {
+                width: 100%;
+                height: 430px;
+            }
+            #contents2 {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside id="aside"></aside>
+            <section id="contents1"></section>
+            <section id="contents2"></section>
+            <section id="contents3"></section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
