@@ -43,6 +43,36 @@ body.img05 {
 body.img06 {
     background-image: url(../img/img06.jpg);
 }
+body.img07 {
+    background-image: url(../img/img07.jpg);
+}
+body.img08 {
+    background-image: url(../img/img08.jpg);
+}
+body.img09 {
+    background-image: url(../img/img09.jpg);
+}
+body.img10 {
+    background-image: url(../img/img10.jpg);
+}
+body.img11 {
+    background-image: url(../img/img11.jpg);
+}
+body.img12 {background-image: url(../img/img12.jpg);}
+body.img13 {background-image: url(../img/img13.jpg);}
+body.img14 {background-image: url(../img/img14.jpg);}
+body.img15 {background-image: url(../img/img15.jpg);}
+body.img16 {background-image: url(../img/img16.jpg);}
+body.img17 {background-image: url(../img/img17.jpg);}
+body.img18 {background-image: url(../img/img18.jpg);}
+body.img19 {background-image: url(../img/img19.jpg);}
+body.img20 {background-image: url(../img/img20.jpg);}
+body.img21 {background-image: url(../img/img21.jpg);}
+body.img22 {background-image: url(../img/img22.jpg);}
+body.img23 {background-image: url(../img/img23.jpg);}
+body.img24 {background-image: url(../img/img24.jpg);}
+body.img25 {background-image: url(../img/img25.jpg);}
+
 body::before {
     content: '';
     position: absolute;

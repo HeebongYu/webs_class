@@ -12,7 +12,7 @@
 
     <style>
         body::before{
-            background: rgba(95, 95, 95,0.80);
+            background: rgba(0,0,0,0.8);
         }
         .mouse__wrap {
             display: flex;
@@ -39,8 +39,8 @@
         }
         .cursor {
             position: absolute;
-            left: 0;
-            top: 0;
+            left: -100px;
+            top: -100px;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -88,14 +88,14 @@
     </style>
   
 </head>
-<body>
+<body class="img16">
     <main>
         <section id="mouseType01">
             <div class="cursor"></div>
 
             <div class="mouse__wrap">
-                <p>I'm leaving for the airport <span class="style1">today</span>. Turn off your phone. Please <span class="style2">don't</span> look for <span class="style3">me</span>.</p>
-                <p>저 <span class="style4">오늘</span> 떠나요 <span class="style5">공항으로</span> 핸드폰 꺼 놔요 <span class="style6">제발</span> 날 찾진 말아줘</p>
+                <p>I'm <span class="style1">leaving</span> for the airport today. <span class="style2">Turn off</span> your phone. Please <span class="style3">don't look</span> for me.</p>
+                <p>저 오늘 <span class="style4">떠나요</span> 공항으로 핸드폰 <span class="style5">꺼 놔요</span> 제발 날 <span class="style6">찾진 말아줘</span></p>
             </div>
         </section>
     </main>
@@ -214,8 +214,12 @@
 
         //마우스 움직이기
         window.addEventListener("mousemove", (e) => {
-            document.querySelector(".cursor").style.left = e.clientX - 25 + "px";
-            document.querySelector(".cursor").style.top = e.clientY -25 + "px";
+            // document.querySelector(".cursor").style.left = e.clientX - 25 + "px";
+            // document.querySelector(".cursor").style.top = e.clientY -25 + "px";
+
+            let x = e.clientX - 25 + "px"
+            let y = e.clientY - 25 + "px"
+            document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
         });
 
         //마우스 효과
@@ -268,15 +272,27 @@
         // }
 
         //forEach
-        const mouseStyle = document.querySelectorAll(".mouse__wrap span");
-        mouseStyle.forEach((el,i)=>{
-            el.addEventListener("mouseover",() => {
-                document.querySelector(".cursor").classList.add("style"+(i+1));
+        document.querySelectorAll(".mouse__wrap span").forEach((span, index) => {
+            span.addEventListener("mouseover", () => {
+                document.querySelector(".cursor").classList.add("style"+(index+1));
             });
-            el.addEventListener("mouseout",() => {
-            document.querySelector(".cursor").classList.remove("style"+(i+1));
+            span.addEventListener("mouseout", () => {
+            document.querySelector(".cursor").classList.remove("style"+(index+1));
             });
         });
+
+        //getAttribute() 요소 속성 가져오기
+        //span에 마우스 오버 했을 떄 속성값을 alert()
+        document.querySelectorAll(".mouse__wrap span").forEach(span => {
+            let attr = span.getAttribute("class");
+            span.addEventListener("mouseover", () => {
+                // alert(attr)
+            })
+        })
+
+
+
+
 
     </script>
 </body>
