@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃</title>
+    <title>레이아웃_flex</title>
     <style>
         * {
             margin: 0;
         }
         body {
-            background-color: #EAF5EA;
+            background-color: #E8F5E9;
         }
         #wrap {
             width: 1200px;
@@ -19,69 +19,69 @@
         #header {
             width: 100%;
             height: 100px;
-            background-color: #C8E6CB;
+            background-color: #C8E6C9;
         }
         #nav {
             width: 100%;
             height: 100px;
-            background-color: #91C58A;
+            background-color: #A5D6A7;
         }
         #main {
             display: flex;
         }
         #side {
-            width: 20%;
-            height: 600px;
-            background-color: #67AD5B;
+            width: 25%;
+            height: 780px;
+            background-color: #81C784;
         }
         #contents {
-            width: 60%;
-            height: 600px;
-            background-color: #5D9E51;
+            width: 50%;
+            height: 780px;
+            background-color: #66BB6A;
         }
         #side2 {
-            width: 20%;
-            height: 600px;
-            background-color: #508C46;
+            width: 25%;
+            height: 780px;
+            background-color: #4CAF50;
         }
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #457B3B;
+            background-color: #43A047;
         }
         @media (max-width: 1220px){
             #wrap {
                 width: 96%;
-            }
-            #main {
-                flex-wrap: wrap
-            }
-            #side {
-                width: 30%;
-                height: 500px;
-            }
-            #contents {
-                width: 70%;
-                height: 500px;
-            }
-            #side2 {
-                width: 100%;
-                height: 300px;
             }
         }
         @media (max-width: 768px){
             #wrap {
                 width: 100%;
             }
+            #main {
+                flex-wrap: wrap
+            }
+            #side {
+                width: 40%;
+                height: 630px;
+            }
+            #contents {
+                width: 60%;
+                height: 630px;
+            }
+            #side2 {
+                width: 100%;
+                height: 150px;
+            }
         }
         @media (max-width: 600px){
             #side {
                 width: 100%;
-                height: 300px;
+                height: 200px;
             }
             #contents {
                 width: 100%;
-                height: 500px;
+                height: 430px;
             }
         }
     </style>
