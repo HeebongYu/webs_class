@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃08_flex</title>
+    <title>Document</title>
     <style>
         * {
             margin: 0;
         }
         body {
-            background-color: #E3F2FD;
+            background-color: #E1F5FE;
         }
         #wrap {
             width: 1200px;
@@ -19,93 +19,96 @@
         #header {
             width: 100%;
             height: 100px;
-            background-color: #BBDEFB;
+            background-color: #B3E5FC;
         }
         #nav {
             width: 100%;
             height: 100px;
-            background-color: #90CAF9;
+            background-color: #81D4FA;
         }
         #main {
             display: flex;
-            flex-wrap: wrap;
-            position: relative;
+        }
+        #aside {
+            width: 30%;
+            height: 780px;
+            background-color: #4FC3F7;
         }
         #contents {
-            width: 30%;
-            height: 600px;
-            background-color: #64B5F6;
+            width: 70%;
         }
         #article1 {
-            width: 70%;
-            height: 200px;
-            background-color: #42A5F5;
+            height: 260px;
+            background-color: #29B6F6;
         }
         #article2 {
-            width: 70%;
-            height: 200px;
-            background-color: #2196F3;
-            position: absolute;
-            left: 30%;
-            top: 200px;
+            height: 260px;
+            background-color: #03A9F4;
         }
         #article3 {
-            width: 70%;
-            height: 200px;
-            background-color: #1E88E5;
-            position: absolute;
-            left: 30%;
-            top: 400px;
+            height: 260px;
+            background-color: #039BE5;
         }
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #1976D2;
+            background-color: #0288D1;
         }
-        /* @media (max-width: 1300px){
+        @media(max-width: 1300px) {
             #wrap {
                 width: 96%;
             }
+            #contents {
+                display: flex;
+                flex-wrap: wrap;
+            }
             #article1 {
-                height: 300px;
+                width: 100%;
+                height: 260px;
             }
             #article2 {
-                height: 300px;
-                top: 300px;
+                width: 50%;
+                height: 520px;
             }
             #article3 {
-                width: 100%;
-                height: 100px;
-                position: unset;
+                width: 50%;
+                height: 520px;
             }
-        } */
-        /* @media (max-width: 768px){
+        }
+        @media(max-width: 768px) {
             #wrap {
                 width: 100%;
             }
             #article1 {
-                height: 600px;
+                width: 100%;
+                height: 390px;
             }
             #article2 {
                 width: 100%;
-                height: 100px;
-                position: unset;
+                height: 390px;
             }
             #article3 {
                 display: none;
             }
-        } */
-        /* @media (max-width: 480px){
+        }
+        @media (max-width: 480px) {
+            #main {
+                flex-wrap: wrap;
+            }
             #contents {
                 width: 100%;
-                height: 300px;
+            }
+            #aside {
+                width: 100%;
+                height: 200px;
             }
             #article1 {
-                width: 100%;
-                height: 100px;
-                position: unset;
+                height: 430px;
             }
-        } */
+            #article2 {
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -113,10 +116,12 @@
         <header id="header"></header>
         <nav id="nav"></nav>
         <main id="main">
-            <section id="contents"></section>
-            <article id="article1"></article>
-            <article id="article2"></article>
-            <article id="article3"></article>
+            <aside id="aside"></aside>
+            <section id="contents">
+                <article id="article1"></article>
+                <article id="article2"></article>
+                <article id="article3"></article>
+            </section>
         </main>
         <footer id="footer"></footer>
     </div>
