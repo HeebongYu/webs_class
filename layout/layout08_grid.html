@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃08_grid</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        body {
+            background-color: #E1F5FE;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "nav nav"
+                "aside contents1"
+                "aside contents2"
+                "aside contents3"
+                "footer footer"
+            ;
+            grid-template-columns: 25% 75%;
+            grid-template-rows: 100px 100px 260px 260px 260px 100px;
+        }
+        #header {
+            grid-area: header;
+            background: #B3E5FC;
+        }
+        #nav {
+            grid-area: nav;
+            background: #81D4FA;
+        }
+        #aside {
+            grid-area: aside;
+            background: #4FC3F7;
+        }
+        #contents1 {
+            grid-area: contents1;
+            background: #29B6F6;
+        }
+        #contents2 {
+            grid-area: contents2;
+            background: #03A9F4;
+        }
+        #contents3 {
+            grid-area: contents3;
+            background: #039BE5;
+        }
+        #footer {
+            grid-area: footer;
+            background: #0288D1;
+        }
+        @media(max-width: 1300px) {
+            #wrap {
+                width: 96%;
+                grid-template-areas: 
+                    "header header header"
+                    "nav nav nav"
+                    "aside contents1 contents1"
+                    "aside contents2 contents3"
+                    "footer footer footer"
+                ;
+                grid-template-columns: 20% 40% 40%;
+                grid-template-rows: 100px 100px 390px 390px 100px;
+            }
+        }
+        @media(max-width: 768px) {
+            #wrap {
+                width: 100%;
+                grid-template-areas: 
+                    "header header"
+                    "nav nav"
+                    "aside contents1"
+                    "aside contents2"
+                    "footer footer"
+                ;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 100px 100px 390px 390px 100px;
+            }
+        }
+        @media(max-width: 480px) {
+            #wrap {
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "aside"
+                    "contents1"
+                    "contents2"
+                    "footer"
+                ;
+                grid-template-columns: 100%;
+                grid-template-rows: 100px 100px 200px 430px 150px 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside"></div>
+        <div id="contents1"></div>
+        <div id="contents2"></div>
+        <div id="contents3"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

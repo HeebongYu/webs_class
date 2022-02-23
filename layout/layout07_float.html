@@ -26,12 +26,7 @@
             height: 100px;
             background-color: #A5D6A7;
         }
-        #main {
-            width: 100%;
-            height: 780px;
-            overflow: hidden;
-        }
-        #side {
+        #aside1 {
             width: 25%;
             height: 780px;
             background-color: #81C784;
@@ -43,7 +38,7 @@
             background-color: #66BB6A;
             float: left;
         }
-        #side2 {
+        #aside2 {
             width: 25%;
             height: 780px;
             background-color: #4CAF50;
@@ -53,8 +48,9 @@
             width: 100%;
             height: 100px;
             background-color: #43A047;
+            clear: both;
         }
-        @media (max-width: 1220px){
+        @media (max-width: 1300px){
             #wrap {
                 width: 96%;
             }
@@ -63,21 +59,21 @@
             #wrap {
                 width: 100%;
             }
-            #side {
-                width: 40%;
+            #aside1 {
+                width: 30%;
                 height: 630px;
             }
             #contents {
-                width: 60%;
+                width: 70%;
                 height: 630px;
             }
-            #side2 {
+            #aside2 {
                 width: 100%;
                 height: 150px;
             }
         }
-        @media (max-width: 600px){
-            #side {
+        @media (max-width: 480px){
+            #aside1 {
                 width: 100%;
                 height: 200px;
             }
@@ -86,18 +82,17 @@
                 height: 430px;
             }
         }
+
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header"></header>
-        <nav id="nav"></nav>
-        <main id="main">
-            <aside id="side"></aside>
-            <section id="contents"></section>
-            <aside id="side2"></aside>
-        </main>
-        <footer id="footer"></footer>
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside1"></div>
+        <div id="contents"></div>
+        <div id="aside2"></div>
+        <div id="footer"></div>
     </div>
 </body>
 </html>
