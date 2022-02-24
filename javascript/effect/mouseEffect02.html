@@ -12,7 +12,7 @@
 
     <style>
         body::before{
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.5);
         }
         .mouse__wrap {
             display: flex;
@@ -35,8 +35,8 @@
             font-weight: 400;
         }
         .mouse__wrap p span {
-            border-bottom: 0.15vw dashed orange;
-            color: orange;
+            border-bottom: 0.15vw dashed yellow;
+            color: yellow;
         }
         .cursor {
             position: absolute;
@@ -68,21 +68,21 @@
         }
         .cursor-follower.active {
             transform: scale(10);
-            background: rgba(255,165,0,.6);
+            background: rgba(255,255,0,.6);
         }
         .cursor.title {
             transform: scale(0);
         }
         .cursor-follower.title {
             transform: scale(10);
-            background: rgba(0,255,0,.6);
+            background: rgba(255,0,0,.6);
         }
         .cursor.number {
             transform: scale(0);
         }
         .cursor-follower.number {
             transform: scale(10);
-            background: rgba(255,0,0,.6);
+            background: rgba(0,255,0,.6);
         }
         .cursor.source {
             transform: scale(0);
@@ -101,8 +101,8 @@
             <div class="cursor-follower"></div>
 
             <div class="mouse__wrap">
-                <p>Even if I scream loudly, I can't help it. I'll wave lightly. <span>Bye bye</span></p>
-                <p>시끄럽게 소리를 질러도 어쩔 수 없어 나 가볍게 손을 흔들며 <span>bye bye</span></p>
+                <p>Even if I scream loudly, <span>I can't help it.</span> I'll wave lightly. <span>Bye bye</span></p>
+                <p>시끄럽게 소리를 질러도 <span>어쩔 수 없어</span> 나 가볍게 손을 흔들며 <span>bye bye</span></p>
             </div>
         </section>
     </main>

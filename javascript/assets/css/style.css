@@ -561,8 +561,15 @@ img {
     vertical-align: 2px;
     border-radius: 5px;
 }
-
-
+td button {
+    border: 1px solid #cdcdcd;
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+td button:active {
+    background: rgb(207,207,207);
+}
 /* 간격 설정 */
 .mt0 {
     margin-top: 0px !important;

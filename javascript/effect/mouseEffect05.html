@@ -23,85 +23,74 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
+            cursor: none;
         }
         .mouse__img {
             position: relative;
-            cursor: none;
+            text-align: center;
+            /* perspective: 600px; */
+            transform: rotateX(0deg) rotateY(0deg) perspective(600px);
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: all 0.4s;
         }
         .mouse__img figure {
-            position: relative;
             width: 50vw;
-            height: 53vh;
-            overflow: hidden;
-            /* background-color: #ccc; */
-            border: 3px solid #fff;
-            transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+            position: relative;
         }
-        .mouse__img figure:hover {
-            transform: scale(1.025);
-        }
-        .mouse__img figure img {
+        .mouse__img figure::before {
+            content: '';
             position: absolute;
-            left: -5%;
-            top: -5%;
-            width: 110%;
-            height: 110%;
-            /* opacity: 0.4; */
-            background-size: cover;
-            object-fit: cover;
+            left: 5%;
+            bottom: -40px;
+            width: 90%;
+            height: 40px;
+            background: url(img/img13.jpg) center center no-repeat;
+            background-size: 100% 40px;
+            filter: blur(10px) grayscale(50%);
+            opacity: 0.9;
+            z-index: -1;
         }
         .mouse__img figcaption {
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 1.6vw;
-            line-height: 1.6;
+            font-size: 1vw;
             white-space: nowrap;
-            background: rgba(0,0,0,0.6);
-            padding: 0.5vw 1vw;
+            line-height: 1.6;
+            background: rgba(0,0,0,0.4);
+            padding: 1vw 2vw;
+            transform: translate3d(-50%, -50%, 150px);
         }
         .cursor {
             position: absolute;
-            left: 0px;
-            top: 0px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
             background: #fff;
+            border-radius: 50%;
             z-index: 1000;
-            user-select: none; 
+            user-select: none;
             pointer-events: none;
-        }
-        .cursor ul {
-            position: absolute;
-            left: 40px; top: 0;
-        }
-        .cursor ul li {
-            white-space: nowrap;
+            mix-blend-mode: difference;
         }
     </style>
   
 </head>
-<body class="img18">
+<body class="img25">
     <main>
-        <section id="mouseType04">
-            <div class="cursor">
-                <!-- <ul>
-                    <li>pageX : <span class="pageX">0</span>px</li>
-                    <li>pageY : <span class="pageY">0</span>px</li>
-                </ul> -->
-            </div>
+        <section id="mouseType05">
+            <div class="cursor"></div>
 
             <div class="mouse__wrap">
                 <div class="mouse__img">
                     <figure>
-                        <img src="img/img24.jpg" alt="이미지">
+                        <img src="img/img13.jpg" alt="이미지">
                     </figure>
                     <figcaption>
-                        <p>When you get hit here and there and get ruined,</p>
-                        <p>이리저리 치이고 또 망가질 때쯤</p>
+                        <p>I'm tired. I'm going crazy. Get out of my way.</p>
+                        <p>지쳤어 나 미쳤어 나 떠날 거야 다 비켜</p>
                     </figcaption>
                 </div>
             </div>
@@ -113,7 +102,7 @@
     <div class="info">
         <div class="title">
             <h1><a href="mouseEffect.html">Javascript Mouse Effect04</a></h1>
-            <p>마우스 이펙트 - 이미지 효과</p>
+            <p>마우스 이펙트 - 이미지 효과2</p>
         </div>
         <!-- //title -->
 
@@ -122,8 +111,8 @@
                 <li><a href="mouseEffect01.html">1</a></li>
                 <li><a href="mouseEffect02.html">2</a></li>
                 <li><a href="mouseEffect03.html">3</a></li>
-                <li><a class="active" href="mouseEffect04.html">4</a></li>
-                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a class="active" href="mouseEffect05.html">5</a></li>
                 <li><a href="mouseEffect06.html">6</a></li>
                 <li><a href="mouseEffect07.html">7</a></li>
                 <li><a href="mouseEffect08.html">8</a></li>
@@ -191,6 +180,12 @@
                 <li>mousePageY : <span class="mousePageY">0</span>px</li>
                 <li>centerPageX : <span class="centerPageX">0</span>px</li>
                 <li>centerPageY : <span class="centerPageY">0</span>px</li>
+                <li>maxPageX : <span class="maxPageX">0</span>px</li>
+                <li>maxPageY : <span class="maxPageY">0</span>px</li>
+                <li>anlexPageX : <span class="anlexPageX">0</span>px</li>
+                <li>anlexPageY : <span class="anlexPageY">0</span>px</li>
+                <li>softPageX : <span class="softPageX">0</span>px</li>
+                <li>softPageY : <span class="softPageY">0</span>px</li>
             </ul>
         </div>
         <!-- //attr -->
@@ -201,83 +196,60 @@
     <script src="js/custom.js"></script> <!-- custom.js -->
     <script src="js/gsap.min.js"></script>
     <script>
-        highlightAll(); //highlight.js에 저장된 함수 highlightAll 실행
-        modal(); //custom.js에 저장된 함수 modal 실행
-        tabMenu(); //tabMenu.js에 저장된 함수 modal 실행
-
+        //highlightAll(); //highlight.js에 저장된 함수 highlightAll 실행
+        //modal(); //custom.js에 저장된 함수 modal 실행
+        //tabMenu(); //tabMenu.js에 저장된 함수 modal 실행
         const circle = document.querySelector(".cursor").getBoundingClientRect();
-
-        document.querySelector(".mouse__img").addEventListener("mousemove", e => {
-            document.querySelector(".cursor").style.opacity = "1";
-            //커서
-            gsap.to(".cursor", {duration: .2, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
-
+        
+        function mouseMove(e){
             //마우스 좌표 값
             let mousePageX = e.pageX;
             let mousePageY = e.pageY;
 
-            //마우스 좌표 값을 가운데 초기화
-            //전체 가로
-            // window.innerWidth; 1707    //확대축소로 변함 //창 크기로 변환
-            // window.outerWidth; 1536    //창 크기로 변환 
-            // window.screen.width 1536   //변화 없음
-
-            //마우스 좌표 값을 가운데 초기화
-            //전체 길이/2 - 마우스 X좌표값 == 0
+            //마우스 좌표 기준점을 가운데로 변경
             let centerPageX = window.innerWidth/2 - mousePageX;
             let centerPageY = window.innerHeight/2 - mousePageY;
 
-            //이미지 움직이기
-            // const imgMove = document.querySelector(".mouse__img figure img")
-            // imgMove.style.transform = "translate(" + centerPageX/20 + "px " + centerPageY/20 + "px)"
+            //최소값을 -100 최대값을 100 설정
+            let maxPageX = Math.max(-100, Math.min(100, centerPageX));
+            let maxPageY = Math.max(-100, Math.min(100, centerPageY));
 
-            gsap.to(".mouse__img figure img", {duration: .3, x: centerPageX/20, y: centerPageY/20});
+            //각도 줄이는 설정
+            let anlexPageX = maxPageX * 0.3;
+            let anlexPageY = maxPageY * 0.1;
+
+            //부드럽게 설정 10-->30
+            let softPageX = 0;
+            let softPageY = 0;
+            softPageX += anlexPageX * 0.4;
+            softPageY += anlexPageY * 0.4;
+
+            //이미지 움직이기
+            const imgNove = document.querySelector(".mouse__img")
+            imgNove.style.transform = "perspective(600px) rotateX("+softPageY+"deg) rotateY("+-softPageX+"deg)";
+
+            //원크기
+            let circleWidth = mousePageX -circle.width/2;
+            let circleHeight = mousePageY -circle.height/2;
+
+            // 커서
+            gsap.to(".cursor", {duration: 0.3, left: circleWidth, top: circleHeight})
 
             //출력
-            // document.querySelector(".pageX").textContent = centerPageX;
-            // document.querySelector(".pageY").textContent = centerPageY;
             document.querySelector(".mousePageX").textContent = mousePageX;
             document.querySelector(".mousePageY").textContent = mousePageY;
             document.querySelector(".centerPageX").textContent = centerPageX;
             document.querySelector(".centerPageY").textContent = centerPageY;
-        })
+            document.querySelector(".maxPageX").textContent = maxPageX;
+            document.querySelector(".maxPageY").textContent = maxPageY;
+            document.querySelector(".anlexPageX").textContent = anlexPageX;
+            document.querySelector(".anlexPageY").textContent = anlexPageY;
+            document.querySelector(".softPageX").textContent = softPageX;
+            document.querySelector(".softPageY").textContent = softPageY;
 
-        document.querySelector(".mouse__img").addEventListener("mouseout", e => {
-            document.querySelector(".cursor").style.opacity = "0";
-        })
+
+        }
+        document.addEventListener("mousemove", mouseMove);
     </script>
-    <!-- <script>
-        // highlight();
-        // modal();
-        // tabMenu();
-        const circle = document.querySelector(".cursor").getBoundingClientRect();
-        document.querySelector(".mouse__img").addEventListener("mousemove", (e) => {
-            //커서
-            gsap.to(".cursor", {duration: .2, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2})
-            //마우스 좌표 값
-            let mousePageX = e.pageX;
-            let mousePageY = e.pageY;
-            //전체 가로
-            //window.innerWidth 1920     //브라우저 크기
-            //window.outerWidth 1920     //브라우저 크기
-            //window.screen.width : 1920    //화면 크기
-            //window.screen.height : 1080   //화면 크기
-            //마우스 좌표 값 기준점을 가운데 초기화
-            //전체 길이/2 - 마우스 X좌표값 == 0
-            let centerPageX = window.innerWidth/2 - mousePageX;
-            let centerPageY = window.innerHeight/2 - mousePageY;
-            //이미지 움직이기
-            // const imgMove = document.querySelector(".mouse__img figure img");
-            // imgMove.style.transform = "translate("+ centerPageX/20 +"px, "+ centerPageY/20 +"px)";
-            gsap.to(".mouse__img figure img", {duration: 0.3, x: centerPageX/20, y: centerPageY/20});
-            //출력
-            // document.querySelector(".pageX").textContent = centerPageX;
-            // document.querySelector(".pageY").textContent = centerPageY;
-            document.querySelector(".mousePageX").textContent = mousePageX;
-            document.querySelector(".mousePageY").textContent = mousePageY;
-            document.querySelector(".centerPageX").textContent = centerPageX;
-            document.querySelector(".centerPageY").textContent = centerPageY;
-        })
-    </script> -->
 </body>
 </html>
