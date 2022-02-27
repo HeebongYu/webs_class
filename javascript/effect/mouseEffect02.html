@@ -154,19 +154,175 @@
     
                             <div class="view-cont">
                                 <div class="active">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;section id="mouseType02"&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
+        &lt;div class="cursor-follower"&gt;&lt;/div&gt;
+
+        &lt;div class="mouse__wrap"&gt;
+            &lt;p&gt;Even if I scream loudly, &lt;span&gt;I can't help it.&lt;/span&gt; I'll wave lightly. &lt;span&gt;Bye bye&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;시끄럽게 소리를 질러도 &lt;span&gt;어쩔 수 없어&lt;/span&gt; 나 가볍게 손을 흔들며 &lt;span&gt;bye bye&lt;/span&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
 </code></pre>
                                 </div>
                                 <!-- //cont1 -->
     
                                 <div>
-<pre><code class="language-css">
+<pre><code class="language-css">body::before{
+    background: rgba(0,0,0,0.5);
+}
+.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+.mouse__wrap p {
+    font-size: 2.4vw;
+    line-height: 2;
+    font-weight: 300;
+}
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed yellow;
+    color: yellow;
+}
+.cursor {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    z-index: 9999;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s, opacity0.2s;
+}
+.cursor-follower {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+    user-select: none; 
+    pointer-events: none;
+    transition: transform 0.3s, opacity0.2s;
+}
+.cursor.active {
+    transform: scale(0);
+}
+.cursor-follower.active {
+    transform: scale(10);
+    background: rgba(255,255,0,.6);
+}
+.cursor.title {
+    transform: scale(0);
+}
+.cursor-follower.title {
+    transform: scale(10);
+    background: rgba(255,0,0,.6);
+}
+.cursor.number {
+    transform: scale(0);
+}
+.cursor-follower.number {
+    transform: scale(10);
+    background: rgba(0,255,0,.6);
+}
+.cursor.source {
+    transform: scale(0);
+}
+.cursor-follower.source {
+    transform: scale(10);
+    background: rgba(0,0,255,.6);
+}
 </code></pre>
                                 </div>
                                 <!-- //cont2 -->
     
                                 <div>
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
+
+window.addEventListener("mousemove", e => {
+    // //커서 좌표값 할당
+    // cursor.style.left = e.pageX -5 + "px";
+    // cursor.style.top = e.pageY -5 + "px";
+    // follower.style.left = e.pageX -15 + "px";
+    // follower.style.top = e.pageY -15 + "px";
+
+    //커서위치 가운데로 조정
+    gsap.to(cursor, {duration: .3, left: e.pageX -5, top: e.pageY -5});
+    gsap.to(follower, {duration: .8, left: e.pageX -15, top: e.pageY -15});
+
+    //오버효과
+    //span에 오버 했을 떄 클래스 active 추가 / 나갔을 떄 active 삭제
+    //mouseover,mouseout /mouseenter,mouseleave 차이점
+    document.querySelectorAll(".mouse__wrap span").forEach(span => {
+        span.addEventListener("mouseenter", () => {
+            cursor.classList.add("active");
+            follower.classList.add("active");
+        });
+        span.addEventListener("mouseleave", () => {
+            cursor.classList.remove("active");
+            follower.classList.remove("active");
+        });
+    })
+
+    //title에 오버효과
+    document.querySelectorAll(".title a").forEach(a => {
+        a.addEventListener("mouseenter", () => {
+            cursor.classList.add("title");
+            follower.classList.add("title");
+        });
+        a.addEventListener("mouseleave", () => {
+            cursor.classList.remove("title");
+            follower.classList.remove("title");
+        });
+    })
+
+    //number에 오버효과
+    document.querySelectorAll(".number a").forEach(a => {
+        a.addEventListener("mouseenter", () => {
+            cursor.classList.add("number");
+            follower.classList.add("number");
+        });
+        a.addEventListener("mouseleave", () => {
+            cursor.classList.remove("number");
+            follower.classList.remove("number");
+        });
+    })
+
+    //source에 오버효과
+    document.querySelectorAll(".source button").forEach(a => {
+        a.addEventListener("mouseenter", () => {
+            cursor.classList.add("source");
+            follower.classList.add("source");
+        });
+        a.addEventListener("mouseleave", () => {
+            cursor.classList.remove("source");
+            follower.classList.remove("source");
+        });
+    })
+
+    //출력
+    document.querySelector(".pageX").innerText = e.pageX;
+    document.querySelector(".pageY").innerHTML = e.pageY;
+})
 </code></pre>
                                 </div>
                                 <!-- //cont3 --> 
@@ -270,8 +426,6 @@
             document.querySelector(".pageX").innerText = e.pageX;
             document.querySelector(".pageY").innerHTML = e.pageY;
         })
-
-        
 
     </script>
 </body>

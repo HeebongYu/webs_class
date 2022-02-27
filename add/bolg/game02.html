@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game02</title>
+
+    <style>
+        .quiz__wrap {
+            width: 500px;
+            margin: 100px auto;
+        }
+        .quiz {
+            height: 500px; /*임시*/
+            border: 1px solid #000;
+        }
+        .quiz__title {
+            border-bottom: 1px solid #000;
+        }
+        .quiz__title h2 {
+            text-align: center;
+            font-size: 2vw;
+        }
+        .quiz__answer {
+            display: inline-block;
+            width: 100%;
+        }
+        .quiz__input {
+            width: 400px;
+            font-size: 2vw;
+            text-align: center;
+            
+        }
+        .quiz__confirm {
+            width: 400px;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz__wrap">
+        <div class="quiz">
+            <div class="quiz__title">
+                <h2>1~100 중에서 정답을 맞추어 주세요</h2>
+            </div>
+            <div class="quiz__answer">
+                <input type="text" class="quiz__input" placeholder="정답을 적어주세요!">
+                <button class="quiz__confirm">정답 확인하기</button>
+                <div class="quiz__result"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

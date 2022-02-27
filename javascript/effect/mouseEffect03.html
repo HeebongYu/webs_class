@@ -116,19 +116,84 @@
     
                             <div class="view-cont">
                                 <div class="active">
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;main&gt;
+    &lt;section id="mouseType03"&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
+        &lt;div class="cursor-follower"&gt;&lt;/div&gt;
+
+        &lt;div class="mouse__wrap"&gt;
+            &lt;p&gt;My youth, &lt;span&gt;like a dream&lt;/span&gt; that shined nonstop&lt;/p&gt;
+            &lt;p&gt;쉬지 않고 빛났던 &lt;span&gt;꿈같은&lt;/span&gt; my youth&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
 </code></pre>
                                 </div>
                                 <!-- //cont1 -->
     
                                 <div>
-<pre><code class="language-css">
+<pre><code class="language-css">body::before{
+    background: rgba(0,0,0,0.8);
+}
+.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+.mouse__wrap p {
+    font-size: 2.4vw;
+    line-height: 2;
+    font-weight: 300;
+}
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed orange;
+    color: orange;
+}
+.cursor {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    background: url(img/img15.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border: 5px solid #fff;
+}
 </code></pre>
                                 </div>
                                 <!-- //cont2 -->
     
                                 <div>
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">function follow(e){
+    // const circle = document.querySelector(".cursor").clientWidth; //190: border 값 빠진 상태
+    // const circle = document.querySelector(".cursor").offsetWidth; //200: border 값 포함 상태
+    const circle = document.querySelector(".cursor").getBoundingClientRect(); //bottom, height, left, right, top, width, x, y
+
+    // console.log(circle);
+    // console.log(circle.width);
+
+    gsap.to(".cursor", {duration: .3, left: e.pageX - circle.width/2, top: e.pageY - circle.height/2});
+    
+    //출력용
+    document.querySelector(".pageX").innerText = e.pageX;
+    document.querySelector(".pageY").innerText = e.pageY;
+}
+
+window.addEventListener("mousemove", follow);
 </code></pre>
                                 </div>
                                 <!-- //cont3 --> 
@@ -179,12 +244,11 @@
             document.querySelector(".pageY").innerText = e.pageY;
         }
 
-
-// 04. 요소 속성 : Element.clientWidth : 요소 가로값
-// 04. 요소 속성 : Element.clientHeight : 요소 세로값
-// 04. 요소 속성 : Element.offsetWidth : 요소 가로값
-// 04. 요소 속성 : Element.offsetHeight : 요소 세로값
-// 04. 요소 메서드 : Element.getBoundingClientRect() : 요소 정보값
+        // 04. 요소 속성 : Element.clientWidth : 요소 가로값
+        // 04. 요소 속성 : Element.clientHeight : 요소 세로값
+        // 04. 요소 속성 : Element.offsetWidth : 요소 가로값
+        // 04. 요소 속성 : Element.offsetHeight : 요소 세로값
+        // 04. 요소 메서드 : Element.getBoundingClientRect() : 요소 정보값
         window.addEventListener("mousemove", follow);
         
 

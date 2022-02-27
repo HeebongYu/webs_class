@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mantiful</title>
+
+    <style>
+        /* 폰트 */
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 500;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'MakGeolli';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/pocheon/MakGeolli.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/pocheon/MakGeolli.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/pocheon/MakGeolli.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/pocheon/MakGeolli.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/pocheon/MakGeolli.ttf') format("truetype");
+            font-display: swap;
+        }
+        /*  기본셋팅 */
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'GmarketSans';
+        }
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+            font-family: 'GmarketSans';
+        }
+        .container{
+            width: 1240px;
+            margin: 0 auto;
+        }
+        #wrap {
+            height: 13520px;
+        }
+        #header {
+            height: 70px;
+        }
+        #main {
+            height: 12620px;
+        }
+        #footer {
+            height: 830px;
+        }
+
+        /* 기본 레이아웃 */
+        #nav {
+            height: 70px;
+        }
+        #section1 {
+            height: 870px;
+            background: #DBFAFC;
+        }
+        #section2 {
+            height: 640px;
+        }
+        #section3 {
+            height: 710px;
+            background: #DBFAFC;
+        }
+        #section4 {
+            height: 730px;
+        }
+        #section5 {
+            height: 1445px;
+            background: #DBFAFC;
+        }
+        #section6 {
+            height: 500px;
+        }
+        #section7 {
+            height: 920px;
+            background: #DBFAFC;
+        }
+        #section8 {
+            height: 980px;
+        }
+        #section9 {
+            height: 1230px;
+            background: #DBFAFC;
+        }
+        #section10 {
+            height: 2890px;
+        }
+        #section11 {
+            height: 875px;
+            background: #DBFAFC;
+        }
+        #section12 {
+            height: 830px;
+        }
+        #footer {
+            height: 830px;
+            background: #DBFAFC;
+        }
+
+        /* nav */
+        .nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav li {
+            margin-top: 13px;
+            display: inline-block;
+            padding: 12px 12px 0px 12px;
+            font-weight: lighter;
+        }
+        .nav li:hover {
+            background: #dbfafc6e ;
+            transition: all 0.3s;
+        }
+        .nav li.logo {
+            margin-top: 8px;
+        }
+        .nav li.logo:hover {
+            background: none;
+        }
+        .nav li a {
+            font-size: 14px;
+        }
+        .nav li a strong {
+            font-weight: 700;
+            font-size: 30px;
+            border: 1px solid #000;
+            padding: 10px 15px 5px 15px;
+            background: #DBFAFC;
+            color: #029A88;
+        }
+
+        /* section1 */
+        .section1 {
+            display: flex;
+        }
+        .section1__title {
+            width: 610px;
+            margin-right: 20px;
+            margin-top: 100px;
+        }
+        .section1__titleUp {
+            font-family: 'MakGeolli';
+            font-size: 30px;
+            color: #029A88;
+            padding-right: 0px;
+            margin: 250px 0 30px 40px;
+            padding-right: 250px;
+        }
+        .section1__titleDo {
+            margin-left: 40px;
+            font-size: 100px;
+            font-weight: 700;
+            color: #029A88;
+        }
+        .section1__img {
+            width: 610px;
+            margin-top: 100px;
+        }
+        .section1__img img {
+            height: 770px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav id="nav">
+                <div class="nav container">
+                    <ul>
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">브리프</a></li>
+                        <li><a href="#">키워드</a></li>
+                        <li class="logo"><a href="#"><strong>남자다움</strong></a></li>
+                        <li><a href="#">플로우</a></li>
+                        <li><a href="#">동영상</a></li>
+                        <li><a href="#">마무리</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main id="main">
+            <section id="section1">
+                <div class="section1 container">
+                    <div class="section1__title">
+                        <div class="section1__titleUp">손쉽게 뷰티 정보 알아보러 갈래? 뷰티 정보 사이트</div>
+                        <div class="section1__titleDo">남자다움</div>
+                    </div>
+                    <div class="section1__img">
+                        <img src="assets/img/img01.jpg" alt="베너 이미지">
+                    </div>
+                </div>
+            </section>
+            <section id="section2"></section>
+            <section id="section3"></section>
+            <section id="section4"></section>
+            <section id="section5"></section>
+            <section id="section6"></section>
+            <section id="section7"></section>
+            <section id="section8"></section>
+            <section id="section9"></section>
+            <section id="section10"></section>
+            <section id="section11"></section>
+            <section id="section12"></section>
+        </main>
+        <footer id="footer">
+            <div class="footer"></div>
+        </footer>
+    </div>
+</body>
+</html>
