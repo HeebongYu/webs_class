@@ -288,9 +288,35 @@
             height: 50px;
             background: #DBE6FC;
         }
+        .section5__rightList ul {}
+        .section5__rightList li {
+            display: inline-block;
+            margin: 0 120px;
+            line-height: 50px;
+            cursor: pointer;
+            font-weight: 300;
+        }
+        .section5__rightList li:first-child {
+            margin-left: 50px;
+        }
+        .section5__rightList li.active {
+            font-weight: 500;
+        }
         .section5__rightDoc {
             height: 295px;
             background: #ECF2FE;
+        }
+        .section5__doc > div {
+            display: none;
+            margin-left: 50px;
+            padding-top: 50px;
+            font-weight: 300;
+            font-size: 25px;
+            padding-right: 50px;
+            line-height: 1.5;
+        }
+        .section5__doc > div:first-child {
+            display: block;
         }
 
         /* section6 */
@@ -419,7 +445,6 @@
         }
 
         /* section11 */
-        .section11 {}
         .section11__img {
             margin-top: 100px;
             width: 1240px;
@@ -522,7 +547,10 @@
                     </ul>
                 </div>
             </nav>
+            <!-- //nav -->
         </header>
+        <!-- //header -->
+
         <main id="main">
             <section id="section1">
                 <div class="section1 container">
@@ -535,6 +563,8 @@
                     </div>
                 </div>
             </section>
+            <!-- //section1 -->
+
             <section id="section2">
                 <div class="section2 container">
                     <div class="section2__title">brief</div>
@@ -570,6 +600,8 @@
                     </div>
                 </div>
             </section>
+            <!-- //section2 -->
+
             <section id="section3">
                 <div class="section3 container">
                     <div class="section3__title">
@@ -587,6 +619,8 @@
                     </div>
                 </div>
             </section>
+            <!-- //section3 -->
+
             <section id="section4">
                 <div class="section4 container">
                     <div class="section4__title">사용자 조사</div>
@@ -597,10 +631,12 @@
                     </div>
                 </div>
             </section>
+            <!-- //section4 -->
+
             <section id="section5">
                 <div class="section5 container">
                     <div class="section5__title">사용자 분석</div>
-                    <div class="section5__Personas">
+                    <div class="section5__Personas row1">
                         <div class="section5__left">
                             <div class="section5__leftText">
                                 <span>30대 회사원</span>
@@ -609,38 +645,96 @@
                             <div class="section5__leftImg"></div>
                         </div>
                         <div class="section5__right">
-                            <div class="section5__rightList"></div>
-                            <div class="section5__rightDoc"></div>
+                            <div class="section5__rightList">
+                                <ul class="section5__btn">
+                                    <li class="section5__btn1 active">행동변수</li>
+                                    <li class="section5__btn2">불편사항</li>
+                                    <li class="section5__btn3">희망사항</li>
+                                </ul>
+                            </div>
+                            <div class="section5__rightDoc">
+                                <div class="section5__doc">
+                                    <div class="section5__doc1">
+                                        자신에게 맞는 피부 화장품을 찾고싶은데 화장품 지식이 부족하다. 매장 직원에게 물어봐 구매를 했는데도 피부에 맞지 않아 화장품 구매후 잘 사용하지 않음.
+
+                                    </div>
+                                    <div class="section5__doc2">
+                                        화장품에 대한 지식이 부족함 아직 남성 화장품이 보편화 되어있지 않기때문에 누군가에게 물어보기 부끄럽다.
+                                    </div>
+                                    <div class="section5__doc3">
+                                        편하게 화장품 지식을 얻을수 있는 사이트를 희망한다. 후기들도 보며 자신에게 맞는 화장품을 찾고싶다.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="section5__Personas">
+                    <div class="section5__Personas row2">
                         <div class="section5__left">
                             <div class="section5__leftText">
-                                <span>30대 회사원</span>
+                                <span>10대 고등학생</span>
                                 <img src="assets/img/img05.jpg" alt="사람2">
                             </div>
                             <div class="section5__leftImg"></div>
                         </div>
                         <div class="section5__right">
-                            <div class="section5__rightList"></div>
-                            <div class="section5__rightDoc"></div>
+                            <div class="section5__rightList">
+                                <ul class="section5__btn">
+                                    <li class="section5__btn1 active">행동변수</li>
+                                    <li class="section5__btn2">불편사항</li>
+                                    <li class="section5__btn3">희망사항</li>
+                                </ul>
+                            </div>
+                            <div class="section5__rightDoc">
+                                <div class="section5__doc">
+                                    <div class="section5__doc1">
+                                        추운 겨울에 피부가 안좋아지신 아버지를 보고 피부 스킨, 로션을 선물하기로 생각함.
+                                    </div>
+                                    <div class="section5__doc2">
+                                        수능공부, 아르바이트 등을 하느라 시간 낭비 없이 화장품 정보를 얻고싶음. 아버지가 자주 쓰실수 있게 쓰기 간편한 화장품을 찾고싶음.
+
+                                    </div>
+                                    <div class="section5__doc3">
+                                        직접 매장 방문을 하지않고도 나이가 있으신 분들이 쓰실수있는 제품, 사용 간편한 화장품을 빠른시간내에 찾고싶음.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="section5__Personas">
+                    <div class="section5__Personas row3">
                         <div class="section5__left">
                             <div class="section5__leftText">
-                                <span>30대 회사원</span>
+                                <span>20대 대학생</span>
                                 <img src="assets/img/img06.jpg" alt="사람3">
                             </div>
                             <div class="section5__leftImg"></div>
                         </div>
                         <div class="section5__right">
-                            <div class="section5__rightList"></div>
-                            <div class="section5__rightDoc"></div>
+                            <div class="section5__rightList">
+                                <ul class="section5__btn">
+                                    <li class="section5__btn1 active">행동변수</li>
+                                    <li class="section5__btn2">불편사항</li>
+                                    <li class="section5__btn3">희망사항</li>
+                                </ul>
+                            </div>
+                            <div class="section5__rightDoc">
+                                <div class="section5__doc">
+                                    <div class="section5__doc1">
+                                        얼굴 피부에 붉게 올라온 여드름때문에 자신감도 잃고 스트레스를 받아함.
+                                    </div>
+                                    <div class="section5__doc2">
+                                        예민한 피부에는 어떤 화장품이 진정이 되는지 여드름을 커버 화장품에는 어떤게 있는지 모르고 아직 남성 화장품이 보편화 되어있지 않기때문에 누군가에게 물어보기 부끄럽다.
+                                    </div>
+                                    <div class="section5__doc3">
+                                        커버 화장품으로 잡티를 효과적으로 가려 자신감을 찾고싶어함.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- //section5 -->
+
             <section id="section6">
                 <div class="section6 container">
                     <div class="section6__title">전략 도출</div>
@@ -648,6 +742,8 @@
                     <img src="assets/img/img07.jpg" alt="전략 도출">
                 </div>
             </section>
+            <!-- //section6 -->
+
             <section id="section7">
                 <div class="section7 container">
                     <div class="section7__title">방향성</div>
@@ -677,6 +773,8 @@
                     </div>
                 </div>
             </section>
+            <!-- //section7 -->
+
             <section id="section8">
                 <div class="section8 container">
                     <div class="section8__title">keyword</div>
@@ -685,6 +783,8 @@
                     </div>
                 </div>
             </section>
+            <!-- //section8 -->
+            
             <section id="section9">
                 <div class="section9 container">
                     <div class="section9__img row1">
@@ -697,6 +797,8 @@
                     </div>
                 </div>
             </section>
+            <!-- //section9 -->
+
             <section id="section10">
                 <div class="section10 container">
                     <div class="section10__title">flow</div>
@@ -705,6 +807,8 @@
                     </div>
                 </div>
             </section>
+            <!-- //section10 -->
+
             <section id="section11">
                 <div class="section11 container">
                     <img class="section11__img" src="assets/img/img17.jpg" alt="이미지">
@@ -714,6 +818,8 @@
                     <img class="section11__img2" src="assets/img/img18.png" alt="이미지">
                 </div>
             </section>
+            <!-- //section11 -->
+
             <section id="section12">
                 <div class="section12 container">
                     <div class="section12__title">video</div>
@@ -722,16 +828,111 @@
                     </div>
                 </div>
             </section>
+            <!-- //section12 -->
         </main>
+        <!-- //main -->
+
         <footer id="footer">
             <div class="footer">
                 <div class="footer container">
                     <div class="footer__row1">감사합니다.</div>
                     <div class="footer__row2">박지선, 이연우, 유희봉</div>
-                    <div class="footer__row3"><a href="#">사이트 바로가기<span class="footer__img"></span></a></div>
+                    <div class="footer__row3"><a href="mantiful.html">사이트 바로가기<span class="footer__img"></span></a></div>
                 </div>
             </div>
         </footer>
+        <!-- //footer -->
     </div>
+    <!-- //wrap -->
+
+    <!-- script -->
+    <script>
+        // section5
+        const tabMenu01 = function(){
+            const tabBtn = document.querySelectorAll(".row1 .section5__btn > li");
+            const tabCont = document.querySelectorAll(".row1 .section5__doc > div");
+
+            tabBtn.forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+
+                    //내가 클릭하지 않은건 active 삭제
+                    tabBtn.forEach(el => {
+                        el.classList.remove("active");
+                    });
+                    //내가 클릭한건 active 추가
+                    btn.classList.add("active");
+
+                    //모든 컨텐츠 박스 안보이게
+                    tabCont.forEach(cont => {
+                        cont.style.display="none";
+                    });
+                    //내가 클릭한 컨텐츠 박스 보이게
+                    tabCont[index].style.display="block";
+                })
+            })
+        }
+        tabMenu01();
+
+        const tabMenu02 = function(){
+            const tabBtn = document.querySelectorAll(".row2 .section5__btn > li");
+            const tabCont = document.querySelectorAll(".row2 .section5__doc > div");
+
+            tabBtn.forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+
+                    //내가 클릭하지 않은건 active 삭제
+                    tabBtn.forEach(el => {
+                        el.classList.remove("active");
+                    });
+                    //내가 클릭한건 active 추가
+                    btn.classList.add("active");
+
+                    //모든 컨텐츠 박스 안보이게
+                    tabCont.forEach(cont => {
+                        cont.style.display="none";
+                    });
+                    //내가 클릭한 컨텐츠 박스 보이게
+                    tabCont[index].style.display="block";
+                })
+            })
+        }
+        tabMenu02();
+
+        const tabMenu03 = function(){
+            const tabBtn = document.querySelectorAll(".row3 .section5__btn > li");
+            const tabCont = document.querySelectorAll(".row3 .section5__doc > div");
+
+            tabBtn.forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+
+                    //내가 클릭하지 않은건 active 삭제
+                    tabBtn.forEach(el => {
+                        el.classList.remove("active");
+                    });
+                    //내가 클릭한건 active 추가
+                    btn.classList.add("active");
+
+                    //모든 컨텐츠 박스 안보이게
+                    tabCont.forEach(cont => {
+                        cont.style.display="none";
+                    });
+                    //내가 클릭한 컨텐츠 박스 보이게
+                    tabCont[index].style.display="block";
+                })
+            })
+        }
+        tabMenu03();
+
+        // section12
+        document.querySelector(".section12__cont a").addEventListener("click", () => {
+            alert("동영상 제작 완료 후 동영상 재생")
+        })
+
+        // footer
+        document.querySelector(".footer__row3 a").addEventListener("click", () => {
+            alert("사이트 제작 완료 후 사이트로 이동")
+        })
+
+    </script>
 </body>
 </html>
