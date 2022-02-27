@@ -378,6 +378,182 @@
             text-align: center;
             margin-bottom: 30px;
         }
+        .section7__parts {
+            display: flex;
+            justify-content: space-between;
+        }
+        .section7__part {
+            width: 400px;
+            height: 490px;
+            background: #ECF2FE;
+        }
+        .section7__partImg {
+            width: 400px;
+            height: 350px;
+        }
+        .section7__partText {
+            width: 400px;
+            height: 90px;
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center;
+        }
+        .section7__partTextUp {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .section7__partTextDo {
+            color: #222;
+        }
+
+        /* section8 */
+        .section8__title {
+            font-family: 'KNPSBandali-Regular00';
+            font-size: 100px;
+            color: #00C6AE;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .section8__cont {
+            width: 1240px;
+            height: 650px;
+            background: #DBFAFC;
+            position: relative;
+        }
+        .section8__cont img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* section9 */
+        .section9 .row1 {
+            padding-top: 100px;
+        }
+        .section9 .row2 {
+            padding-top: 30px;
+        }
+        .section9__img {
+            display: flex;
+            justify-content: space-between;
+        }
+        .section9__imgB {
+            width: 715px;
+            height: 500px;
+        }
+        .section9__imgS {
+            width: 505px;
+            height: 500px;
+        }
+
+        /* section10 */
+        .section10__title {
+            font-family: 'KNPSBandali-Regular00';
+            font-size: 100px;
+            color: #00C6AE;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .section10__cont {
+            width: 1240px;
+            height: 2560px;
+            background: #DBFAFC;
+            position: relative;
+        }
+        .section10__cont img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* section11 */
+        .section11 {}
+        .section11__img {
+            margin-top: 100px;
+            width: 1240px;
+            height: 500px;
+        }
+        .section11__doc {
+            font-size: 30px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 30px;
+            color: #006054;
+        }
+        .section11__img2 {
+            margin-top: 30px;
+            margin-left: 400px;
+        }
+
+        /* section12 */
+        .section12__title {
+            font-family: 'KNPSBandali-Regular00';
+            font-size: 100px;
+            color: #00C6AE;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .section12__cont {
+            width: 1240px;
+            height: 500px;
+            background: #DBFAFC;
+            position: relative;
+        }
+        .section12__img {
+            background: url(assets/img/svg.svg);
+            width: 78px;
+            height: 78px;
+            background-position: 0 -450px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* footer */
+        .footer {
+            text-align: center;
+            color: #006054;
+        }
+        .footer__row1 {
+            font-family: 'KNPSBandali-Regular00';
+            font-size: 200px;
+            font-weight: 700;
+            margin-top: 200px;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        .footer__row2 {
+            font-size: 50px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        .footer__row3 {
+            font-size: 50px;
+            font-weight: 500;
+        }
+        .footer__row3 a {
+            color: #006054;
+            position: relative;
+            margin-left: -50px;
+        }
+        .footer__row3 a::after {
+            content: '';
+            background: url(assets/img/svg.svg);
+            width: 50px;
+            height: 50px;
+            background-position: 0 -550px;
+            position: absolute;
+        }
+        .footer__row3 a:hover {
+            color: #00C6AE;
+        }
+        .footer__row3 a:hover::after {
+            background-position: 0 -650px;
+        }
     </style>
 </head>
 <body>
@@ -388,11 +564,11 @@
                     <ul>
                         <li><a href="#section1">소개</a></li>
                         <li><a href="#section2">브리프</a></li>
-                        <li><a href="#">키워드</a></li>
+                        <li><a href="#section8">키워드</a></li>
                         <li class="logo"><a href="mantiful.html"><strong>남자다움</strong></a></li>
-                        <li><a href="#">플로우</a></li>
-                        <li><a href="#">동영상</a></li>
-                        <li><a href="#">마무리</a></li>
+                        <li><a href="#section10">플로우</a></li>
+                        <li><a href="#section12">동영상</a></li>
+                        <li><a href="#footer">마무리</a></li>
                     </ul>
                 </div>
             </nav>
@@ -524,19 +700,87 @@
             </section>
             <section id="section7">
                 <div class="section7 container">
-                    <div class="section6__title">방향성</div>
-                    <div class="section6__doc">깔끔한 UI !! 쓰기 쉬운 UX !!</div>
-                    <div class="section6__img"></div>
+                    <div class="section7__title">방향성</div>
+                    <div class="section7__doc">깔끔한 UI !! 쓰기 쉬운 UX !!</div>
+                    <div class="section7__parts">
+                        <div class="section7__part">
+                            <img class="section7__partImg" src="assets/img/img08.jpg" alt="방향성01">
+                            <div class="section7__partText">
+                                <div class="section7__partTextUp">사용자 니즈 맞춤 정보 전달</div>
+                                <div class="section7__partTextDo">사용자가 필요로 하는 정보들을 전달</div>
+                            </div>
+                        </div>
+                        <div class="section7__part">
+                            <img class="section7__partImg" src="assets/img/img09.jpg" alt="방향성02">
+                            <div class="section7__partText">
+                                <div class="section7__partTextUp">간편하고 깔끔한 디자인</div>
+                                <div class="section7__partTextDo">사용하기 쉽게 간편하고 깔끔한 디자인</div>
+                            </div>
+                        </div>
+                        <div class="section7__part">
+                            <img class="section7__partImg" src="assets/img/img10.jpg" alt="방향성03">
+                            <div class="section7__partText">
+                                <div class="section7__partTextUp">남성 화장품에 대한 지속적 관심 촉구</div>
+                                <div class="section7__partTextDo">남성 화장품 인식 개선 및 관심촉구</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section id="section8"></section>
-            <section id="section9"></section>
-            <section id="section10"></section>
-            <section id="section11"></section>
-            <section id="section12"></section>
+            <section id="section8">
+                <div class="section8 container">
+                    <div class="section8__title">keyword</div>
+                    <div class="section8__cont">
+                        <img src="assets/img/img11.png" alt="키워드">
+                    </div>
+                </div>
+            </section>
+            <section id="section9">
+                <div class="section9 container">
+                    <div class="section9__img row1">
+                        <img class="section9__imgB" src="assets/img/img12.jpg" alt="키워드사진01">
+                        <img class="section9__imgS" src="assets/img/img13.jpg" alt="키워드사진02">
+                    </div>
+                    <div class="section9__img row2">
+                        <img class="section9__imgS" src="assets/img/img14.jpg" alt="키워드사진03">
+                        <img class="section9__imgB" src="assets/img/img15.jpg" alt="키워드사진04">
+                    </div>
+                </div>
+            </section>
+            <section id="section10">
+                <div class="section10 container">
+                    <div class="section10__title">flow</div>
+                    <div class="section10__cont">
+                        <img src="assets/img/img16.png" alt="플로우">
+                    </div>
+                </div>
+            </section>
+            <section id="section11">
+                <div class="section11 container">
+                    <img class="section11__img" src="assets/img/img17.jpg" alt="이미지">
+                    <div class="section11__doc">
+                        내가 필요한 정보를 한눈에 찾을수있는 방법이 바로 “남자다움” 입니다!
+                    </div>
+                    <img class="section11__img2" src="assets/img/img18.png" alt="이미지">
+                </div>
+            </section>
+            <section id="section12">
+                <div class="section12 container">
+                    <div class="section12__title">video</div>
+                    <div class="section12__cont">
+                        <a href="#"><div class="section12__img"></div></a>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer id="footer">
-            <div class="footer"></div>
+            <div class="footer">
+                <div class="footer container">
+                    <div class="footer__row1">감사합니다.</div>
+                    <div class="footer__row2">박지선, 이연우, 유희봉</div>
+                    <div class="footer__row3"><a href="#">사이트 바로가기<span class="footer__img"></span></a></div>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
