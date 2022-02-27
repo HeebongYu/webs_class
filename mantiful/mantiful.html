@@ -78,6 +78,8 @@
             color: #000;
             font-family: 'GmarketSans';
         }
+
+        /* 기본 구조 */
         .container{
             width: 1240px;
             margin: 0 auto;
@@ -94,8 +96,6 @@
         #footer {
             height: 830px;
         }
-
-        /* 기본 레이아웃 */
         #nav {
             height: 70px;
         }
@@ -155,7 +155,6 @@
             margin-top: 13px;
             display: inline-block;
             padding: 12px 12px 0px 12px;
-            font-weight: lighter;
         }
         .nav li:hover {
             background: #dbfafc6e ;
@@ -169,6 +168,7 @@
         }
         .nav li a {
             font-size: 14px;
+            font-weight: lighter;
         }
         .nav li a strong {
             font-weight: 700;
@@ -212,7 +212,6 @@
         }
 
         /* section2 */
-        .section2 {}
         .section2__title {
             font-family: 'KNPSBandali-Regular00';
             font-size: 100px;
@@ -227,12 +226,11 @@
         .section2__list {
             width: 295px;
             height: 290px;
-            /* background-color: #eee; */
             position: relative;
         }
         .section2__img {
             background: url(assets/img/svg.svg);
-            width: 180px;
+            width: 190px;
             height: 190px;
             position: absolute;
             left: 50%;
@@ -245,13 +243,68 @@
         .section2__text {
             position: absolute;
             left: 50%;
-            bottom: 30px;
+            bottom: 0;
             transform: translate(-50%);
-            font-size: 20px;
+            font-size: 25px;
         }
         .section2__num {
             text-align: center;
             padding-bottom: 10px;
+        }
+
+        /* section3 */
+        .section3 {
+            color: #006054;
+            text-align: center;
+        }
+        .section3__title {
+            font-size: 40px;
+            padding-top: 100px;
+            font-weight: 500;
+        }
+        .section3__title.last {
+            padding-top: 150px;
+        }
+        .section3__doc {
+            font-size: 30px;
+            margin-top: 60px;
+            font-weight: 300;
+        }
+
+        /* section4 */
+        .section4 {
+            color: #006054;
+        }
+        .section4__title {
+            font-size: 80px;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 100px;
+            margin-bottom: 40px;
+        }
+        .section4__doc {
+            font-size: 30px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section4__img {
+            display: flex;
+            justify-content: space-between;
+        }
+        .section4__img img {
+            width: 610px;
+            height: 320px;
+        }
+
+        /* section5 */
+        .section5 {}
+        .section5__title {
+            font-size: 80px;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 100px;
+            margin-bottom: 40px;
         }
     </style>
 </head>
@@ -262,7 +315,7 @@
                 <div class="nav container">
                     <ul>
                         <li><a href="#section1">소개</a></li>
-                        <li><a href="#">브리프</a></li>
+                        <li><a href="#section2">브리프</a></li>
                         <li><a href="#">키워드</a></li>
                         <li class="logo"><a href="mantiful.html"><strong>남자다움</strong></a></li>
                         <li><a href="#">플로우</a></li>
@@ -289,14 +342,14 @@
                     <div class="section2__title">brief</div>
                     <div class="section2__lists">
                         <div class="section2__list">
-                            <a href="#"><div class="section2__img"></div></a>
+                            <a href="#section4"><div class="section2__img"></div></a>
                             <div class="section2__text">
                                 <div class="section2__num">01</div>
                                 <div class="section2__doc">사용자 조사</div>
                             </div>
                         </div>
                         <div class="section2__list">
-                            <a href="#"><div class="section2__img"></div></a>
+                            <a href="#section5"><div class="section2__img"></div></a>
                             <div class="section2__text">
                                 <div class="section2__num">02</div>
                                 <div class="section2__doc">사용자 분석</div>
@@ -319,9 +372,42 @@
                     </div>
                 </div>
             </section>
-            <section id="section3"></section>
-            <section id="section4"></section>
-            <section id="section5"></section>
+            <section id="section3">
+                <div class="section3 container">
+                    <div class="section3__title">
+                        남성들은 왜 관심이 생겼을까?
+                    </div>
+                    <div class="section3__doc">
+                        화장하는 평범한 남성들… ‘잘 보이고 싶어서’ 화장하는 평범한 고등학생 이원진 씨는 말합니다.
+                        “여자같이 보이고 싶다고 (화장) 하는 게 아니라, 잘 보이고 싶어서 하는 거죠.”
+                    </div>
+                    <div class="section3__title last">
+                        화장품 사용 가장 큰 불만  ‘정보 부족’
+                    </div>
+                    <div class="section3__doc">
+                        정보가 부족하다 느끼는 분야로는 성분확인, 사용 시 주의사항, 나에게 맞는 타입으로 나타났다.
+                    </div>
+                </div>
+            </section>
+            <section id="section4">
+                <div class="section4 container">
+                    <div class="section4__title">사용자 조사</div>
+                    <div class="section4__doc">남성 화장품에 대한 관심이 올라고가 있습니다.</div>
+                    <div class="section4__img">
+                        <img src="assets/img/img02.jpg" alt="그래프01">
+                        <img src="assets/img/img03.jpg" alt="그래프02">
+                    </div>
+                </div>
+            </section>
+            <section id="section5">
+                <div class="section5 container">
+                    <div class="section5__title">사용자 분석</div>
+                    <div class="section5__Personas">
+                        <div class="section5__left"></div>
+                        <div class="section5__right"></div>
+                    </div>
+                </div>
+            </section>
             <section id="section6"></section>
             <section id="section7"></section>
             <section id="section8"></section>
