@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mantiful</title>
+    <title>남자다움 - 유희봉</title>
 
+    <!-- css -->
     <link rel="stylesheet" href="assets/css/font.css">
 
     <style>     
@@ -27,6 +28,29 @@
             text-decoration: none;
             color: #000;
             font-family: 'GmarketSans';
+        }
+
+        /* top */
+        .top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 10000;
+        }
+        .top a {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            background: #fff;
+            color: #029A88;
+            display: block;
+            border: 1px solid #029A88;
+        }
+        .top a:hover {
+            background: #029A88;
+            color: #fff;
         }
 
         /* 기본 구조 */
@@ -532,6 +556,8 @@
     </style>
 </head>
 <body>
+    <div class="top"><a href="#header">Top</a></div>
+
     <div id="wrap">
         <header id="header">
             <nav id="nav">
