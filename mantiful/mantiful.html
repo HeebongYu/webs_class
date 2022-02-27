@@ -52,6 +52,13 @@
                 url('https://cdn.jsdelivr.net/gh/webfontworld/pocheon/MakGeolli.ttf') format("truetype");
             font-display: swap;
         }
+        @font-face {
+            font-family: 'KNPSBandali-Regular00';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSBandali-Regular00.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         /*  기본셋팅 */
         *,
         *::after,
@@ -156,9 +163,9 @@
         }
         .nav li.logo {
             margin-top: 8px;
-        }
-        .nav li.logo:hover {
-            background: none;
+            border: 1px solid #000;
+            padding: 10px 15px 5px 15px;
+            background: #DBFAFC;
         }
         .nav li a {
             font-size: 14px;
@@ -166,10 +173,9 @@
         .nav li a strong {
             font-weight: 700;
             font-size: 30px;
-            border: 1px solid #000;
-            padding: 10px 15px 5px 15px;
-            background: #DBFAFC;
-            color: #029A88;
+            background: -webkit-linear-gradient(#029A88 0%, #64A09B 50%, rgba(0,0,0,0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /* section1 */
@@ -193,7 +199,9 @@
             margin-left: 40px;
             font-size: 100px;
             font-weight: 700;
-            color: #029A88;
+            background: -webkit-linear-gradient(#029A88 0%, #64A09B 50%, rgba(0,0,0,0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .section1__img {
             width: 610px;
@@ -201,6 +209,49 @@
         }
         .section1__img img {
             height: 770px;
+        }
+
+        /* section2 */
+        .section2 {}
+        .section2__title {
+            font-family: 'KNPSBandali-Regular00';
+            font-size: 100px;
+            color: #00C6AE;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .section2__lists {
+            display: flex;
+            justify-content: space-between;
+        }
+        .section2__list {
+            width: 295px;
+            height: 290px;
+            /* background-color: #eee; */
+            position: relative;
+        }
+        .section2__img {
+            background: url(assets/img/svg.svg);
+            width: 180px;
+            height: 190px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .section2__img:hover {
+            background: url(assets/img/svg.svg);
+            background-position: 0 -200px;
+        }
+        .section2__text {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translate(-50%);
+            font-size: 20px;
+        }
+        .section2__num {
+            text-align: center;
+            padding-bottom: 10px;
         }
     </style>
 </head>
@@ -210,10 +261,10 @@
             <nav id="nav">
                 <div class="nav container">
                     <ul>
-                        <li><a href="#">소개</a></li>
+                        <li><a href="#section1">소개</a></li>
                         <li><a href="#">브리프</a></li>
                         <li><a href="#">키워드</a></li>
-                        <li class="logo"><a href="#"><strong>남자다움</strong></a></li>
+                        <li class="logo"><a href="mantiful.html"><strong>남자다움</strong></a></li>
                         <li><a href="#">플로우</a></li>
                         <li><a href="#">동영상</a></li>
                         <li><a href="#">마무리</a></li>
@@ -233,7 +284,41 @@
                     </div>
                 </div>
             </section>
-            <section id="section2"></section>
+            <section id="section2">
+                <div class="section2 container">
+                    <div class="section2__title">brief</div>
+                    <div class="section2__lists">
+                        <div class="section2__list">
+                            <a href="#"><div class="section2__img"></div></a>
+                            <div class="section2__text">
+                                <div class="section2__num">01</div>
+                                <div class="section2__doc">사용자 조사</div>
+                            </div>
+                        </div>
+                        <div class="section2__list">
+                            <a href="#"><div class="section2__img"></div></a>
+                            <div class="section2__text">
+                                <div class="section2__num">02</div>
+                                <div class="section2__doc">사용자 분석</div>
+                            </div>
+                        </div>
+                        <div class="section2__list">
+                            <a href="#"><div class="section2__img"></div></a>
+                            <div class="section2__text">
+                                <div class="section2__num">03</div>
+                                <div class="section2__doc">전략 도출</div>
+                            </div>
+                        </div>
+                        <div class="section2__list">
+                            <a href="#"><div class="section2__img"></div></a>
+                            <div class="section2__text">
+                                <div class="section2__num">04</div>
+                                <div class="section2__doc">방향성</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="section3"></section>
             <section id="section4"></section>
             <section id="section5"></section>
