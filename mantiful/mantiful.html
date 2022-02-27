@@ -298,13 +298,85 @@
         }
 
         /* section5 */
-        .section5 {}
+        .section5 {
+            color: #006054;
+        }
         .section5__title {
             font-size: 80px;
             font-weight: 500;
             text-align: center;
             padding-top: 100px;
+            margin-bottom: 20px;
+        }
+        .section5__Personas {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .section5__left {
+            width: 295px;
+            height: 345px;
+        }
+        .section5__leftText {
+            height: 50px;
+            background: #DBE6FC;
+            text-align: center;
+        }
+        .section5__leftText span {
+            font-size: 30px;
+            line-height: 50px;
+        }
+        .section5__leftText img {
+            width: 295px;
+            height: 295px;
+        }
+        .section5__right {
+            width: 925px;
+            height: 345px;
+        }
+        .section5__rightList {
+            height: 50px;
+            background: #DBE6FC;
+        }
+        .section5__rightDoc {
+            height: 295px;
+            background: #ECF2FE;
+        }
+
+        /* section6 */
+        .section6 {
+            color: #006054;
+        }
+        .section6__title {
+            font-size: 80px;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 100px;
             margin-bottom: 40px;
+        }
+        .section6__doc {
+            font-size: 30px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* section7 */
+        .section7 {
+            color: #006054;
+        }
+        .section7__title {
+            font-size: 80px;
+            font-weight: 500;
+            text-align: center;
+            padding-top: 100px;
+            margin-bottom: 40px;
+        }
+        .section7__doc {
+            font-size: 30px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -356,14 +428,14 @@
                             </div>
                         </div>
                         <div class="section2__list">
-                            <a href="#"><div class="section2__img"></div></a>
+                            <a href="#section6"><div class="section2__img"></div></a>
                             <div class="section2__text">
                                 <div class="section2__num">03</div>
                                 <div class="section2__doc">전략 도출</div>
                             </div>
                         </div>
                         <div class="section2__list">
-                            <a href="#"><div class="section2__img"></div></a>
+                            <a href="#section7"><div class="section2__img"></div></a>
                             <div class="section2__text">
                                 <div class="section2__num">04</div>
                                 <div class="section2__doc">방향성</div>
@@ -403,13 +475,60 @@
                 <div class="section5 container">
                     <div class="section5__title">사용자 분석</div>
                     <div class="section5__Personas">
-                        <div class="section5__left"></div>
-                        <div class="section5__right"></div>
+                        <div class="section5__left">
+                            <div class="section5__leftText">
+                                <span>30대 회사원</span>
+                                <img src="assets/img/img04.jpg" alt="사람1">
+                            </div>
+                            <div class="section5__leftImg"></div>
+                        </div>
+                        <div class="section5__right">
+                            <div class="section5__rightList"></div>
+                            <div class="section5__rightDoc"></div>
+                        </div>
+                    </div>
+                    <div class="section5__Personas">
+                        <div class="section5__left">
+                            <div class="section5__leftText">
+                                <span>30대 회사원</span>
+                                <img src="assets/img/img05.jpg" alt="사람2">
+                            </div>
+                            <div class="section5__leftImg"></div>
+                        </div>
+                        <div class="section5__right">
+                            <div class="section5__rightList"></div>
+                            <div class="section5__rightDoc"></div>
+                        </div>
+                    </div>
+                    <div class="section5__Personas">
+                        <div class="section5__left">
+                            <div class="section5__leftText">
+                                <span>30대 회사원</span>
+                                <img src="assets/img/img06.jpg" alt="사람3">
+                            </div>
+                            <div class="section5__leftImg"></div>
+                        </div>
+                        <div class="section5__right">
+                            <div class="section5__rightList"></div>
+                            <div class="section5__rightDoc"></div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section id="section6"></section>
-            <section id="section7"></section>
+            <section id="section6">
+                <div class="section6 container">
+                    <div class="section6__title">전략 도출</div>
+                    <div class="section6__doc">남성 화장품 관련 사이트, 카페 등 광고베너 활용</div>
+                    <img src="assets/img/img07.jpg" alt="전략 도출">
+                </div>
+            </section>
+            <section id="section7">
+                <div class="section7 container">
+                    <div class="section6__title">방향성</div>
+                    <div class="section6__doc">깔끔한 UI !! 쓰기 쉬운 UX !!</div>
+                    <div class="section6__img"></div>
+                </div>
+            </section>
             <section id="section8"></section>
             <section id="section9"></section>
             <section id="section10"></section>
