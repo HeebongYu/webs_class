@@ -16,6 +16,9 @@
 <rect width="78" height="78" transform="translate(0 450)" fill="#DBFAFC"/>
 <circle cx="39" cy="489" r="39" fill="white" stroke="#DBFAFC"/>
 <path d="M48.7031 487.623L31.5156 477.467C30.0996 476.637 28 477.467 28 479.469V499.781C28 501.637 29.9531 502.76 31.5156 501.832L48.7031 491.676C50.2168 490.748 50.2168 488.551 48.7031 487.623Z" fill="#DBFAFC"/>
+<rect width="78" height="78" transform="translate(100 450)" fill="#DBFAFC"/>
+<circle cx="139" cy="489" r="39" fill="white" stroke="#DBFAFC"/>
+<path d="M148.703 487.623L131.516 477.467C130.1 476.637 128 477.467 128 479.469V499.781C128 501.637 129.953 502.76 131.516 501.832L148.703 491.676C150.217 490.748 150.217 488.551 148.703 487.623Z" fill="#00C6AE"/>
 <rect width="50" height="50" transform="matrix(-1 0 0 1 50 550)" fill="#DBFAFC"/>
 <path d="M41.6666 558.333V583.333H45.8333V554.167H16.6666V558.333H41.6666Z" fill="#006054"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.16663 566.667V595.833H33.3333V566.667H4.16663ZM29.1666 570.833H8.33329V591.667H29.1666V570.833Z" fill="#006054"/>

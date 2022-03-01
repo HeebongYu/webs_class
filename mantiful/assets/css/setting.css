@@ -1,0 +1,109 @@
+/*  기본셋팅 */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSans';
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'GmarketSans';
+}
+
+/* top */
+.top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+}
+.top a {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background: #fff;
+    color: #029A88;
+    display: block;
+    border: 1px solid #029A88;
+}
+.top a:hover {
+    background: #029A88;
+    color: #fff;
+}
+
+/* 기본 구조 */
+.container{
+    width: 1240px;
+    margin: 0 auto;
+}
+#wrap {
+    height: 13520px;
+}
+#header {
+    height: 70px;
+}
+#main {
+    height: 12620px;
+}
+#footer {
+    height: 830px;
+}
+#nav {
+    height: 70px;
+}
+#section1 {
+    height: 870px;
+    background: #DBFAFC;
+}
+#section2 {
+    height: 640px;
+}
+#section3 {
+    height: 710px;
+    background: #DBFAFC;
+}
+#section4 {
+    height: 730px;
+}
+#section5 {
+    height: 1445px;
+    background: #DBFAFC;
+}
+#section6 {
+    height: 500px;
+}
+#section7 {
+    height: 920px;
+    background: #DBFAFC;
+}
+#section8 {
+    height: 980px;
+}
+#section9 {
+    height: 1230px;
+    background: #DBFAFC;
+}
+#section10 {
+    height: 2890px;
+}
+#section11 {
+    height: 875px;
+    background: #DBFAFC;
+}
+#section12 {
+    height: 830px;
+}
+#footer {
+    height: 830px;
+    background: #DBFAFC;
+}
