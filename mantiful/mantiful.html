@@ -347,7 +347,7 @@
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
            
             document.querySelectorAll(".content__item").forEach((e, i) => {
-                if(scrollTop >= e.offsetTop-2){
+                if(scrollTop >= e.offsetTop-102){
                     document.querySelectorAll(".nav li").forEach(li => {
                         li.classList.remove("active");
                     })
