@@ -17,17 +17,15 @@
     </style>
 </head>
 <body>
-    <div class="top"><a href="#header">Top</a></div>
-
     <div id="wrap">
         <header id="header">
             <nav id="nav">
                 <div class="nav container">
                     <ul>
-                        <li><a href="#section1">소개</a></li>
+                        <li class="active"><a href="#section1">소개</a></li>
                         <li><a href="#section2">브리프</a></li>
                         <li><a href="#section8">키워드</a></li>
-                        <li class="logo"><a href="mantiful.html"><strong>남자다움</strong></a></li>
+                        <li class="logo"><a href="#header"><strong>남자다움</strong></a></li>
                         <li><a href="#section10">플로우</a></li>
                         <li><a href="#section12">동영상</a></li>
                         <li><a href="#footer">마무리</a></li>
@@ -40,7 +38,7 @@
 
         <main id="main">
             <section id="section1">
-                <div class="section1 container">
+                <div class="section1 container content__item">
                     <div class="section1__title">
                         <div class="section1__titleUp">손쉽게 뷰티 정보 알아보러 갈래? 뷰티 정보 사이트</div>
                         <div class="section1__titleDo">남자다움</div>
@@ -53,7 +51,7 @@
             <!-- //section1 -->
 
             <section id="section2">
-                <div class="section2 container">
+                <div class="section2 container content__item">
                     <div class="section2__title">brief</div>
                     <div class="section2__lists">
                         <div class="section2__list">
@@ -263,7 +261,7 @@
             <!-- //section7 -->
 
             <section id="section8">
-                <div class="section8 container">
+                <div class="section8 container content__item">
                     <div class="section8__title">keyword</div>
                     <div class="section8__cont">
                         <img src="assets/img/img11.png" alt="키워드">
@@ -271,6 +269,8 @@
                 </div>
             </section>
             <!-- //section8 -->
+
+            <div class="content__item"></div>
             
             <section id="section9">
                 <div class="section9 container">
@@ -287,7 +287,7 @@
             <!-- //section9 -->
 
             <section id="section10">
-                <div class="section10 container">
+                <div class="section10 container content__item">
                     <div class="section10__title">flow</div>
                     <div class="section10__cont">
                         <img src="assets/img/img16.png" alt="플로우">
@@ -308,7 +308,7 @@
             <!-- //section11 -->
 
             <section id="section12">
-                <div class="section12 container">
+                <div class="section12 container content__item">
                     <div class="section12__title">video</div>
                     <div class="section12__cont">
                         <a href="#"><div class="section12__img"></div></a>
@@ -320,7 +320,7 @@
         <!-- //main -->
 
         <footer id="footer">
-            <div class="footer">
+            <div class="footer content__item">
                 <div class="footer container">
                     <div class="footer__row1">감사합니다.</div>
                     <div class="footer__row2">박지선, 이연우, 유희봉</div>
@@ -334,7 +334,39 @@
 
     <!-- script -->
     <script>
-        // section5
+        // nav // 패럴랙스
+        document.querySelectorAll(".nav li a").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        })
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+           
+            document.querySelectorAll(".content__item").forEach((e, i) => {
+                if(scrollTop >= e.offsetTop-2){
+                    document.querySelectorAll(".nav li").forEach(li => {
+                        li.classList.remove("active");
+                    })
+                    document.querySelector(".nav li:nth-child("+(i+1)+")").classList.add("active");
+                }
+            })
+        })
+
+        // section2 // 패럴랙스
+        document.querySelectorAll(".section2__list a").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        })
+
+        // section5 // 탭메뉴
         const tabMenu01 = function(){
             const tabBtn = document.querySelectorAll(".row1 .section5__btn > li");
             const tabCont = document.querySelectorAll(".row1 .section5__doc > div");
@@ -420,6 +452,7 @@
             alert("사이트 제작 완료 후 사이트로 이동")
         })
 
+        
     </script>
 </body>
 </html>
