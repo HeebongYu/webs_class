@@ -1108,6 +1108,7 @@
 
         //{3}
         //03. 배열 메서드 : push() : 배열 마지막 요소에 추가 : 반환(숫자)
+        //04. 배열 메서드 : pop() : 배열 마지막 요소 삭제 : 반환(삭제된 요소)
         {
             const arrNum1 = [100, 200, 300, 400, 500];
             const arrPush = arrNum1.push(600);
@@ -1117,9 +1118,7 @@
             document.querySelector(".samlpe03_M1").innerHTML = "push(600)";
             document.querySelector(".sample03_R1").innerHTML = arrPush;
             document.querySelector(".sample03_P1").innerHTML = arrNum1;
-        }
-        //04. 배열 메서드 : pop() : 배열 마지막 요소 삭제 : 반환(삭제된 요소)
-        {
+
             const arrNum2 = [100, 200, 300, 400, 500];
             const arrPop = arrNum2.pop();
 
@@ -1129,9 +1128,10 @@
             document.querySelector(".sample03_R2").innerHTML = arrPop;
             document.querySelector(".sample03_P2").innerHTML = arrNum2;
         }
-
+       
         //{4}
         //05. 배열 메서드 : unshift() : 배열 처음 요소에 추가 : 반환(숫자)
+        //06. 배열 메서드 : shift() : 배열 처음 요소 삭제 : 반환(삭제된 요소)
         {
             const arrNum1 = [100, 200, 300, 400, 500];
             const arrUnshift = arrNum1.unshift(600);
@@ -1141,9 +1141,7 @@
             document.querySelector(".samlpe04_M1").innerHTML = "unshift(600)";
             document.querySelector(".sample04_R1").innerHTML = arrUnshift;
             document.querySelector(".sample04_P1").innerHTML = arrNum1;
-        }
-        //06. 배열 메서드 : shift() : 배열 처음 요소 삭제 : 반환(삭제된 요소)
-        {
+
             const arrNum2 = [100, 200, 300, 400, 500];
             const arrShift = arrNum2.shift();
 
@@ -1156,6 +1154,7 @@
 
         //{5}
         //07. 배열 메서드 : reverse() : 배열 요소 순서를 반대로 정렬 : 반환(배열)
+        //08. 배열 메서드 : sort() : 배열 요소를 정렬 : 반환(배열)
         {
             const arrNum1 = [100, 200, 300, 400, 500];
             const arrReverse = arrNum1.reverse();
@@ -1164,9 +1163,7 @@
             document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".samlpe05_M1").innerHTML = "reverse()";
             document.querySelector(".sample05_R1").innerHTML = arrReverse;
-        }
-        //08. 배열 메서드 : sort() : 배열 요소를 정렬 : 반환(배열)
-        {
+
             const arrNum2 = [100, 200, 300, 400, 500];
             const arrSort2 = arrNum2.sort();
 
@@ -1230,6 +1227,7 @@
 
         //{7}
         //10. 배열 메서드 : reduce() : 배열 요소 하나로 정리 : 반환(결괏값)
+        //11. 배열 메서드 : reduceRight() : 배열 요소 하나로 정리 : 반환(결괏값)
         {
             const arrNum1 = [100, 200, 300, 400, 500];
             const arrReduce1 = arrNum1.reduce(element => element);
@@ -1265,9 +1263,7 @@
             document.querySelector(".sample07_Q4").innerHTML = "[[100, 200], [300, 400]]";
             document.querySelector(".samlpe07_M4").innerHTML = "reduce((p,c) => p.concat(c))";
             document.querySelector(".sample07_R4").innerHTML = arrReduce4;
-        }
-        //11. 배열 메서드 : reduceRight() : 배열 요소 하나로 정리 : 반환(결괏값)
-        {
+
             const arrNum5 = ['javascript', 'react', 'vue'];
             const arrReduce5 = arrNum5.reduceRight((p,c) => p+c);
 
@@ -1391,6 +1387,8 @@
 
         //{10}
         //14. 배열 메서드 : indexOf() : 배열 요소 검색 : 반환(숫자)
+        //15. 배열 메서드 : lastIndexOf() : 배열 요소 끝에서 검색: 반환(숫자)
+        //16. 배열 메서드 : includes() : 배열 요소 검색 : 반환(불린)
         {
             const arrNum1 = [100, 200, 300, 400, 500];
             const arrIndexOf1 = arrNum1.indexOf(200);
@@ -1415,9 +1413,7 @@
             document.querySelector(".sample10_Q3").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".samlpe10_M3").innerHTML = "indexOf(600)";
             document.querySelector(".sample10_R3").innerHTML = arrIndexOf3;
-        }
-        //15. 배열 메서드 : lastIndexOf() : 배열 요소 끝에서 검색: 반환(숫자)
-        {
+
             const arrNum4 = [100, 200, 300, 400, 200];
             const arrIastIndexOf4 = arrNum4.lastIndexOf(200);
 
@@ -1425,9 +1421,7 @@
             document.querySelector(".sample10_Q4").innerHTML = "[100, 200, 300, 400, 200]";
             document.querySelector(".samlpe10_M4").innerHTML = "lastIndexOf(200)";
             document.querySelector(".sample10_R4").innerHTML = arrIastIndexOf4;
-        }
-        //16. 배열 메서드 : includes() : 배열 요소 검색 : 반환(불린)
-        {
+
             const arrNum5 = [100, 200, 300, 400, 500];
             const arrIncludes5 = arrNum5.includes(200);
 
@@ -1444,9 +1438,10 @@
             document.querySelector(".samlpe10_M6").innerHTML = "lastIndexOf(600)";
             document.querySelector(".sample10_R6").innerHTML = arrIncludes6;
         }
-
+        
         //{11}
         //17. 배열 메서드 : find() : 배열 요소 검색 : 반환(요소)
+        //18. 배열 메서드 : findIndex() : 배열 첫 요소 검색 : 반환(숫자)
         {
             //함수의 4가지 유형
             {
@@ -1515,9 +1510,7 @@
             document.querySelector(".sample11_Q3").innerHTML = "['javascript', 'react', 'vue']";
             document.querySelector(".samlpe11_M3").innerHTML = "find(el => el === 'javascript')";
             document.querySelector(".sample11_R3").innerHTML = arrFind3;
-        }
-        //18. 배열 메서드 : findIndex() : 배열 첫 요소 검색 : 반환(숫자)
-        {
+
             const arrText4 = ['javascript', 'react', 'vue'];
             const arrFindIndex4 = arrText4.findIndex(el => el === 'javascript');
 
@@ -1604,9 +1597,9 @@
             document.querySelector(".sample13_R4").innerHTML = arrMap4;
         }
 
-
         //숙제 2가지 이상
         {
+            {
             arrBox1 = [100, 200, 300, 400, 500, 600, 700];
 
             document.write("*** arrBox1 ***");
@@ -1666,61 +1659,62 @@
                 document.write(arrFilter+"-filter");
             }
         }
-        document.write("<br><br>");
-        {
-            document.write("<br>"+"*** arrBox2 ***"+"<br>");
+            document.write("<br><br>");
+            {
+                document.write("<br>"+"*** arrBox2 ***"+"<br>");
 
-            arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                arrBox2 = ['j', 'b', 'c', 'd', 'e'];
 
-            //j
-            document.write("<br>"+"*** j(1) ***"+"<br>");
-            {
-                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxShift = arrBox2.shift();
-                document.write(arrBoxShift+"-shift");
-            }
-            document.write("<br>"+"*** j(2) ***"+"<br>");
-            {
-                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxSplice = arrBox2.splice(0,1);
-                document.write(arrBoxSplice+"-splice");
-            }
-            document.write("<br>"+"*** j(3) ***"+"<br>");
-            {
-                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrFilter = arrBox2.filter(el => el === 'j');
-                document.write(arrFilter+"-filter");
-            }
+                //j
+                document.write("<br>"+"*** j(1) ***"+"<br>");
+                {
+                    const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                    const arrBoxShift = arrBox2.shift();
+                    document.write(arrBoxShift+"-shift");
+                }
+                document.write("<br>"+"*** j(2) ***"+"<br>");
+                {
+                    const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                    const arrBoxSplice = arrBox2.splice(0,1);
+                    document.write(arrBoxSplice+"-splice");
+                }
+                document.write("<br>"+"*** j(3) ***"+"<br>");
+                {
+                    const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                    const arrFilter = arrBox2.filter(el => el === 'j');
+                    document.write(arrFilter+"-filter");
+                }
 
-            //jc
-            document.write("<br>"+"*** jc (1)***"+"<br>");
-            {
-                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxSplice = arrBox2.splice(3,2) + arrBox2.splice(1,1);
-                document.write(arrBox2+"-splice");
-            }
-            document.write("<br>"+"*** jc (2)***"+"<br>");
-            {
-                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxFind = arrBox2.find(el => el === 'j') + arrBox2.find(el => el === 'c')
-                document.write(arrBoxFind+"-find");
-            }
+                //jc
+                document.write("<br>"+"*** jc (1)***"+"<br>");
+                {
+                    const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                    const arrBoxSplice = arrBox2.splice(3,2) + arrBox2.splice(1,1);
+                    document.write(arrBox2+"-splice");
+                }
+                document.write("<br>"+"*** jc (2)***"+"<br>");
+                {
+                    const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                    const arrBoxFind = arrBox2.find(el => el === 'j') + arrBox2.find(el => el === 'c')
+                    document.write(arrBoxFind+"-find");
+                }
 
-            //jbcd
-            document.write("<br>"+"*** jbcd (1)***"+"<br>");
-            {
-                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxPop = arrBox2.pop();
-                document.write(arrBox2+"-pop");
-            }
-            document.write("<br>"+"*** jbcd (2)***"+"<br>");
-            {
-                const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
-                const arrBoxSplice = arrBox2.splice(4)
-                document.write(arrBox2+"-splice");
+                //jbcd
+                document.write("<br>"+"*** jbcd (1)***"+"<br>");
+                {
+                    const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                    const arrBoxPop = arrBox2.pop();
+                    document.write(arrBox2+"-pop");
+                }
+                document.write("<br>"+"*** jbcd (2)***"+"<br>");
+                {
+                    const arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+                    const arrBoxSplice = arrBox2.splice(4)
+                    document.write(arrBox2+"-splice");
+                }
             }
         }
-
+        
         //{14}
         //14. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)
         {
@@ -1748,6 +1742,7 @@
             document.querySelector(".samlpe14_M3").innerHTML = "[...text3].map(el => el)";
             document.querySelector(".sample14_R3").innerHTML = result3;
         }
+        
     </script>
 </body>
 
