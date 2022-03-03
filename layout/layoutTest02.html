@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layoutTest02</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #header {
+            width: 100%;
+            height: 10vh;
+            background-color: #7EC484;
+        }
+        #main {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+        }
+        #aside1 {
+            width: 25%;
+            background-color: #62B86A;
+        }
+        #contents {
+            width: 50%;
+            background-color: #47AC50;
+        }
+        #aside2 {
+            width: 25%;
+            background-color: #3E9D47;
+        }
+        #footer {
+            width: 100%;
+            height: 10vh;
+            background-color: #338B3C;
+        }
+        @media (max-width: 1200px){
+            #main {
+                flex-wrap: wrap;
+            }
+            #aside1 {
+                width: 30%;
+                height: 60vh;
+            }
+            #contents {
+                width: 70%;
+                height: 60vh;
+            }
+            #aside2 {
+                width: 100%;
+                height: 20vh;
+            }
+        }
+        @media (max-width: 768px){
+            #aside1 {
+                display: none;
+            }
+            #contents {
+                width: 100%;
+                height: 40vh;
+            }
+            #aside2 {
+                height: 40vh;
+            }
+        }
+        @media (max-width: 480px){
+            #header {
+                height: 20vh;
+            }
+            #main {
+                height: 60vh;
+            }
+            #contents {
+                height: 30vh;
+            }
+            #aside2 {
+                height: 30vh;
+            }
+            #footer {
+                height: 20vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <main id="main">
+            <aside id="aside1"></aside>
+            <section id="contents"></section>
+            <aside id="aside2"></aside>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
+
+
+        

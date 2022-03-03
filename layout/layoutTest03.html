@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layoutTest03</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+        #wrap {
+            width: 1200px;
+            height: 100vh;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "aside contents1"
+                "aside contents2"
+                "aside contents3"
+                "footer footer"
+            ;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 5vh 30vh 30vh 30vh 5vh;
+        }
+        #header {
+            grid-area: header;
+            background-color: #7ED4FA;
+        }
+        #aside {
+            grid-area: aside;
+            background-color: #49C4F7;
+        }
+        #contents1 {
+            grid-area: contents1;
+            background-color: #1CB7F6;
+        }
+        #contents2 {
+            grid-area: contents2;
+            background-color: #00ABF4;
+        }
+        #contents3 {
+            grid-area: contents3;
+            background-color: #009DE5;
+        }
+        #footer {
+            grid-area: footer;
+            background-color: #008AD1;
+        }
+        @media (max-width: 1200px){
+            #wrap {
+                width: 100%;
+                grid-template-areas: 
+                    "header header"
+                    "aside contents1"
+                    "aside contents2"
+                    "contents3 contents3"
+                    "footer footer"
+                ;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 5vh 30vh 30vh 30vh 5vh;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                grid-template-areas: 
+                    "header header"
+                    "aside aside"
+                    "contents1 contents2"
+                    "contents3 contents3"
+                    "footer footer"
+                ;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 10vh 10vh 40vh 30vh 10vh;
+            }
+        }
+        @media (max-width: 480px){
+            #wrap {
+                grid-template-areas: 
+                    "header"
+                    "aside"
+                    "contents1"
+                    "contents2"
+                    "footer"
+                ;
+                grid-template-columns: 100%;
+                grid-template-rows: 5vh 30vh 30vh 30vh 5vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <aside id="aside"></aside>
+        <section id="contents1"></section>
+        <section id="contents2"></section>
+        <section id="contents3"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
+
+
+        

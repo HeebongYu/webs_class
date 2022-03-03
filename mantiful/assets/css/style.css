@@ -10,7 +10,7 @@
 }
 .nav li:hover,
 .nav li.active {
-    background: #dbfafc6e ;
+    background: #dbfafc6e;
     transition: all 0.3s;
 }
 .nav li.logo {

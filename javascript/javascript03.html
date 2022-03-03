@@ -71,12 +71,11 @@
                 <li>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</li>
                 <li>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</li>
                 <li>12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</li>
-                
-                
-                <li>01. 내부 함수 </li>
-                <li>01. 즉시실행 함수 </li>
-                <li>01. 파라미터 함수 </li>
-                <li>01. 아규먼트 함수 </li>
+                <li>13. 내부 함수 </li>
+                <li>14. 즉시실행 함수 </li>
+                <li>15. 파라미터 함수 </li>
+                <li>16. 아규먼트 함수 </li>
+
                 <li>01. 재귀 함수 </li>
                 <li>01. 콜백 함수 </li>
                 <li>01. 객체생성자 함수 </li>
@@ -354,6 +353,106 @@
             </div>
             <!-- //sample12 -->
 
+            <!-- sample13 -->
+            <div id="sample13" class="sample">
+                <h3>13. 내부 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        function funA(){
+            document.write("13. 함수 A가 실행되었습니다.");
+        }
+        funA();
+        function funB(){
+            document.write("13. 함수 B가 실행되었습니다.");
+        }
+        funB();
+    }
+    func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        13. 함수 A가 실행되었습니다.13. 함수 B가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample13 -->
+
+            <!-- sample14 -->
+            <div id="sample14" class="sample">
+                <h3>14. 즉시 실행 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    // function func(){
+    //     document.write("14. 함수가 실행되었습니다.")
+    // }
+    // func();
+
+    (function (){
+        document.write("14. 함수가 실행되었습니다.");
+    }());
+
+    (() => {
+        document.write("14. 함수가 실행되었습니다.");
+    })();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        14. 함수가 실행되었습니다.14. 함수가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample14 -->
+
+            <!-- sample15 -->
+            <div id="sample15" class="sample">
+                <h3>15. 파라미터 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    // function func(str){
+    //     document.write(str);
+    // }
+    // func("15. 함수가 실행되었습니다.");
+
+    function func(str = "15. 함수가 실행되었습니다."){
+        document.write(str);
+    }
+    func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        15. 함수가 실행되었습니다.
+                    </div>
+                </div>
+            </div>
+            <!-- //sample15 -->
+
+            <!-- sample16 -->
+            <div id="sample16" class="sample">
+                <h3>16. 아규면트 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(a, b){
+        document.write(arguments[0]);
+        document.write(arguments[1]);
+    }
+    func("16. 함수가 실행되었습니다[0].", "16. 함수가 실행되었습니다[1].")
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        16. 함수가 실행되었습니다[0].16. 함수가 실행되었습니다[1].
+                    </div>
+                </div>
+            </div>
+            <!-- //sample16 -->
         </div>
         <!-- //script -->
 
@@ -492,7 +591,60 @@
             document.write(func("12. 함수가 실행되었습니다."))
         }
 
+        //13. 내부 함수 
+        {
+            function func(){
+                function funA(){
+                    document.write("13. 함수 A가 실행되었습니다.");
+                }
+                funA();
+                function funB(){
+                    document.write("13. 함수 B가 실행되었습니다.");
+                }
+                funB();
+            }
+            func();
+        }
+
+        //14. 즉시 실행 함수
+        {
+            // function func(){
+            //     document.write("14. 함수가 실행되었습니다.")
+            // }
+            // func();
+
+            (function (){
+                document.write("14. 함수가 실행되었습니다.");
+            }());
+
+            (() => {
+                document.write("14. 함수가 실행되었습니다.");
+            })();
+        }
+
+        //15. 파라미터 함수
+        {
+            // function func(str){
+            //     document.write(str);
+            // }
+            // func("15. 함수가 실행되었습니다.");
+
+            function func(str = "15. 함수가 실행되었습니다."){
+                document.write(str);
+            }
+            func();
+        }
+
+        //16. 아규면트 함수
+        {
+            function func(a, b){
+                document.write(arguments[0]);
+                document.write(arguments[1]);
+            }
+            func("16. 함수가 실행되었습니다[0].", "16. 함수가 실행되었습니다[1].")
+        }
+
+
     </script>
 </body>
-
 </html>
