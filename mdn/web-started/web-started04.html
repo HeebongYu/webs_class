@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 기본</title>
+</head>
+<body>
+    <h3><a href="https://heebongyu.tistory.com/54">Web과 함께 시작하기</a></h3>
+
+    <h3><a href="https://heebongyu.tistory.com/58">HTML 기본</a></h3>
+    <p>
+        HTML(Hypertext Markup Language)은 웹 페이지와 그 내용을 구조화하기 위해 
+        사용하는 코드입니다. 예를 들면, 컨텐트는 여러 개의 문단, 글 머리 목록이 
+        구조화된 것이거나 사진이나 데이터 테이블일 수도 있습니다. 제목과 같이 이 
+        글은 HTML과 그 기능에 대한 기본적인 이해를 제공할 것입니다.
+    </p>
+
+    <h4>그래서 HTML은 무엇일까요?</h4>
+    <p>
+        HTML은 프로그래밍 언어가 아닙니다. 컨텐츠의 구조를 정의하는 마크업 언어입니다. 
+        HTML은 컨텐츠의 서로 다른 부분들을 씌우거나 감싸서 다른 형식으로 보이게하거나 
+        특정한 방식으로 동작하도록 하는 일련의 요소(elements)로 이루어져 있습니다. 
+        태그(tags)로 감싸는 것으로 단어나 이미지를 다른 어딘가로 하이퍼링크(hyperlink)하거나 
+        단어들을 이탤릭체로 표시하고 글씨체를 크게 또는 작게 만드는 등의 
+        일을 할 수 있습니다.
+    </p>
+    <pre><code>너의 그 한 마디 말도 그 웃음도 나에겐 커다란 의미 - 너의 의미</code></pre>
+    <p>
+        이 문장이 독립적인 구문이길 원한다면 문단태그(paragraph tags)로 감싸서 그것이 하나의 문단임을 명시할 수 있습니다.
+    </p>
+    <pre><code>&lt;p&gt;너의 그 한 마디 말도 그 웃음도 나에겐 커다란 의미 - 너의 의미&lt;/p&gt;</code></pre>
+
+    <h4>요소 분석</h4>
+    <p>
+        이 문단요소에 대해 조금 더 살펴봅시다.
+    </p>
+    <ul>
+        <li>여는 태그(opening tag) : 여는 태그는 요소의 이름으로 구성되고 여닫는 꺾쇠괄호로 감싸집니다.</li>
+        <li>닫는 태그(closing tag) : 닫는 태그는 여는 태그와 같지만, 요소의 이름 앞에 전방향 슬래시가 포함된다는 점이 다릅니다.</li>
+        <li>내용(content) : 내용(content)은 이 예제에서는 그냥 텍스트입니다.</li>
+        <li>요소(element) : 요소는 여는 태그와 닫는 태그, 그리고 컨텐츠로 이루어집니다.</li>
+    </ul>
+    
+    <h4>요소 중첩</h4>
+    <p>
+        요소는 다른 요소의 안에 놓을 수 있습니다. 이것을 중첩(nesting)이라고 부릅니다.
+    </p>
+    <pre><code>&lt;p&gt;너의 그 한 마디 말도 그 &lt;strong&gt;웃음&lt;/strong&gt;도 나에겐 커다란 의미 - 너의 의미&lt;/p&gt;</code></pre>
+
+    <h4>빈 요소</h4>
+    <p>
+        어떤 요소들은 내용을 갖지 않습니다, 그리고 이것을 빈 요소(empty elements)라고 합니다. 예를들어 &lt;img&gt; 요소가 있습니다.
+    </p>
+
+    <h4>HTML 문서 해부</h4>
+    <p>
+        <a href="https://heebongyu.tistory.com/57">파일 다루기</a>에서 넣은 코드를 다시 살펴봅시다.
+    </p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;My test page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src="images/firefox-icon.png" alt="My test image"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    <ul>
+        <li>
+            &lt;!DOCTYPE html&gt; : &lt;!DOCTYPE html&gt;은 오래전 HTML로 인정받기 
+            위해 HTML 페이지가 따라야 할 일련의 규칙으로의 연결통로로써 작동하는 것을 
+            의미하였습니다. 하지만, 지금은 역사적인 유물일 뿐입니다.
+        </li>
+        <li>
+            &lt;html&gt; : &lt;html&gt; 요소는 페이지 전체의 컨텐츠를 감싸며 
+            루트(root) 요소라고도 합니다.
+        </li>
+        <li>
+            &lt;head&gt; : &lt;head&gt; 요소는 HTML 페이지에 포함되어 있는 모든 것들의 
+            컨테이너 역할을 합니다. 여기에는 <a href="https://developer.mozilla.org/en-US/docs/Glossary/Keyword">keywords</a>와 
+            검색 결과에 표시되길 원하는 페이지 설명, 컨텐츠를 꾸미기 위한 CSS, 
+            문자 집합 선언 등과 같은 것들이 포함됩니다.
+        </li>
+        <li>
+            &lt;body&gt; : &lt;body&gt; 요소는 페이지에 방문한 모든 웹 사용자들에게 보여주길 
+            원하는 모든 컨텐츠를 담고 있으며, 그것이 텍스트일 수도, 이미지, 비디오, 게임, 
+            플레이할 수 있는 오디오 트랙이나 다른 무엇이든 될 수 있습니다.
+        </li>
+        <li>
+            &lt;meta charset="utf-8"&gt; : &lt;meta charset="utf-8"&gt; 요소는 문서가 사용해야 할 
+            문자 집합을 utf-8으로 설정합니다.
+        </li>
+        <li>
+            &lt;title&gt; : &lt;title&gt; 요소는 페이지의 제목을 설정하는 것으로 페이지가 로드되는 
+            브라우저의 탭에 이 제목이 표시됩니다. 이 요소는 북마크나 즐겨찾기에서 페이지를 
+            설명하는 것으로도 사용됩니다.
+        </li>
+    </ul>
+
+    <h4>문서 나타내기</h4>
+    <p>
+        여기에서는 문자를 나타내기 위해 사용하는 몇 개의 기본적인 HTML 엘리먼트를 다룰 것입니다.
+    </p>
+    <ul>
+        <li>
+            제목(&lt;h1&gt;~&lt;h6&gt;) : 제목 요소는 여러분이 내용의 특정 부분이 제목 또는 내용의 
+            하위 제목임을 구체화 할 수 있게 해줍니다.
+<pre><code>&lt;h1&gt;너의 그 한 마디 말도 그 웃음도&lt;/h1&gt;
+&lt;h2&gt;나에겐 커다란 의미&lt;/h2&gt;
+&lt;h3&gt;너의 그 작은 눈빛도&lt;/h3&gt;
+&lt;h4&gt;쓸쓸한 뒷모습도 나에겐 힘겨운 약속&lt;/h4&gt;
+</code></pre>
+        </li>
+        <li>
+            문단(&lt;p&gt;) : 문단 요소는 문자의 문단을 포함하기 위한 것입니다.
+<pre><code>&lt;p&gt;너의 모든 것은 내게로 와 풀리지 않는 수수께끼가 되네&lt;/p&gt;
+</code></pre>
+        </li>
+        <li>
+            목록 : 많은 웹의 내용은 목록이기 때문에, HTML은 이것을 위한 특별한 요소를 가지고 있습니다.
+            <ol>
+                <li>순서가 없는 목록(&lt;ul&gt;)</li>
+                <li>순서가 있는 목록(&lt;ol&gt;)</li>
+                <li>목록의 리스트(&lt;li&gt;)</li>
+            </ol>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;슬픔은 간이역에 코스모스로 피고&lt;/li&gt;
+    &lt;li&gt;스쳐 불어온 넌 향긋한 바람&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+    &lt;li&gt;나 이제 뭉게구름 위에 성을 짓고&lt;/li&gt;
+    &lt;li&gt;널 향해 창을 내리 바람 드는 창을&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+        </li>
+        <li>
+            연결(&lt;a&gt;) : 연결은 아주 중요합니다. 이것은 웹을 웹으로 만들어줍니다.
+<pre><code>&lt;a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%95%84%EC%9D%B4%EC%9C%A0+%EB%84%88%EC%9D%98%EC%9D%98%EB%AF%B8"&gt;아이유 너의의미&lt;/a&gt;
+</code></pre>
+        </li>
+    </ul>
+</body>
+</html>
