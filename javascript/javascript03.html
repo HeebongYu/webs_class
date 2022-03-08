@@ -75,9 +75,11 @@
                 <li>14. 즉시실행 함수 </li>
                 <li>15. 파라미터 함수 </li>
                 <li>16. 아규먼트 함수 </li>
+                <li>17. 재귀 함수 </li>
+                <li>18. 콜백 함수 </li>
 
-                <li>01. 재귀 함수 </li>
-                <li>01. 콜백 함수 </li>
+
+
                 <li>01. 객체생성자 함수 </li>
                 <li>01. 프로토타입 함수 </li>
                 <li>01. 객체 리터럴 함수 </li>
@@ -453,6 +455,40 @@
                 </div>
             </div>
             <!-- //sample16 -->
+
+            <!-- sample17 -->
+            <div id="sample17" class="sample">
+                <h3>17. 재귀 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+   
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- //sample17 -->
+
+            <!-- sample18 -->
+            <div id="sample18" class="sample">
+                <h3>18. 콜백 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+   
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- //sample18 -->
         </div>
         <!-- //script -->
 
@@ -644,6 +680,27 @@
             func("16. 함수가 실행되었습니다[0].", "16. 함수가 실행되었습니다[1].")
         }
 
+        //17. 재귀 함수 : 자기 스스로를 호출
+        {
+            // function func(){
+            //     document.write("17. 함수가 실행되었습니다.");
+            //     func();
+            // }
+            // func();
+
+            function func(num){
+                if(num <= 1){
+                    document.write("17. 함수가 실행되었습니다.");
+                } else {
+                    document.write("17. 함수가 실행되었습니다.");
+                    func(num-1);
+                }
+            }
+            func(5); 
+        }
+
+        //18. 콜백 함수 : 나
+        {}
 
     </script>
 </body>

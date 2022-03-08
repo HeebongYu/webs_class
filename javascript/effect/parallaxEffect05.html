@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 효과</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+        }
+        #parallax__title {
+            padding: 20px;
+            font-weight: 400;
+        }
+        #parallax__title h1 {
+            font-size: 30px;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            font-weight: 500;
+            display: inline-block;
+        }
+        #parallax__title p {
+            font-size: 16px;
+        }
+        #parallax__title ul {
+            margin-top: 7px;
+        }
+        #parallax__title li {
+            display: inline;
+        }
+        #parallax__title li a {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px dashed #fff;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+        }
+        #parallax__title li.active a {
+            background: #fff;
+            color: #000;
+        }
+        #parallax__cont {
+            max-width: 1600px;
+            width: 98%;
+            margin: 0 auto;
+            /* background-color: rgba(255,255,255,0.1); */
+        }
+        .content__item {
+            width: 1000px;
+            max-width: 70vw;
+            margin: 30vw auto;
+            /* background-color: rgba(255,255,255,0.3); */
+            text-align: left;
+            margin-right: 0;
+            position: relative;
+            padding-top: 15vw;
+        }
+        .content__item:nth-child(even) {
+            margin-left: 0;
+            text-align: right;
+        }
+        .content__item__num {
+            font-size: 25vw;
+            position: absolute;
+            left: -5vw;
+            top: -7vw;
+            opacity: 0.07;
+            font-family: 'Poppins';
+            font-weight: 900;
+        }
+        .content__item:nth-child(even) .content__item__num {
+            left: auto;
+            right: -5vw;
+        }
+        .content__item__title {
+            padding-bottom: 5px;
+        }
+        .content__item__imgWrap {
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        .content__item__img {
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            filter: saturate(0%);
+            /*transition: all 1s;*/
+        }
+        .content__item__img:hover {
+            filter: saturate(100%);
+            transform: scale(1.025);
+        }
+        .content__item:nth-child(1) .content__item__img {background-image: url(img/img11.jpg);}
+        .content__item:nth-child(2) .content__item__img {background-image: url(img/img12.jpg);}
+        .content__item:nth-child(3) .content__item__img {background-image: url(img/img13.jpg);}
+        .content__item:nth-child(4) .content__item__img {background-image: url(img/img14.jpg);}
+        .content__item:nth-child(5) .content__item__img {background-image: url(img/img15.jpg);}
+        .content__item:nth-child(6) .content__item__img {background-image: url(img/img16.jpg);}
+        .content__item:nth-child(7) .content__item__img {background-image: url(img/img17.jpg);}
+        .content__item:nth-child(8) .content__item__img {background-image: url(img/img18.jpg);}
+        .content__item:nth-child(9) .content__item__img {background-image: url(img/img19.jpg);}
+
+        .content__item__desc {
+            font-size: 4vw;
+            line-height: 1.4;
+            margin-top: -5vw;
+            margin-left: -4vw;
+            z-index: 100;
+            position: relative;
+            word-break: keep-all;
+        }
+        .content__item:nth-child(even) .content__item__desc {
+            margin-left: auto;
+            margin-right: -4vw;
+        }
+
+        #parallax__footer {}
+
+        /* info */
+        .scrollTop {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 50px;
+        }
+        .scrollInfo {
+            position: fixed;
+            left: 20px;
+            bottom: 70px;
+            z-index: 1000;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .scrollInfo li {
+            list-style: none;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="parallax__title">
+        <h1><a href="parallaxEffect.html">Javascript Parallax Effect05</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 이질감 효과</p>
+        <ul>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li class="active"><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
+        </ul>
+    </header>
+    <!-- //parallax__tittle -->
+
+    <main id="parallax__cont">
+        <div id="contents">
+            <section id="section1" class="content__item">
+                <span class="content__item__num">01</span>
+                <h2 class="content__item__title">Section1</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">너의 그 한 마디 말도 그 웃음도 나에겐 커다란 의미</p>
+            </section>
+            <!-- //section1 -->
+
+            <section id="section2" class="content__item">
+                <span class="content__item__num">02</span>
+                <h2 class="content__item__title">Section2</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">너의 그 작은 눈빛도 쓸쓸한 뒷모습도 나에겐 힘겨운 약속</p>
+            </section>
+            <!-- //section2 -->
+
+            <section id="section3" class="content__item">
+                <span class="content__item__num">03</span>
+                <h2 class="content__item__title">Section3</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">너의 모든 것은 내게로 와 풀리지 않는 수수께끼가 되네</p>
+            </section>
+            <!-- //section3 -->
+
+            <section id="section4" class="content__item">
+                <span class="content__item__num">04</span>
+                <h2 class="content__item__title">Section4</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">슬픔은 간이역에 코스모스로 피고 스쳐 불어온 넌 향긋한 바람</p>
+            </section>
+            <!-- //section4 -->
+
+            <section id="section5" class="content__item">
+                <span class="content__item__num">05</span>
+                <h2 class="content__item__title">Section5</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">나 이제 뭉게구름 위에 성을 짓고 널 향해 창을 내리 바람 드는 창을</p>
+            </section>
+            <!-- //section5 -->
+
+            <section id="section6" class="content__item">
+                <span class="content__item__num">06</span>
+                <h2 class="content__item__title">Section6</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">너의 그 한 마디 말도 그 웃음도 나에겐 커다란 의미</p>
+            </section>
+            <!-- //section6 -->
+
+            <section id="section7" class="content__item">
+                <span class="content__item__num">07</span>
+                <h2 class="content__item__title">Section7</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">너의 그 작은 눈빛도 쓸쓸한 뒷모습도 나에겐 힘겨운 약속</p>
+            </section>
+            <!-- //section7 -->
+
+            <section id="section8" class="content__item">
+                <span class="content__item__num">08</span>
+                <h2 class="content__item__title">Section8</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">너의 모든 것은 내게로 와 풀리지 않는 수수께끼가 되네</p>
+            </section>
+            <!-- //section8 -->
+
+            <section id="section9" class="content__item">
+                <span class="content__item__num">09</span>
+                <h2 class="content__item__title">Section9</h2>
+                <figure class="content__item__imgWrap">
+                    <div class="content__item__img"></div>
+                </figure>
+                <p class="content__item__desc">슬픔은 간이역에 코스모스로 피고 스쳐 불어온 넌 향긋한 바람</p>
+            </section>
+            <!-- //section9 -->
+        </div>
+    </main>
+    <!-- //parallax__cont -->
+
+    <!-- info -->
+    <div class="scrollTop">
+        scrollTop : <span>0</span>px
+    </div>
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="js/gsap.min.js"></script>
+    <script>
+        function scroll(){
+            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
+            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+
+            //const img = document.querySelector("#section1 .content__item__img");
+            //img.style.transform = "translateY("+scrollTop/10+"px)";
+
+            document.querySelectorAll(".content__item").forEach(item => {
+                let offset1 = (scrollTop - item.offsetTop) * 0.07
+                let offset2 = (scrollTop - item.offsetTop) * 0.3
+
+                let target1 = item.querySelector(".content__item__img")
+                let target2 = item.querySelector(".content__item__desc")
+                let target3 = item.querySelector(".content__item__num")
+
+                //target1.style.transform = `translateY(${offset1}px)`;
+                //target2.style.transform = `translateY(${offset2}px)`;
+                //target3.style.transform = `translateY(${-offset2*2}px)`;
+
+                gsap.to(target1, {duration: 0.3, y: offset1})
+                gsap.to(target2, {duration: 0.3, y: offset2})
+                gsap.to(target3, {duration: 0.3, y: -offset2})
+            })
+
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+
+        
+   
+
+    </script>
+
+</body>
+</html>

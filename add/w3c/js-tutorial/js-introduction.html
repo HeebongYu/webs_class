@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-introduction</title>
+</head>
+<body>
+    <h3>자바스크립 소개</h3>
+    <h4>
+        JavaScript Can Change HTML Content<br>
+        JavaScript는 HTML의 컨텐츠를 변경할 수 있습니다
+    </h4>
+    <div>
+        <span>예시</span>
+<pre><code>document.getElementById("demo").innerHTML = "Hello JavaScript";
+</code></pre>
+        <ul>
+            <li>JavaScript는 큰따옴표와 작은따옴표를 모두 허용합니다.</li>
+            <li>getElementById("demo"): HTML문서의 컨테츠 중에서 아이디가 "demo"인 요소룰 가져옴니다.</li>
+            <li>~.innerHTML = "Hello JavaScript"; : ~에 "Hello JavaScript"을 HTML 방식으로 입력합니다.</li>
+        </ul>
+    </div>
+
+    <h4>
+        JavaScript Can Change HTML Attribute Values<br>
+        JavaScript는 HTML의 속성 값을 변경할 수 있습니다
+    </h4>
+    <div>
+        <span>예시</span>
+<pre><code>document.getElementById("change2").setAttribute("type", "button");
+</code></pre>
+        <ul>
+            <li>~.setAttribute("type", "button"); : ~에 속성(type)의 값을 "button"으로 변경합니다.</li>
+        </ul>
+    </div>
+
+    <h4>
+        JavaScript Can Change HTML Styles (CSS)<br>
+        JavaScript는 HTML의 스타일(CSS)을 변경할 수 있습니다.
+    </h4>
+    <div>
+        <span>예시</span>
+<pre><code>document.getElementById("demo").style.fontSize = "35px";
+</code></pre>
+        <ul>
+            <li>~.style.fontsize = "35px"; : ~에 스타일(css)의 속성(fontsize)의 값을 "35px"으로 변경합니다.</li>
+        </ul>
+    </div>
+
+    <h4>
+        JavaScript Can Hide HTML Elements<br>
+        JavaScript는 HTML 요소를 숨길 수 있습니다
+    </h4>
+    <div>
+        <span>예시</span>
+<pre><code>document.getElementById("demo").style.display = "none";
+</code></pre>
+        <ul>
+            <li>~.style.display = "none"; : ~에 스타일(css)의 속성(display)의 값을 "none"으로 변경하여 영역을 제거합니다.</li>
+        </ul>
+    </div>
+
+    <h4>
+        JavaScript Can Show HTML Elements<br>
+        JavaScript는 HTML 요소를 표시할 수 있습니다
+    </h4>
+    <div>
+        <span>예시</span>
+<pre><code>document.getElementById("demo").style.display = "block";
+</code></pre>
+        <ul>
+            <li>~.style.display = "none"; : ~에 스타일(css)의 속성(display)의 값을 "block"으로 변경하여 영역을 생성합니다.</li>
+        </ul>
+    </div>
+</body>
+</html>

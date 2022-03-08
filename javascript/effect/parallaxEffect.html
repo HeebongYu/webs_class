@@ -4,424 +4,188 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴랙스 효과</title>
-
-    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <title>패럴랙스 이펙트</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
         * {
             margin: 0;
             padding: 0;
-            /* box-sizing: border-box; */
+            box-sizing: border-box;
         }
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-        body {
-            background-color: #222;
-            color: #fff;
-            font-family: 'NexonLv1Gothic';
-            font-weight: 300;
-        }
-        #parallax__title {
-            padding: 20px;
-            font-weight: 400;
-        }
-        #parallax__title h1 {
-            font-size: 30px;
-            border-bottom: 1px dashed #fff;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            font-weight: 500;
-            display: inline-block;
-        }
-        #parallax__title p {
-            font-size: 16px;
-        }
-        #parallax__nav {
-            position: fixed;
-            right: 20px;
-            top: 20px;
-            z-index: 1000;
-            background-color: rgba(0,0,0,0.4);
-            padding: 15px 20px;
-            border-radius: 50px;
-        }
-        #parallax__nav li {
-            list-style: none;
-            display: inline;
-        }
-        #parallax__nav li a {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            padding: 5px;
-            text-align: center;
-            line-height: 30px;
-        }
-        #parallax__nav li.active a {
-            background: #fff;
-            color: #222;
-            border-radius: 50%;
-        }
-        #parallax__cont {
-            max-width: 1600px;
-            width: 98%;
-            margin: 0 auto;
-            /* background-color: rgba(255,255,255,0.1); */
-        }
-        .content__item {
-            width: 1000px;
-            max-width: 70vw;
-            margin: 30vw auto;
-            /* background-color: rgba(255,255,255,0.3); */
-            text-align: left;
-            margin-right: 0;
-            position: relative;
-            padding-top: 15vw;
-        }
-        .content__item:nth-child(even) {
-            margin-left: 0;
-            text-align: right;
-        }
-        .content__item__num {
-            font-size: 25vw;
-            position: absolute;
-            left: -5vw;
-            top: -7vw;
-            opacity: 0.07;
-            font-family: 'Poppins';
-            font-weight: 900;
-        }
-        .content__item:nth-child(even) .content__item__num {
-            left: auto;
-            right: -5vw;
-        }
-        .content__item__title {
-            padding-bottom: 5px;
-        }
-        .content__item__imgWrap {
+        html {
             width: 100%;
-            padding-bottom: 56.25%;
-            background: #000;
-            position: relative;
+            height: 100vh;
+            background: linear-gradient(to bottom, #11E8BB 0%,#8200C9 100%);
             overflow: hidden;
         }
-        .content__item__img {
+        h1 {
+            font-family: 'Six Caps', sans-serif;
             position: absolute;
-            left: -5%;
-            top: -5%;
-            width: 110%;
-            height: 110%;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            filter: saturate(0%);
-            transition: all 1s;
+            left: 50%;
+            top: 50%;
+            font-size: 6vw;
+            text-transform: uppercase;
+            font-weight: normal;
+            transform: translate(-50%, -50%);
+            letter-spacing: 2vw;
+            background: -webkit-linear-gradient(#8200C9 30%, #6d73c981 70%, #25E8BB9f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .content__item__img:hover {
-            filter: saturate(100%);
-            transform: scale(1.025);
+        .pages {
+            font-family: 'NexonLv1Gothic';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
         }
-        .content__item:nth-child(1) .content__item__img {background-image: url(img/img11.jpg);}
-        .content__item:nth-child(2) .content__item__img {background-image: url(img/img12.jpg);}
-        .content__item:nth-child(3) .content__item__img {background-image: url(img/img13.jpg);}
-        .content__item:nth-child(4) .content__item__img {background-image: url(img/img14.jpg);}
-        .content__item:nth-child(5) .content__item__img {background-image: url(img/img15.jpg);}
-        .content__item:nth-child(6) .content__item__img {background-image: url(img/img16.jpg);}
-        .content__item:nth-child(7) .content__item__img {background-image: url(img/img17.jpg);}
-        .content__item:nth-child(8) .content__item__img {background-image: url(img/img18.jpg);}
-        .content__item:nth-child(9) .content__item__img {background-image: url(img/img19.jpg);}
-
-        .content__item__desc {
-            font-size: 4vw;
-            line-height: 1.4;
-            margin-top: -5vw;
-            margin-left: -4vw;
-            z-index: 100;
-            position: relative;
-            word-break: keep-all;
-        }
-        .content__item:nth-child(even) .content__item__desc {
-            margin-left: auto;
-            margin-right: -4vw;
-        }
-
-        #parallax__footer {}
-
-        /* info */
-        .scrollTop {
-            position: fixed;
-            left: 20px;
-            bottom: 20px;
-            z-index: 1000;
-            background: rgba(0,0,0,0.4);
-            color: #fff;
-            padding: 10px 30px;
-            border-radius: 50px;
-        }
-        .scrollInfo {
-            position: fixed;
-            left: 20px;
-            bottom: 70px;
-            z-index: 1000;
-            background: rgba(0,0,0,0.4);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-        .scrollInfo li {
+        .pages li {
+            display: inline;
             list-style: none;
-            line-height: 1.6;
+        }
+        .pages li a {
+            display: inline-block;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            border: 1px solid #fff;
+            text-decoration: none;
+            border-radius: 50%;
+            font-size: 14px;
+            margin: 4px;
+            box-shadow: 0 0 0 #fff inset;
+            transition: all 0.4s;
+            opacity: 0.8;
+        }
+        .pages li a:hover {
+            box-shadow: 0 -100px 0 #fff inset;
+            color: #6C4A70;
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <header id="parallax__title">
-        <h1><a href="parallaxEffect.html">Javascript Parallax Effect01</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 메뉴 이동</p>
-    </header>
-    <!-- //parallax__tittle -->
+    <div id="canvas"></div>
 
-    <nav id="parallax__nav">
+    <a href="../../index.html"><h1>parallax Effect</h1></a>
+
+    <div class="pages">
         <ul>
-            <li class="active"><a href="#section1">s1</a></li>
-            <li><a href="#section2">s2</a></li>
-            <li><a href="#section3">s3</a></li>
-            <li><a href="#section4">s4</a></li>
-            <li><a href="#section5">s5</a></li>
-            <li><a href="#section6">s6</a></li>
-            <li><a href="#section7">s7</a></li>
-            <li><a href="#section8">s8</a></li>
-            <li><a href="#section9">s9</a></li>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
+            <li><a href="parallaxEffect08.html">8</a></li>
+            <li><a href="parallaxEffect09.html">9</a></li>
+            <li><a href="parallaxEffect10.html">10</a></li>
         </ul>
-    </nav>
-    <!-- //parallax__nav -->
-
-    <main id="parallax__cont">
-        <div class="contents">
-            <section id="section1" class="content__item">
-                <span class="content__item__num">01</span>
-                <h2 class="content__item__title">Section1</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">너의 그 한 마디 말도 그 웃음도 나에겐 커다란 의미</p>
-            </section>
-            <!-- //section1 -->
-
-            <section id="section2" class="content__item">
-                <span class="content__item__num">02</span>
-                <h2 class="content__item__title">Section2</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">너의 그 작은 눈빛도 쓸쓸한 뒷모습도 나에겐 힘겨운 약속</p>
-            </section>
-            <!-- //section2 -->
-
-            <section id="section3" class="content__item">
-                <span class="content__item__num">03</span>
-                <h2 class="content__item__title">Section3</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">너의 모든 것은 내게로 와 풀리지 않는 수수께끼가 되네</p>
-            </section>
-            <!-- //section3 -->
-
-            <section id="section4" class="content__item">
-                <span class="content__item__num">04</span>
-                <h2 class="content__item__title">Section4</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">슬픔은 간이역에 코스모스로 피고 스쳐 불어온 넌 향긋한 바람</p>
-            </section>
-            <!-- //section4 -->
-
-            <section id="section5" class="content__item">
-                <span class="content__item__num">05</span>
-                <h2 class="content__item__title">Section5</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">나 이제 뭉게구름 위에 성을 짓고 널 향해 창을 내리 바람 드는 창을</p>
-            </section>
-            <!-- //section5 -->
-
-            <section id="section6" class="content__item">
-                <span class="content__item__num">06</span>
-                <h2 class="content__item__title">Section6</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">너의 그 한 마디 말도 그 웃음도 나에겐 커다란 의미</p>
-            </section>
-            <!-- //section6 -->
-
-            <section id="section7" class="content__item">
-                <span class="content__item__num">07</span>
-                <h2 class="content__item__title">Section7</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">너의 그 작은 눈빛도 쓸쓸한 뒷모습도 나에겐 힘겨운 약속</p>
-            </section>
-            <!-- //section7 -->
-
-            <section id="section8" class="content__item">
-                <span class="content__item__num">08</span>
-                <h2 class="content__item__title">Section8</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">너의 모든 것은 내게로 와 풀리지 않는 수수께끼가 되네</p>
-            </section>
-            <!-- //section8 -->
-
-            <section id="section9" class="content__item">
-                <span class="content__item__num">09</span>
-                <h2 class="content__item__title">Section9</h2>
-                <figure class="content__item__imgWrap">
-                    <div class="content__item__img"></div>
-                </figure>
-                <p class="content__item__desc">슬픔은 간이역에 코스모스로 피고 스쳐 불어온 넌 향긋한 바람</p>
-            </section>
-            <!-- //section9 -->
-        </div>
-    </main>
-    <!-- //parallax__cont -->
-
-    <!-- info -->
-    <div class="info">
-        <div class="scrollTop">
-            scrollTop : <span>0</span>px
-        </div>
-        <div class="scrollInfo">
-            <ul>
-                <li>#section1 offset() : <span class="offset1">0</span>px</li>
-                <li>#section2 offset() : <span class="offset2">0</span>px</li>
-                <li>#section3 offset() : <span class="offset3">0</span>px</li>
-                <li>#section4 offset() : <span class="offset4">0</span>px</li>
-                <li>#section5 offset() : <span class="offset5">0</span>px</li>
-                <li>#section6 offset() : <span class="offset6">0</span>px</li>
-                <li>#section7 offset() : <span class="offset7">0</span>px</li>
-                <li>#section8 offset() : <span class="offset8">0</span>px</li>
-                <li>#section9 offset() : <span class="offset9">0</span>px</li>
-            </ul>
-        </div>
     </div>
-    <!-- //info -->
 
-    <!-- script -->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/93/three.min.js"></script>
     <script>
-        document.querySelectorAll("#parallax__nav li a").forEach(li => {
-            li.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior:"smooth"
-                })
-            })
-        })
+        //화면 설정
+        const scene = new THREE.Scene();
 
-        window.addEventListener("scroll", () => {
-            // let scrollTop = window.pageYOffset;
-            // let scrollTop = document.documentElement.scrollTop;
-            // let scrollTop = window.scrollY;
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+        //카메라 설정
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 1, 1000);
+        camera.position.z = 400;
+        scene.add(camera);
 
-            // if(scrollTop > document.getElementById("section1").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(1)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section2").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(2)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section3").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(3)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section4").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(4)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section5").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(5)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section6").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(6)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section7").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(7)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section8").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(8)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section9").offsetTop){
-            //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav li:nth-child(9)").classList.add("active");
-            // }
+        //렌더링 설정
+        const renderer = new THREE.WebGLRenderer({antialias: true, alpha:true});
+        renderer.setPixelRatio((window.devicePixelRatio) ? window.devicePixelRatio : 1);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.autoClear = false;
+        renderer.setClearColor(0x000000, 0.0);
+        document.getElementById('canvas').appendChild(renderer.domElement);
 
-            // for
-            // for(let i=1; i<=9; i++){
-            //     if(scrollTop >= document.getElementById("section"+i).offsetTop-2){
-            //         document.querySelectorAll("#parallax__nav li").forEach(li => {
-            //             li.classList.remove("active");
-            //         })
-            //         document.querySelector("#parallax__nav li:nth-child("+i+")").classList.add("active");
-            //     }
-            // }
+        //오브젝트 설정
+        const circle = new THREE.Object3D();
+        const skelet = new THREE.Object3D();
+        const particle = new THREE.Object3D();
+        scene.add(circle);
+        scene.add(skelet);
+        scene.add(particle);
 
-            // forEach
-            document.querySelectorAll(".content__item").forEach((e, i) => {
-                if(scrollTop >= e.offsetTop-2){
-                    document.querySelectorAll("#parallax__nav li").forEach(li => {
-                        li.classList.remove("active");
-                    })
-                    document.querySelector("#parallax__nav li:nth-child("+(i+1)+")").classList.add("active");
-                }
-            })
+        //모양 설정
+        const geometry = new THREE.TetrahedronGeometry(2, 0);
+        const geom = new THREE.IcosahedronGeometry(7, 1);
+        const geom2 = new THREE.IcosahedronGeometry(15, 1);
+        const material = new THREE.MeshPhongMaterial({color: 0xffffff, shading: THREE.FlatShading});
+        const mat = new THREE.MeshPhongMaterial({color: 0xffffff, shading: THREE.FlatShading});
+        const mat2 = new THREE.MeshPhongMaterial({color: 0xffffff, wireframe: true, side: THREE.DoubleSide});
 
-            //info
-            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+        //파티클 설정
+        for (let i=0; i<700; i++) {
+            let mesh = new THREE.Mesh(geometry, material);
+            mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
+            mesh.position.multiplyScalar(90 + (Math.random() * 700));
+            mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
+            particle.add(mesh);
+        }
 
-            document.querySelector(".offset1").innerText = document.getElementById("section1").offsetTop;
-            document.querySelector(".offset2").innerText = document.getElementById("section2").offsetTop;
-            document.querySelector(".offset3").innerText = document.getElementById("section3").offsetTop;
-            document.querySelector(".offset4").innerText = document.getElementById("section4").offsetTop;
-            document.querySelector(".offset5").innerText = document.getElementById("section5").offsetTop;
-            document.querySelector(".offset6").innerText = document.getElementById("section6").offsetTop;
-            document.querySelector(".offset7").innerText = document.getElementById("section7").offsetTop;
-            document.querySelector(".offset8").innerText = document.getElementById("section8").offsetTop;
-            document.querySelector(".offset9").innerText = document.getElementById("section9").offsetTop;
-        })
+        //크기 설정
+        var planet = new THREE.Mesh(geom, mat);
+        planet.scale.x = planet.scale.y = planet.scale.z = 16;
+        circle.add(planet);
+        var planet2 = new THREE.Mesh(geom2, mat2);
+        planet2.scale.x = planet2.scale.y = planet2.scale.z = 10;
+        skelet.add(planet2);
 
+        //조명 설정
+        const ambientLight = new THREE.AmbientLight(0x999999);
+        const lights = [];
+        lights[0] = new THREE.DirectionalLight( 0xffffff, 1 );
+        lights[0].position.set( 1, 0, 0 );
+        lights[1] = new THREE.DirectionalLight( 0x11E8BB, 1 );
+        lights[1].position.set( 0.75, 1, 0.5 );
+        lights[2] = new THREE.DirectionalLight( 0x8200C9, 1 );
+        lights[2].position.set( -0.75, -1, 0.5 );
+        scene.add(ambientLight);
+        scene.add(lights[0]);
+        scene.add(lights[1]);
+        scene.add(lights[2]);
+
+        //애니메이션 설정
+        function animate(){
+            requestAnimationFrame(animate);
+            particle.rotation.x -= 0.001;
+            particle.rotation.y -= 0.003;
+            circle.rotation.x -= 0.002;
+            circle.rotation.y -= 0.003;
+            skelet.rotation.x -= 0.001;
+            skelet.rotation.y += 0.002;
+            renderer.clear();
+            renderer.render(scene, camera)
+        }
+        animate();
+
+        //화면 사이즈 설정
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        window.addEventListener('resize', onWindowResize);
     </script>
 </body>
 </html>
