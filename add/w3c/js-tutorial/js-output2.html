@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-output2</title>
+</head>
+<body>
+    <h3>자바스크립트 출력 - 실습</h3>
+
+    <h4>HTML 요소의 변경 - innerHTML 사용하기</h4>
+    <div>
+        <p>5+6</p>
+        <p id="change1">5+6</p>
+    </div>
+
+    <h4>단순 입력(테스트용) - document.write() 사용하기</h4>
+
+    <h4>window.alert() 사용하기</h4>
+    <h4>console.log() 사용하기</h4>
+    <h4>window.print() 사용하기</h4>
+
+    <script>
+        document.getElementById("change1").innerHTML = 5 + 6;
+
+        document.write(5 + 6);
+
+    </script>
+</body>
+</html>

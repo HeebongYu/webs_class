@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-output</title>
+</head>
+<body>
+    <h3>자바스크립트 출력</h3>
+    <div>
+        <p>
+            JavaScript는 다양한 방식으로 데이터를 표시할 수 있습니다.
+        </p>
+    </div>
+
+    <h4>HTML 요소의 변경 - innerHTML 사용하기</h4>
+    <div>
+        <span>예시</span>
+<pre><code>&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script&gt;
+    document.getElementById("demo").innerHTML = 5 + 6;
+&lt;/script&gt;
+</code></pre>
+        <ul>
+            <li>innerHTML 속성은 HTML에 요소의 데이터를 변경하는 일반적인 방법입니다.</li>
+            <li>~.innerHTML = 5 + 6; : ~에 HTML 요소를 "5 + 6"으로 변경합니다.</li>
+        </ul>
+    </div>
+
+    <h4>단순 입력(테스트용) - document.write() 사용하기</h4>
+    <div>
+        <span>예시</span>
+<pre><code>
+&lt;script&gt;
+    document.write(5 + 6);
+&lt;/script&gt;
+</code></pre>
+        <ul>
+            <li>document.write() 메서드는 테스트용으로만 사용해야 합니다.</li>
+            <li>document.write(5 + 6); : 하단에 "5 + 6"을 입력합니다.</li>
+        </ul>
+    </div>
+
+
+    <h4>window.alert() 사용하기</h4>
+    <h4>console.log() 사용하기</h4>
+    <h4>window.print() 사용하기</h4>
+</body>
+</html>
