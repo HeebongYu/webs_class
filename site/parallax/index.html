@@ -12,6 +12,12 @@
             font-weight: normal;
             font-style: normal;
         }
+        @font-face {
+            font-family: '양진체';
+            src: url('https://cdn.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -46,13 +52,8 @@
             vertical-align: top;
             object-fit: cover;
         }
-
-
-
         #contents {}
-        #section1 {}
         
-
         /* section1__bg */
         .section1__bg img {
             width: 70%;
@@ -77,14 +78,36 @@
         .section2__bg {
             width: 100%;
             height: 100vh;
-            background: #000;
+            background: #222;
         }
         .section2__text1 {
             color: #fff;
-            font-size: 10vw;
+            font-size: 5vw;
+            font-family: '양진체';
+            font-weight: bold;
+            line-height: 1.6;
+            white-space: nowrap;
         }
         .section2__img1 {
             width: 50vw;
+            top: 40%;
+        }
+        .section2__img1__site {
+            position: absolute;
+            left: 50%; top: 0.5vw;
+            transform: translate(-50%);
+            width: 41.2vw;
+            height: 26.7vw;
+            /* border: 1px solid #fff; */
+            border-radius: 0.4vw 0.4vw 0 0;
+            /* background: #222; */
+            overflow: hidden;
+
+        }
+        .section2__img1__site .move {
+            position: absolute;
+            left: 0;
+            top: 0;
         }
     </style>
 
@@ -111,35 +134,40 @@
                 data-2000 = "transform: translate(-50%, -50%) scale(1); top: 50%;"
                 data-3000 = "transform: translate(-50%, -50%) scale(1); top: 50%;"
                 data-4000 = "transform: translate(-50%, -50%) scale(1); top: -10%;"
-            >Hello!
+            >
+            Hello!
             </div>
             <div class="section1__text2 fixed"
                 data-3000 = "transform: translate(-50%, -50%) scale(1); top: 100%; left: 50%;"
                 data-4000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%;"
                 data-5000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%;"
                 data-6000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: -100%;"
-            >저의 포트폴리오에 오신걸 환영합니다.
+            >
+            저의 포트폴리오에 오신걸 환영합니다.
             </div>
             <div class="section1__text3 fixed"
                 data-5000 = "transform: translate(-50%, -50%) scale(1); left: 150%;"
                 data-6000 = "transform: translate(-50%, -50%) scale(1); left: 50%;"
                 data-7000 = "transform: translate(-50%, -50%) scale(1); left: 50%;"
                 data-8000 = "transform: translate(-50%, -50%) scale(1); left: 150%;"
-            >재미있게 감상해주세요!
+            >
+            재미있게 감상해주세요!
             </div>
             <div class="section1__text4 fixed"
                 data-7000 = "transform: translate(-50%, -50%) scale(1); left: -100%; top: 50%;"
                 data-8000 = "transform: translate(-50%, -50%) scale(1); left: 50%; top: 50%;"
                 data-9000 = "transform: translate(-50%, -50%) scale(1); left: 50%; top: 50%;"
                 data-10000 = "transform: translate(-50%, -50%) scale(1); left: 50%; top: -10%"
-            >지금부터 시작합니다.
+            >
+            지금부터 시작합니다.
             </div>
             <div class="section1__text5 fixed"
                 data-9000 = "transform: translate(-50%, -50%) scale(1); top: 100%; left: 50%"
                 data-10000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%"
                 data-11000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 50%"
                 data-12000 = "transform: translate(-50%, -50%) scale(0); top: 50%; left: 105%"
-            >Let's go!
+            >
+            Let's go!
             </div>
         </section>
         <!-- section1 -->
@@ -149,21 +177,31 @@
             data-12000 = "display: block"
         >
             <div class="section2__bg fixed"
-                data-12000 = "width: 100%; height: 0vh; border-radius: 50%"
-                data-13000 = "width: 100%; height: 100vh;  border-radius: 0%"
+                data-12000 = "left: auto; right: 0; transform: translate(-50%, -50%); width: 0%; height: 0vh;"
+                data-13000 = "left: auto; right: 0; transform: translate(0%, -50%); width: 100%; height: 100vh;"
             ></div>
             <div class="section2__text1 fixed"
-                data-12500 = "transform: translate(-50%, -50%) scale(0.5);"
-                data-13000 = "transform: translate(-50%, -50%) scale(1);"
-                data-13300 = "transform: translate(-50%, -50%) scale(1);"
-                data-14000 = "transform: translate(-50%, -50%) scale(0);"
-            >I've Been Working In On Sites.
+                data-12000 = "transform: translate(-50%, -50%) scale(0); top: 50%"
+                data-13000 = "transform: translate(-50%, -50%) scale(1); top: 50%"
+                data-14000 = "transform: translate(-50%, -50%) scale(1); top: 50%"
+                data-14500 = "transform: translate(-50%, -50%) scale(0.5); top: 50%"
+                data-15000 = "transform: translate(-50%, -50%) scale(0.3); top: 50%"
+                data-15500 = "transform: translate(-50%, -50%) scale(0.3); top: 8%" 
+            >
+            I've Been Working In On Sites.
             </div>
             <div class="section2__img1 fixed"
-                data-14000 = "transform: translate(-50%, -50%) scale(0);"
-                data-15000 = "transform: translate(-50%, -50%) scale(1.2);"
+                data-14500 = "transform: translate(-50%, -50%) scale(0); top: 100%;"
+                data-15500 = "transform: translate(-50%, -50%) scale(1); top: 50%"
+                data-16000 = "transform: translate(-50%, -50%) scale(1.2); top: 50%"
             >
-                <img src="img/MacBook Pro 16.png" alt="이미지1">
+                <img src="img/MacBook Pro 16.png" alt="macbook">
+                <div class="section2__img1__site">
+                    <div class="move"
+                        data-16000 = "top: 0%"
+                        data-20000 = "top: -405%"
+                    ><img src="img/site01.png" alt="사이트01"></div>
+                </div>
             </div>
             
         </section>
