@@ -312,6 +312,28 @@ Records: 0  Duplicates: 0  Warnings: 0
                     <div class="bs-callout bs-callout-info">구문 : INSERT INTO 테이블명(필드명) VALUES(데이터)</div>
 <pre class="language-js"><code>INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('webstoryboy@naver.com','황상연','12dfsdecv','19920405','33','01039858583','578365839');
 INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('qhd1994@naver.com', '유희봉', '123asdd**7', '19940728', '29', '01075790168', '20220314');
+
+
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('webstoryboy@naver.com','황상연','12dfsdecv','19920405','33','01039858583','578365839');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('jungsik321@naver.com', '김정식', '1234', '19930209', '30', '01025738580', '20220314');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('ik6623@naver.com','박종호','1234qwer','19950909','28','01040976623','10293857');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('rmsgur2275@gmail.com','박근혁','alcls2860','19980611','25','01058122860', '12345678');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('apdlvmf8044@gmail.com', '송준섭', 'qweasdf', '19931120', '30', '01088648044', '21846351');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('sbxjs6999@naver.com','박근희','1234qwer','19970214','28',01041046999,'12345678');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('seongwoo@lycos.com','박성우','123456asd','19910506','32', '01044779156','54216451');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('dnwls7738@naver.com','천우진', '12asdf', '19960324', '27', '01055805274', '45678941');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('dnstjq6305@naver.com', '조운섭', 'qweasdf', '19911110', '32', '01024068904', '12345678');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('lhw1847@gmail.com','이현우','1234','19971221','26', '01055332287', '0303');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('dhtpfls321@naver.com', '오세린', '1234', '19980214', '25', '01032229944', '12345678');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('GarenChoi@naver.com','최근영','1234','19970117','26','01054651345','234');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('sna12345@naver.com', '배석찬','1234','19960727','27','01033125279','03270327');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('sbxjs6999@naver.com','박근희','1234qwer','19970214','26',01041046999,'12345678');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('wwuu123@naver.com','최가영','12345678','19970506','26','01066179991','12345678');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('illie@naver.com', '류성일', 'ryuPass', '19940426', '29', '01055327391', '1440');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('jsjh442@naver.com','박지선','1234','19980423','25','01057421662','12341234');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('ohwehoh@naver.com','이연우','dldus1358','19950720','28','01014141441','12341234');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('go_goa@naver.com' ,'김현우', '159753', '19920126', '31', '01087361836', '40250371');
+INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, regTime) VALUES('placidcy@gmail.com', '김지섭', '1234', '19900212', '32', '01011112222','20220314');
 </code></pre>
 <pre class="language-js"><code>Query OK, 1 row affected (0.01 sec)
 </code></pre>
@@ -470,14 +492,126 @@ INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, reg
                     <h4 class="pt20">지정 삭제 : 지정한 멤버를 삭제</h4>
 <pre class="language-js"><code>DELETE FROM myMember WHERE memberID IN(2,8,10);
 </code></pre>
+                </div>
+                <!-- //box7 -->
 
+                <!-- box8 -->
+                <div class="bs_docs-section">
+                    <h2 id="intro8" class="page-header">테이블 합치기</h2>
+<pre class="language-js"><code>CREATE TABLE myMember (
+    memberID int(10) unsigned auto_increment,
+    youEmail varchar(40) NOT NULL,
+    youName varchar(20) NOT NULL,
+    youPass varchar(20) NOT NULL,
+    youBirth int(20) NOT NULL,
+    youAge int(20) NOT NULL,
+    youPhone int(20) NOT NULL,
+    regTime int(11) NOT NULL,
+    PRIMARY KEY (memberID)
+) charset=utf8;
 
+CREATE TABLE myReview (
+    reviwID int(10) unsigned auto_increment,
+    memberID int(10) unsigned,
+    youCont tinytext NOT NULL,
+    regTime int(11) NOT NULL,
+    PRIMARY KEY (reviwID)
+) charset=utf8;
 
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('4', '리뷰입니다.', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('6', '추천 추천', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('14', '사지마세요.', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('11', '비추에요', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('5', '이거 왜 팜.', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('1', '안녕하세요.', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('19', '또 사러옴', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('2', 'ㅇㅇ', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('17', '리뷰 당첨', '12345');
+INSERT INTO myReview (memberID, youCont, regTime) VALUES ('4', '배고파요', '12345');
+</code></pre>
 
+                    <h3 id="intro7-4" class="page-header">JOIN 사용하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        구문 : SELECT 필드명 FROM 테이블명 엘리어스 JOIN 연결할 테이블명 엘리어스 ON(조건문);
+                    </div>
+<pre class="language-js"><code>SELECT m.youName, m.youEmail, r.youCont, r.regTime FROM myMember m JOIN myReview r ON(m.memberID = r.memberID);
+</code></pre>
 
+                    <h4 class="pt20">필드명 바꾸기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        구문 : SELECT 필드명 AS 기존 필드명 출력할 필드명 FROM 테이블명;
+                    </div>
+<pre class="language-js"><code>SELECT m.youName, m.youEmail, r.youCont, r.regTime AS reviwTime FROM myMember m JOIN myReview r ON(m.memberID = r.memberID);
+</code></pre>
+
+                    <h4 class="pt20">필드 내용이 없는 경우 표시</h4>
+                    <div class="bs-callout bs-callout-info">
+                        구문 : LEFT JOIN
+                    </div>
+<pre class="language-js"><code>SELECT m.youName, m.youEmail, r.youCont, r.regTime AS reviwTime FROM myMember m LEFT JOIN myReview r ON(m.memberID = r.memberID);
+</code></pre>
+                </div>
+                <!-- //box8 -->
+
+                <!-- box9 -->
+                <div class="bs_docs-section">
+                    <h2 id="intro9" class="page-header">집계 함수</h2>
+<pre class="language-js"><code>CREATE TABLE myMember (
+    memberID int(10) unsigned auto_increment,
+    youEmail varchar(40) NOT NULL,
+    youName varchar(20) NOT NULL,
+    youPass varchar(20) NOT NULL,
+    youBirth int(20) NOT NULL,
+    youAge int(20) NOT NULL,
+    youPhone int(20) NOT NULL,
+    regTime int(11) NOT NULL,
+    PRIMARY KEY (memberID)
+) charset=utf8;
+
+CREATE TABLE myRecode (
+    recodeID int(10) unsigned auto_increment,
+    memberID int(10) unsigned,
+    javascript tinyint NOT NULL,
+    html tinyint NOT NULL,
+    css tinyint NOT NULL,
+    mysql tinyint NOT NULL,
+    react tinyint NOT NULL,
+    PRIMARY KEY (recodeID)
+) charset=utf8;
+
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('4', '50', '50', '50', '80', '50');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('14', '50', '50', '70', '50', '50');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('2', '50', '100', '50', '50', '50');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('6', '50', '70', '50', '70', '30');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('8', '50', '50', '50', '50', '50');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('18', '50', '50', '50', '70', '50');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('20', '50', '50', '50', '30', '50');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('11', '80', '50', '50', '90', '50');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('12', '50', '50', '10', '50', '50');
+INSERT INTO myRecode (memberID, javascript, html, css, mysql, react) VALUES ('19', '50', '70', '50', '50', '10');
+</code></pre>
+
+                    <h3 id="intro7-4" class="page-header">집계 합수 종류</h3>
+<pre class="language-js"><code>SELECT COUNT(javascript) FROM myRecode;</code></pre>
+<pre class="language-js"><code>SELECT SUM(javascript) FROM myRecode;</code></pre>
+<pre class="language-js"><code>SELECT AVG(javascript) FROM myRecode;</code></pre>
+<pre class="language-js"><code>SELECT MAX(javascript) FROM myRecode;</code></pre>
+<pre class="language-js"><code>SELECT MIN(javascript) FROM myRecode;</code></pre>
+
+                    <h3 id="intro7-4" class="page-header">그룹별 집계</h3>
+                    <h4>GROUP BY</h4>
+                    <div class="bs-callout bs-callout-info">
+                        구문 : SELECT 필드명 FROM 테이블명 GROUP BY 필드명;
+                    </div>
+<pre class="language-js"><code>SELECT memberID AVG(javascript) FROM myRecode WHERE memberID IN(1, 2, 3, 4) GROUP BY memberID;</code></pre>
 
                 </div>
-                <!-- //box6 -->
+                <!-- //box9 -->
+
+
+
+
+
             </div>
 
             <div class="col-md-3">
@@ -517,12 +651,24 @@ INSERT INTO myMember(youEmail, youName, youPass, youBirth, youAge, youPhone, reg
                         </li>
                         <li><a href="#intro7">테이블 데이터</a>
                             <ul class="nav bs-sidenav">
-                                <li><a href="#intro7-1">데이터 입력하기()</a></li>
-                                <li><a href="#intro7-2">데이터 불려오기()</a></li>
-                                <li><a href="#intro7-3">데이터 수정하기()</a></li>
-                                <li><a href="#intro7-3">데이터 삭제하기()</a></li>
+                                <li><a href="#intro7-1">데이터 입력하기</a></li>
+                                <li><a href="#intro7-2">데이터 불려오기</a></li>
+                                <li><a href="#intro7-3">데이터 수정하기</a></li>
+                                <li><a href="#intro7-3">데이터 삭제하기</a></li>
                             </ul>
                         </li>
+                        <li><a href="#intro8">테이블 합치기</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro8-1">데이터 JOIN</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro9">집계 함수</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro9-1">데이터 JOIN</a></li>
+                            </ul>
+                        </li>
+
+
                     </ul>
                 </div>
             </div>
