@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤직 사이트 만들기</title>
+
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/setting.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style></style>
+</head>
+<body>
+    <main id="wrap">
+        <h1 class="ir_so">뮤직 사이트 만들기</h1>
+        <aside id="aside">
+            <h2 class="ir_so">사이드바 영역</h2>
+            <article class="aside__logo asideBox">
+                <h3><a href="#" class="logo">Music Amarrd</a></h1>
+            </article>
+            <!-- //aside__logo -->
+
+            <article class="aside__member asideBox">
+                <h3 class="ir_so">회원 영역</h3>
+                <span class="img"></span>
+                <span class="hello">희봉님 환영합니다.</span>
+            </article>
+            <!-- //aside__member -->
+
+            <article class="aside__menu asideBox">
+                <h3 class="ir_so">메뉴 영역</h3>
+                <nav>
+                    <h4 class="ir_so">네비 영역</h4>
+                    <ul>
+                        <li>
+                            <a href="#search">
+                                <span class="material-icons">search</span>
+                                노래 검색
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#newAlbum">
+                                <span class="material-icons">headphones</span>
+                                최신 앨범
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#monthSsong">
+                                <span class="material-icons">schedule</span>
+                                이달의 노래
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#musicChart">
+                                <span class="material-icons">thumb_up</span>
+                                뮤직 차트
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#advice">
+                                <span class="material-icons">music_note</span>
+                                추천 뮤직
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#myPaly">
+                                <span class="material-icons">book</span>
+                                나만의 노래
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+            <!-- //aside__menu -->
+
+            <article class="aside__play asideBox">
+                <h3 class="ir_so">뮤직 영역</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons">play_circle_outline</span>
+                            MonthMusic
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons">play_circle_outline</span>
+                            ChartMusic
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons">play_circle_outline</span>
+                            AdviceMusic
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons">play_circle_outline</span>
+                            MyMusic01
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons">play_circle_outline</span>
+                            MyMusic02
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="material-icons">play_circle_outline</span>
+                            MyMusic03
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!-- //aside__play -->
+            
+            <article class="aside__more asideBox">
+                <h3 class="ir_so">사이트 정보 영역</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            서비스 소개
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            사용방법
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            저작권 안내
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <!-- //aside__more -->
+        </aside>
+        <!-- //aside -->
+
+        <section id="section">
+            <h2 class="ir_so">컨텐츠 영역</h2>
+            <div class="container">
+                <article id="search">
+                    <h3 class="ir_so">노래 검색 영역</h3>
+                    <div class="search__wrap">
+                        <form action="#" class="search__form">
+                            <fieldset class="search__fieldset">
+                                <legend class="ir_so">검색 영역</legend>
+                                <button class="material-icons search__button">search</button>
+                                <input type="search" placeholder="음악을 입력해주세요!" class="search__input">
+                            </fieldset>
+                        </form>
+                    </div>
+                </article>
+                <!-- //search -->
+
+                <article id="newAlbum">
+                    <h3 class="ir_so">최신 앨범 영역</h3>
+                    <div class="newAlbum__wrap">
+                        <div class="newAlbum__img">
+                            <div class="newAlbum__slider">
+                                <div class="slider">
+                                    <div class="slider__img"><img src="./img/newAlbum/img01.jpg" alt="앨범 이미지01">
+                                    </div>
+                                    <div class="slider__info">
+                                        <div class="num">Nem01</div>
+                                        <div class="title">
+                                            꽃밭 (Prod. by SOZY)
+                                        </div>
+                                        <div class="doc">
+                                            임상진 트리오의 첫 싱글 ‘꽃밭’
+
+                                            ‘임상진 트리오’
+
+                                            재즈가 좋아서 모인 팀입니다.
+                                            작은 구성의 재즈 밴드이지만,
+                                            팀워크에서 나오는 합으로 힘찬 에너지를 보여드립니다.
+
+
+                                            재즈 피아니스트 임상진
+                                            음악 프로듀서 및 베이스 박우석
+                                            드러머 조성창으로 팀이 구성되어있습니다.
+                                            믹싱 & 마스터링은 박우석 님이 담당하셨습니다.
+
+                                            ‘꽃밭’
+
+                                            꽃이 만발한 초원을 떠올리면서 작곡한 곡입니다.
+                                            끝없이 펼쳐져 있는 초원에 누워서 파란 하늘을 바라보는 모습을 상상해보세요.
+                                            답답한 일상 속에서 잠깐 도망쳐 나와서
+                                            자유롭게 뛰어노는 곳을 그렸습니다.
+
+                                            피쳐링으로 소프라노 색소폰을 연주해준 김찬영 님의 여유로운 연주도 즐겨주세요!
+
+                                            Artwork : KangCar_NFT
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="slider__img"><img src="./img/newAlbum/img02.jpg" alt="앨범 이미지02">
+                                    </div>
+                                    <div class="slider__info">
+                                        <div class="num">Nem02</div>
+                                        <div class="title">
+                                            배운게 사랑이라
+                                        </div>
+                                        <div class="doc">
+                                            [제이세라 "배운게 사랑이라"]
+
+                                            ‘배운게 사랑뿐이라서 가진게 너 하나 뿐이라서
+                                            니가 아니면 다른 사랑은 못해 너도 알잖아‘
+
+                                            2010년 발표된 디셈버 원곡의 ‘배운게 사랑이라’가 제이세라만의 감성으로 재해석 되어 최근 몰아치고 있는 가요계 리메이크 앨범 열풍에 힘을 더하게 되었다.
+
+                                            최근 별이 될게,가슴으로 운다의 리메이크 앨범을 발표하며 많은 사랑을 받은 바 있는 제이세라는 이번 곡 ‘배운게 사랑이라’를 통해 다시 한번 폭발적인 가창력과 감성을 선보이며 독보적인 보컬리스트로서의 존재감을 각인시키고 있다.
+
+                                            또한 이번 곡 ‘배운게 사랑이라’는 울랄라세션 ‘그런 사람 또 없습니다’, 제이세라 ‘그 사람’, 오마이걸 효정 ‘사랑하고 있습니다’, 이민혁 ‘아로하’, 송하예 ‘채워지지 않는 빈자리’ 등 수많은 명품 리메이크 곡들을 탄생시킨 프로듀싱팀 메이져리거가 편곡을 맡았으며, 최근 제이세라와 발표한 리메이크 앨범 ‘별이 될게’,‘가슴으로 운다’ 프로듀싱에 이어 또 하나의 명품 리메이크곡의 탄생을 기대케 하고 있다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider">
+                                    <div class="slider__img"><img src="./img/newAlbum/img03.jpg" alt="앨범 이미지03">
+                                    </div>
+                                    <div class="slider__info">
+                                        <div class="num">Nem03</div>
+                                        <div class="title">
+                                            군검사 도베르만 OST Part 4
+                                        </div>
+                                        <div class="doc">
+                                            [군검사 도베르만 OST Part 4] 홍이삭 - Dive in
+
+                                            JTBC ‘슈퍼밴드’ 출신의 싱어송라이터 홍이삭이 부른 tvN 새 월화드라마 ‘군검사 도베르만’(극본 윤현호, 연출 진창규, 제작 스튜디오드래곤, 로고스필름)의 새 OST ‘Dive in'이 오늘 발매된다.
+
+                                            이날 ‘군검사 도베르만’ OST 제작을 맡고 있는 Stone Music Entertainment에 따르면 홍이삭은 ‘군검사 도베르만’에서 도배만(안보현)과 차우인(조보아) 사이의 감정선을 연결해 줄 OST ‘Dive in’의 가창을 맡는다.
+
+                                            지난 8회를 시작으로 삽입돼 시청자들의 몰입을 도울 곡 ‘Dive in’은 ‘다시 따뜻한 박동을 느끼고 싶은 내 맘을 안아줄래’와 같은 따뜻한 가삿말, 어쿠스틱한 악기 사운드와 홍이삭의 담백한 목소리가 합쳐져 잔잔한 감동을 선물한다.
+
+                                            가창을 맡은 홍이삭은 2013년 제24회 유재하음악경연대회에서 자작곡 '봄아'로 동상을 수상한 실력파 싱어송라이터로, 지난 2019년 방영된 JTBC ‘슈퍼밴드’를 통해 음악성과 대중성을 모두 갖춘 뮤지션으로 평가 받았다.
+
+                                            다수의 라디오 DJ, 라이브 공연 등의 경험을 통해 다재다능한 면모를 보여준 그는 이후 드라마 ‘경이로운 소문’, ‘해피니스’ 등 히트 드라마 OST 참여, 어쿠스틱 음악 영화 ‘다시 만난 날들'의 주연과 음악 감독으로 나서며 입지를 넓혔다.
+
+                                            지난해 12월에는 직접 제작한 EP ‘마음이 내려 쌓이면’을 출시해 팬들로부터 좋은 반응을 이끌어냈다.
+
+                                            한편 tvN 월화드라마 ‘군검사 도베르만’은 돈을 위해 군검사가 된 도배만(안보현)과 복수를 위해 군검사가 된 차우인(조보아)이 만나 군대 내의 검고 썩은 악을 타파하며 진짜 군검사로 성장하는 이야기를 그린 작품으로 매주 월, 화요일 밤 10시 30분에 방영된다.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newAlbum__dot">
+                            <!-- <span class="material-icons dot" onclick="dotChange(0)">radio_button_unchecked</span>
+                            <span class="material-icons dot">radio_button_checked</span>
+                            <span class="material-icons dot">radio_button_unchecked</span>
+                            <span class="material-icons play">play_arrow</span>
+                            <span class="material-icons">pause</span> -->
+                        </div>
+                    </div>
+
+                    
+                    <div class="slider__wrap">
+                        <!-- <div class="slider__img">
+                            <div class="slider__inner">
+                                <div class="slider s1"><img src="img/img16.jpg" alt="이미지1"></div>
+                                <div class="slider s2"><img src="img/img17.jpg" alt="이미지2"></div>
+                                <div class="slider s3"><img src="img/img18.jpg" alt="이미지3"></div>
+                                <div class="slider s4"><img src="img/img19.jpg" alt="이미지4"></div>
+                                <div class="slider s5"><img src="img/img20.jpg" alt="이미지5"></div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="slider__btn">
+                            <a href="#" class="prev">prev</a>
+                            <a href="#" class="next">next</a>
+                        </div> -->
+                        <div class="slider__dot">
+                            <!-- <a href="#" class="dot active"></a>
+                            <a href="#" class="dot"></a>
+                            <a href="#" class="dot"></a>
+                            <a href="#" class="dot"></a>
+                            <a href="#" class="dot"></a> -->
+                        </div>
+                    </div>
+
+
+                </article>
+                <article id="monthSsong">
+                    <h3 class="ir_so">최신 앨범 영역</h3>
+                </article>
+                <article id="musicChart">
+                    <h3 class="ir_so">이달의 노래 영역</h3>
+                </article>
+                <article id="advice">
+                    <h3 class="ir_so">추천 뮤직 영역</h3>
+                </article>
+                <article id="myPaly">
+                    <h3 class="ir_so">나만의 노래 영역</h3>
+                </article>
+            </div>
+        </section>
+        <!-- //section -->
+    </main>
+    <footer id="player">
+        <h2 class="ir_so">뮤직 플레이바 영역</h2>
+        <div class="player__wrap">
+            <div class="player__logo">
+                <h2><a href="#wrap" class="logo">Music Amarrd</a></h2>
+            </div>
+            <div class="player__control">
+                <div class="player__iconL">
+                    <span class="material-icons">fast_rewind</span>
+                    <span class="material-icons">play_circle_outline</span>
+                    <!-- <span class="material-icons">pause_circle_outline</span> -->
+                    <span class="material-icons">fast_forward</span>
+                    <div class="player__info">
+                        <div class="img">img</div>
+                        <div class="doc">
+                            <div class="title">Feel My Rhythm</div>
+                            <div class="artist">Red Velvet</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player__bar">
+                    <div class="bar">
+                        <audio id="main-audio" src=""></audio>
+                    </div>
+                </div>
+                <div class="player__iconR">
+                    <span class="material-icons">volume_up</span>
+                    <span class="material-icons">repeat</span>
+                    <!-- <span class="material-icons">shuffle</span> -->
+                    <span class="material-icons">playlist_play</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //player -->
+
+    <!-- script -->
+    <script src="./javascript/search.js"></script>
+    <script src="./javascript/slider.js"></script>
+</body>
+</html>
