@@ -79,37 +79,37 @@
             <article class="aside__play asideBox">
                 <h3 class="ir_so">뮤직 영역</h3>
                 <ul>
-                    <li>
+                    <li class="play__list">
                         <a href="#">
                             <span class="material-icons">play_circle_outline</span>
                             MonthMusic
                         </a>
                     </li>
-                    <li>
+                    <li class="play__list">
                         <a href="#">
                             <span class="material-icons">play_circle_outline</span>
                             ChartMusic
                         </a>
                     </li>
-                    <li>
+                    <li class="play__list">
                         <a href="#">
                             <span class="material-icons">play_circle_outline</span>
                             AdviceMusic
                         </a>
                     </li>
-                    <li>
+                    <li class="play__list">
                         <a href="#">
                             <span class="material-icons">play_circle_outline</span>
                             MyMusic01
                         </a>
                     </li>
-                    <li>
+                    <li class="play__list">
                         <a href="#">
                             <span class="material-icons">play_circle_outline</span>
                             MyMusic02
                         </a>
                     </li>
-                    <li>
+                    <li class="play__list">
                         <a href="#">
                             <span class="material-icons">play_circle_outline</span>
                             MyMusic03
@@ -253,42 +253,17 @@
                             </div>
                         </div>
                         <div class="newAlbum__dot">
-                            <!-- <span class="material-icons dot" onclick="dotChange(0)">radio_button_unchecked</span>
-                            <span class="material-icons dot">radio_button_checked</span>
-                            <span class="material-icons dot">radio_button_unchecked</span>
-                            <span class="material-icons play">play_arrow</span>
-                            <span class="material-icons">pause</span> -->
                         </div>
                     </div>
-
-                    
-                    <div class="slider__wrap">
-                        <!-- <div class="slider__img">
-                            <div class="slider__inner">
-                                <div class="slider s1"><img src="img/img16.jpg" alt="이미지1"></div>
-                                <div class="slider s2"><img src="img/img17.jpg" alt="이미지2"></div>
-                                <div class="slider s3"><img src="img/img18.jpg" alt="이미지3"></div>
-                                <div class="slider s4"><img src="img/img19.jpg" alt="이미지4"></div>
-                                <div class="slider s5"><img src="img/img20.jpg" alt="이미지5"></div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="slider__btn">
-                            <a href="#" class="prev">prev</a>
-                            <a href="#" class="next">next</a>
-                        </div> -->
-                        <div class="slider__dot">
-                            <!-- <a href="#" class="dot active"></a>
-                            <a href="#" class="dot"></a>
-                            <a href="#" class="dot"></a>
-                            <a href="#" class="dot"></a>
-                            <a href="#" class="dot"></a> -->
-                        </div>
-                    </div>
-
-
                 </article>
+                <!-- //newAlbum -->
+
                 <article id="monthSsong">
                     <h3 class="ir_so">최신 앨범 영역</h3>
+`
+
+
+
                 </article>
                 <article id="musicChart">
                     <h3 class="ir_so">이달의 노래 영역</h3>
@@ -303,6 +278,7 @@
         </section>
         <!-- //section -->
     </main>
+
     <footer id="player">
         <h2 class="ir_so">뮤직 플레이바 영역</h2>
         <div class="player__wrap">
@@ -339,8 +315,15 @@
     </footer>
     <!-- //player -->
 
+    <div class="cursor"><span class="text"></span></div>
+    <!-- //cursor -->
+
     <!-- script -->
     <script src="./javascript/search.js"></script>
     <script src="./javascript/slider.js"></script>
+    <script src="./javascript/cursor.js"></script>
+
+
+
 </body>
 </html>
