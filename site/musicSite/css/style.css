@@ -293,6 +293,20 @@
     cursor: pointer;
 }
 
+/* card */
+.card__type {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.card__type .card {
+    width: 300px;
+}
+.card__type .card .img {
+    width: inherit;
+    height: 300px;
+    background: #62db72;
+}
 
 
 
