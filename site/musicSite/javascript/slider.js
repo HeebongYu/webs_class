@@ -12,7 +12,6 @@ let sliderFirst = slider[0];                    //첫번째 슬라이드
 let sliderLast = slider[sliderLength - 1];      //마지막 슬라이드
 let cloneFirst = sliderFirst.cloneNode(true);   //첫번째 슬라이드 복사
 let cloneLast = sliderLast.cloneNode(true);     //마지막 슬라이드 복사
-// let posInitial ="";
 let dotIndex = "";                               //닷 메뉴
 let sliderTimer = "";                            //자동 플레이
 let interval = 3000;                             //setInterval 간격
@@ -29,12 +28,14 @@ function gotoSlider(index){
     // 세번째 슬라이드 : left = -300%
     newAlbumSlider.style.left = -sliderWidth * (index + 1) + "%";
     currentIndex = index;
+
+    // 닷으로 움직이기
     if(currentIndex!=1 && currentIndex!=2){
         dotChange(0);
     } else {
         dotChange(currentIndex);
     }
-    
+
     // 애니메이션 추가
     newAlbumSlider.classList.add("transition");
 }
@@ -43,16 +44,10 @@ function gotoSlider(index){
 newAlbumSlider.addEventListener("transitionend", () => {
     // 트레이션 제거
     newAlbumSlider.classList.remove("transition");
-    //처음 슬라이드일 때
-    if(currentIndex == -1){
-        newAlbumSlider.style.left = -(sliderLength * sliderWidth) + "%";
-        currentIndex = sliderLength -1;
-    }
     //마지막 슬라이드일 때
     if(currentIndex == sliderLength){
         newAlbumSlider.style.left = -(1 * sliderWidth) + "%";
         currentIndex = 0;
-        // dotChange(0);
     }
 });
 
@@ -67,6 +62,7 @@ autoPlay();
 // 자동 플레이 정지
 function stopPlay(){
     clearInterval(sliderTimer);
+    clearInterval(currentIndex);
 }
 
 // 닷 메뉴 추가
@@ -75,14 +71,27 @@ function dotInit(){
     for(let i=1; i<slider.length; i++){
         dotIndex += "<span class='material-icons dot'>radio_button_unchecked</span>";
     }
-    dotIndex += "<span class='material-icons play'>play_arrow</span>";
+    dotIndex += "<span class='material-icons play'></span>";
     newAlbumDot.innerHTML = dotIndex;
+
+    const newAlbumDotPlay = newAlbumDot.querySelector(".play");
+    newAlbumDotPlay.innerText = "play_arrow"
+
+    // 닷 메뉴 플레이
+    newAlbumDotPlay.addEventListener("click", () => {
+        if(newAlbumDotPlay.innerText == "play_arrow"){
+            newAlbumDotPlay.innerText = "pause";
+            stopPlay();
+        } else if(newAlbumDotPlay.innerText == "pause"){
+            newAlbumDotPlay.innerText = "play_arrow";
+            autoPlay();
+        }
+    })
 }
 dotInit();
 
 // 변수 저장
 const newAlbumDotDot = newAlbumDot.querySelectorAll(".dot");   //닷 버튼들
-const newAlbumDotPlay = newAlbumDot.querySelector(".play");    //플레이 버튼
 
 // 닷 메뉴 체인지
 function dotChange(e){
@@ -94,25 +103,29 @@ function dotChange(e){
     }
 }
 
-// 닷 메뉴 이동
-for(let i=0; i<newAlbumDotDot.length; i++){
-    newAlbumDotDot[i].addEventListener("click", () => {
-        newAlbumSlider.style.left = -sliderWidth * (i + 1) + "%";
-        currentIndex = i
-        dotChange(i);
-    })
-}
+// // 닷 메뉴 이동
+// for(let i=0; i<newAlbumDotDot.length; i++){
+//     newAlbumDotDot[i].addEventListener("click", () => {
+//         newAlbumSlider.style.left = -sliderWidth * (i + 1) + "%";
+//         currentIndex = i
+//         dotChange(i);
+//         gotoSlider(i);
+//     })
+// }
 
-// 닷 메뉴 플레이
-newAlbumDotPlay.addEventListener("click", () => {
-    if(newAlbumDotPlay.innerText == "play_arrow"){
-        newAlbumDotPlay.innerText = "pause";
-        stopPlay();
-    } else {
-        newAlbumDotPlay.innerText = "play_arrow";
-        autoPlay();
-    }
-})
+// // 닷 메뉴 플레이
+// newAlbumDotPlay.addEventListener("click", () => {
+//     if(newAlbumDotPlay.innerText == "play_arrow"){
+//         newAlbumDotPlay.innerText = "pause";
+//         stopPlay();
+//     } else {
+//         newAlbumDotPlay.innerText = "play_arrow";
+//         autoPlay();
+//     }
+// })
+
+
+
 
 // 마우스 올라갔을때 자동 플레이 정지
 newAlbumWrap.addEventListener("mouseenter", ( )=> {
@@ -121,7 +134,7 @@ newAlbumWrap.addEventListener("mouseenter", ( )=> {
 
 // 마우스 떠낫을때 자동 플레이 시작
 newAlbumWrap.addEventListener("mouseleave", ( )=> {
-    if(newAlbumDotPlay.innerText == "play_arrow"){
+    if(document.querySelector(".play").innerText == "play_arrow"){
         autoPlay();
     } else {
         stopPlay();
