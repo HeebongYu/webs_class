@@ -27,11 +27,15 @@ header h1 {
     color: rgb(120, 67, 182);
     text-transform: uppercase;
 }
-.btn {
+.btn,
+.btnS,
+.btnP {
     position: absolute;
     text-align: center;
 }
-.btn a {
+.btn a,
+.btnS a,
+.btnP a {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -41,11 +45,15 @@ header h1 {
     background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transition: all 0.3s;
 }
-.btn a img {
+.btn a img,
+.btnS a img,
+.btnP a img {
     width: 30px;
     padding-top: 10px;
 }
-.btn a span {
+.btn a span,
+.btnS a span,
+.btnP a span {
     position: absolute;
     left: 50%; bottom: -20px;
     transform: translateX(-50%);
@@ -56,46 +64,38 @@ header h1 {
 .btn:hover a {
     background: rgb(49, 248, 204);
 }
-.btn.btn1 {top: 100px;left: 100px;}
-.btn.btn2 {top: 200px;left: 100px;}
-.btn.btn3 {top: 300px;left: 100px;}
-
-
-
-
-.btnS {
-    position: absolute;
-    text-align: center;
-}
 .btnS a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
     background: #c0c0aa;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #1cefff, #c0c0aa);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #1cefff, #c0c0aa); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    transition: all 0.3s;
-}
-.btnS a img {
-    width: 30px;
-    padding-top: 10px;
 }
 .btnS a span {
-    position: absolute;
-    left: 50%; bottom: -20px;
-    transform: translateX(-50%);
     background: rgb(245 248 51);
-    padding: 0 10px;
-    white-space: nowrap;
 }
 .btnS:hover a {
     background: rgb(245 248 51);
 }
+.btnP a {
+    background: #22c1c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.btnP a span {
+    background: rgb(253 214 252);
+}
+.btnP:hover a {
+    background: rgb(253 214 252);
+}
+
+.btn.btn1 {top: 100px;left: 100px;}
+.btn.btn2 {top: 200px;left: 100px;}
+.btn.btn3 {top: 300px;left: 100px;}
 .btnS.btn1 {top: 100px;left: 200px;}
 .btnS.btn2 {top: 200px;left: 200px;}
 .btnS.btn3 {top: 300px;left: 200px;}
-
+.btnP.btn1 {top: 100px;left: 300px;}
+.btnP.btn2 {top: 200px;left: 300px;}
+.btnP.btn3 {top: 300px;left: 300px;}
 
 
 
