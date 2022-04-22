@@ -29,7 +29,6 @@
         button:active {
             opacity: 0.6;
         }
-
         .start__btn,
         .info__box,
         .card__wrap,
@@ -63,7 +62,6 @@
             border-radius: 5px;
             font-size: 1.3em;
         }
-
         .info__box {
             width: 500px;
             background: #fff;
@@ -99,7 +97,6 @@
             border: 1px solid #007BFF;
             color: #007BFF;
         }
-
         .card__wrap {
             width: 500px;
             height: 500px;
@@ -131,7 +128,7 @@
         .cards li .view {
             position: absolute;
             padding: 15%;
-            transition: transform 0.6s linear;
+            transition: transform 0.3s linear;
             backface-visibility: hidden;
             border-radius: 10px;
             width: 100%;
@@ -165,7 +162,6 @@
             60%  {transform: translateX(-8px);}
             100% {transform: translateX(0);}
         }
-
         .result__box,
         .failed__box {
             width: 500px;
@@ -207,7 +203,6 @@
             border: 1px solid #007BFF;
             color: #007BFF;
         }
-
         .remaining__life {
             background: #cbffde;
             display: inline-block;
@@ -220,7 +215,6 @@
             z-index: 9999;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1),
                         0 6px 10px 0 rgba(0,0,0,0.17);
-            /* opacity: 0; */
             pointer-events: none;
             transition: all 0.3s ease;
             opacity: 0;
@@ -230,7 +224,6 @@
             opacity: 1;
             transform: scale(1);
         }
-
     </style>
 </head>
 <body>
@@ -471,21 +464,22 @@
         // 카드 클릭
         cards.forEach(card => {
             card.addEventListener("click", flipCard);
+            // shuffledCard.readdEventListener("click", flipCard);
         })
 
         // 클릭한 카드 저장
         function flipCard(e){
             let clickedCard = e.target;
-
-            if(clickedCard !== cardOne && !disableDeck){
+            
+            if(clickedCard !== cardOne && disableDeck){
                 clickedCard.classList.add("flip");
 
                 if(!cardOne){
                     return cardOne = clickedCard;
                 }
                 cardTwo = clickedCard;
-                disableDeck = true; 
 
+                disableDeck = false;
                 let cardOneIng = cardOne.querySelector(".back img").src;
                 let cardTwoIng = cardTwo.querySelector(".back img").src;
 
@@ -498,7 +492,7 @@
             // 일치하는 경우
             if(img1 == img2){
                 matchedCard++;
-                disableDeck = false;
+                disableDeck = true;
                 // 카드게임 클리어
                 if(matchedCard == 8){
                     cardWrap.classList.remove("active");
@@ -527,7 +521,7 @@
                     cardOne.classList.remove("shake", "flip");
                     cardTwo.classList.remove("shake", "flip");
                     cardOne = cardTwo = "";
-                    disableDeck = false;
+                    disableDeck = true;
                 }, 1200)
                 soundNoMatch.play();
             }
@@ -535,11 +529,7 @@
 
         // 카드 섞기
         function shuffledCard(){
-            cardOne = cardTwo = "";
             disableDeck = false;
-            matchedCard = 0;
-            missedCard = 0;
-            youLife.innerText = 5;
 
             let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
             let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
@@ -553,6 +543,11 @@
                 
                 setTimeout(() => {
                     card.classList.remove("flip")
+                    cardOne = cardTwo = "";
+                    matchedCard = 0;
+                    missedCard = 0;
+                    youLife.innerText = 5;
+                    disableDeck = true;
                 }, 3000)
 
                 let imgTag = card.querySelector(".back img");
