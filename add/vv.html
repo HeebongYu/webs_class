@@ -42,18 +42,14 @@
     // }
 
     {
-        function func(s){
-            let answer= "";
-            for(let x of s){
-                if(x != 'w') answer +='#';
-                else answer += x;
-            }
+        function solution(s){  
+            let answer;
+            answer = s.filter(function(v, i){
+                return s.indexOf(v) === i;
+            });
             return answer;
         }
-        let str = "wbestoryboy"
-        document.write(func(str, 't'));
-        str.classlist
+        let str = ["good", "time", "good", "time", "student"];
+        console.log(solution(str));
     }
-        addEventListener
-        classlist
 </script>
