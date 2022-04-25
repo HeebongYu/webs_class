@@ -122,13 +122,13 @@ header h1 {
     right: -400px;
     transform: translateY(-50%);
     width: 380px;
-    height: 587px;
+    height: 588px;
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
 }
 .musicBox.show {
-    right: 0;
+    right: 10px;
 }
 .memoryBox {
     position: absolute;

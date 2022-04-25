@@ -10,9 +10,22 @@
     <link rel="stylesheet" href="./assets/css/bg.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <style>
+        .close {
+            font-size: 30px;
+            z-index: 1000;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
+    
+
     <div class="cursor">
         <img src="https://assets.codepen.io/756881/pointer.svg" alt="">
     </div>
@@ -23,6 +36,8 @@
         <span class="hi">게임의 세계에 온것을 환영합니다.</span>
         <span id="clock"></span>
     </header>
+    <!-- //header -->
+
     <main>
         <div class="btns">
             <div class="btn btn1">
@@ -91,9 +106,11 @@
         </div>
         <div class="musicBox">
             <iframe class="musicBoxIframe" src="./musicPlayer/index.html" frameborder="0"></iframe>
+            
         </div>
         <div class="memoryBox">
             <iframe class="memoryBoxIframe" src="./memoryGame/index2.html" frameborder="0"></iframe>
+            <div class="close memoryBoxClose">x</div>
         </div>
     </main>
 
@@ -103,6 +120,7 @@
         // 아이콘 이동
         $(".btn").draggable();
         $(".btnS").draggable();
+        $(".btnP").draggable();
 
         // 이이콘 클릭시 창 온오프
         $(".btn.btn1").click(function(){
@@ -133,6 +151,13 @@
             let y = e.clientY - 25 + "px"
             document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
         });
+
+        // 닫기
+        const close = document.querySelector(".memoryBoxClose")
+        close.addEventListener("click", () => {
+            document.querySelector(".memoryBox").classList.remove("show")
+        })
+
     </script>
 </body>
 
