@@ -130,7 +130,8 @@ header h1 {
 .musicBox.show {
     right: 10px;
 }
-.memoryBox {
+.memoryBox,
+.typingBox {
     position: absolute;
     left: 0;
     top: 0;
@@ -146,12 +147,16 @@ header h1 {
                 0 6px 10px 0 rgba(0,0,0,0.17);
     transition: all 0.5s ease-in-out;
 }
-.memoryBox.show {
+.memoryBox.show,
+.typingBox.show {
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+}
+.typingBox {
+    width: 1200px;
 }
 iframe {
     width: 100%;
