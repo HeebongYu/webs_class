@@ -144,7 +144,7 @@
             src="./tetrisGame/index2.html"
             frameborder="0"
           ></iframe>
-          <span class="material-icons close typingBoxClose">close</span>
+          <span class="material-icons close tetrisBoxClose">close</span>
         </div>
       </div>
       <!-- //게임 프레임 -->
@@ -216,6 +216,11 @@
       const typingBoxClose = document.querySelector(".typingBoxClose");
       typingBoxClose.addEventListener("click", () => {
         document.querySelector(".typingBox").classList.remove("show");
+      });
+      // 닫기
+      const tetrisBoxClose = document.querySelector(".tetrisBoxClose");
+      tetrisBoxClose.addEventListener("click", () => {
+        document.querySelector(".tetrisBox").classList.remove("show");
       });
     </script>
   </body>
