@@ -1,587 +1,594 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Game</title>
-    <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+    <link
+      href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css"
+      rel="stylesheet"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", "NexonMaplestory";
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", "NexonMaplestory";
+      }
+      body {
+        background: #007bff;
+      }
+      img {
+        width: 100%;
+        vertical-align: top;
+      }
+      button {
+        border: 0;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      button:active {
+        opacity: 0.6;
+      }
+      .start__btn,
+      .info__box,
+      .card__wrap,
+      .result__box,
+      .failed__box {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+          0 6px 10px 0 rgba(0, 0, 0, 0.17);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+      }
+      .start__btn.active,
+      .info__box.active,
+      .card__wrap.active,
+      .result__box.active,
+      .failed__box.active {
+        opacity: 1;
+        z-index: 10;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      .start__btn button {
+        background: #fff;
+        padding: 0.8rem 3rem;
+        border-radius: 5px;
+        font-size: 1.3em;
+      }
+      .info__box {
+        width: 500px;
+        background: #fff;
+        border-radius: 5px;
+        font-size: 1.3em;
+      }
+      .info__box .title {
+        border-bottom: 1px solid #ccc;
+        padding: 0.8rem 2rem;
+        font-size: 1.3em;
+        text-align: center;
+      }
+      .info__box .list ol {
+        padding: 0.8rem 3rem;
+      }
+      .info__box .buttons {
+        border-top: 1px solid #ccc;
+        padding: 0.8rem 2rem;
+        text-align: center;
+      }
+      .info__box .buttons button {
+        background: #007bff;
+        color: #fff;
+        padding: 0.4rem 2rem;
+        border-radius: 5px;
+        font-size: 1em;
+        border: 1px solid #007bff;
+        margin: 0 0.2rem;
+        display: inline-block;
+      }
+      .info__box .buttons button:first-child {
+        background: #fff;
+        border: 1px solid #007bff;
+        color: #007bff;
+      }
+      .card__wrap {
+        width: 500px;
+        height: 500px;
+        background: #fff;
+      }
+      .card__wrap li {
+        list-style: none;
+      }
+      .card__inner {
+        width: inherit;
+        height: inherit;
+        padding: 20px;
+      }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        width: 100%;
+        height: 100%;
+      }
+      .cards li {
+        width: calc(100% / 4 - 20px);
+        height: calc(100% / 4 - 20px);
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        position: relative;
+      }
+      .cards li .view {
+        position: absolute;
+        padding: 15%;
+        transition: transform 0.3s linear;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        user-select: none;
+        pointer-events: none;
+      }
+      .cards li .view.front {
+        padding: 10%;
+        background: #f1758c;
+        transform: rotateY(0deg);
+      }
+      .cards li.flip .view.front {
+        transform: rotateY(180deg);
+      }
+      .cards li .view.back {
+        background: #c9ad97;
+        transform: rotateY(-180deg);
+      }
+      .cards li.flip .view.back {
+        transform: rotateY(0deg);
+      }
+      .cards li.shake {
+        animation: shake 0.35s ease-in-out;
+      }
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
         }
-        body {
-            background: #007BFF;
+        20% {
+          transform: translateX(-13px);
         }
-        img {
-            width: 100%;
-            vertical-align: top;
+        40% {
+          transform: translateX(13px);
         }
-        button {
-            border: 0;
-            cursor: pointer;
-            transition: all 0.3s;
+        80% {
+          transform: translateX(8px);
         }
-        button:active {
-            opacity: 0.6;
+        60% {
+          transform: translateX(-8px);
         }
-        .start__btn,
-        .info__box,
-        .card__wrap,
-        .result__box,
-        .failed__box {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) scale(0.8);
-            border-radius: 5px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1),
-                        0 6px 10px 0 rgba(0,0,0,0.17);
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s ease;
+        100% {
+          transform: translateX(0);
         }
-        .start__btn.active,
-        .info__box.active,
-        .card__wrap.active,
-        .result__box.active,
-        .failed__box.active
-         {
-            opacity: 1;
-            z-index: 10;
-            pointer-events: auto;
-            transform: translate(-50%, -50%) scale(1);
-        }
-        .start__btn button {
-            background: #fff;
-            padding: .8rem 3rem;
-            border-radius: 5px;
-            font-size: 1.3em;
-        }
-        .info__box {
-            width: 500px;
-            background: #fff;
-            border-radius: 5px;
-            font-size: 1.3em;
-        }
-        .info__box .title {
-            border-bottom: 1px solid #ccc;
-            padding: .8rem 2rem;
-            font-size: 1.3em;
-            text-align: center;
-        }
-        .info__box .list ol {
-            padding: 0.8rem 3rem;
-        }
-        .info__box .buttons {
-            border-top: 1px solid #ccc;
-            padding: .8rem 2rem;
-            text-align: center;
-        }
-        .info__box .buttons button {
-            background: #007BFF;
-            color: #fff;
-            padding: .4rem 2rem;
-            border-radius: 5px;
-            font-size: 1em;
-            border: 1px solid #007BFF;
-            margin: 0 0.2rem;
-            display: inline-block;
-        }
-        .info__box .buttons button:first-child {
-            background: #fff;
-            border: 1px solid #007BFF;
-            color: #007BFF;
-        }
-        .card__wrap {
-            width: 500px;
-            height: 500px;
-            background: #fff;
-        }
-        .card__wrap li {
-            list-style: none;
-        }
-        .card__inner {
-            width: inherit;
-            height: inherit;
-            padding: 20px;
-        }
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-around;
-            width: 100%;
-            height: 100%;
-        }
-        .cards li {
-            width: calc(100% / 4 - 20px);
-            height: calc(100% / 4 - 20px);
-            perspective: 1000px;
-            transform-style: preserve-3d;
-            position: relative;
-        }
-        .cards li .view {
-            position: absolute;
-            padding: 15%;
-            transition: transform 0.3s linear;
-            backface-visibility: hidden;
-            border-radius: 10px;
-            width: 100%;
-            height: 100%;
-            user-select: none;
-            pointer-events: none;
-        }
-        .cards li .view.front {
-            padding: 10%;
-            background: #f1758c;
-            transform:  rotateY(0deg);
-        }
-        .cards li.flip .view.front {
-            transform:  rotateY(180deg);
-        }
-        .cards li .view.back {
-            background: #c9ad97;
-            transform:  rotateY(-180deg);
-        }
-        .cards li.flip .view.back {
-            transform:  rotateY(0deg);
-        }
-        .cards li.shake {
-            animation: shake 0.35s ease-in-out;
-        }
-        @keyframes shake {
-            0%   {transform: translateX(0);}
-            20%  {transform: translateX(-13px);}
-            40%  {transform: translateX(13px);}
-            80%  {transform: translateX(8px);}
-            60%  {transform: translateX(-8px);}
-            100% {transform: translateX(0);}
-        }
-        .result__box,
-        .failed__box {
-            width: 500px;
-            background: #fff;
-            border-radius: 5px;
-            font-size: 1.3em;
-        }
-        .result__box .title,
-        .failed__box .title {
-            border-bottom: 1px solid #ccc;
-            padding: .8rem 2rem;
-            font-size: 1.3em;
-            text-align: center;
-        }
-        .result__box .score {
-            padding: 2rem;
-            height: 300px;
-        }
-        .result__box .buttons,
-        .failed__box .buttons {
-            border-top: 1px solid #ccc;
-            padding: .8rem 2rem;
-            text-align: center;
-        }
-        .result__box .buttons button,
-        .failed__box .buttons button {
-            background: #007BFF;
-            color: #fff;
-            padding: .4rem 2rem;
-            border-radius: 5px;
-            font-size: 1em;
-            border: 1px solid #007BFF;
-            margin: 0 0.2rem;
-            display: inline-block;
-        }
-        .result__box .buttons button:first-child,
-        .failed__box .buttons button:first-child {
-            background: #fff;
-            border: 1px solid #007BFF;
-            color: #007BFF;
-        }
-        .remaining__life {
-            background: #cbffde;
-            display: inline-block;
-            padding: 7px;
-            font-size: 1.3rem;
-            border-radius: 10px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 9999;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1),
-                        0 6px 10px 0 rgba(0,0,0,0.17);
-            pointer-events: none;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: scale(0.8);
-        }
-        .remaining__life.active {
-            opacity: 1;
-            transform: scale(1);
-        }
+      }
+      .result__box,
+      .failed__box {
+        width: 500px;
+        background: #fff;
+        border-radius: 5px;
+        font-size: 1.3em;
+      }
+      .result__box .title,
+      .failed__box .title {
+        border-bottom: 1px solid #ccc;
+        padding: 0.8rem 2rem;
+        font-size: 1.3em;
+        text-align: center;
+      }
+      .result__box .score {
+        padding: 2rem;
+        height: 300px;
+      }
+      .result__box .buttons,
+      .failed__box .buttons {
+        border-top: 1px solid #ccc;
+        padding: 0.8rem 2rem;
+        text-align: center;
+      }
+      .result__box .buttons button,
+      .failed__box .buttons button {
+        background: #007bff;
+        color: #fff;
+        padding: 0.4rem 2rem;
+        border-radius: 5px;
+        font-size: 1em;
+        border: 1px solid #007bff;
+        margin: 0 0.2rem;
+        display: inline-block;
+      }
+      .result__box .buttons button:first-child,
+      .failed__box .buttons button:first-child {
+        background: #fff;
+        border: 1px solid #007bff;
+        color: #007bff;
+      }
+      .remaining__life {
+        background: #cbffde;
+        display: inline-block;
+        padding: 7px;
+        font-size: 1.3rem;
+        border-radius: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+          0 6px 10px 0 rgba(0, 0, 0, 0.17);
+        pointer-events: none;
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      .remaining__life.active {
+        opacity: 1;
+        transform: scale(1);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 시작버튼 -->
     <div class="start__btn active">
-        <button>Start</button>
+      <button>Start</button>
     </div>
 
     <!-- 규칙 박스 -->
     <div class="info__box">
-        <div class="title">메모리 게임을 하기 위한 규칙</div>
-        <div class="list">
-            <ol>
-                <li>당신에게는 기회가 <em>5번</em> 있습니다.</li>
-                <li>기회를 5번을 모두 소진하면 실패합니다.</li>
-                <li>같은 카드를 모두 찾으시면 게임을 클리어 합니다.</li>
-                <li>적은 기회로 완성하면 점수가 높습니다.</li>
-                <li>100점이면 축하드립니다.</li>
-            </ol>
-        </div>
-        <div class="buttons">
-            <button class="stop">그만하기</button>
-            <button class="start">도전하기</button>
-        </div>
+      <div class="title">메모리 게임을 하기 위한 규칙</div>
+      <div class="list">
+        <ol>
+          <li>당신에게는 기회가 <em>5번</em> 있습니다.</li>
+          <li>기회를 5번을 모두 소진하면 실패합니다.</li>
+          <li>같은 카드를 모두 찾으시면 게임을 클리어 합니다.</li>
+          <li>적은 기회로 완성하면 점수가 높습니다.</li>
+          <li>100점이면 축하드립니다.</li>
+        </ol>
+      </div>
+      <div class="buttons">
+        <button class="stop">그만하기</button>
+        <button class="start">도전하기</button>
+      </div>
     </div>
 
     <!-- 카드박스 -->
     <div class="card__wrap">
-        <div class="card__inner">
-            <ul class="cards">
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon01.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon01.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon02.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon02.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon03.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon03.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon04.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon04.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon05.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon05.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon06.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon06.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon07.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon07.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon08.svg" alt="뒷면">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="./img/front.svg" alt="앞면">
-                    </div>
-                    <div class="view back">
-                        <img src="./img/icon08.svg" alt="뒷면">
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <div class="card__inner">
+        <ul class="cards">
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon01.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon01.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon02.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon02.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon03.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon03.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon04.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon04.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon05.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon05.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon06.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon06.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon07.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon07.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon08.svg" alt="뒷면" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="./img/front.svg" alt="앞면" />
+            </div>
+            <div class="view back">
+              <img src="./img/icon08.svg" alt="뒷면" />
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- 결과 박스 -->
     <div class="result__box">
-        <div class="title">게임을 성공하였습니다.</div>
-        <div class="score">
-            당신의 점수는 <span class="youScore">100</span>점 입니다.
-        </div>
-        <div class="buttons">
-            <button class="stop">그만하기</button>
-            <button class="restart">다시하기</button>
-        </div>
+      <div class="title">게임을 성공하였습니다.</div>
+      <div class="score">
+        당신의 점수는 <span class="youScore">100</span>점 입니다.
+      </div>
+      <div class="buttons">
+        <button class="stop">그만하기</button>
+        <button class="restart">다시하기</button>
+      </div>
     </div>
 
     <!-- 실패 박스 -->
     <div class="failed__box">
-        <div class="title">게임을 실패하였습니다.</div>
-        <div class="buttons">
-            <button class="stop">그만하기</button>
-            <button class="restart">다시하기</button>
-        </div>
+      <div class="title">게임을 실패하였습니다.</div>
+      <div class="buttons">
+        <button class="stop">그만하기</button>
+        <button class="restart">다시하기</button>
+      </div>
     </div>
 
     <!-- 남은 기회 -->
-    <div class="remaining__life">
-        남은 기회: <span class="life">5</span>회
-    </div>
+    <div class="remaining__life">남은 기회: <span class="life">5</span>회</div>
 
     <script>
-        const startBtn = document.querySelector(".start__btn");
-        const infoBox = document.querySelector(".info__box");
-        const infoBoxStart = infoBox.querySelector(".buttons .start");
-        const infoBoxStop = infoBox.querySelector(".buttons .stop");
-        const cardWrap = document.querySelector(".card__wrap");
-        const cards = cardWrap.querySelectorAll(".cards li");
-        const resultBox = document.querySelector(".result__box");
-        const resultBoxYouScore = resultBox.querySelector(".youScore");
-        const resultBoxStop = resultBox.querySelector(".buttons .stop");
-        const resultBoxRestart = resultBox.querySelector(".buttons .restart");
-        const failedBox = document.querySelector(".failed__box");
-        const failedBoxStop = failedBox.querySelector(".buttons .stop");
-        const failedBoxRestart = failedBox.querySelector(".buttons .restart");
-        const remainingLife = document.querySelector(".remaining__life");
-        const youLife = remainingLife.querySelector(".life");
+      const startBtn = document.querySelector(".start__btn");
+      const infoBox = document.querySelector(".info__box");
+      const infoBoxStart = infoBox.querySelector(".buttons .start");
+      const infoBoxStop = infoBox.querySelector(".buttons .stop");
+      const cardWrap = document.querySelector(".card__wrap");
+      const cards = cardWrap.querySelectorAll(".cards li");
+      const resultBox = document.querySelector(".result__box");
+      const resultBoxYouScore = resultBox.querySelector(".youScore");
+      const resultBoxStop = resultBox.querySelector(".buttons .stop");
+      const resultBoxRestart = resultBox.querySelector(".buttons .restart");
+      const failedBox = document.querySelector(".failed__box");
+      const failedBoxStop = failedBox.querySelector(".buttons .stop");
+      const failedBoxRestart = failedBox.querySelector(".buttons .restart");
+      const remainingLife = document.querySelector(".remaining__life");
+      const youLife = remainingLife.querySelector(".life");
 
+      //시작버튼
+      startBtn.onclick = () => {
+        infoBox.classList.add("active");
+      };
 
-        //시작버튼
-        startBtn.onclick = () => {
-            infoBox.classList.add("active")
+      //그만하기 버튼
+      infoBoxStop.onclick = () => {
+        infoBox.classList.remove("active");
+      };
+
+      //도전하기 버튼
+      infoBoxStart.onclick = () => {
+        infoBox.classList.remove("active");
+        cardWrap.classList.add("active");
+        remainingLife.classList.add("active");
+        shuffledCard();
+      };
+
+      let cardOne, cardTwo;
+      let disableDeck = false;
+      let matchedCard = 0;
+      let missedCard = 0;
+      let sound = ["audio/match2.mp3", "audio/match.mp3", "audio/up.mp3"];
+      let soundMatch = new Audio(sound[0]);
+      let soundNoMatch = new Audio(sound[1]);
+      let soundSuccess = new Audio(sound[2]);
+
+      // 카드 클릭
+      cards.forEach((card) => {
+        card.addEventListener("click", flipCard);
+        // shuffledCard.readdEventListener("click", flipCard);
+      });
+
+      // 클릭한 카드 저장
+      function flipCard(e) {
+        let clickedCard = e.target;
+
+        if (clickedCard !== cardOne && disableDeck) {
+          clickedCard.classList.add("flip");
+
+          if (!cardOne) {
+            return (cardOne = clickedCard);
+          }
+          cardTwo = clickedCard;
+
+          disableDeck = false;
+          let cardOneIng = cardOne.querySelector(".back img").src;
+          let cardTwoIng = cardTwo.querySelector(".back img").src;
+
+          matchCards(cardOneIng, cardTwoIng);
         }
-        
-        //그만하기 버튼
-        infoBoxStop.onclick = () => {
-            infoBox.classList.remove("active")
+      }
+
+      // 카드 일치 확인
+      function matchCards(img1, img2) {
+        // 일치하는 경우
+        if (img1 == img2) {
+          matchedCard++;
+          disableDeck = true;
+          // 카드게임 클리어
+          if (matchedCard == 8) {
+            cardWrap.classList.remove("active");
+            resultBox.classList.add("active");
+            remainingLife.classList.remove("active");
+          }
+          cardOne = cardTwo = "";
+          soundMatch.play();
         }
-
-        //도전하기 버튼
-        infoBoxStart.onclick = () => {
-            infoBox.classList.remove("active")
-            cardWrap.classList.add("active");
-            remainingLife.classList.add("active");
-            shuffledCard();
+        // 일치하는 않는 경우
+        else {
+          missedCard++;
+          resultBoxYouScore.innerText = 100 - missedCard * 10;
+          youLife.innerText = 5 - missedCard;
+          // 카드게임 실패
+          if (missedCard == 5) {
+            cardWrap.classList.remove("active");
+            failedBox.classList.add("active");
+            remainingLife.classList.remove("active");
+          }
+          setTimeout(() => {
+            cardOne.classList.add("shake");
+            cardTwo.classList.add("shake");
+          }, 400);
+          setTimeout(() => {
+            cardOne.classList.remove("shake", "flip");
+            cardTwo.classList.remove("shake", "flip");
+            cardOne = cardTwo = "";
+            disableDeck = true;
+          }, 1200);
+          soundNoMatch.play();
         }
+      }
 
-        let cardOne, cardTwo;
-        let disableDeck = false;
-        let matchedCard = 0;
-        let missedCard = 0;
-        let sound = [
-            "audio/match2.mp3",
-            "audio/match.mp3",
-            "audio/up.mp3",
-        ];
-        let soundMatch = new Audio(sound[0]);
-        let soundNoMatch = new Audio(sound[1]);
-        let soundSuccess = new Audio(sound[2]);
-  
-        // 카드 클릭
-        cards.forEach(card => {
-            card.addEventListener("click", flipCard);
-            // shuffledCard.readdEventListener("click", flipCard);
-        })
+      // 카드 섞기
+      function shuffledCard() {
+        disableDeck = false;
 
-        // 클릭한 카드 저장
-        function flipCard(e){
-            let clickedCard = e.target;
-            
-            if(clickedCard !== cardOne && disableDeck){
-                clickedCard.classList.add("flip");
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
+        let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
-                if(!cardOne){
-                    return cardOne = clickedCard;
-                }
-                cardTwo = clickedCard;
+        cards.forEach((card, index) => {
+          card.classList.remove("flip");
 
-                disableDeck = false;
-                let cardOneIng = cardOne.querySelector(".back img").src;
-                let cardTwoIng = cardTwo.querySelector(".back img").src;
+          setTimeout(() => {
+            card.classList.add("flip");
+          }, 100 * index + 200);
 
-                matchCards(cardOneIng, cardTwoIng);
-            }
-        }
+          setTimeout(() => {
+            card.classList.remove("flip");
+            cardOne = cardTwo = "";
+            matchedCard = 0;
+            missedCard = 0;
+            youLife.innerText = 5;
+            disableDeck = true;
+          }, 3000);
 
-        // 카드 일치 확인
-        function matchCards(img1, img2){
-            // 일치하는 경우
-            if(img1 == img2){
-                matchedCard++;
-                disableDeck = true;
-                // 카드게임 클리어
-                if(matchedCard == 8){
-                    cardWrap.classList.remove("active");
-                    resultBox.classList.add("active")
-                    remainingLife.classList.remove("active");
-                }
-                cardOne = cardTwo = "";
-                soundMatch.play();
-            }
-            // 일치하는 않는 경우
-            else {
-                missedCard++;
-                resultBoxYouScore.innerText = 100 - missedCard*10;
-                youLife.innerText = 5 - missedCard
-                // 카드게임 실패
-                if(missedCard == 5){
-                    cardWrap.classList.remove("active");
-                    failedBox.classList.add("active")
-                    remainingLife.classList.remove("active");
-                }
-                setTimeout(() => {
-                    cardOne.classList.add("shake");
-                    cardTwo.classList.add("shake");
-                }, 400)
-                setTimeout(() => {
-                    cardOne.classList.remove("shake", "flip");
-                    cardTwo.classList.remove("shake", "flip");
-                    cardOne = cardTwo = "";
-                    disableDeck = true;
-                }, 1200)
-                soundNoMatch.play();
-            }
-        }
+          let imgTag = card.querySelector(".back img");
+          imgTag.src = `img/icon0${arr[index]}.svg`;
+        });
+      }
 
-        // 카드 섞기
-        function shuffledCard(){
-            disableDeck = false;
+      //그만하기 버튼
+      resultBoxStop.onclick = () => {
+        resultBox.classList.remove("active");
+        startBtn.classList.add("active");
+      };
 
-            let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
-            let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+      //다시하기 버튼
+      resultBoxRestart.onclick = () => {
+        resultBox.classList.remove("active");
+        cardWrap.classList.add("active");
+        remainingLife.classList.add("active");
+        shuffledCard();
+      };
 
-            cards.forEach((card, index) => {
-                card.classList.remove("flip")
+      //그만하기 버튼
+      failedBoxStop.onclick = () => {
+        failedBox.classList.remove("active");
+        startBtn.classList.add("active");
+      };
 
-                setTimeout(() => {
-                    card.classList.add("flip")
-                }, 100 * index + 200)
-                
-                setTimeout(() => {
-                    card.classList.remove("flip")
-                    cardOne = cardTwo = "";
-                    matchedCard = 0;
-                    missedCard = 0;
-                    youLife.innerText = 5;
-                    disableDeck = true;
-                }, 3000)
-
-                let imgTag = card.querySelector(".back img");
-                imgTag.src = `img/icon0${arr[index]}.svg`;
-            })
-        }
-        
-        //그만하기 버튼
-        resultBoxStop.onclick = () => {
-            resultBox.classList.remove("active")
-            startBtn.classList.add("active")
-        }
-
-        //다시하기 버튼
-        resultBoxRestart.onclick = () => {
-            resultBox.classList.remove("active")
-            cardWrap.classList.add("active");
-            remainingLife.classList.add("active");
-            shuffledCard();
-        }
-
-        //그만하기 버튼
-        failedBoxStop.onclick = () => {
-            failedBox.classList.remove("active")
-            startBtn.classList.add("active")
-        }
-
-        //다시하기 버튼
-        failedBoxRestart.onclick = () => {
-            failedBox.classList.remove("active")
-            cardWrap.classList.add("active");
-            remainingLife.classList.add("active");
-            shuffledCard();
-        }
+      //다시하기 버튼
+      failedBoxRestart.onclick = () => {
+        failedBox.classList.remove("active");
+        cardWrap.classList.add("active");
+        remainingLife.classList.add("active");
+        shuffledCard();
+      };
     </script>
-</body>
+  </body>
 </html>
