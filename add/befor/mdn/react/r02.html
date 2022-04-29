@@ -1,0 +1,96 @@
+<h3>React 설정하기</h3>
+<p>
+  React를 사용하는 데에는 많은 방법이 있지만, 여기서는 커맨드-라인
+  인터페이스(command-line interface; CLI) 툴인 create-react-app을 사용할 겁니다.
+  이 툴은 패키지를 설치하고 파일들을 생성하여 앞서 설명한 툴링들로 React
+  애플리케이션을 개발하는 과정을 신속히 처리합니다.
+</p>
+
+<hr />
+
+<h4>요구되는 것들</h4>
+<p>
+  create-react-app을 사용하기 위해선 Node.js를 설치해야 합니다. LTS(오랜 기간
+  지원된; long-term support) 버전을 사용하는 것을 추천합니다. Node는 npm (the
+  node package manager)와 npx (the node package runner)를 포함합니다.
+</p>
+<br />
+<p>
+  Node 대신에 Yarn package manager를 사용할 수도 있습니다. 하지만 이 튜토리얼의
+  설정에서는 npm을 사용하는 것을 권고합니다. npm과 yarn에 대해 더 자세한 정보는
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management"
+  >
+    Package management basics</a
+  >를 참고하세요.
+</p>
+
+<hr />
+
+<h4>앱 초기화</h4>
+<p>
+  create-react-app은 애플리케이션의 이름을 인수로 가집니다. create-react-app은
+  이 이름을 새로운 디렉토리를 만들 때 사용한 후 그 안에 중요한 파일들을
+  생성합니다. cd로 하드 드라이브에 애플리케이션을 저장하고 싶은 장소까지
+  이동하고 다음 명령어를 터미널에 실행하세요.
+</p>
+<br />
+<pre><code>npx create-react-app moz-todo-react
+</code></pre>
+<br />
+<p>
+  이 명령어는 moz-todo-react 디렉토리(폴더)를 만들고 다음과 같은 일들을 합니다.
+  <ul>
+    <li>앱의 기능에 필수적인 npm 패키지들을 설치합니다.</li>
+    <li>애플리케이션을 시작하고 서비스하기 위한 스크립트를 작성합니다.</li>
+    <li>기본적인 앱 아키텍처를 정의하는 파일과 디렉토리의 구조를 만듭니다.</li>
+    <li>컴퓨터에 깃이 설치되어있다면, 디렉토리를 깃 레포지토리로 초기화합니다.</li>
+  </ul>
+</p>
+<br>
+<p>이 과정이 완료되면 moz-todo-react 디렉토리 안으로 cd를 실행한 후 npm start 커맨드를 실행하세요. create-react-app에 의해 설치된 스크립트는 localhost:3000에서 실행되고 있는 로컬 서버에서 실행을 시작할 것입니다. 새로운 브라우저 탭을 열고 앱을 열면, 브라우저는 다음과 같이 무언가를 표시하고 있을 겁니다.</p>
+<br>
+
+<hr>
+
+<h4>애플리케이션 구조</h4>
+<p>
+  create-react-app은 React 애플리케이션을 개발하기 위해 필요한 모든 것을 제공합니다. 초기 파일 구조는 다음과 같습니다
+</p>
+<br>
+<pre><code>moz-todo-react
+  ├── README.md
+  ├── node_modules
+  ├── package.json
+  ├── package-lock.json
+  ├── .gitignore
+  ├── public
+  │   ├── favicon.ico
+  │   ├── index.html
+  │   └── manifest.json
+  └── src
+      ├── App.css
+      ├── App.js
+      ├── App.test.js
+      ├── index.css
+      ├── index.js
+      ├── logo.svg
+      └── serviceWorker.js
+</code></pre>
+<br>
+<p>src 디렉토리는 애플리케이션의 소스 코드가 있는 곳으로서, 가장 많은 시간을 보낼 곳입니다.</p>
+<br>
+<p>
+  public 디렉토리는 앱을 개발하는 동안 브라우저가 읽을 파일들을 가지고 있습니다. 
+  이들 중 가장 중요한 것은 index.html 입니다. React는 코드를 이 html 파일에 주입하여 
+  브라우저가 코드를 실행할 수 있게 합니다. create-react-app function에 도움이 되는 
+  다른 마크업도 있기 때문에, 무엇을 하는지 모른다면 함부로 편집하지 않도록 주의하세요. 
+  애플리케이션의 타이틀에 반영되도록 index.html 파일의 &lt;title&gt; 요소 안의 
+  텍스트를 바꿔야 합니다. 정확한 페이지 타이틀은 접근성을 위해 중요하니까요!
+</p>
+<br>
+<p>
+  package.json 파일은 Node.js/npm가 프로젝트를 조직하기 위해 사용하는, 프로젝트에 
+  관련한 정보를 포함하고 있습니다. 이 파일은 React 애플리케이션에 유일하지 
+  않은데요. create-react-app이 이 파일을 수정합니다.
+</p>

@@ -1,0 +1,91 @@
+<h3>React</h3>
+<p>
+  <strong>React</strong>는 <strong>JSX</strong>(JavaScript와 XML)라는
+  <strong>HTML-in-JavaScript 문법</strong>을 사용합니다. HTML와 JavaScript에
+  익숙하다면 JSX를 배우는 것에 도움이 됩니다. 또한 애플리케이션에서 발생하는
+  버그가 JavaScript와 관련이 있는지 아니면 React의 구체적인 도메인과 관련이
+  있는지 수월하게 식별하는 것에 도움이 됩니다.
+</p>
+
+<hr />
+
+<h4>React 알아보기</h4>
+<p>
+  공식적인 태그라인에 따르면, React는 사용자 인터페이스를 만들기 위한
+  <strong>라이브러리</strong>입니다. React는 프레임워크가 아니고, 심지어 웹에만
+  사용할 수 있는 것도 아닙니다. React는 다른 라이브러리들과 함께 특정한 환경을
+  렌더링하는 데 사용됩니다. 가령, React Native는 모바일 애플리케이션을 만드는 데
+  사용될 수 있고, React 360은 가상 현실 애플리케이션을 만드는 데 사용할 수
+  있습니다. 그 밖에도 많은 가능성이 존재합니다.
+</p>
+<br />
+<p>
+  <strong>웹</strong>을 만들기 위해서 사용자는 <strong>React</strong>를
+  <strong>ReactDOM</strong>과 함께 사용해야 합니다. React와 ReactDOM은 다른 실제
+  웹 프레임워크들과 동일한 공간에서 논의되고 동일한 문제를 해결하기 위해
+  사용됩니다. React를 <strong>"프레임워크"</strong>로 지칭할 때는 통상적인
+  뜻으로 받아들이면 됩니다.
+</p>
+
+<hr />
+
+<h4>React 사용하기</h4>
+<p>
+  이 모듈에서 다루고 있는 다른 프레임워크와 달리, React는 코드 컨벤션이나 파일
+  구조에 엄격한 규칙을 강제하지 않습니다. 이를 통해 팀은 그들에게 가장 적합한
+  컨벤션을 설정할 수 있고, 원하는 어떤 방식으로든 React를 쓸 수 있습니다.
+  React는 하나의 버튼, 인터페이스의 일부분, 혹은 애플리케이션의 사용자
+  인터페이스 전체를 다룰 수 있습니다.
+</p>
+<br />
+<p>
+  React는 인터페이스의 일부분을 위하여 사용할 수 있지만, jQuery와 같은
+  라이브러리 혹은 Vue와 같은 프레임워크처럼 애플리케이션 "안에 넣는" 것은 쉬운
+  일이 아닙니다. React는 애플리케이션 전체를 만들 때 사용하기가 보다 쉽습니다.
+</p>
+
+<hr />
+
+<h4>React는 JavaScript를 어떻게 사용할까?</h4>
+<p>
+  React는 많은 패턴에 모던 JavaScript의 특징을 이용합니다. JavaScript와 가장
+  다른 부분은 JSX 구문의 사용입니다. JSX는 JavaScript의 구문을 확장하여 HTML과
+  유사한 코드를 함께 사용할 수 있도록 합니다. 다음은 JSX 구문의 예시입니다.
+</p>
+<br />
+<pre><code>const heading = &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;;
+</code></pre>
+<br />
+<p>
+  이 heading 상수는 JSX 표현식(JSX expression) 으로 알려져 있습니다. React는
+  애플리케이션에 &lt;h1&gt; 태그를 렌더링할 때 이 표현식을 사용할 수 있습니다.
+</p>
+<br />
+<p>
+  &lt;header&gt; 태그로 heading을 감싸고 싶다고 가정해보겠습니다. JSX는 HTML에서
+  하던 것처럼 요소를 다른 요소 안에 중첩할 수 있습니다.
+</p>
+<br />
+<pre><code>const header = (
+  &lt;header&gt;
+    &lt;h1&gt;Mozilla Developer Network&lt;/h1&gt;
+  &lt;/header&gt;
+);
+</code></pre>
+<br />
+<p>
+  React.createElement() 를 사용하여 UI를 직접 작성해서 컴파일 단계를 생략할 수도
+  있습니다. 하지만, 이렇게 하면 JSX의 선언적인 장점을 잃을 것이고 코드는 읽기
+  더욱 어려워질 것입니다. 컴파일은 개발 과정에 있어 추가 과정이지만 React
+  커뮤니티의 많은 개발자는 JSX의 가독성이 그럴만한 가치가 있다고 생각합니다.
+  그리고 널리 사용되는 툴링은 JSX를 JavaScript로 컴파일하는 부분을 설정 과정의
+  일부로 만듭니다. 원하지 않는다면, 컴파일을 직접 구성하지 않아도 됩니다.
+</p>
+<br />
+<p>
+  JSX는 HTML과 JavaScript를 섞은 것이기 때문에 어떤 개발자들은 JSX를
+  직관적이라고 생각합니다. 다른 이들은 JSX의 혼합된 본성 때문에 혼란스럽다고
+  하기도 합니다. 하지만 한번 익숙해지면 사용자 인터페이스를 더 빠르고 직관적으로
+  만들 수 있고 다른 이들이 여러분의 코드베이스를 한눈에 더 잘 이해할 수 있게
+  합니다.
+</p>

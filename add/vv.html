@@ -1,55 +1,22 @@
-<script>
-    // {
-    //     function func(data, exp){
-    //         let result = 1;
-    //         for(i=1; i<exp; i++){
-    //             result = result * i;
-    //         }
-    //         document.write(result + data);
-    //         console.log("result:", result)
-    //         console.log("data:", data)
-    //     }
-    //     func(1,5);
-    // }
+<h3>날짜 메서드 getSeconds()</h3>
 
-    //6번 ??????
-    // {
-    //     function func(){
-    //         let i,j = 0;
+<h4>정의 및 사용법</h4>
+<ul>
+  <li>getMonth() 날짜의 초(0~59)를 반환합니다.</li>
+</ul>
 
-    //         for(i=0; i<=8; i++){
-    //             j+=i;
-    //         }
-    //         document.write(j+i)
-    //         console.log("j:", j)
-    //         console.log("i:", i)
-    //     }
-    //     func()
-    // }
+<h4>구문</h4>
+<pre><code>
+    Date.getSeconds()
+</code></pre>
 
-    //9번 ??????
-    // {
-    //     function func(){
-    //         let a =0, sum = 0;
-    //         while(a<10){
-    //             a++;
-    //             if(a%2 == 1) continue;
-    //             sum += a;
-    //         }
-    //         document.write(sum);
-    //     }
-    //     func();
-    // }
+<h4>반환 값</h4>
+<p>숫자(날짜의 초(0 ~ 59))</p>
 
-    {
-        function solution(s){  
-            let answer;
-            answer = s.filter(function(v, i){
-                return s.indexOf(v) === i;
-            });
-            return answer;
-        }
-        let str = ["good", "time", "good", "time", "student"];
-        console.log(solution(str));
-    }
-</script>
+<h4>예시</h4>
+<pre><code>
+    const d = new Date("July 21, 1983 01:15:00");
+    let seconds = d.getSeconds();
+
+    //0
+</code></pre>

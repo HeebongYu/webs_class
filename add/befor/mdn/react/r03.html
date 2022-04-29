@@ -1,0 +1,165 @@
+<h3>React 컴포넌트 탐색하기</h3>
+<p>
+  React에서, 컴포넌트(component)는 앱의 일부를 렌더링하는 재사용가능한
+  모듈입니다. 이 부분들은 클 수도 작을 수도 있지만, 대개 정확하게 정의됩니다.
+  이들은 단일하고 명확한 목적만을 위해 일합니다.
+</p>
+<br />
+<p>
+  src/App.js를 열어봅시다. 이 파일은 첫번째 컴포넌트 App과 몇 줄의 코드를
+  포함하고 있습니다.
+</p>
+<br />
+<pre><code>import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+        &lt;p&gt;
+          Edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.
+        &lt;/p&gt;
+        &lt;a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        &gt;
+          Learn React
+        &lt;/a&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}
+export default App;
+</code></pre>
+<br />
+<p>
+  App.js 파일은 세 개의 부분으로 나눌 수 있습니다: 상단의 import 문들, 중앙의
+  App 컴포넌트, 그리고 하단의 export 문들. 많은 React 컴포넌트들이 이 패턴을
+  따르고 있습니다.
+</p>
+
+<hr />
+
+<h4>Import 문</h4>
+<p>
+  상단의 import 문은 App.js가 다른 곳에 정의된 코드들을 사용할 수 있게 해줍니다.
+  이 명령문들을 자세히 들여다봅시다.
+</p>
+<br />
+<pre><code>import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+</code></pre>
+<br />
+<p>
+  첫 번째 명령문은 React 라이브러리를 불러옵니다. React가 우리가 작성한 JSX를
+  React.createElement()로 변환하기 때문에, 모든 React 컴포넌트들은 반드시 React
+  모듈을 불러와야 합니다. 이 단계를 건너뛰면 애플리케이션은 오류를 발생시킬
+  겁니다.
+</p>
+<br />
+<p>
+  두 번째 명령문은 ./logo.svg로부터 로고를 불러옵니다. ./를 경로의 시작에, .svg
+  익스텐션을 마지막에 사용한다는 것은 해당 파일이 로컬에 위치하며 JavaScript
+  파일이 아니라는 것을 뜻합니다. 실제로, logo.svg 파일은 소스 디렉토리 안에
+  있습니다.
+</p>
+<br />
+<p>
+  React 모듈을 불러올 때는 경로나 익스텐션을 쓰지 않습니다. 이것들은 로컬 파일이
+  아니라, package.json의 의존성 목록에 포함되어 있습니다. 로컬과 이들의 구분을
+  꼭 주의하세요!
+</p>
+<br />
+<p>
+  세 번째 명령문은 App 컴포넌트에 관련된 CSS를 불러옵니다. 어떤 변수 이름이나
+  from 지시가 없다는 것을 주목해주세요. 이 특별한 import 구문은 JavaScript 모듈
+  구문이 아니라 웹팩(Webpack)으로부터 온 것입니다. 웹팩은 create-react-app이
+  우리의 모든 JavaScript 파일을 함께 번들하고 브라우저에 제공하기 위해 사용하는
+  도구입니다.
+</p>
+<hr />
+
+<h4>App 컴포넌트</h4>
+<p>
+  import문들 이후, App이라고 이름 지어진 함수가 있습니다. 많은 JavaScript
+  커뮤니티가 helloWorld와 같은 카멜-케이스(camel-case) 이름을 선호하는 반면에,
+  React 컴포넌트는 파스칼-케이스(pascal-case) 변수 이름을 사용합니다. 이는 JSX
+  요소가 React 컴포넌트이지, 정규 HTML 태그가 아니라는 것을 분명히 하기
+  위해서입니다. App 함수를 app으로 이름 짓는다면 브라우저는 오류를 발생시킬
+  겁니다.
+</p>
+<br />
+<pre><code>
+function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+        &lt;p&gt;
+          Edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.
+        &lt;/p&gt;
+        &lt;a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        &gt;
+          Learn React
+        &lt;/a&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<br />
+<p>
+  App 함수는 JSX 표현식을 반환합니다. 이 표현식은 브라우저가 궁극적으로 DOM에
+  렌더링할 것을 정의하고 있습니다.
+</p>
+<br />
+<p>
+  표현식의 어떤 요소들은 HTML에 쓰인 것과 같이 속성들을 가지고
+  attribute="value"와 같은 패턴을 따르고 있습니다. 세 번째 줄에서, 여는 div
+  태그는 className 속성을 가지고 있습니다. 이건 HTML의 class 속성과 같지만,
+  JSX는 JavaScript이므로 class 라는 단어를 쓸 수 없습니다. 거꾸로 말하자면,
+  JavaScript는 이미 이 단어를 특별한 목적을 위해 사용하고 있어 코드 안에서
+  사용한다면 문제를 발생시킬 것입니다. 같은 이유로 몇 개의 다른 HTML 속성들이
+  HTML에서 그랬던 것과는 다르게 JSX에서 쓰이고 있습니다.
+</p>
+<br />
+<p>
+  여섯 번째 줄의 &lt;p&gt; 태그 안의 텍스트를 "Hello, world!"로 바꾸고, 파일을
+  저장하세요. 브라우저에서 http://localhost:3000에 실행되고 있는 개발 서버에
+  즉시 변화가 렌더링 되는 것을 볼 수 있을 겁니다. 이제 &lt;a&gt; 태그를 지우고
+  저장해보세요. "Learn React" 링크가 사라질 겁니다.
+</p>
+<br />
+<p>이제 App 컴포넌트는 아래와 같을 겁니다.</p>
+<br />
+<pre><code>
+function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
+        &lt;p&gt;
+          Hello, World!
+        &lt;/p&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<hr />
+
+<h4>Export 문</h4>
+<p>
+  App.js 파일의 최하단에 있는 export default App라는 명령문은 App 컴포넌트들을
+  다른 모듈에서 사용할 수 있게 합니다.
+</p>
