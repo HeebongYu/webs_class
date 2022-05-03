@@ -225,7 +225,6 @@
       //바디 높이
       document.body.style.height =
         (parallaxWidth / windowWidth) * windowHeight + "px";
-      //document.body.style.height = 900 + "vw";
 
       //스크롤
       function scroll() {
@@ -234,9 +233,6 @@
           //window.pageYOffset ||
           document.documentElement.scrollTop;
         //console.log(scrollTop);
-
-        console.log("windowWidth: " + windowWidth);
-        console.log("windowHeight: " + windowHeight);
 
         gsap.to(parallaxCont, {
           left: (-scrollTop / windowHeight) * windowWidth,
