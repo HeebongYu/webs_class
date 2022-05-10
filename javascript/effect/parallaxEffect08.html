@@ -215,17 +215,6 @@
       const parallaxCont = document.getElementById("parallax__cont");
       const contentItem = document.querySelector(".content__item");
 
-      //페럴 가로
-      const parallaxWidth = parallaxCont.offsetWidth;
-      console.log(parallaxWidth);
-
-      let windowWidth = contentItem.offsetWidth;
-      let windowHeight = contentItem.offsetHeight;
-
-      //바디 높이
-      document.body.style.height =
-        (parallaxWidth / windowWidth) * windowHeight + "px";
-
       //스크롤
       function scroll() {
         let scrollTop =
@@ -234,6 +223,29 @@
           document.documentElement.scrollTop;
         //console.log(scrollTop);
 
+        //페럴 가로
+        let parallaxWidth = parallaxCont.offsetWidth;
+        //console.log(parallaxWidth);
+
+        //바디 높이
+        //document.body.style.height =
+        //  (parallaxWidth / windowWidth) * windowHeight + "px";
+        document.body.style.height = parallaxWidth + "px";
+
+        //아이템 크기
+        //let windowWidth = contentItem.offsetWidth;
+        //let windowHeight = contentItem.offsetHeight;
+        let viewWidth = parallaxWidth - window.innerWidth;
+        let viewHeight = parallaxWidth - window.innerHeight;
+
+        //여기까지
+        //여기까지
+        //여기까지
+        //여기까지
+        //여기까지
+        let goLift = scrollTop * (viewWidth / viewHeight);
+
+        // 이동하기
         gsap.to(parallaxCont, {
           left: (-scrollTop / windowHeight) * windowWidth,
         });
@@ -245,6 +257,8 @@
         requestAnimationFrame(scroll);
       }
       scroll();
+
+      window.addEventListener("resize", scroll);
     </script>
   </body>
 </html>

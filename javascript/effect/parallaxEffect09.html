@@ -129,15 +129,31 @@
       #section4 {
         background-color: #666;
         z-index: 4000;
-        height: 500vh;
+        height: 400vw;
       }
       #section4 .sec4 {
         position: fixed;
         left: 0;
         top: 0;
-        width: 400vh;
-        height: 100%;
         background-color: red;
+        display: flex;
+      }
+      #section4 .sec4 .item {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+      #section4 .sec4 .item:nth-child(1) {
+        background-color: rgb(135, 55, 55);
+      }
+      #section4 .sec4 .item:nth-child(2) {
+        background-color: rgb(14, 139, 16);
+      }
+      #section4 .sec4 .item:nth-child(3) {
+        background-color: rgb(51, 36, 140);
+      }
+      #section4 .sec4 .item:nth-child(4) {
+        background-color: rgb(201, 214, 55);
       }
       #section5 {
         background-color: #555;
@@ -194,7 +210,18 @@
       <!-- //section3 -->
       <section id="section4" class="content__item">
         <div class="sec4">
-          <span class="content__item__num">04</span>
+          <div class="item">
+            <span class="content__item__num">04-1</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-2</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-3</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-4</span>
+          </div>
         </div>
       </section>
       <!-- //section4 -->
@@ -241,12 +268,18 @@
         document.querySelector(".scrollTop span").innerText =
           Math.round(scrollTop);
 
-        //4번쨔 왔을때 스탑 0으로 초기화
+        //4번째 왔을때 스탑 0으로 초기화
         let offset = scrollTop - document.querySelector("#section4").offsetTop;
 
         if (scrollTop >= document.querySelector("#section4").offsetTop) {
           //section4.style.backgroundColor = "blue";
-          gsap.to(".sec4", { left: -offset, ease: "linear" });
+          if (
+            scrollTop <=
+            document.querySelector("#section4").offsetTop +
+              document.querySelector(".item").offsetWidth * 3
+          ) {
+            gsap.to(".sec4", { left: -offset, ease: "linear" });
+          }
         }
 
         requestAnimationFrame(scroll);
